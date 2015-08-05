@@ -5,7 +5,7 @@ baseurl:
 #url: "http://jeremynealbrown.github.io"
 
 # Localhost
-#url: http://127.0.0.1:4000
+url: http://127.0.0.1:4000
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-65964466-1
@@ -46,6 +46,8 @@ highlighter: pygments
 
 # Permalinks
 permalink: pretty
+
+include: [_pages]
 
 exclude:
   - CNAME
