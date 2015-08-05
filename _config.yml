@@ -1,12 +1,62 @@
-# Site settings
-title: into the fray
-description: > # this means to ignore newlines until "baseurl:"
-  I am a creative technologist currently residing in Portland, 
-  Oregon and working as a Software Developer at Upswell. 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://jeremynealbrown.github.io" # the base hostname & protocol for your site
-twitter_username: jeremynealbrown
-github_username:  jeremynealbrown
+# Base URL
+baseurl:
 
-# Build settings
-markdown: kramdown
+# Site live URL
+#url: "http://jeremynealbrown.github.io"
+
+# Localhost
+#url: http://127.0.0.1:4000
+
+# Google Analytics key, leave blank to ignore
+google_analytics_key: UA-65964466-1
+
+# Name of the site
+name: jeremynealbrown.com
+
+# Harmony theme configuration. Please change accordingly.
+harmony:
+  # Little description about your site
+  description:
+  # 'meta_description:' Write an awesome description for your new site here.
+  # It will appear in your document head meta (for Google search results) and
+  # in your feed.xml site description.
+  meta_description: > #
+   I am a creative technologist living in Portland, Oregon and working
+   for an experience design and software shop called Upswell.
+  # Author details
+  author:
+    name: Jeremy Brown
+    email: jeremynealbrown@gmail.com
+    url: http://jeremynealbrown.github.io
+
+  # Profile links, leave blank to ignore
+  social:
+    github: jeremynealbrown
+    twitter: jeremynealbrown
+    gplus: +JeremyBrownFromEarth
+
+  # Toggle disclaimer in footer
+  show_disclaimer: true
+
+# Conversion / Build settings
+markdown:    kramdown
+
+# This is how you put pygments config in jekyll 2.0 instead of pygments: true
+highlighter: pygments
+
+# Permalinks
+permalink: pretty
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+
+# Sass conversion configs
+sass:
+    sass_dir: assets/css/_sass
+    style: :compressed
