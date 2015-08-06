@@ -1,6 +1,6 @@
 ---
 layout: page
-title: work
-permalink: /work/
+title: projects
+permalink: /projects/
 group: navigation
 ---
