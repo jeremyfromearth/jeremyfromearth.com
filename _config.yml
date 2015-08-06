@@ -13,7 +13,7 @@ google_analytics_key: UA-65964466-1
 # Name of the site
 name: jeremynealbrown.com
 
-pages: about, blog, projects, work
+navigation: about, blog, projects, work
 
 # Harmony theme configuration. Please change accordingly.
 harmony:

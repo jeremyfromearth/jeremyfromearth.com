@@ -196,16 +196,23 @@ header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
 
-  .tilde {
-    color: black;
+  h1, h2 {
+    color: inherit;
+    text-align: center;
+    @include transition(all, .2s);
+    @include font-size(64px);
+    @include MQ(M) {
+      @include font-size(128px);
+    }
   }
 
-  h1, h2 { text-align: left; color: inherit;}
+  p {
+    text-align: center;
+  }
+
   a {
-    color: white;
-    @include transition(all, .2s);
+    text-align: center;
     &:hover, &:active, &:focus {
-      color: black;
       @include transition(all, .2s);
       border-bottom-color: transparent;
     }
@@ -213,7 +220,7 @@ header.main-header {
 
   ul {
     width: 100%;
-    text-align: left;
+    text-align: center;
     padding: 15px;
   }
   ul li {

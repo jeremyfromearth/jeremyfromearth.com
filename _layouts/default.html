@@ -26,8 +26,9 @@
     <body>
         <header class="main-header">
             <div class="wc-container">
-                <h1><a class="tilde" href="{{ site.baseurl }}">&#126;&#47;</a><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-                {% include header-links.html %}
+            		{% assign navigation = site.pages %}
+            		{% assign group = 'navigation' %}
+            		{% include navigation.html %}
             </div>
         </header>
         {{ content }}
