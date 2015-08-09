@@ -2,7 +2,8 @@
 
 <ul>
 {% if page.url != "/" %}<li><a href="/">~/home</a></li>{% endif %}
-{% for node in navigation %}
+
+{% for node in site.pages %}
   {% if group and group == node.group %}
     {% if page.url != node.url %}
       <li><a href="{{node.url}}">/{{ node.title }}</a></li>

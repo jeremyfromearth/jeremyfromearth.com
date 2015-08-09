@@ -217,6 +217,7 @@ header.main-header {
     text-align: center;
     &:hover, &:active, &:focus {
       @include transition(all, .2s);
+      background-color: $base-00;
       border-bottom-color: transparent;
     }
   }
