@@ -35,30 +35,16 @@
         <footer class="main-footer">
             <div class="wc-container">
                 <div class="column one">
-                    {% include footer-links.html %}
+                  {% include footer-links.html %}
                 </div>
                 <div class="column two">
-                    {% include social.html %}
+                  {% include social.html %}
                 </div>
             </div>
             <p class="wc-container disclaimer">
-                {% include footer.html %}
+              {% include footer.html %}
             </p>
         </footer>
-        <!--
-        <script type="text/javascript">
-          /* To avoid render blocking css */
-          var cb = function() {
-            var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = 'http://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
-            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(cb);
-          else window.addEventListener('load', cb);
-        </script>
-        -->
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- When no internet load JQuery from local -->
