@@ -1,15 +1,14 @@
 ---
 layout: post
-title:  "Sample post from harmony"
+title:  "Sample Post"
 date:   2014-08-19 23:56:45
-description: Just a sample post to show some of the typography elements supported from harmony theme.
+description: Just a sample post to show some of the typography elements
 categories:
 - blog
 permalink: sample-post
 ---
 
-Just a sample post to show some of the *typography* elements supported from
-**harmony** theme.
+Just a sample post to show some of the *typography* elements
 
 ____
 
@@ -59,5 +58,3 @@ Curabitur cursus magna eu sem cursus
 Pellentesque habitant morbi tristique senectus
 : Curabitur malesuada lacus ac gravida porttitor
 : Duis sodales feugiat lorem et mollis.
-
-Want me to suggest something? Please [Send me a request](https://github.com/web-create/harmony/issues/new)
