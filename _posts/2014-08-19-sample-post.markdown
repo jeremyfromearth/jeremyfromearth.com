@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Sample Post"
-date:   2014-08-19 23:56:45
+date: 2014-08-19 23:56:45
 description: Just a sample post to show some of the typography elements
 categories:
 - blog
 permalink: sample-post
+heading: Sample Post
 ---
 
 Just a sample post to show some of the *typography* elements
