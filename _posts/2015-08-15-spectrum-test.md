@@ -8,10 +8,7 @@ permalink: spectrum-test
 heading: Spectrum Test
 ---
 
-
-
-
-Just a sample post to show Spectrum working this site
+Sample post to show Spectrum working with this site
 
 ____
 
