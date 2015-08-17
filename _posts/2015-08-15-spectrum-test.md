@@ -5,6 +5,7 @@ description: Testing Spectrum in the blog
 categories:
 - blog
 permalink: blog/spectrum-test
+headline: blog
 heading: Spectrum Test
 ---
 
