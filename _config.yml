@@ -5,7 +5,7 @@ baseurl:
 #url: "http://jeremynealbrown.github.io"
 
 # Localhost
-url: http://jeremynealbrown.github.io
+url: ./
 
 # Google Analytics key, leave blank to ignore
 google_analytics_key: UA-65964466-1
