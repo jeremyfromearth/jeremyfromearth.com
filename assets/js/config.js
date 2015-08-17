@@ -4,7 +4,8 @@
     paths: {
       spectrum: 'http://code.jeremynealbrown.com/spectrum/lib',
       visible: 'http://code.jeremynealbrown.com/visible/js',
+      coffeerithms: 'http://code.jeremynealbrown.com/coffeerithms/lib/',
+      uibot: 'http://code.jeremynealbrown.com/uibot/lib/'
     }
   });
-
 }).call(this);

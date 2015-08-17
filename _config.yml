@@ -19,29 +19,20 @@ meta_description: > #
  I am a creative technologist living in Portland, Oregon and working
  for an experience design and software shop called Upswell.
 
-# Harmony theme configuration. Please change accordingly.
-harmony:
-  # Little description about your site
-  description:
+# Site author information
+author:
+  name: Jeremy Brown
+  email: jeremynealbrown@gmail.com
+  url: http://jeremynealbrown.github.io
 
-
-  # Author details
-  author:
-    name: Jeremy Brown
-    email: jeremynealbrown@gmail.com
-    url: http://jeremynealbrown.github.io
-
-  # Profile links, leave blank to ignore
-  social:
-    github: jeremynealbrown
-    twitter: jeremynealbrown
-    gplus: +JeremyBrownFromEarth
-
-  # Toggle disclaimer in footer
-  show_disclaimer: true
+# Social links
+social:
+  github: jeremynealbrown
+  twitter: jeremynealbrown
+  gplus: +JeremyBrownFromEarth
 
 # Conversion / Build settings
-markdown:    kramdown
+markdown: kramdown
 
 # This is how you put pygments config in jekyll 2.0 instead of pygments: true
 highlighter: pygments
@@ -49,6 +40,7 @@ highlighter: pygments
 # Permalinks
 permalink: pretty
 
+# Extra dirs to include in build
 include: [_pages]
 
 exclude:
