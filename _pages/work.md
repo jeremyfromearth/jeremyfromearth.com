@@ -1,6 +1,6 @@
 ---
 layout: page
-title: work
+headline: work
 permalink: /work/
 group: navigation
 ---

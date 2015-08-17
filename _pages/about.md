@@ -1,6 +1,6 @@
 ---
 layout: page
-title: about
+headline: about
 permalink: /about/
 group: navigation
 ---

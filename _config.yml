@@ -44,8 +44,10 @@ permalink: pretty
 include: [_pages]
 
 collections:
-  - projects
-  - work
+  projects:
+  work:
+    output: true
+    permalink: /work/:path/
 
 exclude:
   - CNAME

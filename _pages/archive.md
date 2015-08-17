@@ -1,6 +1,6 @@
 ---
 layout: default
-title: archive
+headline: archive
 permalink: /archive/
 ---
 <div class="page-content wc-container">
