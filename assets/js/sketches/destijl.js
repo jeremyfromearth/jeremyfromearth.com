@@ -20,7 +20,6 @@
 
       Destijl.prototype.step = function() {
         var c, i, len, ref, results;
-        console.log(this.stepCount);
         if (this.stepCount === 0 || modulo(this.stepCount, 120) === 0) {
           this.circle_shapes.push({
             radius: 100,

@@ -5,7 +5,6 @@ define ['spectrum/Renderer'], (Renderer) ->
             @circle_shapes = []
 
         step : ->
-            console.log @stepCount
             if @stepCount is 0 or @stepCount %% 120 is 0
                 @circle_shapes.push {radius: 100, alpha: 0.01}
             for c in @circle_shapes
