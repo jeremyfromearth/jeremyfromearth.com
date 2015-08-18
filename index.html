@@ -5,9 +5,23 @@ location: ""
 <html>
   <head>
   {% include head.html %}
+  <script>
+  require(['spectrum/Player', 'sketches/Destijl'], function(Player, App) {
+      var canvas = document.getElementById("index-canvas");
+      if(canvas) {
+        var ctx = canvas.getContext('2d');
+        var app = new App(ctx);
+        var player = new Player(canvas);
+        player.setFullWindow(true);
+        player.setRenderer(app);
+        player.init();
+        player.play();
+      }
+  });
+  </script>
   </head>
   <body>
-    <canvas class="index-canvas"></canvas>
+    <canvas id="index-canvas" class="index-canvas"></canvas>
     <div class="index-header">
       {% include header.html %}
     </div>

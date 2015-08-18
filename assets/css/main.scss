@@ -278,6 +278,19 @@ header.main-header {
   }
 }
 
+div.about {
+  img {
+    float: left;
+    margin-right: 1.5em;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+}
+
 footer.main-footer {
   background-color: $base-00;
   color: $base-07;
@@ -298,6 +311,7 @@ footer.main-footer {
       padding: 10px 0;
       text-transform: uppercase;
   }
+
   h6::before {
       content: '';
       position: absolute;
@@ -487,7 +501,7 @@ div.page-content {
   }
 
   img {
-    padding: 1em 0;
+    padding: 0em 0;
   }
 
   p {
