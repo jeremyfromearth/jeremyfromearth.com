@@ -14,8 +14,11 @@
       }
 
       Destijl.prototype.init = function() {
+        var stuff;
         this.bg = "#ffffff";
-        return this.circle_shapes = [];
+        this.circle_shapes = [];
+        stuff = ['C++', 'CoffeeScript', 'Java', 'Socket.io', 'PixelFlex', 'LED Arrays', 'Red5 Media Server', 'JavaScript', 'Python', 'HTML/CSS', 'Bower', 'Grunt.js', 'Node.js', 'SASS', 'OpenGL', 'Cake', 'InfluxDB', 'Orchestrate.io', 'SQL', 'Cinder', 'Django', 'Flask', 'Jekyll', 'Kinect', 'Processing', 'iOS', 'OSX', 'Android', 'UNIX', 'Vim', 'Cocoa', 'CoreData'];
+        return console.log(stuff.sort().toString().replace(/,/g, ", "));
       };
 
       Destijl.prototype.step = function() {
