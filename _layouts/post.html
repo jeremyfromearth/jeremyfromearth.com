@@ -38,15 +38,15 @@ title: blog
 	<div class="post-footer">
 		<div class="column-1">
 			{% if page.previous %}
-				<a href="{{page.previous.url | prepend: site.baseurl | prepend: site.url }}"><< Older</a>
+				<a href="{{ page.previous.url }}"><< Older</a>
 			{% else %}
 				<span><< Older</span>
 			{% endif %}
 		</div>
-		<div class="column-2"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }} ">Home</a></div>
+		<div class="column-2"><a href="/blog">blog</a></div>
 		<div class="column-3">
 			{% if page.next %}
-				<a href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}">Newer >></a>
+				<a href="{{ page.next.url }}">Newer >></a>
 			{% else %}
 				<span>Newer >></span>
 			{% endif %}
