@@ -6,7 +6,7 @@ categories:
 - blog
 permalink: blog/spectrum-test
 headline: blog
-heading: Spectrum Test
+heading: Spectrum Tests
 ---
 
 Sample post to show Spectrum working with this site
