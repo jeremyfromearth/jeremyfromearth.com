@@ -4,8 +4,9 @@ date: 2014-08-19 23:56:45
 description: Testing Spectrum in the blog
 categories:
 - blog
-permalink: spectrum-test
-heading: Spectrum Test
+permalink: blog/spectrum-test
+headline: blog
+heading: Spectrum Tests
 ---
 
 Sample post to show Spectrum working with this site

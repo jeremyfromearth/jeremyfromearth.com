@@ -6,6 +6,7 @@ categories:
 - blog
 - jekyll
 heading: What is Jekyll?
+permalink: blog/what-is-jekyll
 ---
 
 [Jekyll][jekyll] is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. Here is a little quote from the official website:

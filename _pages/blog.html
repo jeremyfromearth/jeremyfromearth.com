@@ -1,6 +1,6 @@
 ---
 layout: page
-title: blog
+headline: blog
 permalink: /blog/
 group: navigation
 ---
@@ -9,7 +9,7 @@ group: navigation
     {% for post in site.posts limit:10 %}
       <div class="post">
         <h3 class="post-title">
-          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+          <a href="{{ post.url }}">
             {{ post.heading }}
           </a>
         </h3>
@@ -27,7 +27,7 @@ group: navigation
           {{ post.excerpt }}
         </p>
         <p>
-          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title}}">
+          <a href="{{ post.url }}" title="{{ post.title}}">
             Read More
         </a>
         </p>
@@ -35,5 +35,5 @@ group: navigation
     {% endfor %}
 </div>
 <div class="post-footer">
-  <div class="column-full"><a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></div>
+  <div class="column-full"><a href="/archive">Blog archive</a></div>
 </div>

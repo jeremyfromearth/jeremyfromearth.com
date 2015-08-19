@@ -1,6 +1,6 @@
 ---
 layout: page
-title: projects
+headline: projects
 permalink: /projects/
 group: navigation
 ---
