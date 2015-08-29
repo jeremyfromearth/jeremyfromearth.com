@@ -7,13 +7,15 @@ title: work
 	<div class="post">
     <p><strong>Title:</strong> {{ page.title }}<br/>
 	Client: {{ page.client }}<br/>
-    Date: {{ page.date }} <br/>
 	Location: {{ page.location }}<br/>
     Collaborators: {{ page.collaborators }} <br/>
 	Technologies: {{ page.technologies }}<br/>
-	Tags: {{ page.categories }}
-
+	Year: {{ page.year }} <br/>
+	{{ if page.description }}
+		<p>{{ page.description }}</p>
+	{{ endif }}
 	</p>
 	{{ content }}
+	<div class="work-tags">Tags: {{ page.categories }}</div>
   </div>
 </div>
