@@ -240,8 +240,8 @@ header.main-header {
 
   ul {
     width: 100%;
-    padding: 15px;
   }
+
   ul li {
     display: inline-block;
     position:relative;
@@ -428,10 +428,10 @@ div.page-content {
       @include font-size(14px);
       color: $color-2;
       line-height: 1.6;
-      background: url(./images/bullet.svg);
+      /*background: url(./images/bullet.svg);*/
       background-repeat: no-repeat;
       background-position: 0 6px;
-      padding: 0 0 5px 15px;
+      padding: 0 0 5px 0px;
       margin-left: 0;
     }
     @include MQ(M){

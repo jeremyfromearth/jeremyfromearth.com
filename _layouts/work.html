@@ -5,8 +5,15 @@ title: work
 
 <div class="page-content wc-container">
 	<div class="post">
-    {{ page.date }}
-    {{ page.location }}
-    {{ content }}
+    <p><strong>Title:</strong> {{ page.title }}<br/>
+	Client: {{ page.client }}<br/>
+    Date: {{ page.date }} <br/>
+	Location: {{ page.location }}<br/>
+    Collaborators: {{ page.collaborators }} <br/>
+	Technologies: {{ page.technologies }}<br/>
+	Tags: {{ page.categories }}
+
+	</p>
+	{{ content }}
   </div>
 </div>
