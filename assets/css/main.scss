@@ -284,10 +284,6 @@ div.about {
 
 }
 
-.work-tags {
-    font-size: .85em;
-}
-
 footer.main-footer {
   background-color: $base-00;
   color: $base-07;
@@ -684,6 +680,15 @@ div.post {
 
   &:last-child {
     border-bottom: none;
+  }
+
+  .project-details {
+    padding: 0em;
+  }
+
+  .project-meta {
+    padding-bottom: 2em;
+    font-size: .85em;
   }
 }
 p.post-meta {

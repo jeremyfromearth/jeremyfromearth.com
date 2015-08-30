@@ -2,7 +2,7 @@
 layout: work
 headline: work
 title: Names Quilt Touch Table
-date: 2007-12
+year: 2007
 location: Bethesda, Maryland U.S.
 client: National Library of Medicine
 collaborators: Second Story
