@@ -222,11 +222,16 @@ header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
 
+
   h1, h2 {
     color: inherit;
+    line-height: 1.2em;
+    padding-top: 0.5em;
     @include transition(all, .2s);
     @include font-size(64px);
     @include MQ(M) {
+      line-height: 1.2em;
+      padding-top: 0.5em;
       @include font-size(128px);
     }
   }
