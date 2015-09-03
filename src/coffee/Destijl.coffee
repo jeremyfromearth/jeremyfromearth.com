@@ -3,42 +3,6 @@ define ['spectrum/Renderer'], (Renderer) ->
         init : ->
             @bg = "#ffffff"
             @circle_shapes = []
-            stuff = [
-                'C++'
-                'CoffeeScript'
-                'Java'
-                'Socket.io'
-                'PixelFlex'
-                'LED Arrays'
-                'Red5 Media Server'
-                'JavaScript'
-                'Python'
-                'HTML/CSS'
-                'Bower'
-                'Grunt.js'
-                'Node.js'
-                'SASS'
-                'OpenGL'
-                'Cake'
-                'InfluxDB'
-                'Orchestrate.io'
-                'SQL'
-                'Cinder'
-                'Django'
-                'Flask'
-                'Jekyll'
-                'Kinect'
-                'Processing'
-                'iOS'
-                'OSX'
-                'Android'
-                'UNIX'
-                'Vim'
-                'Cocoa'
-                'CoreData'
-            ]
-
-            console.log stuff.sort().toString().replace(/,/g, ", ")
 
         step : ->
             if @stepCount is 0 or @stepCount %% 120 is 0
