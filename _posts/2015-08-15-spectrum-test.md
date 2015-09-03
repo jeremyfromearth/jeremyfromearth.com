@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2014-08-19 23:56:45
+date: 2015-08-19 23:56:45
 description: Testing Spectrum in the blog
 categories:
 - blog
