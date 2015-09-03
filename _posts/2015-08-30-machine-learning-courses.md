@@ -14,6 +14,8 @@ headline: blog
 heading: Machine Learning & Data Science Related Links
 markdown: kramdown
 ---
+[University of Washington - Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning)
+This Specialization provides a case-based introduction to the exciting, high-demand field of machine learning. You’ll learn to analyze large and complex datasets, build applications that can make predictions from data, and create systems that adapt and improve over time.
 
 [Stanford - Machine Learning](https://www.coursera.org/learn/machine-learning/)
 This course provides a broad introduction to machine learning, data-mining, and statistical pattern recognition.
