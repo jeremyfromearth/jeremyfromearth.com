@@ -9,11 +9,11 @@ headline: blog
 heading: Spectrum Tests
 ---
 
-Sample post to show Spectrum working with this site
+Sample post to show [Spectrum](https://github.com/jeremynealbrown/spectrum) working with this site
 
 ____
 
-<canvas id="spectrum-test-canvas" class="post-canvas" width="800" height="450"></canvas>
+<canvas id="spectrum-test-canvas" class="post-canvas" width="800" height="550"></canvas>
 <script>
 require(['spectrum/Player', 'visible/charting/NetworkGraph'], function(Player, App) {
     var canvas = document.getElementById("spectrum-test-canvas");
@@ -26,3 +26,5 @@ require(['spectrum/Player', 'visible/charting/NetworkGraph'], function(Player, A
     player.play();
 });
 </script>
+
+{{ include "http://code.jeremynealbrown.com/visible/coffee/charting/NetworkGraph.coffee" }}
