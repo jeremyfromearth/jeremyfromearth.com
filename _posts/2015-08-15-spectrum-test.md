@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2014-08-19 23:56:45
+date: 2015-08-14 23:56:45
 description: Testing Spectrum in the blog
 categories:
 - blog
@@ -11,9 +11,7 @@ heading: Spectrum Tests
 
 Sample post to show [Spectrum](https://github.com/jeremynealbrown/spectrum) working with this site
 
-____
-
-<canvas id="spectrum-test-canvas" class="post-canvas" width="800" height="550"></canvas>
+<canvas id="spectrum-test-canvas" class="post-canvas" width="1024" height="640"></canvas>
 <script>
 require(['spectrum/Player', 'visible/charting/NetworkGraph'], function(Player, App) {
     var canvas = document.getElementById("spectrum-test-canvas");

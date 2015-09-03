@@ -21,5 +21,8 @@ This course provides a broad introduction to machine learning, data-mining, and 
 [Stanford - Mining Massive Datasets](https://www.coursera.org/course/mmds)
 This class teaches algorithms for extracting models and other information from very large amounts of data. The emphasis is on techniques that are efficient and that scale well.
 
+[University of Illinois - Data Mining Specialization](https://www.coursera.org/specialization/datamining/)
+This Specialization will teach you data mining techniques for both structured data which conform to a clearly defined schema, and unstructured data which exist in the form of natural language text.
+
 [Caltech - Learning From data](https://work.caltech.edu/telecourse.html)
 This is an introductory course in machine learning (ML) that covers the basic theory, algorithms, and applications.
