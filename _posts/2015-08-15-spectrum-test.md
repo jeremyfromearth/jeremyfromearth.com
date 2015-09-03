@@ -11,9 +11,7 @@ heading: Spectrum Tests
 
 Sample post to show Spectrum working with this site
 
-____
-
-<canvas id="spectrum-test-canvas" class="post-canvas" width="800" height="450"></canvas>
+<canvas id="spectrum-test-canvas" class="post-canvas" width="1024" height="640"></canvas>
 <script>
 require(['spectrum/Player', 'visible/charting/NetworkGraph'], function(Player, App) {
     var canvas = document.getElementById("spectrum-test-canvas");
