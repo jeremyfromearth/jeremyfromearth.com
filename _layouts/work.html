@@ -15,9 +15,7 @@ title: work
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
-			{% if image.caption %}
 				<p>{{ image.caption }}</p>
-			{% endif %}
 		{% endfor %}
 	{% endif %}
 	{{ content }}

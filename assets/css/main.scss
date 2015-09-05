@@ -19,6 +19,9 @@
 // Import fonts
 @import "partials/fonts";
 
+// Import blink
+@import "partials/blink";
+
 
 /* --------------------------------
 
@@ -222,6 +225,9 @@ header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
 
+  .blink {
+    display: inline;
+  }
 
   h1, h2 {
     color: inherit;
@@ -234,6 +240,8 @@ header.main-header {
       padding-top: 0.5em;
       @include font-size(128px);
     }
+
+
   }
 
   a {
