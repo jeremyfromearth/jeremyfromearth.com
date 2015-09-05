@@ -10,8 +10,8 @@ title: work
 			<li>Client: {{ page.client }}</li>
 			<li>Location: {{ page.location }}</li>
 			<li>Collaborators: {{ page.collaborators }}</li>
-		</ul>
 		<div class="project-meta">Year: {{ page.year }}, Technologies: {{ page.technologies }}, Tags: {{ page.categories }}</div>
+	<p>{{ page.description }}</p>
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
