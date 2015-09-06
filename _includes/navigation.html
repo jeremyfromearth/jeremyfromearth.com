@@ -1,4 +1,4 @@
-<h1>{% if page.url == "/" %}~{% endif %}/{{ page.headline }}<div class="blink">_</div></h1>
+<h1 id="headline">{% if page.url == "/" %}~{% endif %}/{{ page.headline }}<div class="blink">_</div></h1>
 
 <ul>
 {% if page.url != "/" %}<li>~/<a href="/">home</a></li>{% endif %}
@@ -13,3 +13,42 @@
 </ul>
 {% assign navigation = nil %}
 {% assign group = nil %}
+
+<script>
+var url = "{{ page.url }}";
+var input = "{{ page.url }}".split("/")[1] || "";
+var headline = document.getElementById("headline");
+var abcs = "abcdefghijklmnopqrstuvwxyz";
+
+function updateInput() {
+  var pre = url == "/" ? "~/" : "/";
+  headline.innerHTML = pre + input + "<div class='blink'>_</div>";
+}
+
+document.addEventListener("keypress", function(e) {
+  e.preventDefault();
+  e.cancelBubble = true;
+  var s = String.fromCharCode(event.keyCode);
+  if(abcs.indexOf(s) >= 0) {
+    input += s;
+    updateInput();
+  }
+});
+
+document.addEventListener("keydown", function(e) {
+  switch(e.keyCode) {
+    case 8: // delete
+      e.preventDefault();
+      e.cancelBubble = true;
+      if(input.length) {
+        input = input.substring(0, input.length - 1);
+        updateInput();
+      }
+    break;
+
+    case 13: // enter
+      window.location.href = "/" + input;
+    break;
+  }
+});
+</script>
