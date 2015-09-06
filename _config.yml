@@ -19,6 +19,9 @@ meta_description: > #
  I am a creative technologist living in Portland, Oregon and working
  for an experience design and software shop called Upswell.
 
+# Site description, used in feed.xml
+description: The personal site of Jeremy Neal Brown, a creative technologist from Portland, Oregon
+
 # Site author information
 author:
   name: Jeremy Brown
