@@ -18,7 +18,7 @@
 var url = "{{ page.url }}";
 var input = "{{ page.url }}".split("/")[1] || "";
 var headline = document.getElementById("headline");
-var abcs = "abcdefghijklmnopqrstuvwxyz";
+var chars = "abcdefghijklmnopqrstuvwxyz ?!.";
 
 function updateInput() {
   var pre = url == "/" ? "~/" : "/";
@@ -29,7 +29,7 @@ document.addEventListener("keypress", function(e) {
   e.preventDefault();
   e.cancelBubble = true;
   var s = String.fromCharCode(event.keyCode);
-  if(abcs.indexOf(s) >= 0) {
+  if(chars.indexOf(s) >= 0) {
     input += s;
     updateInput();
   }
@@ -47,6 +47,17 @@ document.addEventListener("keydown", function(e) {
     break;
 
     case 13: // enter
+      if(input == "home") input = "{{ site.url }}";
+      if(input == "ping") {
+        input = "pong";
+        updateInput();
+        return;
+      }
+      if(input == "pong") {
+        input = "ping";
+        updateInput();
+        return;
+      }
       window.location.href = "/" + input;
     break;
   }
