@@ -3,3 +3,5 @@ _site
 *.lock
 .DS_Store
 .jekyll-metadata
+node_modules/
+packages/

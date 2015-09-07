@@ -1,0 +1,21 @@
+{
+    "name" : "grunt-basics",
+    "version" : "1.0.0",
+    "author" : "jeremy <jeremynealbrown@gmail.com>",
+    "private" : true,
+
+    "devDependencies" : {
+        "grunt": "latest",
+        "grunt-contrib-copy" : "*",
+        "grunt-contrib-coffee": "*",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-sass": "*",
+        "grunt-newer" : "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-cssc": "*",
+        "grunt-htmlhint": "*"
+    }
+}
