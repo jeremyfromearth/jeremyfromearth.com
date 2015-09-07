@@ -6,23 +6,33 @@ location: ""
   <head>
   {% include head.html %}
   <script>
+  var player;
+  var renderer;
   var sketches = [
     'sketches/Destijl',
     'spectrum_demos/BrownianPaths'
   ];
-  var sketch = sketches[Math.floor(Math.random() * sketches.length)];
-  require(['spectrum/Player', sketch], function(Player, App) {
+
+  function loadRandomSketch() {
+    var sketch = sketches[Math.floor(Math.random() * sketches.length)];
+    require(['spectrum/Player', sketch], function(Player, App) {
       var canvas = document.getElementById("index-canvas");
       if(canvas) {
+        if(renderer) renderer = null;
+        if(player) { player.stop(); }
         var ctx = canvas.getContext('2d');
-        var app = new App(ctx);
-        var player = new Player(canvas);
+        renderer = new App(ctx);
+        player = new Player(canvas);
+        player.setRenderer(renderer);
         player.setFullWindow(true);
-        player.setRenderer(app);
         player.init();
         player.play();
       }
-  });
+    });
+  }
+
+  loadRandomSketch();
+
   </script>
   </head>
   <body>

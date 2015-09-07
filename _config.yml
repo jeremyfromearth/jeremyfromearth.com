@@ -53,16 +53,16 @@ collections:
     permalink: /work/:path/
 
 exclude:
+  - src
   - CNAME
   - Gemfile
+  - packages
   - Rakefile
   - README.md
   - .gitignore
   - .sass-cache
   - Gemfile.lock
-  - packages
-  - src
-
+  - node_modules
 
 # Sass conversion configs
 sass:

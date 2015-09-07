@@ -28,3 +28,6 @@ This Specialization will teach you data mining techniques for both structured da
 
 [Caltech - Learning From data](https://work.caltech.edu/telecourse.html)
 This is an introductory course in machine learning (ML) that covers the basic theory, algorithms, and applications.
+
+[Intro to Artificial Intelligence](https://www.udacity.com/course/intro-to-artificial-intelligence--cs271)
+Artificial Intelligence (AI) is a field that has a long history but is still constantly and actively growing and changing. In this course, you’ll learn the basics of modern AI as well as some of the representative applications of AI.

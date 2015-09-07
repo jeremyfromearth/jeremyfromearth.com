@@ -58,6 +58,13 @@ document.addEventListener("keydown", function(e) {
         updateInput();
         return;
       }
+
+      if(input == "random") {
+        if("{{ page.url }}" == "/")
+        loadRandomSketch();
+        return;
+      }
+      
       window.location.href = "/" + input;
     break;
   }
