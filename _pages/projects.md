@@ -5,4 +5,4 @@ permalink: /projects/
 group: navigation
 ---
 
-Insert personal projects here.....
+Insert personal projects here.
