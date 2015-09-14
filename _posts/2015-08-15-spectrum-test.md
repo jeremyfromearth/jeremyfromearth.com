@@ -13,7 +13,7 @@ Sample post to show [Spectrum](https://github.com/jeremynealbrown/spectrum) work
 
 <canvas id="spectrum-test-canvas" class="post-canvas" width="1024" height="640"></canvas>
 <script>
-require(['spectrum/Player', 'visible/charting/NetworkGraph'], function(Player, App) {
+require(['spectrum/Player', 'spectrum_demos/NetworkGraph'], function(Player, App) {
     var canvas = document.getElementById("spectrum-test-canvas");
     var ctx = canvas.getContext('2d');
     var app = new App(ctx);
