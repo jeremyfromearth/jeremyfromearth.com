@@ -24,15 +24,15 @@ description: The personal site of Jeremy Neal Brown, a creative technologist fro
 
 # Site author information
 author:
-  name: Jeremy Brown
-  email: jeremynealbrown@gmail.com
-  url: http://jeremynealbrown.github.io
+    name: Jeremy Brown
+    email: jeremynealbrown@gmail.com
+    url: http://jeremynealbrown.github.io
 
 # Social links
 social:
-  github: jeremynealbrown
-  twitter: jeremynealbrown
-  gplus: +JeremyBrownFromEarth
+    github: jeremynealbrown
+    twitter: jeremynealbrown
+    gplus: +JeremyBrownFromEarth
 
 # Conversion / Build settings
 markdown: kramdown
@@ -48,21 +48,23 @@ include: [_pages]
 
 collections:
   projects:
+      output: true
+      permalink: /projects/:path/
   work:
-    output: true
-    permalink: /work/:path/
+      output: true
+      permalink: /work/:path/
 
 exclude:
-  - src
-  - CNAME
-  - Gemfile
-  - packages
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
-  - node_modules
+    - src
+    - CNAME
+    - Gemfile
+    - packages
+    - Rakefile
+    - README.md
+    - .gitignore
+    - .sass-cache
+    - Gemfile.lock
+    - node_modules
 
 # Sass conversion configs
 sass:

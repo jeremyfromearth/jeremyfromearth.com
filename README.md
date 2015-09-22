@@ -2,4 +2,3 @@ My personal site built with [Jekyll][jeckyll]. This is not prime time yet, but y
 
 [jeckyll]: http://jekyllrb.com/
 [githubsites]: http://jeremynealbrown.github.io
-

@@ -5,4 +5,6 @@ permalink: /projects/
 group: navigation
 ---
 
-Insert personal projects here.
+{% for project in site.projects reversed %}
+[{{ project.title }}]({{ project.url }})
+{% endfor %}

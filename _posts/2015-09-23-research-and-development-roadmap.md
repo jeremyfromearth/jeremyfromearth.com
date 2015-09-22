@@ -1,12 +1,12 @@
 ---
 layout: post
-date: 2015-09-21
+date: 2015-09-23
 description: Research and development list
 categories:
 - code
-permalink: blog/r-and-d-list
+permalink: blog/research-and-development-roadmap
 headline: blog
-heading: Research and Development
+heading: Research and Development Roadmap
 ---
 
 Here is a list of tools that I intend to dig into over the next few months as I set out to become a Data Scientist. The plan here is to create some small project using each of the following tools. Then I'll post them either in the blog or projects sections of this site.
