@@ -9,7 +9,7 @@ headline: blog
 heading: Research and Development Roadmap
 ---
 
-Here is a list of tools that I am going to dig into over the next few months. The plan here is to create a small project using each of the following tools. Then I'll post them either in the blog or projects sections of this site.
+Below is a list of software libraries that I am going to dig into over the next few months. The plan is to create a small project using each tool and then do a write up about it.
 
 ### Mining
 * [Scrapy](http://scrapy.org)

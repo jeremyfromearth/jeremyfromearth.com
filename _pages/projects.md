@@ -6,5 +6,7 @@ group: navigation
 ---
 
 {% for project in site.projects reversed %}
-[{{ project.title }}]({{ project.url }})
+#[{{ project.title }}  is . . .]({{ project.url }})
+{{ project.description }}
+[Read more »]({{ project.url }})
 {% endfor %}
