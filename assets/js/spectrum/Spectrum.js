@@ -1,7 +1,7 @@
 (function() {
   var Spectrum;
 
-  define(['renderer', 'player', 'dispatcher', 'utils'], function(Renderer, Player, Dispatcher, Utils) {}, Spectrum = (function() {
+  define(['Renderer', 'Player', 'Dispatcher', 'Utils', 'Vector'], function(Renderer, Player, Dispatcher, Utils, Vector) {}, Spectrum = (function() {
     function Spectrum() {}
 
     Spectrum.Player = Player;
@@ -11,6 +11,8 @@
     Spectrum.Dispatcher = Dispatcher;
 
     Spectrum.Utils = Utils;
+
+    Spectrum.Vector = Vector;
 
     return Spectrum;
 

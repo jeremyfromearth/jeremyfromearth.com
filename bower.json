@@ -20,5 +20,6 @@
     "modernizer": "~2.8.2",
     "requirejs": "~2.1.20",
     "spectrum-js" : ""
-  }
+  },
+  "private": true
 }

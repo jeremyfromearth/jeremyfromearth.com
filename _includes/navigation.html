@@ -28,7 +28,7 @@ function updateInput() {
 document.addEventListener("keypress", function(e) {
   e.preventDefault();
   e.cancelBubble = true;
-  var s = String.fromCharCode(event.keyCode);
+  var s = String.fromCharCode(e.keyCode);
   if(chars.indexOf(s) >= 0) {
     input += s;
     updateInput();
