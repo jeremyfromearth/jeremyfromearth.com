@@ -19,60 +19,72 @@ var url = "{{ page.url }}";
 var input = "{{ page.url }}".split("/")[1] || "";
 var headline = document.getElementById("headline");
 var chars = "abcdefghijklmnopqrstuvwxyz ?!.";
+var heldKeys = {}
 
 function updateInput() {
   var pre = url == "/" ? "~/" : "/";
   headline.innerHTML = pre + input + "<div class='blink'>_</div>";
 }
 
-document.addEventListener("keypress", function(e) {
-  e.preventDefault();
-  e.cancelBubble = true;
-  var s = String.fromCharCode(e.keyCode);
-  if(chars.indexOf(s) >= 0) {
-    input += s;
-    updateInput();
-  }
+function handleKeyPress(e) {
+    heldKeys[e.keyCode] = true
+    if(heldKeys[91] || heldKeys[18] || heldKeys[17]) return;
+
+    switch(e.keyCode) {
+      case 8: // delete
+        e.preventDefault();
+        e.cancelBubble = true;
+        if(input.length) {
+          input = input.substring(0, input.length - 1);
+          updateInput();
+        }
+      break;
+
+      case 13: // enter
+        e.preventDefault();
+        e.cancelBubble = true
+        if(input == "home") input = "{{ site.url }}";
+        if(input == "ping") {
+          input = "pong";
+          updateInput();
+          return;
+        }
+
+        if(input == "pong") {
+          input = "ping";
+          updateInput();
+          return;
+        }
+
+        if(input == "random" || input == "reboot") {
+          if("{{ page.url }}" == "/") loadRandomSketch();
+          return;
+        }
+
+        if(input == "hello" || input == "hi") {
+            input = Math.random() > 0.5 ? "Well, hello!" : "Yo!"
+            updateInput()
+            return
+        }
+
+        window.location.href = "/" + input;
+      break;
+
+      default:
+        var s = String.fromCharCode(e.keyCode).toLowerCase();
+        if(chars.indexOf(s) >= 0) {
+            input += s;
+            updateInput();
+        }
+      break;
+    }
+}
+
+window.document.addEventListener("keydown", function(e) {
+  handleKeyPress(e)
 });
 
-document.addEventListener("keydown", function(e) {
-  switch(e.keyCode) {
-    case 8: // delete
-      e.preventDefault();
-      e.cancelBubble = true;
-      if(input.length) {
-        input = input.substring(0, input.length - 1);
-        updateInput();
-      }
-    break;
-
-    case 13: // enter
-      if(input == "home") input = "{{ site.url }}";
-      if(input == "ping") {
-        input = "pong";
-        updateInput();
-        return;
-      }
-
-      if(input == "pong") {
-        input = "ping";
-        updateInput();
-        return;
-      }
-
-      if(input == "random" || input == "reboot") {
-        if("{{ page.url }}" == "/") loadRandomSketch();
-        return;
-      }
-
-      if(input == "hello" || input == "hi") {
-          input = Math.random() > 0.5 ? "Well, hello!" : "Yo!"
-          updateInput()
-          return
-      }
-
-      window.location.href = "/" + input;
-    break;
-  }
+window.document.addEventListener("keyup", function(e) {
+    heldKeys[e.keyCode] = false;
 });
 </script>
