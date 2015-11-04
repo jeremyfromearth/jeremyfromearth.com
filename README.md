@@ -1,4 +1,25 @@
-My personal site built with [Jekyll][jeckyll]. This is not prime time yet, but you can check it out [here][githubsites]. will soon replace my site jeremynealbrown.com with this.
+# Welcome
+This is my personal experimentation and portfolio site. You can check it out [here][site].
 
-[jeckyll]: http://jekyllrb.com/
-[githubsites]: http://jeremynealbrown.github.io
+For preview, ensure that you have [Jekyll][jekyll] installed.
+
+
+For development ensure that you have and [Grunt][grunt] and [Bower][bower] installed. You will need to get the front-end dependencies using Bower:
+
+`$ bower install`
+
+Start Grunt to build. Optionally enable auto-build using `watch` flag
+
+`$ grunt watch`
+
+Start the Jekyll server. Optionally enable auto-build using `--watch` flag
+
+`$ jekyll serve --watch`
+
+Open your browser to `http://localhost:4000`
+
+[jekyll]: http://jekyllrb.com/
+[site]: http://jeremynealbrown.com
+[bower]: http://bower.io
+[grunt]: http://gruntjs.com/
+[d3]: http://d3js.org

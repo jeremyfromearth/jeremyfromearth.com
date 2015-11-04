@@ -18,7 +18,7 @@
 var url = "{{ page.url }}";
 var input = "{{ page.url }}".split("/")[1] || "";
 var headline = document.getElementById("headline");
-var chars = "abcdefghijklmnopqrstuvwxyz ?!.";
+var chars = "abcdefghijklmnopqrstuvwxyz";
 var heldKeys = {}
 
 function updateInput() {
@@ -85,6 +85,6 @@ window.document.addEventListener("keydown", function(e) {
 });
 
 window.document.addEventListener("keyup", function(e) {
-    heldKeys[e.keyCode] = false;
+  heldKeys[e.keyCode] = false;
 });
 </script>
