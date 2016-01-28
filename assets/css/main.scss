@@ -527,7 +527,16 @@ div.page-content {
   background-repeat: no-repeat;
   background-position: 0 6px;
   padding: 0 0 5px 15px;
-  margin-left: 0;
+  margin-left: 2em;
+}
+
+div.page-content ul li {
+    margin-left: 2em;
+}
+
+div.page-content ul {
+    padding: 0 0 1em 0em;
+    list-style: circle;
 }
 
 // Theme base 01
@@ -705,12 +714,12 @@ div.post {
   }
 }
 p.post-meta {
-  line-height: 1.6;
+  line-height: 0;
   letter-spacing: 2px;
   @include font-size(12px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
+  padding: 0.5em 0.0em 1.5em 0.0em;
   color: #7A7A7A;
   @include MQ(M) {
     @include font-size(16px);
