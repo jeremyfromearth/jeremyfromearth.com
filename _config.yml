@@ -65,6 +65,7 @@ exclude:
     - Gemfile.lock
     - node_modules
     - twitter
+    - vendor
 
 # Sass conversion configs
 sass:
