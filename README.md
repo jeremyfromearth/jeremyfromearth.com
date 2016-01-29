@@ -1,5 +1,5 @@
 # Welcome
-This is my personal experimentation and portfolio site. You can check it out [here][site].
+This is the source code for my archive and experimentation site. You can check it out [here][site].
 
 For preview, ensure that you have [Jekyll][jekyll] installed.
 
