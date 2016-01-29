@@ -8,8 +8,6 @@ permalink: blog/custom-geometry-swift-scenekit
 headline: blog
 heading: Custom 3D Geometry With Swift and SceneKit
 ---
-
-## Let's Make A Shape
 In this article I'll demonstrate an of example of creating custom 3D geometry for SceneKit using the Swift programming language. We'll look at how to create the simple yet very interesting polyhedron known as the [Icosahedron](https://en.wikipedia.org/wiki/Icosahedron).
 
 ![Icosahefron made with SceneKit](/assets/images/blog/scenekit-icosahedron.png)

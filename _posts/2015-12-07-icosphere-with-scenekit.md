@@ -8,8 +8,6 @@ permalink: blog/icosphere-with-scenekit
 headline: blog
 heading: Creating an IcoSphere with Swift & SceneKit
 ---
-
-## The IcoSphere
 In my [last article](/blog/custom-geometry-swift-scenekit) I wrote about how to create an Icosahedron using Swift and SceneKit. The example used hard-coded values for the vertices and indices that define the shape. In this article, I'll show how we can create a sphere using that same data for initial values combined with an iterative algorithm. The algorithm takes each face of the Icosahedron and sub-divides it into four new triangles. The vertices of which are turned into new faces to be once again sub-divided in the next iteration.
 
 ![IcoSphere with one sub-division](/assets/images/blog/icosphere-1-subdivision.png)
