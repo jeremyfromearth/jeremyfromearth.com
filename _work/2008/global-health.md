@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Global Health Kiosks
 year: 2008
 location: Bethesda, Maryland U.S.

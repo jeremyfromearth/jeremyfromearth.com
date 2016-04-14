@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Rayburn Document Explorer
 year: 2012
 location: Bonham, Texas U.S.

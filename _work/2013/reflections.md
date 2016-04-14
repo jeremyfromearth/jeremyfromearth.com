@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Some Were Neighbors
 year: 2013
 location: Washington, D.C. U.S.

@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Floods Navigator
 year: 2012
 location: Spokane, Washington U.S.

@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Book of Hours
 year: 2009
 location:  Louisville, Kentucky U.S.

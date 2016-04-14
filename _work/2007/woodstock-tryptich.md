@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Woodstock Tryptich Kiosks
 year: 2007
 location: The Museum at Bethel Woods

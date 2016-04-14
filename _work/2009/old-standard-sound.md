@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Old Standard Sound Website
 year: 2009
 location: <a href="http://oldstandardsound.com">oldstandardsound.com</a>

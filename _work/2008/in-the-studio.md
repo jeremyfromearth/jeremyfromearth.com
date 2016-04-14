@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: In the Studio
 year: 2007
 location: Los Angeles, California U.S.

@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Human Rights Now
 year: 2014
 location: Winnipeg, Manitoba Canada

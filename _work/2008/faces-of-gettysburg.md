@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Faces of Gettysburg
 year: 2008
 location: Gettysburg, Pensylvania U.S.

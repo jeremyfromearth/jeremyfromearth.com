@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Data Ribbon
 year: 2015
 location: Greenville, North Carolina U.S.

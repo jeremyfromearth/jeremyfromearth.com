@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: The Virtual Estuary
 year: 2011
 location:  Berlin Township, Ohio U.S.

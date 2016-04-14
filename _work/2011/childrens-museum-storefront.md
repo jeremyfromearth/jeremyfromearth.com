@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Children's Museum Storefront
 year: 2011
 location:  Portland, Oregon U.S.

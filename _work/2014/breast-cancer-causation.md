@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Visualizing Breast Cancer Causation
 year: 2014
 location: <a href="http://www.cabreastcancer.org/causes/">www.cabreastcancer.org/causes</a>

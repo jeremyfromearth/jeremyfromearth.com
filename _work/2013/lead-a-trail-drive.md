@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Lead a Trail Drive
 year: 2013
 location: Cuero, Texas U.S.

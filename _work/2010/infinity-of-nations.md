@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Infinity of Nations
 year: 2010
 location: New York, New York U.S.

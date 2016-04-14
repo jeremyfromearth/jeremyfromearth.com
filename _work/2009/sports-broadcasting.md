@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Sports Broadcasting
 year: 2009
 location:  Kansas City, Missouri U.S.

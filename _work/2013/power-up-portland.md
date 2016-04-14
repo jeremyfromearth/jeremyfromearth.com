@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Power Up Portland
 year: 2013
 location: Portland, Oregon U.S.

@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Orientation Screens
 year: 2007
 location: Washington, D.C. U.S.

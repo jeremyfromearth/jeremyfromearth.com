@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Murder is My Business
 year: 2012
 location: New York, New York U.S.

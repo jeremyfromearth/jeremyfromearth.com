@@ -1,4 +1,4 @@
----
+----
 layout: page
 headline: projects
 title: Spectrum

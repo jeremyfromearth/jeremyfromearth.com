@@ -5,12 +5,11 @@ title: work
 
 <div class="page-content wc-container">
 	<div class="post">
-		<ul class="project-details">
-			<li>Title: {{ page.title }}</li>
-			<li>Client: {{ page.client }}</li>
-			<li>Location: {{ page.location }}</li>
-			<li>Collaborators: {{ page.collaborators }}</li>
-		<div class="project-meta">Year: {{ page.year }}, Technologies: {{ page.technologies }}, Tags: {{ page.categories }}</div>
+		<h2>Title: {{ page.title }}</h2>
+		<h4>Client: {{ page.client }}</h4>
+		<h4>Location: {{ page.location }}</h4>
+		<h4>Collaborators: {{ page.collaborators }}</h4>
+		Year: {{ page.year }}, Technologies: {{ page.technologies }}, Tags: {{ page.categories }}</div>
 	<p>{{ page.description }}</p>
 	{% if page.images %}
 		{% for image in page.images %}

@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Names Quilt Touch Table
 year: 2007
 location: Bethesda, Maryland U.S.

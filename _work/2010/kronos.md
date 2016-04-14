@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Kronos
 year: 2010
 location:  Philadelphia, Pennsylvania U.S.

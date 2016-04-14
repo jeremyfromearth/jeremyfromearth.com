@@ -21,13 +21,14 @@ As mentioned above, there are 12 vertices. In order to draw different types of g
 
 ## Example Usage
 The following snippet shows how to use the above class. Some important code regarding setting up your view and camera is not covered here. There are plenty of [tutorials out there about SceneKit basics](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=scenekit%20tutorial).
-```swift
+
+{% highlight swift  %}
 let scene = SCNScene()
 let icosahedron = Icosahedron()
 let facesNode = SCNNode(geometry: icosahefron.faces)
 let wireframeNode = SCNNode(geometry: icosahedron.wireframe)
 scene.rootNode.addChildNode(node)
-```
+{% endhighlight %}
 
 ## A Bit More Detail
 Careful readers will notice that the Icosahedron class extends `Geometry`. You may have also noticed the `createGeometry` method called in each of the lazy properties and that that method is not declared in the Icosahedron class. In order to actually create the data that the underlying rendering engine requires to display our content, we need to carry out some conversions on the vertex and index lists. The `Geometry` class, listed below, is responsible for this.

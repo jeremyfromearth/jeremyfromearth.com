@@ -1,6 +1,7 @@
 ---
 layout: work
 headline: work
+published: true
 title: Seggesser Hide Explorer
 year: 2009
 location:  Santa Fe, New Mexico U.S.

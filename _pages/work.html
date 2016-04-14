@@ -4,10 +4,10 @@ headline: work
 permalink: /work/
 group: navigation
 ---
-<p>Below is a list of nearly every public facing project that I've worked on in my career. Some have images and text. Others are just breif descriptions. Adding media for each project is the goal, however this site is a perpetual work in progress :)</p>
-
 <ul>
 {% for work in site.work reversed %}
+{% if work.published %}
 <li><a href="{{ work.url }}">{{ work.url }}</a></li>
+{% endif %}
 {% endfor %}
 </ul>
