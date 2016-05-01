@@ -118,6 +118,7 @@ h6 {
   @include MQ(M) {
     @include font-size(19px);
   }
+  line-height: 1.0em;
 }
 
 p {
