@@ -5,11 +5,14 @@ title: work
 
 <div class="page-content wc-container">
 	<div class="post">
+		{% if page.title %}
 		<h2>{{ page.title }}</h2>
+		{% endif %}
+		{% if page.client %}
 		<h6>{{ page.client }}</h6>
+		{% endif %}
+		{% if page.location %}
 		<h6>{{ page.location }}</h6>
-		{% if page.collaborators %}
-			<h6>{{ page.collaborators }}</h6>
 		{% endif %}
 		<p>
 			{% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}, Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}, Technologies: {{ page.technologies }}{% endif %}{% if page.tags %}, Tags: {{ page.categories }}{% endif %}
