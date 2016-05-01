@@ -21,10 +21,14 @@ title: work
 		<p>{{ page.description }}</p>
 		{% endif %}
 	</div>
+	{% if page.video %}
+	{{ page.video }}
+	{% endif%}
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
 				<p>{{ image.caption }}</p>
+			<hr/>
 		{% endfor %}
 	{% endif %}
 	{{ content }}
