@@ -5,10 +5,10 @@ published: true
 title: MacArthur Foundation Kiosk
 year: 2007
 location: Chicago, Illinois U.S.
-client: [Second Story](http://secondstory.com) for The MacArthur Foundation
+client: <a href="http://secondstory.com">Second Story</a> for The MacArthur Foundation
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, kiosk
-description: The Foundation Kiosks illuminate the important work being done with grants provided by the McArthur Foundation
+video: <iframe src="https://player.vimeo.com/video/32282147?color=D6A34B" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href="https://vimeo.com/secondstory">Second Story</a></p>
 images:
   - src: macarthur_foundation_01.jpg
     caption: Animated particles collapse and rearrage themselves to generate new layouts of images in attract mode

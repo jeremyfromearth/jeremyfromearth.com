@@ -8,5 +8,5 @@ location:  Louisville, Kentucky U.S.
 client: <a href="http://secondstory.com">Second Story</a> for The Speed Art Museum
 technologies: Flash, Actionscript 3.0
 categories: high-res-images, kiosk
-description: Illuminated manuscript viewer allowing visitors to view pages of an ancient text in high-resolution detail
+video: <iframe src="https://player.vimeo.com/video/10195050?color=D6A34B" width="1024" height="614" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href="https://vimeo.com/secondstory">Second Story</a></p>
 ---

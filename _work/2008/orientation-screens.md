@@ -9,4 +9,9 @@ client: <a href="http://secondstory.com">Second Story</a> for The Library of Con
 technologies: Flash, Actionscript 3.0
 categories: data-visualization, events, info-screens
 description: Three synchronized information screens displaying event data, motion graphics and image slideshows
+images:
+  - src: loc_orientation_01.jpg
+  - src: loc_orientation_02.jpg
+  - src: loc_orientation_03.jpg
+  - src: loc_orientation_04.jpg
 ---

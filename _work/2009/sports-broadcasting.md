@@ -8,5 +8,5 @@ location:  Kansas City, Missouri U.S.
 client: <a href="http://secondstory.com">Second Story</a> for The Kansas City Royals Hall of Fame
 technologies: Flash, Actionscript 3.0
 categories: kiosk, touchscreen
-description: Visitors receive a quick lesson in broadcasting and then are placed in the announcers chair to record their own play by play
+video: <iframe src="https://player.vimeo.com/video/32350414?color=D6A34B" width="1024" height="768" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href="https://vimeo.com/secondstory">Second Story</a></p>
 ---

@@ -4,9 +4,9 @@ headline: work
 published: true
 title: Faces of Gettysburg
 year: 2008
-location: Gettysburg, Pensylvania U.S.
+location: Gettysburg, Pensylvania
 client: <a href="http://secondstory.com">Second Story</a> for Gettysburg Visitors Center
 technologies: Flash, Actionscript 3.0
 categories: touch-screen, data-visualization
-description: Touch-screen application enabling search through database of known Gettysburg soldiers
+video: <iframe src="https://player.vimeo.com/video/32282009?color=D6A34B" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href="https://vimeo.com/secondstory">Second Story</a></p>
 ---
