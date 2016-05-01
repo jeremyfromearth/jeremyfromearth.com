@@ -6,7 +6,7 @@ title: Rayburn Document Explorer
 year: 2012
 location: Bonham, Texas U.S.
 client: Sam Rayburn Library & Museum
-collaborators: Terra Incognita
+collaborators: <a href="http://www.terraincognita.com/studio/">Terra Incognita</a>
 technologies: Adobe AIR, ActionScript 3.0
 categories: touch-screen, kiosk
 description: Touch-screen app providing thorough insight into the documents and photos of Sam Rayburn

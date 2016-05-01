@@ -6,7 +6,7 @@ title: Partnership Hub
 year: 2015
 location: Sydney, Austrailia
 client: Telstra
-collaborators: Wild
+collaborators: <a href="http://builtbywild.com">Wild</a>
 technologies: C++, Cinder, MQTT, Microsof Kinect, Box2D
 categories: kinect, data-visualization, projection
 description: A thirty foot LED wall presentation platform providing executives at Telstra the ability to demonstrate the reach of Telstra across multiple industries

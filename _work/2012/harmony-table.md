@@ -6,7 +6,7 @@ title: Harmony Table
 year: 2012
 location: Spokane, Washington U.S.
 client: Mobius Science Center
-collaborators: Upswell, Renate
+collaborators: <a href="http://hello-upswell.com">Upswell</a>, <a href="http://projectrenate.com/">Renate</a>
 technologies: Java, Processing, MaxMSP, TUIO
 categories: multi-touch, table
 description: Multi-touch table allowing visitors to explore music theory through abstract visualizations and interactive instruments

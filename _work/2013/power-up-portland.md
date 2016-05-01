@@ -5,8 +5,8 @@ published: true
 title: Power Up Portland
 year: 2013
 location: Portland, Oregon U.S.
-client: Oregon Museum of Science and Industry
-collaborators: Made Clear, OMSI
+client: Oregon Museum of Sciecne and Industry <a href="http://www.omsi.edu/">(OMSI)</a>
+collaborators: <a href="http://madeclear.co">Made Clear</a>
 technologies: Adobe AIR, ActionScript 3.0
 categories: arduino, projection
 description: Interactive exhibit allowing visitors to control an animated power plant with physical controls

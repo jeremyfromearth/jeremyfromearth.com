@@ -6,7 +6,7 @@ title: Human Rights Now
 year: 2014
 location: Winnipeg, Manitoba Canada
 client: Canadian Museum for Human Rights
-collaborators: Upswell, Zach Doe
+collaborators: <a href="http://hello-upswell.com">Upswell</a>, Zach Doe
 technologies: C++, Cinder, OpenGL, OSX
 categories: data-visualization, wall-projection
 description: Thirty foot data visualization wall providing a concise view of human rights issues around the world today.
