@@ -5,7 +5,7 @@ published: true
 title: MacArthur Foundation Kiosk
 year: 2007
 location: Chicago, Illinois U.S.
-client: <a href="http://secondstory.com">Second Story</a> for MacArthur Foundation
+client: [Second Story](http://secondstory.com) for MacArthur Foundation
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, kiosk
 description: The Foundation Kiosks illuminate the important work being done with grants provided by the McArthur Foundation

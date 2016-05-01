@@ -5,7 +5,7 @@ published: true
 title: Woodstock Tryptich Kiosks
 year: 2007
 location: The Museum at Bethel Woods
-client: <a href="http://secondstory.com">Second Story</a> for MacArthur Foundation
+client: [Second Story](http://secondstory.com) for MacArthur Foundation
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, kiosk
 ---

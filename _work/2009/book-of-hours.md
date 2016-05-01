@@ -5,7 +5,7 @@ published: true
 title: Book of Hours
 year: 2009
 location:  Louisville, Kentucky U.S.
-client: <a href="http://secondstory.com">Second Story</a> for The Speed Art Museum
+client: [Second Story](http://secondstory.com) for The Speed Art Museum
 technologies: Flash, Actionscript 3.0
 categories: high-res-images, kiosk
 description: Illuminated manuscript viewer allowing visitors to view pages of an ancient text in high-resolution detail

@@ -5,7 +5,7 @@ published: true
 title: Treaty of Guadalupe Hidalgo
 year: 2009
 location:  Santa Fe, New Mexico U.S.
-client: <a href="http://secondstory.com">Second Story</a> for New Mexico History Museum
+client: [Second Story](http://secondstory.com) for New Mexico History Museum
 technologies: Flash, Actionscript 3.0
 categories: high-res-images, kiosk
 ---
