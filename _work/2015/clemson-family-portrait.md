@@ -6,9 +6,9 @@ title: Clemson Family Portrait
 year: 2015
 location: Greenville, North Carolina U.S.
 client: Clemson University
-collaborators: Upswell
+collaborators: <a href="hello-upswell.com">Upswell</a>
 technologies: C++, Cinder, Microsof Kinect
-categories: kinect
+categories: kinect, interactive, installation
 description: A three-screen, Kinect controlled wall mounted interactive installation allowing visitors to meet Clemson alumni
 images:
   - src: clemson_cfp_01.jpg
