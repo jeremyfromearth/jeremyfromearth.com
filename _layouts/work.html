@@ -15,12 +15,12 @@ title: work
 		<h6>{{ page.location }}</h6>
 		{% endif %}
 		<p>
-			{% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}, Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}, Technologies: {{ page.technologies }}{% endif %}{% if page.tags %}, Tags: {{ page.categories }}{% endif %}
+			{% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}, Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}, Technologies: {{ page.technologies }}{% endif %}
 		</p>
+		{% if page.description %}
+		<p>{{ page.description }}</p>
+		{% endif %}
 	</div>
-	{% if page.description %}
-	<p>{{ page.description }}</p>
-	{% endif %}
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
@@ -28,5 +28,6 @@ title: work
 		{% endfor %}
 	{% endif %}
 	{{ content }}
+	<h8>{% if page.categories %}Tags: {{ page.categories }}{% endif %}</h8>
   </div>
 </div>
