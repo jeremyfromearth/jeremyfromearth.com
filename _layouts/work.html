@@ -5,12 +5,19 @@ title: work
 
 <div class="page-content wc-container">
 	<div class="post">
-		<h2>Title: {{ page.title }}</h2>
-		<h4>Client: {{ page.client }}</h4>
-		<h4>Location: {{ page.location }}</h4>
-		<h4>Collaborators: {{ page.collaborators }}</h4>
-		Year: {{ page.year }}, Technologies: {{ page.technologies }}, Tags: {{ page.categories }}</div>
+		<h2>{{ page.title }}</h2>
+		<h6>{{ page.client }}</h6>
+		<h6>{{ page.location }}</h6>
+		{% if page.collaborators %}
+			<h6>{{ page.collaborators }}</h6>
+		{% endif %}
+		<p>
+			{% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}, Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}, Technologies: {{ page.technologies }}{% endif %}{% if page.tags %}, Tags: {{ page.categories }}{% endif %}
+		</p>
+	</div>
+	{% if page.description %}
 	<p>{{ page.description }}</p>
+	{% endif %}
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
