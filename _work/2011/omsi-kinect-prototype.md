@@ -9,7 +9,5 @@ client: Oregon Museum of Sciecne and Industry <a href="http://www.omsi.edu/">(OM
 collaborators: <a href="http://madeclear.co">Made Clear</a>
 technologies: C++, Cinder, Microsoft Kinect
 categories: kinect
-description: Prototype exploring possibility of using Kinect to simulate augmenting a persons physical capabilities.
+video: <iframe src="https://player.vimeo.com/video/165074357" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---
-
-<iframe src="https://player.vimeo.com/video/33494600" width="1025" height="575" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

@@ -233,12 +233,12 @@ header.main-header {
   h1, h2 {
     color: inherit;
     line-height: 1.2em;
-    padding-top: 0.5em;
+    padding-top: 0.2em;
     @include transition(all, .2s);
     @include font-size(64px);
     @include MQ(M) {
       line-height: 1.2em;
-      padding-top: 0.5em;
+      padding-top: 0.2em;
       @include font-size(128px);
     }
 
