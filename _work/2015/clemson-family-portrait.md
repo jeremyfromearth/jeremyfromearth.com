@@ -9,10 +9,9 @@ client: Clemson University
 collaborators: <a href="hello-upswell.com">Upswell</a>
 technologies: C++, Cinder, Microsof Kinect
 categories: kinect, interactive, installation
-description: A three-screen, Kinect controlled wall mounted interactive installation allowing visitors to meet Clemson alumni
 images:
   - src: clemson_cfp_01.jpg
-    caption: The new visitors center in Greenville serves to attract potential new students
+    caption: The new visitors center in Greenville serves to attract prospective students
   - src: clemson_cfp_04.jpg
     caption: Life-size figures invite visitors to interact
   - src: clemson_cfp_02.jpg

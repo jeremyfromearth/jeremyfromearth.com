@@ -2,12 +2,12 @@
 layout: work
 headline: work
 published: true
-title: Floods Navigator
+title: Missoula Floods Navigator
 year: 2012
 location: Spokane, Washington U.S.
 client: Mobius Science Center
-collaborators: <a href="http://hello-upswell.com">Upswell</a>, <a href="http://projectrenate.com/">Renate</a>
+collaborators: <a href="http://hello-upswell.com">Upswell</a>, <a href="http://projectrenate.com/">Renate</a><a href="http://www.arxi-creative.com/">, Arxi</a>
 technologies: Adobe AIR, ActionScript 3.0
 categories: touch-screen, kiosk
-description: Four interactive touch-screen apps exploring different regions affected by the Missoula Floods
+video: <iframe src="https://player.vimeo.com/video/164945798" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---
