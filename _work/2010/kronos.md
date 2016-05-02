@@ -2,11 +2,13 @@
 layout: work
 headline: work
 published: true
-title: Kronos
+title: Kronos - Artifact Logging Tool
 year: 2010
 location:  Philadelphia, Pennsylvania U.S.
 client: University of Pennsylvania Museum of Archaeology and Anthropology
-technologies: Java, Python, Android, Django, SQL
+technologies: Java, Android, Python, Django, SQL
 categories: data-collection, android, mobile
-description: Data collection application for Android platform allowing archaeologists to record findings in the field
+images:
+  - src: kronos_02.jpg
+    caption: Researchers at Mt. Lykaion log findings in the field on handheld devices
 ---
