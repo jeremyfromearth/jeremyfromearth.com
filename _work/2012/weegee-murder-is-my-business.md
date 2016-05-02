@@ -9,5 +9,5 @@ client:  <a href="http://www.icp.org/">International Center for Photography</a>
 collaborators: Octothorp
 technologies: Adobe AIR, ActionScript 3.0
 categories: touch-screen, kiosk
-description: Touch-screen photo viewer exploring the rich work of Weegee, a preeminent photo journalist
+video: <iframe src="https://player.vimeo.com/video/165036449" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---
