@@ -7,7 +7,6 @@ year: 2013
 location: Washington, D.C. U.S.
 client: United States Holocaust Memorial Museum
 collaborators: <a href="http://www.cgpartnersllc.com/">C&G Partners</a>
-technologies: Adobe AIR, ActionScript 3.0
 categories: data-visualization
 description: A programmatic motion graphics treatment of reflections left by visitors to the museum
 images:
