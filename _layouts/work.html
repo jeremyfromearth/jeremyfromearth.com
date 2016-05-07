@@ -25,6 +25,12 @@ title: work
 	{{ page.video }}
 	<hr/>
 	{% endif%}
+	{% if page.videos %}
+	{% for video in page.videos %}
+		{{ video.src }}
+		<hr/>
+	{% endfor %}
+	{% endif %}
 	{% if page.images %}
 		{% for image in page.images %}
 			<img src="/assets/images/work/{{ image.src }}"></img>
