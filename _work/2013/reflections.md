@@ -2,7 +2,7 @@
 layout: work
 headline: work
 published: true
-title: Some Were Neighbors
+title: Reflections
 year: 2013
 location: Washington, D.C. U.S.
 client: United States Holocaust Memorial Museum
