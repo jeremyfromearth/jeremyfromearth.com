@@ -8,5 +8,6 @@ location: Spokane, Washington U.S.
 client: Mobius Science Center
 collaborators: <a href="http://hello-upswell.com">Upswell</a>, <a href="http://projectrenate.com/">Renate</a>
 categories: data-visualization, motion-graphics
-description: Dynamic data projection displaying museum information, curated photo sets and fun scientific facts
+video: <iframe src="https://player.vimeo.com/video/165723507" width="1024" height="638" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 ---
