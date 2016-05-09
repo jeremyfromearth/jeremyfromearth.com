@@ -71,3 +71,6 @@ exclude:
 sass:
     sass_dir: assets/css/_sass
     style: :compressed
+
+# used in work to store years
+years: []

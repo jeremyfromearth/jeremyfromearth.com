@@ -11,3 +11,20 @@ group: navigation
 {% endif %}
 {% endfor %}
 </ul>
+
+{% comment %}
+Exprimenting with listing by year. Pretty much impossible to with this approach to create a nested list.
+
+{% assign years = site.years %}
+{% for work in site.work %}
+{% if years contains work.year %}
+<a href="{{ work.url }}">{{ work.url }}</a></br>
+{% else %}
+{% assign years = years | push: work.year %}
+<h2>{{ work.year }}</h2>
+    {% if work.published %}
+    <a href="{{ work.url }}">{{ work.url }}</a></br>
+    {% endif %}
+{% endif %}
+{% endfor %}
+{% endcomment %}
