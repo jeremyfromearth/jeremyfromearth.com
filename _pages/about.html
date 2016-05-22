@@ -5,10 +5,56 @@ permalink: /about/
 group: navigation
 ---
 
-<h3>Hello, my name is Jeremy</h3>
+<script>
+    var titles = [
+        "creative technologist",
+        "mathlete",
+        "geek",
+        "creative coder",
+        "hacker",
+        "programmer",
+        "machine learning ninja",
+        "data scientist",
+        "synth nerd",
+        "software developer"
+    ];
+    var interval = 0;
+    setInterval(function() {
+        var text = "";
+        var current = titles[0].split("");
+        var duration = 1000.0 / current.length;
+        clearInterval(interval);
+        titles.push(titles.shift());
+        interval = setInterval(function() {
+            if(current.length) {
+                text += current.shift();
+                $("#job-title").text(text);
+            }
+        }, duration);
+    }, 2000);
+</script>
+
+<h2>Hello, my name is Jeremy</h2>
 
 <div class="about">
-  <p>I am a freelance creative technologist working and living in <a href="https://en.wikipedia.org/wiki/Portland_Oregon">Portland, Oregon</a>.
+    <p>I am a freelance <em><span id="job-title">software developer</span></em>
 
-  <p>I have over 10 years of experience writing code in a many programming languages including C++, HTML5, Java, JavaScript, OpenGL, Python and Swift. I've developed software for many platforms including Android, iOS, OSX, Windows and the WWW.</p>
+    <h4>Background</h4>
+    <p>My interests in coding began in 2004. At the time I was working at a musical instrument store and was very involved in music production. I operated a small analog recording studio where I learned about crafting and creating sound. Over time my studio became more and more digital and as it shed tape machines in place of hard disks I became more and more fascinated by the creative possibilities that computers were able to facilitate.</p>
+
+    <p>Over the next few years I spent hours learning about digital media, sotware development and web programming. I honed my skills with HTML, CSS, JavaScript, ActionScript and Processing. The Flash platform, while now widely unpopular, was the only framework at the time that enabled for complex graphics to be rendered on the web. I began to combine my interest in sound with graphical elements and built a collection of experimental sound art pieces.</p>
+
+    <p>In 2007 I became aware of Second Story Interactive and their impressive portfolio of immersive museum content. It was then that I found the path that I would follow for what has now been almost 10 years. I worked at Second Story from 2007 to 2010. There, I learned how to think about software in an object oriented way, how to orgranize my time, to write specifications and most importantly, how to collaborate within a team. It was a formative experience. In 2010, left Second Story to begin a career as a freelance developer.</p>
+
+    <p>Since then, my work has continued to evolve. I've developed software for mobile platforms, the web, large interactive installations and the desktop. Over time, my interest in the work I do has only become stronger. I take on projects that I believe in and know that I can become personally vested in. I truly love my work.<p>
+
+    <h4>Process</h4>
+    <p>I subscribe to the philosophy that the most compelling digital work is successful because it utilizes technologies that best enable seamless and intuitive user experiences. I get involved as early as possible in the planning phases so that technology can inform concepts and design. Thoroughly vetting technology through research and prototyping allows for identifying practical limitations early.</p>
+
+    <p>Once research and prototyping have provided the insights needed to begin development, I follow an agile process. I break development into logical sets of features that become releases and I establish a regular delivery cycle so that clients stay informed and have the opportunity to provide feedback at regular intervals.</p>
+
+    <p>Documentation is an important and ongoing task that must be maintained throughout a project's development. I document all code in a consistent manner and write technical specifications where needed. I use diagrams, charts and markdown documents to clearly communicate the inner workings of the software that I build.</p>
+
+    <img src="/assets/images/work/networking_doc.png"></img>
+    <h8>Networking diagram for a pub/sub server and it's clients written in Python</h8>
 </div>
