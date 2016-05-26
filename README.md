@@ -19,7 +19,7 @@ Start the Jekyll server. Optionally enable auto-build using `--watch` flag
 Open your browser to `http://localhost:4000`
 
 [jekyll]: http://jekyllrb.com/
-[site]: http://jeremynealbrown.com
+[site]: http://jeremyfromearth.com
 [bower]: http://bower.io
 [grunt]: http://gruntjs.com/
 [d3]: http://d3js.org
