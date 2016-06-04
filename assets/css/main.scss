@@ -285,17 +285,54 @@ header.main-header {
   }
 }
 
+
 div.about {
-  img {
-    float: left;
-    margin-right: 1.5em;
-    margin-bottom: 0.25em;
-  }
+    ul.social-links {
+        li {
+            display:inline-block;
+        }
 
-  p {
-    text-align: justify;
-  }
+        li a {
+            width:100%;
+            height:100%;
+            content: url("./images/blank32.png");
+        }
 
+        li a.github {
+            background-image: url("./images/github.png");
+            &:hover {
+                background-image: url("./images/github-hover.png");
+            }
+        }
+
+        li a.twitter {
+            background-image: url("./images/twitter.png");
+            &:hover {
+                background-image: url("./images/twitter-hover.png");
+            }
+        }
+
+        li a.vimeo {
+            background-image: url("./images/vimeo.png");
+            &:hover {
+                background-image: url("./images/vimeo-hover.png");
+            }
+        }
+
+        li a.linkedin {
+            background-image: url("./images/linkedin.png");
+            &:hover {
+                background-image: url("./images/linkedin-hover.png");
+            }
+        }
+
+        li a.email {
+            background-image: url("./images/email.png");
+            &:hover {
+                background-image: url("./images/email-hover.png");
+            }
+        }
+    }
 }
 
 footer.main-footer {
@@ -531,13 +568,8 @@ div.page-content {
   margin-left: 2em;
 }
 
-div.page-content ul li {
-    margin-left: 2em;
-}
-
 div.page-content ul {
-    padding: 0 0 1em 0em;
-    list-style: circle;
+    list-style: square;;
 }
 
 // Theme base 01
