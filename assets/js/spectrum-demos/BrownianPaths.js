@@ -120,7 +120,7 @@
         results = [];
         for (k in ref) {
           v = ref[k];
-          this.color("#ccc");
+          this.color("#666");
           this.shape(v.points, false, false);
           results.push((function() {
             var l, len, ref1, results1;
