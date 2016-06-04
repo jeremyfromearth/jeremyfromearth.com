@@ -21,7 +21,7 @@
           y: this.height * .5
         };
         numNodes = 100;
-        thetaInc = Math.PI * 2 / numNodes;
+        thetaInc = Math.TWO_PI / numNodes;
         this.nodes = (function() {
           var j, ref, results;
           results = [];

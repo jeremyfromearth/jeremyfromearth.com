@@ -4,9 +4,13 @@
     return Vector = (function() {
       Vector.Zero = new Vector(0, 0);
 
-      function Vector(x1, y1) {
-        this.x = x1 != null ? x1 : 0;
-        this.y = y1 != null ? y1 : 0;
+      Vector.Random = function(xMin, xMax, yMin, yMax) {
+        return new Vector(Math.randomInRange(xMin, xMax), Math.randomInRange(yMin, yMax));
+      };
+
+      function Vector(x, y) {
+        this.x = x != null ? x : 0;
+        this.y = y != null ? y : 0;
       }
 
       Vector.prototype.length = function() {
@@ -35,12 +39,12 @@
 
       Vector.prototype.distance = function(v) {
         var dx, dy;
-        dx = x - v.x;
-        dy = y - v.y;
+        dx = this.x - v.x;
+        dy = this.y - v.y;
         return Math.sqrt(dx * dx + dy * dy);
       };
 
-      Vector.prototype.normalized = function(v) {
+      Vector.prototype.normalized = function() {
         var len;
         len = this.length();
         if (len === 0.0) {
