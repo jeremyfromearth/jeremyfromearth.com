@@ -1,7 +1,7 @@
 ---
 layout: work
 headline: work
-published: true
+published: false
 title: Digital Organ Explorers
 year: 2015
 location: Reno, Nevada U.S.
