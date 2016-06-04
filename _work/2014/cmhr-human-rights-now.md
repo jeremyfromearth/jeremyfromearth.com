@@ -11,10 +11,10 @@ technologies: C++, Cinder, OpenGL, OSX
 categories: data-visualization, wall-projection
 description: Thirty foot data visualization wall providing a concise view of human rights issues around the world today.
 images:
-  - src: cmhr_hrnow_02.jpg
+  - src: cmhr_hrnow_05.jpg
     caption: The Canadian Museum for Human Rights is an amazing architectural monument
-  - src: cmhr_hrnow_01.jpg
+  - src: cmhr_hrnow_06.jpg
     caption: Human Rights Now is a nine meter wide data visualization media wall
-  - src: cmhr_hrnow.gif
+  - src: cmhr_hrnow_03.gif
     caption: The wall displays dynamic info-graphics with programmatic animation and effects
 ---
