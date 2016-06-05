@@ -93,7 +93,7 @@ h2 {
 }
 
 h3 {
-  @include font-size(15px);
+  @include font-size(16px);
   @include MQ(M) {
     @include font-size(30px);
   }
@@ -102,21 +102,21 @@ h3 {
 h4 {
   @include font-size(16px);
   @include MQ(M) {
-    @include font-size(24px);
+    @include font-size(26px);
   }
 }
 
 h5 {
-  @include font-size(14px);
+  @include font-size(10px);
   @include MQ(M) {
-    @include font-size(22px);
+    @include font-size(18px);
   }
 }
 
 h6 {
-  @include font-size(14px);
+  @include font-size(8px);
   @include MQ(M) {
-    @include font-size(19px);
+    @include font-size(16px);
   }
   line-height: 1.0em;
 }
@@ -285,7 +285,6 @@ header.main-header {
   }
 }
 
-
 div.about {
     ul.social-links {
         li {
@@ -332,6 +331,13 @@ div.about {
                 background-image: url("./images/email-hover.png");
             }
         }
+    }
+}
+
+div.work {
+    h4 {
+        margin-top: 0.7em;
+        line-height: 1em;
     }
 }
 

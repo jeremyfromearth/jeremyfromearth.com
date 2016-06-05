@@ -4,27 +4,17 @@ headline: work
 permalink: /work/
 group: navigation
 ---
-<ul>
+<div class="work">
+{% assign years = site.years %}
 {% for work in site.work reversed %}
 {% if work.published %}
-<li><a href="{{ work.url }}">{{ work.url }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
-
-{% comment %}
-Exprimenting with listing by year. Pretty much impossible to with this approach to create a nested list.
-
-{% assign years = site.years %}
-{% for work in site.work %}
-{% if years contains work.year %}
-<a href="{{ work.url }}">{{ work.url }}</a></br>
-{% else %}
-{% assign years = years | push: work.year %}
-<h2>{{ work.year }}</h2>
-    {% if work.published %}
-    <a href="{{ work.url }}">{{ work.url }}</a></br>
+    {% if years contains work.year %}
+        <a href="{{ work.url }}">{{ work.url }}</a></br>
+    {% else %}
+        {% assign years = years | push: work.year %}
+        <h4>{{ work.year }}</h4>
+        <a href="{{ work.url }}">{{ work.url }}</a></br>
     {% endif %}
 {% endif %}
 {% endfor %}
-{% endcomment %}
+</div>

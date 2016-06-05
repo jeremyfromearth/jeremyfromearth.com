@@ -3,7 +3,7 @@ layout: work
 headline: work
 published: true
 title: In the Studio
-year: 2007
+year: 2008
 location: Los Angeles, California U.S.
 client: <a href="http://secondstory.com">Second Story</a> for The Grammy Museum
 categories: touch-screen, kiosk, music, dsp
