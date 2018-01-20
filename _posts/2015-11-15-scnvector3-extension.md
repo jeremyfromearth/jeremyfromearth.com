@@ -10,7 +10,7 @@ heading: SCNVector3 Extension for SceneKit
 ---
 The `SCNVector3` class for SceneKit is a bit under-featured. Here is an extension that adds many useful operators and a few nice to have methods to it. A feature in Swift that is particularly helpful here is the ability to declare a function parameter as an [`inout`](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html#//apple_ref/doc/uid/TP40014097-CH34-ID545) variable. This allows you to reassign a value to the variable itself. This is especially useful for defining `+=`, `*=` and the like.
 
-<script src="https://gist.github.com/jeremyfromearth/46017fc3fe93eb611387.js"></script>
+{% gist jeremyfromearth/46017fc3fe93eb611387 %}
 
 ## Two Examples
 
