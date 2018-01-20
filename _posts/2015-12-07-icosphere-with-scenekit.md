@@ -18,7 +18,7 @@ __IcoSphere with three sub-divisions__
 
 Before we take a look at the code, make sure you take a look at the [extension for SCNVector](https://gist.github.com/simon-theta/8a9734849753e926a278) that I wrote about a while back. This algorithm uses two methods from that extension. Additionally, the following code also relies on a base class that I wrote about in my [previous article](https://gist.github.com/simon-theta/40d6efd44bd5bc4975f4).
 
-<script src="https://gist.github.com/jeremyfromearth/1b2ca5d7da16bd781e64.js"></script>
+{% gist jeremyfromearth/1b2ca5d7da16bd781e64 %}
 
 ## The Algorithm
 The algorithm is pretty simple. It looks something like this:
