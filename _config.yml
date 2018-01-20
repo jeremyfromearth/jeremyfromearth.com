@@ -42,6 +42,9 @@ highlighter: rouge
 # Permalinks
 permalink: pretty
 
+plugins: 
+  - jekyll-gist
+
 # Extra dirs to include in build
 include: [_pages]
 
