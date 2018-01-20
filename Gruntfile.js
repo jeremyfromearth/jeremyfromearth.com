@@ -1,4 +1,5 @@
 module.exports = (grunt) => {
+  require('load-grunt-tasks')(grunt)
   grunt.initConfig({
     pkg: grunt.file.readJSON("package.json"),
     coffee: {
@@ -21,20 +22,37 @@ module.exports = (grunt) => {
       }
     },
 
+    babel: {
+      options: {
+        sourceMap: false,
+        presets: ['env'],
+        plugins: ['transform-es2015-modules-amd']
+      },
+      dist: {
+        files: {
+          './assets/js/app/app.js': './src/app.js'
+        }
+      }
+    },
+
     watch: {
       coffee: {
         files: [
           "coffee/*.coffee",
           "coffee/*/*.coffee",
           "coffee/*/*/*.coffee",
+        ],
+        tasks: [
+          "coffee:spectrum",
+          "coffee:spectrum_demos"
         ]
       },
 
-      tasks: [
-        "coffee:spectrum",
-        "coffee:spectrum_demos"
-      ]
-    },
+      babel: {
+        files: 'src/*.js',
+        tasks: ['babel']
+      }
+    }
   });
 
   grunt.loadNpmTasks("grunt-contrib-copy");
@@ -46,6 +64,7 @@ module.exports = (grunt) => {
   grunt.loadNpmTasks("grunt-contrib-uglify");
 
   grunt.registerTask("default", [
+    'babel',
     "coffee:spectrum",
     "coffee:spectrum_demos"
   ]);
