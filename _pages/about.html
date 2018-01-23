@@ -6,55 +6,46 @@ group: navigation
 ---
 
 <script>
-    var titles = [
-        "creative technologist",
-        "software engineer",
-        "mathlete",
-        "geek",
-        "creative coder",
-        "hacker",
-        "programmer",
-        "machine learning ninja",
-        "data scientist",
-        "synth nerd",
-        "software developer"
-    ];
-    var interval = 0;
-    setInterval(function() {
-        var text = "";
-        var current = titles[0].split("");
-        var duration = 1000.0 / current.length;
-        clearInterval(interval);
-        titles.push(titles.shift());
-        interval = setInterval(function() {
-            if(current.length) {
-                text += current.shift();
-                $("#job-title").text(text);
-            }
-        }, duration);
-    }, 2000);
+  var titles = [
+    'creative technologist',
+    'software engineer',
+    'mathlete',
+    'creative coder',
+    'hacker',
+    'programmer',
+    'machine learning ninja',
+    'data scientist',
+    'software developer'
+  ];
+  var interval = 0;
+  setInterval(function() {
+    var text = '';
+    var current = titles[0].split('');
+    var duration = 500.0 / current.length;
+    clearInterval(interval);
+    titles.push(titles.shift());
+    interval = setInterval(function() {
+      if(current.length) {
+        text += current.shift();
+        $('#job-title').text(text);
+      }
+    }, duration);
+  }, 2000);
 </script>
 
-<div class="about">
-    <h2>Hello, my name is Jeremy</h2>
-
-    <ul class="social-links">
-        <li><a class="github" href="https://github.com/jeremynealbrown"></a></li>
-        <li><a class="vimeo" href="https://vimeo.com/user51728746"></a></li>
-        <li><a class="twitter" href="http://twitter.com/jeremyfromearth"></a></li>
-        <li><a class="linkedin" href="https://www.linkedin.com/in/jeremynealbrown"></a></li>
-        <li><a class="email" href="mailto:jeremy.from.earth@gmail.com"></a></li>
-    </ul>
-
-    <p>I am a freelance <em><span id="job-title">software developer</span></em></p>
-
-    <p><a target="_blank" href="/files/2016.06.30_jeremy_brown_resume.pdf">You can view my resume here.</a></p>
-
-    <p>My interests in coding began in 2004. At the time I was working at a musical instrument store and was very involved in music production. I operated a small analog recording studio where I learned about crafting and creating sound. Over time my studio became more and more digital and as it shed tape machines in place of hard disks I became fascinated by the creative possibilities that computers were able to facilitate.</p>
-
-    <p>Over the next few years I learned everything I could about digital media, coding and technology. I honed my skills with HTML, CSS, JavaScript, ActionScript and Processing. The Flash platform, while now widely unpopular, was the only framework, at the time that, enabled complex graphics to be rendered on the web. I began to combine my interest in sound with graphical elements and built a collection of experimental sound art pieces.</p>
-
-    <p>In 2007 I became aware of Second Story Interactive and their impressive portfolio of immersive museum content. It was then that I found the path that I would follow for the next eight years. I worked at Second Story from 2007 to 2010. There, I learned how to think about software in an object oriented way, how to orgranize my time, to write specifications and most importantly, how to collaborate within a team. It was a formative experience. In 2010, left Second Story to begin a career as a freelance developer.</p>
-
-    <p>Since then, my work has continued to evolve with the technology landscape. I've developed software for mobile platforms, the web, large interactive installations and the desktop. My interest in the work I do has only become stronger. I take on projects that I believe in and I truly enjoy the work I do.</p>
+<div class='about'>
+  <h2>Hello, my name is Jeremy</h2>
+  <p class='job-title'>I'm a freelance <span id='job-title'>software developer</span></p>
+  <hr/>
+  <p>I've been writing code for about ten years and I still discover new things almost everyday. This site is where I share what I learn and what I make. It is developed using the static site generator <a href='https://jekyllrb.com/'>Jekyll</a> and is hosted on <a href='https://pages.github.com/'>Github Pages</a>. The source code is <a href='https://github.com/jeremyfromearth/jeremyfromearth.github.io'>available</a> on Github too. In addition to Jekyll, I also make use of D3.js, three.js and my own drawing library Pixelspace for creating visualizations and programmatic sketches.</p>
+  <p>You can find me around the web on the various social platforms. Feel free to get in touch!</p>
+  <ul class='social-links'>
+    <li><a target='_blank' href='https://github.com/jeremyfromearth' alt='github'><i class='fab fa-2x fa-github-square'></i></a></li>
+    <li><a target='_blank' href='https://stackoverflow.com/users/230561/jeremyfromearth' alt='stack overflow'><i class='fab fa-2x fa-stack-overflow'></i></a></li>
+    <li><a target='_blank' href='https://www.linkedin.com/in/jeremynealbrown' alt='linked in'><i class='fab fa-2x fa-linkedin'></i></a></li>
+    <li><a target='_blank' href='http://twitter.com/jeremyfromearth' alt='twitter'><i class='fab fa-2x fa-twitter-square'></i></a></li>
+    <li><a target='_blank' href='https://vimeo.com/user51728746' alt='vimeo'><i class='fab fa-2x fa-vimeo-square'></i></a></li>
+    <li><a target='_blank' href='mailto:jeremy.from.earth@gmail.com' alt='email'><i class='fas fa-2x fa-envelope-square'></i></a></li>
+  </ul>
+  <p>Thanks for stopping by!</p>
 </div>
