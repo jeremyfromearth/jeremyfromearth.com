@@ -294,41 +294,11 @@ div.about {
         li a {
             width:100%;
             height:100%;
-            content: url("./images/blank32.png");
-        }
-
-        li a.github {
-            background-image: url("./images/github.png");
+            color: inherit;
+            border-bottom: none;
             &:hover {
-                background-image: url("./images/github-hover.png");
-            }
-        }
-
-        li a.twitter {
-            background-image: url("./images/twitter.png");
-            &:hover {
-                background-image: url("./images/twitter-hover.png");
-            }
-        }
-
-        li a.vimeo {
-            background-image: url("./images/vimeo.png");
-            &:hover {
-                background-image: url("./images/vimeo-hover.png");
-            }
-        }
-
-        li a.linkedin {
-            background-image: url("./images/linkedin.png");
-            &:hover {
-                background-image: url("./images/linkedin-hover.png");
-            }
-        }
-
-        li a.email {
-            background-image: url("./images/email.png");
-            &:hover {
-                background-image: url("./images/email-hover.png");
+              color: $base-08;
+              @include transition(color 0.5s);
             }
         }
     }
