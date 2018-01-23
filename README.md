@@ -3,10 +3,15 @@ This is the source code for my archive and experimentation site. You can check i
 
 For preview, ensure that you have [Jekyll][jekyll] installed.
 
+Install the Ruby deps
+```
+bundle install
+```
+
 Start the Jekyll server. Optionally enable auto-build using `--watch` flag
 
 ```
-jekyll serve --watch`
+jekyll serve --watch
 ```
 
 Open your browser to `http://localhost:4000`
