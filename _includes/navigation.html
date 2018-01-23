@@ -27,6 +27,7 @@ function updateInput() {
 }
 
 function handleKeyPress(e) {
+
     heldKeys[e.keyCode] = true
     if(heldKeys[91] || heldKeys[18] || heldKeys[17]) return;
 
@@ -43,7 +44,11 @@ function handleKeyPress(e) {
       case 13: // enter
         e.preventDefault();
         e.cancelBubble = true
-        if(input == "home") input = "{{ site.url }}";
+        if(input == "home") {
+          window.location.href = '/';
+          return;
+        }
+
         if(input == "ping") {
           input = "pong";
           updateInput();
