@@ -195,6 +195,8 @@ canvas.index-canvas {
   height: 100%;
   background-color: $color-white;
   position: absolute;
+  z-index: -1;
+  top: 0;
 }
 
 div.index-header {
@@ -225,6 +227,7 @@ header.main-header, footer.main-footer {
 header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
+  background-color: transparent;
 
   .blink {
     display: inline;
@@ -296,6 +299,7 @@ div.about {
             height:100%;
             color: inherit;
             border-bottom: none;
+            @include transition(color 1.5s);
             &:hover {
               color: $base-08;
               @include transition(color 0.5s);
@@ -440,6 +444,8 @@ footer.main-footer {
 }
 
 div.page-content {
+  background-color: rgba(255, 255, 255, 0.9);
+
   @extend .default-page-content;
   min-height: initial;
 

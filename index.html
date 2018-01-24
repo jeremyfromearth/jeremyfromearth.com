@@ -5,35 +5,10 @@ location: ""
 <html>
   <head>
   {% include head.html %}
-  <script>
-  function loadRandomSketch() {
-    var player = null;
-    var renderer = null;
-    var sketches = ['brownian'];
-    var sketch = sketches[Math.floor(Math.random() * sketches.length)];
-
-    require(['lib/pixelspace', 'app/' + sketch], function(Pixelspace, Brownian) {
-      var canvas = document.getElementById("index-canvas");
-      if(canvas) {
-        if(renderer) renderer = null;
-        if(player) { player.stop(); }
-        var ctx = canvas.getContext('2d');
-        renderer = new Brownian(ctx);
-        player = new Pixelspace.Player(canvas);
-        player.setRenderer(renderer);
-        player.setFullWindow(true);
-        player.init();
-        player.play();
-      }
-    });
-  }
-
-  loadRandomSketch();
-
-  </script>
+  {% include random-bg.html %}
   </head>
   <body>
-    <canvas id="index-canvas" class="index-canvas"></canvas>
+    <canvas id="bg-canvas" class="index-canvas"></canvas>
     <div class="index-header">
       {% include header.html %}
     </div>

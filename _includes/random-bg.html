@@ -1,0 +1,23 @@
+<script>
+  function loadRandomSketch() {
+    var player = null;
+    var renderer = null;
+    var sketches = ['brownian'];
+    var sketch = sketches[Math.floor(Math.random() * sketches.length)];
+    require(['lib/pixelspace', 'app/' + sketch], function(Pixelspace, Sketch) {
+      var canvas = document.getElementById('bg-canvas');
+      if(canvas) {
+        if(renderer) renderer = null;
+        if(player) { player.stop(); }
+        var ctx = canvas.getContext('2d');
+        renderer = new Sketch(ctx);
+        player = new Pixelspace.Player(canvas);
+        player.setRenderer(renderer);
+        player.setFullWindow(true);
+        player.init();
+        player.play();
+      }
+    });
+  }
+  loadRandomSketch();
+</script>
