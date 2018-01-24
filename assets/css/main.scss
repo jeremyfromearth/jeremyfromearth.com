@@ -444,8 +444,6 @@ footer.main-footer {
 }
 
 div.page-content {
-  background-color: rgba(255, 255, 255, 0.9);
-
   @extend .default-page-content;
   min-height: initial;
 
