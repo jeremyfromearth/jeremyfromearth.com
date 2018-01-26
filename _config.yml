@@ -58,6 +58,7 @@ collections:
 
 exclude:
     - src
+    - util
     - CNAME
     - Gemfile
     - packages

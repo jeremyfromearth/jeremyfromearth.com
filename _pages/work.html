@@ -4,6 +4,138 @@ headline: work
 permalink: /work/
 group: navigation
 ---
+<style>
+  .timeline-container-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .timeline-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .timeline-col-left {
+    width: 50%;
+    padding: 1em;
+    text-align: right;
+  }
+
+  .timeline-col-center {
+    width: 1px; 
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .timeline-col-year {
+    color: red;
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+  }
+
+  .timeline-col-right {
+    width: 50%;
+    padding: 1em;
+    text-align: left;
+  }
+
+  .dot {
+    height: 0.5em;
+    width: 0.5em;
+    background-color: white;
+    border-radius: 50%;
+    align-self: center;
+    border: 1px solid black;
+  }
+
+  .timeline-node-title {
+    font-size: 1.0em;
+  }
+
+  .timeline-node-client {
+    font-size: 0.9em;
+  }
+
+  .timeline-node-location {
+    font-size: 0.85em;
+  }
+
+	.timeline-node-tech {
+		float: right;
+		margin: 0.5em 0.0em 0.5em 0.0em;
+	} 
+
+	.timeline-node-tech-item {
+		float: left;
+		padding: 0.2em;
+		font-size: 1.1em;
+		transform: scale(1.0);
+		transition: 0.25s ease-in-out;
+	}
+
+	.timeline-node-tech-item:hover {
+		color: red;
+		transform: scale(2.0);
+		transition: 0.25s ease-in-out;
+	}
+</style>
+
+<div class='timeline-container-row'>
+  <div class='timeline-row'>
+    <div class='timeline-col-year'>2010</div>  
+  </div>
+  <div class='timeline-row'>
+    <div class='timeline-col-left'>
+      <div class='timeline-node-title'>McArthur Foundation Experience</div>
+      <div class='timeline-node-client'>John T. and Katherin D. McArthur Foundation</div>
+      <div class='timeline-node-location'>Chicago, Illinois</div>
+			<div class="timeline-node-tech">
+				<i class="timeline-node-tech-item devicon-android-plain"></i>
+				<i class="timeline-node-tech-item devicon-cplusplus-line"></i>
+				<i class="timeline-node-tech-item devicon-django-plain"></i>
+        <i class="timeline-node-tech-item devicon-visualstudio-plain"></i>
+        <i class="timeline-node-tech-item fa fa-hand-pointer"></i>
+			</div>
+    </div>  
+    <div class='timeline-col-center'>
+      <div class='dot'></div> 
+    </div>  
+    <div class='timeline-col-right'></div>  
+  </div>
+  <div class='timeline-row'>
+    <div class='timeline-col-left'></div>  
+    <div class='timeline-col-center'>
+      <div class='dot'></div> 
+    </div>  
+    <div class='timeline-col-right'>Faces of Gettysburg</div>  
+  </div>
+  <div class='timeline-row'>
+    <div class='timeline-col-year'>2011</div>  
+  </div>
+  <div class='timeline-row'>
+    <div class='timeline-col-left'>SFMOMA Story Screens</div>  
+    <div class='timeline-col-center'>
+      <div class='dot'></div> 
+    </div>  
+    <div class='timeline-col-right'></div>  
+  </div>
+  <div class='timeline-row'>
+    <div class='timeline-col-left'></div>  
+    <div class='timeline-col-center'>
+      <div class='dot'></div>
+    </div> 
+    <div class='timeline-col-right'>American Electric Power</div>  
+  </div>
+</div>
+
+<!--
 <div class="work">
 {% assign years = site.years %}
 {% for work in site.work reversed %}
@@ -18,3 +150,4 @@ group: navigation
 {% endif %}
 {% endfor %}
 </div>
+-->

@@ -2,10 +2,10 @@
 layout: work
 headline: work
 published: true
-title: MacArthur Foundation Kiosk
+title: MacArthur Foundation Experience
 year: 2007
 location: Chicago, Illinois U.S.
-client: <a href="http://secondstory.com">Second Story</a> for The MacArthur Foundation
+client: John D. and Catherine T. MacArthur Foundation
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, kiosk
 video: <iframe src="https://player.vimeo.com/video/32282147?color=D6A34B" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href="https://vimeo.com/secondstory">Second Story</a></p>
