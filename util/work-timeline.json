@@ -1,0 +1,694 @@
+{
+  "": [],
+  "2010": [
+    {
+      "title": "Kronos - Artifact Logging Tool",
+      "id": "kronos",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Philadelphia, Pennsylvania U.S.",
+      "categories": "data-collection, android, mobile",
+      "images": [
+        {
+          "src": "kronos_02.jpg",
+          "caption": "Researchers at Mt. Lykaion log findings in the field on handheld devices"
+        }
+      ],
+      "technologies": "Java, Android, Python, Django, SQL",
+      "client": "University of Pennsylvania Museum of Archaeology and Anthropology",
+      "year": 2010
+    },
+    {
+      "title": "Infinity of Nations",
+      "id": "infinity-of-nations",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165625518\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "New York, New York U.S.",
+      "description": "Ten interactive touch-screen object explorer applications",
+      "categories": "touchscreen, kiosk",
+      "images": [
+        {
+          "src": "nmai_infinity_01.jpg"
+        },
+        {
+          "src": "nmai_infinity_02.jpg"
+        },
+        {
+          "src": "nmai_infinity_03.jpg"
+        },
+        {
+          "src": "nmai_infinity_04.jpg"
+        },
+        {
+          "src": "nmai_infinity_05.jpg"
+        }
+      ],
+      "client": "National Museum of the American Indian",
+      "year": 2010,
+      "collaborators": "<a href=\"http://www.potiondesign.com/\">Potion</a>"
+    },
+    {
+      "title": "Nike Sparq Data Visualizations",
+      "id": "nike-sparq-data-visulization",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165072709\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Portland, OR",
+      "categories": "data-visualization",
+      "images": [
+        {
+          "src": "nike_sparq_radar_chart_01.jpg"
+        },
+        {
+          "src": "nike_sparq_radar_chart_02.jpg"
+        },
+        {
+          "src": "nike_sparq_radar_chart_03.jpg"
+        }
+      ],
+      "client": "Nike, Sparq",
+      "year": 2010,
+      "collaborators": "<a href=\"http://themakers.com/\">The Makers</a>"
+    }
+  ],
+  "2013": [
+    {
+      "title": "Power Up Portland",
+      "id": "power-up-portland",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Portland, Oregon U.S.",
+      "client": "Oregon Museum of Sciecne and Industry <a href=\"http://www.omsi.edu/\">(OMSI)</a>",
+      "categories": "arduino, projection",
+      "images": [
+        {
+          "src": "omsi_power_up_01.jpg",
+          "caption": "Multiple users interact as they try to find a balance in energy consumtion"
+        },
+        {
+          "src": "omsi_power_up_02.jpg",
+          "caption": "Periodically the an old rotary telephone rings and alerts visitors that conditions have changed and new challenges in energy consumption have started"
+        },
+        {
+          "src": "omsi_power_up_03.jpg",
+          "caption": "Users press the large physical buttons to control the energy sources"
+        }
+      ],
+      "description": "Interactive exhibit allowing visitors to control an animated power plant with physical controls",
+      "year": 2013,
+      "collaborators": "<a href=\"http://madeclear.co\">Made Clear</a>"
+    },
+    {
+      "title": "Reflections",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165724749\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Washington, D.C. U.S.",
+      "client": "United States Holocaust Memorial Museum",
+      "categories": "data-visualization",
+      "id": "reflections",
+      "description": "Visitors to the U.S. Holocaust Memorial Museum share their thoughts in this dynamically animated motion graphics piece.",
+      "year": 2013,
+      "collaborators": "<a href=\"http://www.cgpartnersllc.com/\">C&G Partners</a>"
+    },
+    {
+      "title": "Navigate the Seas",
+      "video": "<iframe src=\"https://player.vimeo.com/video/102772177\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Washington, D.C. U.S.",
+      "categories": "touchscreen, kiosk",
+      "id": "navigate-the-seas",
+      "client": "National Air & Space Museum",
+      "year": 2013,
+      "collaborators": "<a href=\"http://www.terraincognita.com/studio/\">Terra Incognita</a>, <a href=\"http://zachdoe.com/work/about\">Zach Doe</a>"
+    },
+    {
+      "title": "Lead a Trail Drive",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Cuero, Texas U.S.",
+      "client": "Chisholm Trail Heritage Museum",
+      "categories": "touchscreen, kiosk",
+      "id": "lead-a-trail-drive",
+      "description": "Touch-screen application exploring life as a cowboy on the Chisholm Trail",
+      "year": 2013,
+      "collaborators": "<a href=\"http://www.terraincognita.com/studio/\">Terra Incognita</a>"
+    }
+  ],
+  "2015": [
+    {
+      "title": "Data Ribbon",
+      "id": "clemson-data-ribbon",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Greenville, North Carolina U.S.",
+      "description": "An 12x144 LED display featuring animated news, events and facts about Clemson University",
+      "categories": "data-visualization, motion-graphics, led-array, led",
+      "images": [
+        {
+          "src": "clemson_data_ribbon.jpg"
+        }
+      ],
+      "technologies": "Java, Processing, Heroic Robotic",
+      "client": "Clemson University",
+      "year": 2015,
+      "collaborators": "<a href=\"hello-upswell.com\">Upswell</a>"
+    },
+    {
+      "title": "Digital Organ Explorers",
+      "id": "digital-organ-explorers",
+      "layout": "work",
+      "published": false,
+      "headline": "work",
+      "location": "Reno, Nevada U.S.",
+      "description": "An augmented reality application for the iPad that enables users to view content overlays against real physical models of four different human organs.",
+      "categories": "augmented-reality",
+      "images": [
+        {
+          "src": "nvdm_organs_01.jpg",
+          "caption": "The brain explorer with augmented overlays as seen by a visitor through the iPad"
+        },
+        {
+          "src": "nvdm_organs_02.jpg",
+          "caption": "Each iPad is encased in a steel housing that rotates around the organ model. As the arm rotates hotspots overlays highlight important parts of each organ"
+        }
+      ],
+      "technologies": "iOS, Swift, OpenGL, Python, Django",
+      "client": "Nevada Discovery Museum",
+      "year": 2015,
+      "collaborators": "Upswell"
+    },
+    {
+      "title": "Partnership Hub",
+      "id": "telstra-partnership-hub",
+      "layout": "work",
+      "published": false,
+      "headline": "work",
+      "location": "Sydney, Austrailia",
+      "description": "A thirty foot LED wall presentation platform providing executives at Telstra the ability to demonstrate the reach of Telstra across multiple industries",
+      "categories": "kinect, data-visualization, projection",
+      "images": [
+        {
+          "src": "telstra_01.jpg",
+          "caption": "Attract mode displays flocking particles against roving shapes and images"
+        },
+        {
+          "src": "telstra_02.jpg",
+          "caption": "Particles swarming to form phrases"
+        },
+        {
+          "src": "telstra_03.jpg",
+          "caption": "Partners are displayed in dynamically arranged and sized layouts"
+        },
+        {
+          "src": "telstra_04.jpg",
+          "caption": "Behind the scenes look at physics enabled particles and shapes"
+        }
+      ],
+      "technologies": "C++, Cinder, MQTT, Microsof Kinect, Box2D",
+      "client": "Telstra",
+      "year": 2015,
+      "collaborators": "<a href=\"http://builtbywild.com\">Wild</a>"
+    },
+    {
+      "title": "Clemson Family Portrait",
+      "id": "clemson-family-portrait",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Greenville, North Carolina U.S.",
+      "categories": "kinect, interactive, installation",
+      "images": [
+        {
+          "src": "clemson_cfp_01.jpg",
+          "caption": "The new visitors center in Greenville serves to attract prospective students"
+        },
+        {
+          "src": "clemson_cfp_04.jpg",
+          "caption": "Life-size figures invite visitors to interact"
+        },
+        {
+          "src": "clemson_cfp_02.jpg",
+          "caption": "Using a Kinect, the application recognizes a visitor's presence and prompts them to interact"
+        },
+        {
+          "src": "clemson_cfp_03.jpg",
+          "caption": "Visitors navigate through the entire experience using a single swipe gesture"
+        }
+      ],
+      "technologies": "C++, Cinder, Microsof Kinect",
+      "client": "Clemson University",
+      "year": 2015,
+      "collaborators": "<a href=\"hello-upswell.com\">Upswell</a>"
+    }
+  ],
+  "2011": [
+    {
+      "title": "Children's Museum Storefront",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165729989\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Portland, Oregon U.S.",
+      "description": "Kinect promo for display in storefronts in downtown PDX",
+      "categories": "kinect",
+      "id": "childrens-museum-storefront",
+      "technologies": "C++, Cinder, Microsoft Kinect, Box2D",
+      "client": "Portland's Children Museum",
+      "year": 2011,
+      "collaborators": "Fashion Buddha, W+K-12"
+    },
+    {
+      "title": "Strength Augmentation Prototype",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165074357\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Portland, Oregon U.S.",
+      "categories": "kinect",
+      "id": "omsi-kinect-prototype",
+      "technologies": "C++, Cinder, Microsoft Kinect",
+      "client": "Oregon Museum of Sciecne and Industry <a href=\"http://www.omsi.edu/\">(OMSI)</a>",
+      "year": 2011,
+      "collaborators": "<a href=\"http://madeclear.co\">Made Clear</a>"
+    },
+    {
+      "title": "The Virtual Estuary",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165634719\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Berlin Township, Ohio U.S.",
+      "categories": "touchscreen, kiosk",
+      "id": "virtual-estuary",
+      "client": "Old Woman Creek Estuary & Visitors Center",
+      "year": 2011,
+      "collaborators": "Octothorp"
+    }
+  ],
+  "2012": [
+    {
+      "title": "Missoula Floods Navigator",
+      "video": "<iframe src=\"https://player.vimeo.com/video/164945798\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Spokane, Washington U.S.",
+      "categories": "touch-screen, kiosk",
+      "id": "floods-navigator",
+      "client": "Mobius Science Center",
+      "year": 2012,
+      "collaborators": "<a href=\"http://hello-upswell.com\">Upswell</a>, <a href=\"http://projectrenate.com/\">Renate</a><a href=\"http://www.arxi-creative.com/\">, Arxi</a>"
+    },
+    {
+      "title": "Floods Navigator",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165723507\" width=\"1024\" height=\"638\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Spokane, Washington U.S.",
+      "categories": "data-visualization, motion-graphics",
+      "id": "lab-screens",
+      "client": "Mobius Science Center",
+      "year": 2012,
+      "collaborators": "<a href=\"http://hello-upswell.com\">Upswell</a>, <a href=\"http://projectrenate.com/\">Renate</a>"
+    },
+    {
+      "title": "Harmony Table",
+      "id": "harmony-table",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Spokane, Washington U.S.",
+      "description": "Multi-touch table allowing visitors to explore music theory through abstract visualizations and interactive instruments",
+      "categories": "multi-touch, table",
+      "images": [
+        {
+          "src": "mobius_harmony_table_01.jpg",
+          "caption": "Attract mode plays familiar melodies and animates their notes"
+        },
+        {
+          "src": "mobius_harmony_table_02.jpg",
+          "caption": "Users control radial pianos using felt pucks"
+        },
+        {
+          "src": "mobius_harmony_table_03.jpg",
+          "caption": "Corresponding notes are called out across painos"
+        },
+        {
+          "src": "mobius_harmony_table_04.jpg",
+          "caption": "The multi-touch capabilities support as many users as can fit around the table"
+        },
+        {
+          "src": "mobius_harmony_table_05.jpg",
+          "caption": "Colors shift as notes are transposed from key to key"
+        }
+      ],
+      "technologies": "Java, Processing, MaxMSP, TUIO",
+      "client": "Mobius Science Center",
+      "year": 2012,
+      "collaborators": "<a href=\"http://hello-upswell.com\">Upswell</a>, <a href=\"http://projectrenate.com/\">Renate</a>"
+    },
+    {
+      "title": "Murder is My Business",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165036449\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "New York, New York U.S.",
+      "categories": "touch-screen, kiosk",
+      "id": "weegee-murder-is-my-business",
+      "client": "<a href=\"http://www.icp.org/\">International Center for Photography</a>",
+      "year": 2012,
+      "collaborators": "Octothorp"
+    },
+    {
+      "title": "Sam Rayburn Archive Explorer",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165063933\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Bonham, Texas U.S.",
+      "categories": "touch-screen, kiosk",
+      "id": "rayburn",
+      "client": "Sam Rayburn Library & Museum",
+      "year": 2012,
+      "collaborators": "<a href=\"http://www.terraincognita.com/studio/\">Terra Incognita</a>"
+    }
+  ],
+  "2014": [
+    {
+      "title": "Human Rights Now",
+      "id": "cmhr-human-rights-now",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Winnipeg, Manitoba Canada",
+      "description": "Thirty foot data visualization wall providing a concise view of human rights issues around the world today.",
+      "categories": "data-visualization, wall-projection",
+      "images": [
+        {
+          "src": "cmhr_hrnow_05.jpg",
+          "caption": "The Canadian Museum for Human Rights is an amazing architectural monument"
+        },
+        {
+          "src": "cmhr_hrnow_06.jpg",
+          "caption": "Human Rights Now is a nine meter wide data visualization media wall"
+        },
+        {
+          "src": "cmhr_hrnow_03.gif",
+          "caption": "The wall displays dynamic info-graphics with programmatic animation and effects"
+        }
+      ],
+      "technologies": "C++, Cinder, OpenGL, OSX",
+      "client": "Canadian Museum for Human Rights",
+      "year": 2014,
+      "collaborators": "<a href=\"http://hello-upswell.com\">Upswell</a>, Zach Doe"
+    },
+    {
+      "title": "Visualizing Breast Cancer Causation",
+      "video": "<iframe src=\"https://player.vimeo.com/video/165915999\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "<a href=\"http://www.cabreastcancer.org/causes/\">www.cabreastcancer.org/causes</a>",
+      "description": "HTML5 & JavaScript driven data visualization of breast cancer causation",
+      "categories": "data-visualization",
+      "id": "breast-cancer-causation",
+      "technologies": "HTML5, JavaScript, CSS",
+      "client": "University of California",
+      "year": 2014,
+      "collaborators": "<a href=\"periscopic.com\">Periscopic</a>"
+    }
+  ],
+  "2008": [
+    {
+      "title": "In the Studio",
+      "id": "in-the-studio",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Los Angeles, California U.S.",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The Grammy Museum",
+      "categories": "touch-screen, kiosk, music, dsp",
+      "images": [
+        {
+          "src": "grammy_its_01.jpg"
+        },
+        {
+          "src": "grammy_its_02.jpg"
+        },
+        {
+          "src": "grammy_its_03.jpg"
+        }
+      ],
+      "description": "Eight unique interactive installations allow visitors to record, mix, master and re-mix music with guidance provided by Grammy Award winning producers and engineers",
+      "videos": [
+        {
+          "src": "<iframe src=\"https://player.vimeo.com/video/32282088?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        },
+        {
+          "src": "<iframe src=\"https://player.vimeo.com/video/32282082?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        },
+        {
+          "src": "<iframe src=\"https://player.vimeo.com/video/32282110?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+        },
+        {
+          "src": "<iframe src=\"https://player.vimeo.com/video/32282070?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>"
+        }
+      ],
+      "year": 2008
+    },
+    {
+      "title": "Faces of Gettysburg",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32282009?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Gettysburg, Pensylvania",
+      "categories": "touch-screen, data-visualization",
+      "id": "faces-of-gettysburg",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for Gettysburg Visitors Center",
+      "year": 2008
+    },
+    {
+      "title": "Orientation Screens",
+      "id": "orientation-screens",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Washington, D.C. U.S.",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The Library of Congress",
+      "categories": "data-visualization, events, info-screens",
+      "images": [
+        {
+          "src": "loc_orientation_01.jpg"
+        },
+        {
+          "src": "loc_orientation_02.jpg"
+        },
+        {
+          "src": "loc_orientation_03.jpg"
+        },
+        {
+          "src": "loc_orientation_04.jpg"
+        }
+      ],
+      "description": "Three synchronized information screens displaying event data, motion graphics and image slideshows",
+      "year": 2008
+    },
+    {
+      "title": "Global Health Kiosks",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32282236?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of<a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Bethesda, Maryland U.S.",
+      "categories": "touch-screen, data-visualization",
+      "id": "global-health",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for National Library of Medicine",
+      "year": 2008
+    }
+  ],
+  "2009": [
+    {
+      "title": "Book of Hours",
+      "video": "<iframe src=\"https://player.vimeo.com/video/10195050?color=D6A34B\" width=\"1024\" height=\"614\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Louisville, Kentucky U.S.",
+      "categories": "high-res-images, kiosk",
+      "id": "book-of-hours",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The Speed Art Museum",
+      "year": 2009
+    },
+    {
+      "title": "Seggesser Hide Explorer",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Santa Fe, New Mexico U.S.",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The New Mexico History Museum",
+      "categories": "high-res-images, kiosk",
+      "id": "seggesser-hide-explorer",
+      "description": "Hi-res image pan and zoom explorers allowing visitors to view artifacts in incredible detail",
+      "year": 2009
+    },
+    {
+      "title": "Old Standard Sound Website",
+      "id": "old-standard-sound",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "<a href=\"http://oldstandardsound.com\">oldstandardsound.com</a>",
+      "client": "Old Standard Sound",
+      "categories": "website, full-screen-video",
+      "images": [
+        {
+          "src": "oss_01.jpg"
+        },
+        {
+          "src": "oss_02.jpg"
+        },
+        {
+          "src": "oss_03.jpg"
+        },
+        {
+          "src": "oss_04.jpg"
+        }
+      ],
+      "description": "Fullscreen site for local recording studio. Disclaimer! - This site was recently re-built using HTML5 and JavaScript. I had no part in the re-build.",
+      "year": 2009,
+      "collaborators": "<a href=\"http://hello-upswell.com\">Upswell</a>"
+    },
+    {
+      "title": "Sports Broadcasting",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32350414?color=D6A34B\" width=\"1024\" height=\"768\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Kansas City, Missouri U.S.",
+      "categories": "kiosk, touchscreen",
+      "id": "sports-broadcasting",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The Kansas City Royals Hall of Fame",
+      "year": 2009
+    },
+    {
+      "title": "Treaty of Guadalupe Hidalgo",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Santa Fe, New Mexico U.S.",
+      "categories": "high-res-images, kiosk",
+      "id": "treaty-of-gaudalupe-hidalgo",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for New Mexico History Museum",
+      "year": 2009
+    }
+  ],
+  "2007": [
+    {
+      "title": "Names Quilt Touch Table",
+      "id": "names-quilt",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32282222?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Bethesda, Maryland U.S.",
+      "categories": "touchscreen, interactive-table",
+      "images": [
+        {
+          "src": "nlm_names_quilt_01.jpg"
+        },
+        {
+          "src": "nlm_names_quilt_02.jpg"
+        },
+        {
+          "src": "nlm_names_quilt_03.jpg"
+        },
+        {
+          "src": "nlm_names_quilt_05.jpg"
+        }
+      ],
+      "technologies": "Flash, Actionscript 2.0",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for National Library of Medicine",
+      "year": 2007
+    },
+    {
+      "title": "Woodstock Tryptich Kiosks",
+      "video": "<iframe src=\"https://player.vimeo.com/video/11447969?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Bethel, NY",
+      "categories": "touchscreen, kiosk",
+      "id": "woodstock-tryptich",
+      "technologies": "Flash, Actionscript 2.0",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The Museum at Bethel Woods",
+      "year": 2007
+    },
+    {
+      "title": "AIDS Activism",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32282208?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Bethesda, Maryland U.S.",
+      "categories": "touchscreen, kiosk",
+      "id": "aid-activism",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for National Library of MedicineS",
+      "year": 2007
+    },
+    {
+      "title": "MacArthur Foundation Kiosk",
+      "id": "macarthur-foundation-kiosk",
+      "video": "<iframe src=\"https://player.vimeo.com/video/32282147?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
+      "layout": "work",
+      "published": true,
+      "headline": "work",
+      "location": "Chicago, Illinois U.S.",
+      "categories": "touchscreen, kiosk",
+      "images": [
+        {
+          "src": "macarthur_foundation_01.jpg",
+          "caption": "Animated particles collapse and rearrage themselves to generate new layouts of images in attract mode"
+        },
+        {
+          "src": "macarthur_foundation_02.jpg",
+          "caption": "Users select content and view image slideshows and video"
+        },
+        {
+          "src": "macarthur_foundation_03.jpg"
+        },
+        {
+          "src": "macarthur_foundation_04.jpg"
+        },
+        {
+          "src": "macarthur_foundation_05.jpg"
+        },
+        {
+          "src": "macarthur_foundation_06.jpg"
+        },
+        {
+          "src": "macarthur_foundation_07.jpg"
+        },
+        {
+          "src": "macarthur_foundation_08.jpg"
+        }
+      ],
+      "technologies": "Flash, Actionscript 2.0",
+      "client": "<a href=\"http://secondstory.com\">Second Story</a> for The MacArthur Foundation",
+      "year": 2007
+    }
+  ]
+}
