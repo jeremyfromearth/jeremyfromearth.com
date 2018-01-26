@@ -315,6 +315,20 @@ div.work {
     }
 }
 
+.timeline_container {
+  width: 1024px;
+  .timeline_left {
+    height: 100px;
+    background-color: red;
+  }
+
+  .timeline_right {
+    height: 100px;
+  }
+}
+
+
+
 footer.main-footer {
   background-color: $base-00;
   color: $base-07;
