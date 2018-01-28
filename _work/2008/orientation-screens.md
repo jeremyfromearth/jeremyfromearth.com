@@ -4,8 +4,8 @@ headline: work
 published: true
 title: Orientation Screens
 year: 2008
-location: Washington, D.C. U.S.
-client: <a href="http://secondstory.com">Second Story</a> for The Library of Congress
+location: Washington, D.C.
+client: The Library of Congress
 categories: data-visualization, events, info-screens
 description: Three synchronized information screens displaying event data, motion graphics and image slideshows
 images:

@@ -4,7 +4,7 @@ headline: work
 published: true
 title: MacArthur Foundation Experience
 year: 2007
-location: Chicago, Illinois U.S.
+location: Chicago, Illinois
 client: John D. and Catherine T. MacArthur Foundation
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, kiosk

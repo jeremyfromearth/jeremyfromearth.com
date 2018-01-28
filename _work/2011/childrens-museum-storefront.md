@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Children's Museum Storefront
 year: 2011
-location:  Portland, Oregon U.S.
+location:  Portland, Oregon
 client: Portland's Children Museum
 collaborators: Fashion Buddha, W+K-12
 technologies: C++, Cinder, Microsoft Kinect, Box2D

@@ -5,11 +5,19 @@ permalink: /work/
 group: navigation
 ---
 <style>
-  .timeline-container-row {
+  .timeline-container {
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+
+  .timeline-block {
+    width: 100%;
+  }
+
+  .timeline-row-container {
+    width: 100%;
   }
 
   .timeline-row {
@@ -87,7 +95,14 @@ group: navigation
 	}
 </style>
 
-<div class='timeline-container-row'>
+<script>
+require(['app/timeline'], function(Timeline) {
+  new Timeline(); 
+});
+</script>
+
+<div id='timeline-container' class='timeline-container'>
+  <!--
   <div class='timeline-row'>
     <div class='timeline-col-year'>2010</div>  
   </div>
@@ -133,6 +148,7 @@ group: navigation
     </div> 
     <div class='timeline-col-right'>American Electric Power</div>  
   </div>
+  -->
 </div>
 
 <!--

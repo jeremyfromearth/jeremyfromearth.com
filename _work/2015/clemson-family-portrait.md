@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Clemson Family Portrait
 year: 2015
-location: Greenville, North Carolina U.S.
+location: Greenville, North Carolina
 client: Clemson University
 collaborators: <a href="hello-upswell.com">Upswell</a>
 technologies: C++, Cinder, Microsof Kinect

@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Human Rights Now
 year: 2014
-location: Winnipeg, Manitoba Canada
+location: Winnipeg, Manitoba
 client: Canadian Museum for Human Rights
 collaborators: <a href="http://hello-upswell.com">Upswell</a>, Zach Doe
 technologies: C++, Cinder, OpenGL, OSX

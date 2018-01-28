@@ -4,8 +4,8 @@ headline: work
 published: true
 title: In the Studio
 year: 2008
-location: Los Angeles, California U.S.
-client: <a href="http://secondstory.com">Second Story</a> for The Grammy Museum
+location: Los Angeles, California
+client: The Grammy Museum
 categories: touch-screen, kiosk, music, dsp
 description: Eight unique interactive installations allow visitors to record, mix, master and re-mix music with guidance provided by Grammy Award winning producers and engineers
 videos:

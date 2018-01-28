@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Names Quilt Touch Table
 year: 2007
-location: Bethesda, Maryland U.S.
+location: Bethesda, Maryland
 client: National Library of Medicine
 technologies: Flash, Actionscript 2.0
 categories: touchscreen, interactive-table

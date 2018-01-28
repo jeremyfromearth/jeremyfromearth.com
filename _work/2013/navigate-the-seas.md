@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Navigate the Seas
 year: 2013
-location: Washington, D.C. U.S.
+location: Washington, D.C.
 client: National Air & Space Museum
 collaborators: <a href="http://www.terraincognita.com/studio/">Terra Incognita</a>, <a href="http://zachdoe.com/work/about">Zach Doe</a>
 categories: touchscreen, kiosk

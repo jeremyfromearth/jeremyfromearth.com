@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Sam Rayburn Archive Explorer
 year: 2012
-location: Bonham, Texas U.S.
+location: Bonham, Texas
 client: Sam Rayburn Library & Museum
 collaborators: <a href="http://www.terraincognita.com/studio/">Terra Incognita</a>
 categories: touch-screen, kiosk

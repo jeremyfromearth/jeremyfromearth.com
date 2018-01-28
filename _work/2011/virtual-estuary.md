@@ -4,7 +4,7 @@ headline: work
 published: true
 title: The Virtual Estuary
 year: 2011
-location:  Berlin Township, Ohio U.S.
+location:  Berlin Township, Ohio
 client: Old Woman Creek Estuary & Visitors Center
 collaborators: Octothorp
 categories: touchscreen, kiosk

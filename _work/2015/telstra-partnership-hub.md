@@ -1,6 +1,6 @@
 ---
 layout: work
-published: false
+published: true
 headline: work
 title: Partnership Hub
 year: 2015

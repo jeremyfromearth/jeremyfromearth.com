@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Data Ribbon
 year: 2015
-location: Greenville, North Carolina U.S.
+location: Greenville, North Carolina
 client: Clemson University
 collaborators: <a href="hello-upswell.com">Upswell</a>
 technologies: Java, Processing, Heroic Robotic
