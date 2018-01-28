@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Murder is My Business
 year: 2012
-location: New York, New York U.S.
+location: New York, New York
 client:  <a href="http://www.icp.org/">International Center for Photography</a>
 collaborators: Octothorp
 categories: touch-screen, kiosk

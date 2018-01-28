@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Reflections
 year: 2013
-location: Washington, D.C. U.S.
+location: Washington, D.C.
 client: United States Holocaust Memorial Museum
 collaborators: <a href="http://www.cgpartnersllc.com/">C&G Partners</a>
 categories: data-visualization

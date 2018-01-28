@@ -1,10 +1,10 @@
 ---
 layout: work
 headline: work
-published: false
+published: true
 title: Digital Organ Explorers
 year: 2015
-location: Reno, Nevada U.S.
+location: Reno, Nevada
 client: Nevada Discovery Museum
 collaborators: Upswell
 technologies: iOS, Swift, OpenGL, Python, Django

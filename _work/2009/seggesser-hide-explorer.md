@@ -4,8 +4,8 @@ headline: work
 published: true
 title: Seggesser Hide Explorer
 year: 2009
-location:  Santa Fe, New Mexico U.S.
-client: <a href="http://secondstory.com">Second Story</a> for The New Mexico History Museum
+location:  Santa Fe, New Mexico
+client: The New Mexico History Museum
 categories: high-res-images, kiosk
 description: Hi-res image pan and zoom explorers allowing visitors to view artifacts in incredible detail
 ---

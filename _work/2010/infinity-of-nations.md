@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Infinity of Nations
 year: 2010
-location: New York, New York U.S.
+location: New York, New York
 client: National Museum of the American Indian
 categories: touchscreen, kiosk
 collaborators: <a href="http://www.potiondesign.com/">Potion</a>

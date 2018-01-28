@@ -4,7 +4,7 @@ headline: work
 published: true
 title: Lead a Trail Drive
 year: 2013
-location: Cuero, Texas U.S.
+location: Cuero, Texas
 client: Chisholm Trail Heritage Museum
 collaborators: <a href="http://www.terraincognita.com/studio/">Terra Incognita</a>
 categories: touchscreen, kiosk
