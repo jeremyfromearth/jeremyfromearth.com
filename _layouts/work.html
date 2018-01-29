@@ -15,7 +15,7 @@ title: work
 		<h6>{{ page.location }}</h6>
 		{% endif %}
 		<p>
-			{% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}, Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}, Technologies: {{ page.technologies }}{% endif %}
+    {% if page.year %}Year: {{ page.year }}{% endif %}{% if page.collaborators %}<br/>Collaborators: {{ page.collaborators }}{% endif %}{% if page.technologies %}<br/>Technologies: {{ page.technologies }}{% endif %}
 		</p>
 		{% if page.description %}
 		<p>{{ page.description }}</p>
