@@ -1,31 +1,5 @@
 const d3 = require('lib/d3.min');
 
-/*
-<div class='timeline-block'>
-  <div class='timeline-row'>
-    <div class='timeline-col-year'>2010</div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-left'>
-      <div class='timeline-node-title'>McArthur Foundation Experience</div>
-      <div class='timeline-node-client'>John T. and Katherin D. McArthur Foundation</div>
-      <div class='timeline-node-location'>Chicago, Illinois</div>
-      <div class="timeline-node-tech">
-        <i class="timeline-node-tech-item devicon-android-plain"></i>
-        <i class="timeline-node-tech-item devicon-cplusplus-line"></i>
-        <i class="timeline-node-tech-item devicon-django-plain"></i>
-        <i class="timeline-node-tech-item devicon-visualstudio-plain"></i>
-        <i class="timeline-node-tech-item fa fa-hand-pointer"></i>
-      </div>
-    </div>  
-    <div class='timeline-col-center'>
-      <div class='dot'></div> 
-    </div>  
-    <div class='timeline-col-right'></div>  
-  </div>
-</div>
-*/
-
 class Timeline {
   constructor() {
     const self = this;
@@ -85,7 +59,6 @@ class Timeline {
                 .append('div')
                 .classed('timeline-col-right', true);
 
-              //self.create_project_node(right, d, dot);
               self.create_project_node(toggle ? left : right, d, dot);
               idx++; 
             });

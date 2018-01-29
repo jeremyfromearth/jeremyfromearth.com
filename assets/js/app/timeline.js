@@ -58,7 +58,6 @@ define(['module', 'lib/d3.min'], function (module, d3) {
 
             var right = d3.select(this).append('div').classed('timeline-col-right', true);
 
-            //self.create_project_node(right, d, dot);
             self.create_project_node(toggle ? left : right, d, dot);
             idx++;
           });
