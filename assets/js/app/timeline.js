@@ -109,7 +109,7 @@ define(['module', 'lib/d3.min'], function (module, d3) {
             location = info.append('div').classed('timeline-node-location', true).html(project.location);
           }
 
-          add_mouse_handlers(el);
+          add_mouse_handlers(inner);
           add_mouse_handlers(dot);
         }
       }

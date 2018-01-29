@@ -118,7 +118,7 @@ class Timeline {
         });
       }
       
-      add_mouse_handlers(el);
+      add_mouse_handlers(inner);
       add_mouse_handlers(dot);
     }
   }
