@@ -4,7 +4,6 @@ headline: work
 published: true
 title: Old Standard Sound Website
 year: 2009
-location: <a href="http://oldstandardsound.com">oldstandardsound.com</a>
 client: Old Standard Sound
 collaborators: <a href="http://hello-upswell.com">Upswell</a>
 categories: website, full-screen-video

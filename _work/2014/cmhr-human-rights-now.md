@@ -17,4 +17,5 @@ images:
     caption: Human Rights Now is a nine meter wide data visualization media wall
   - src: cmhr_hrnow_03.gif
     caption: The wall displays dynamic info-graphics with programmatic animation and effects
+video: <iframe src="https://player.vimeo.com/video/251536677" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 ---

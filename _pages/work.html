@@ -6,31 +6,42 @@ group: navigation
 ---
 <style>
   .timeline-container {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: block;
   }
 
-  .timeline-block {
-    width: 100%;
-  }
+  .timeline-block {}
 
-  .timeline-row-container {
-    width: 100%;
-  }
+  .timeline-row-container {}
 
   .timeline-row {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    width: 100%;
   }
 
   .timeline-col-left {
     width: 50%;
     padding: 1em;
     text-align: right;
+  }
+
+  .timeline-col-inner {
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+  }
+
+  .timeline-col-bg {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+		transition: 0.25s ease-in-out;
+  }
+
+  .timeline-col-bg-hover {
+    background-color: red;
+		transition: 0.3s ease-in-out;
   }
 
   .timeline-col-center {
@@ -61,18 +72,53 @@ group: navigation
     border-radius: 50%;
     align-self: center;
     border: 1px solid black;
+    transform: scale(1.0);
+		transition: 0.1s ease-in;
+  }
+
+  .dot-hover {
+    width: .7em;
+    height: .7em;
+    border-radius: 0;
+    background-color: red;
+		transition: 0.25s ease-in-out;
+  }
+
+  .timeline-node-info-container {
+    padding: 0.25em;
   }
 
   .timeline-node-title {
     font-size: 1.0em;
+    cursor: crosshair;
+    font-family: Terminus;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+
+  .timeline-node-title-hover {
+    color: white;
+		transition: 0.1s ease-in-out;
   }
 
   .timeline-node-client {
-    font-size: 0.9em;
+    font-size: 1em;
+    cursor: crosshair;
+  }
+
+  .timeline-node-client-hover {
+    color: white;
+		transition: 0.2s ease-in-out;
   }
 
   .timeline-node-location {
-    font-size: 0.85em;
+    font-size: 0.9em;
+    cursor: crosshair;
+  }
+
+  .timeline-node-location-hover {
+    color: white;
+		transition: 0.3s ease-in-out;
   }
 
 	.timeline-node-tech {
@@ -100,70 +146,4 @@ require(['app/timeline'], function(Timeline) {
   new Timeline(); 
 });
 </script>
-
-<div id='timeline-container' class='timeline-container'>
-  <!--
-  <div class='timeline-row'>
-    <div class='timeline-col-year'>2010</div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-left'>
-      <div class='timeline-node-title'>McArthur Foundation Experience</div>
-      <div class='timeline-node-client'>John T. and Katherin D. McArthur Foundation</div>
-      <div class='timeline-node-location'>Chicago, Illinois</div>
-			<div class="timeline-node-tech">
-				<i class="timeline-node-tech-item devicon-android-plain"></i>
-				<i class="timeline-node-tech-item devicon-cplusplus-line"></i>
-				<i class="timeline-node-tech-item devicon-django-plain"></i>
-        <i class="timeline-node-tech-item devicon-visualstudio-plain"></i>
-        <i class="timeline-node-tech-item fa fa-hand-pointer"></i>
-			</div>
-    </div>  
-    <div class='timeline-col-center'>
-      <div class='dot'></div> 
-    </div>  
-    <div class='timeline-col-right'></div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-left'></div>  
-    <div class='timeline-col-center'>
-      <div class='dot'></div> 
-    </div>  
-    <div class='timeline-col-right'>Faces of Gettysburg</div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-year'>2011</div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-left'>SFMOMA Story Screens</div>  
-    <div class='timeline-col-center'>
-      <div class='dot'></div> 
-    </div>  
-    <div class='timeline-col-right'></div>  
-  </div>
-  <div class='timeline-row'>
-    <div class='timeline-col-left'></div>  
-    <div class='timeline-col-center'>
-      <div class='dot'></div>
-    </div> 
-    <div class='timeline-col-right'>American Electric Power</div>  
-  </div>
-  -->
-</div>
-
-<!--
-<div class="work">
-{% assign years = site.years %}
-{% for work in site.work reversed %}
-{% if work.published %}
-    {% if years contains work.year %}
-        <a href="{{ work.url }}">{{ work.url }}</a></br>
-    {% else %}
-        {% assign years = years | push: work.year %}
-        <h4>{{ work.year }}</h4>
-        <a href="{{ work.url }}">{{ work.url }}</a></br>
-    {% endif %}
-{% endif %}
-{% endfor %}
-</div>
--->
+<div id='timeline-container' class='timeline-container'></div>

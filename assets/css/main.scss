@@ -227,13 +227,13 @@ header.main-header, footer.main-footer {
 header.main-header {
   color: $base-00;
   border-top: 5px $base-00 solid;
-  background-color: transparent;
 
   .blink {
     display: inline;
   }
 
   h1, h2 {
+    font-weight: bold;
     color: inherit;
     line-height: 1.2em;
     padding-top: 0.2em;
@@ -257,6 +257,10 @@ header.main-header {
 
   ul {
     width: 100%;
+    margin-left: 2em;
+    @include MQ(M) {
+      margin-left: 4em;
+    }
   }
 
   ul li {
@@ -314,20 +318,6 @@ div.work {
         line-height: 1em;
     }
 }
-
-.timeline_container {
-  width: 1024px;
-  .timeline_left {
-    height: 100px;
-    background-color: red;
-  }
-
-  .timeline_right {
-    height: 100px;
-  }
-}
-
-
 
 footer.main-footer {
   background-color: $base-00;
