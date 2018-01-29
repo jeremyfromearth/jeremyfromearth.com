@@ -4,7 +4,6 @@ headline: work
 published: true
 title: Visualizing Breast Cancer Causation
 year: 2014
-location: <a href="http://www.cabreastcancer.org/causes/">www.cabreastcancer.org/causes</a>
 client: University of California
 collaborators: <a href="periscopic.com">Periscopic</a>
 technologies: HTML5, JavaScript, CSS

@@ -2,10 +2,10 @@
 layout: work
 headline: work
 published: true
-title: Kronos - Artifact Logging Tool
+title: Kronos Archaeology Discovery
 year: 2010
 location:  Philadelphia, Pennsylvania
-client: University of Pennsylvania Museum of Archaeology and Anthropology
+client: University of Pennsylvania<br/>Museum of Archaeology and Anthropology
 technologies: Java, Android, Python, Django, SQL
 categories: data-collection, android, mobile
 images:

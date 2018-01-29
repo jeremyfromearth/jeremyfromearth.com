@@ -9,5 +9,12 @@ client: San Franscisco Museum of Modern Art
 collaborators: <a href="http://briteliteimmersive.com">Britelite</a>
 technologies: C++, Cinder, OpenGL, Python, Kinect
 categories: data-visualization, motion-graphics
-description: Media presentation platform enabling museum staff to curate custom HTML layout, videos and motion graphics
+images:
+  - src: sfmoma-exterior-01.jpg
+  - src: sfmoma-interior-01.jpg
+  - src: sfmoma-interior-02.jpg
+  - src: sfmoma-interior-03.jpg
+  - src: sfmoma-interior-04.jpg
+  - src: sfmoma-interior-05.jpg
+  - src: sfmoma-interior-06.jpg
 ---

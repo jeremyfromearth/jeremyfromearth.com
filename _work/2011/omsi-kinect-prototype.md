@@ -5,7 +5,7 @@ published: true
 title: Strength Augmentation Prototype
 year: 2011
 location:  Portland, Oregon
-client: Oregon Museum of Sciecne and Industry <a href="http://www.omsi.edu/">(OMSI)</a>
+client: Oregon Museum of Sciecne and Industry
 collaborators: <a href="http://madeclear.co">Made Clear</a>
 technologies: C++, Cinder, Microsoft Kinect
 categories: kinect

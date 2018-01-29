@@ -29,6 +29,7 @@ for root, subdir, files in os.walk('./_work/'):
             s += line
           y = yaml.load(s)
           y['id'] = str_id
+          y['link'] = '/work/' + year + '/' + fname.split('.')[0]
           projects.append(y)
 
 with open('./util/work-timeline.json', 'w') as f:
