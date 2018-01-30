@@ -1,8 +1,8 @@
 # Base URL
-baseurl:
+baseurl: 
 
 # Site live URL
-#url: "http://jeremynealbrown.github.io"
+url: http://jeremyfromearth.github.io
 
 # Localhost
 url: ./
