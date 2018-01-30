@@ -114,7 +114,6 @@ title: blog
     var submit_button = document.getElementById('submit-btn');
 
     function inputs_are_valid() {
-      console.log(name_input.value.length, email_input.value.match(email_pattern), message_input.value.length);
       return name_input.value.length > 0 
         && email_input.value.match(email_pattern)
         && message_input.value.length > 0;
@@ -122,11 +121,9 @@ title: blog
 
     function on_key_up() {
       if(inputs_are_valid()) {
-        console.log('enabled');
         submit_button.classList.add('enabled');
         submit_button.classList.remove('disabled');
       } else {
-        console.log('disabled');
         submit_button.classList.add('disabled');
         submit_button.classList.remove('enabled');
       }
