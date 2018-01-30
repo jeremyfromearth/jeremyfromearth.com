@@ -8,7 +8,7 @@ location: San Francisco, California
 client: San Franscisco Museum of Modern Art
 collaborators: <a href="http://briteliteimmersive.com">Britelite</a>
 technologies: C++, Cinder, OpenGL, Python, Kinect
-categories: data-visualization, motion-graphics
+categories: 
 images:
   - src: sfmoma-exterior-01.jpg
   - src: sfmoma-interior-01.jpg

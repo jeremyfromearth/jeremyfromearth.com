@@ -21,17 +21,58 @@ title: blog
 		</div>
 	</div>
 
-  <!--
-  <form method="POST" action="https://api.staticman.net/v2/entry/jeremyfromearth/jeremyfromearth.github.io/master/comments">
-    <input name="options[redirect]" type="hidden" value="{{site.url}}{{page.url}}">
-    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
-    <label><input name="fields[name]" type="text">Name</label>
-    <label><input name="fields[email]" type="email">E-mail</label>
-    <label><textarea name="fields[message]"></textarea>Message</label>
-    <button type="submit">Go!</button>
-  </form> 
-  -->
-
+  
+ 
+  <div class='comment-container'>
+    {% if site.data.comments[page.slug] %}
+      <div class='comments'>
+          <h2>Comments</h2>
+          {% assign comments = site.data.comments[page.slug] | sort %}
+          {% for comment in comments %}
+            {% assign name = comment[1].name %}
+            {% assign url = comment[1].url %}
+            {% assign date = comment[1].date %}
+            {% assign message = comment[1].message %}
+            <div class='comment'>
+              <div class='comment-user'>
+                {% if url %}
+                <a href="{{ url }}">{{ name }}</a>:
+                {% else %}
+                  {{ name }}:
+                {% endif %}
+              </div>
+              <div class='comment-date'>{{ date | date: '%-d %B %Y %T' }}</div>
+              <div class='comment-message'>{{ message }}</div>
+            </div>
+          {% endfor %}
+      </div>
+    {% endif %}
+    <div class='comment-form-container'>
+      <form class='comment-form' method="POST" action="https://api.staticman.net/v2/entry/jeremyfromearth/jeremyfromearth.github.io/master/comments">
+        <div class='comment-input'>
+          {% if site.data.comments[page.slug] %}
+          <h2>Join the conversation</h2>
+          {% else %}
+          <h2>Start the Conversation...</h2>
+          {% endif %}
+          <input class='comment-text-input' name="options[redirect]" type="hidden" value="{{site.url}}{{page.url}}">
+          <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+          <label class='comment-input-label'>Name</label>
+          <input class='comment-text-input' id='name-input' name="fields[name]" type="text">
+          <label class='comment-input-label'>E-mail</label>
+          <input class='comment-text-input' id='email-input' name="fields[email]" type="email">
+          <label class='comment-input-label'>Website</label>
+          <input class='comment-text-input' name="fields[url]" type="text">
+        </div>
+        <div class='comment-textarea'>
+          <label class='comment-input-label'>Message</label>
+          <textarea class='comment-text-area' id='message-input' name="fields[message]"></textarea>
+          </br>
+          <button class='comment-submit disabled' id='submit-btn' type="submit">Send!</button>
+        </div>
+      </form> 
+    </div>
+  </div>
 	{% if site.related_posts %}
 	<div class="related">
 		<h4>Related Posts</h2>
@@ -64,3 +105,34 @@ title: blog
 		</div>
 	</div>
 </div>
+
+<script>
+    var email_pattern = /^\w+([\.-]?\ w+)*@\w+([\.-]?\ w+)*(\.\w{2,3})+$/;
+    var name_input = document.getElementById('name-input');
+    var email_input = document.getElementById('email-input');
+    var message_input = document.getElementById('message-input');  
+    var submit_button = document.getElementById('submit-btn');
+
+    function inputs_are_valid() {
+      console.log(name_input.value.length, email_input.value.match(email_pattern), message_input.value.length);
+      return name_input.value.length > 0 
+        && email_input.value.match(email_pattern)
+        && message_input.value.length > 0;
+    }
+
+    function on_key_up() {
+      if(inputs_are_valid()) {
+        console.log('enabled');
+        submit_button.classList.add('enabled');
+        submit_button.classList.remove('disabled');
+      } else {
+        console.log('disabled');
+        submit_button.classList.add('disabled');
+        submit_button.classList.remove('enabled');
+      }
+    }
+
+    name_input.addEventListener('keyup', on_key_up);
+    email_input.addEventListener('keyup', on_key_up);
+    message_input.addEventListener('keyup', on_key_up);
+  </script>

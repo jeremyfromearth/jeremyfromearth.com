@@ -15,6 +15,7 @@
 {% assign group = nil %}
 
 <script>
+var focus = true;
 var url = "{{ page.url }}";
 var input = "{{ page.url }}".split("/")[1] || "";
 var headline = document.getElementById("headline");
@@ -23,16 +24,24 @@ var heldKeys = {}
 
 function updateInput() {
   var pre = url == "/" ? "~/" : "/";
-  headline.innerHTML = pre + input + "<div class='blink'>_</div>";
+  var output = pre + input
+  if(focus) output += "<div class='blink'>_</div>"
+  headline.innerHTML = output;
 }
 
-function handleKeyPress(e) {
+window.addEventListener('mousedown', function(event) {
+  focus = event.target.id == 'headline';
+  updateInput();
+});
 
+function handleKeyPress(e) {
+    if(!focus) return;
     heldKeys[e.keyCode] = true
     if(heldKeys[91] || heldKeys[18] || heldKeys[17]) return;
 
     switch(e.keyCode) {
       case 8: // delete
+        console.log(typeof(e.target));
         e.preventDefault();
         e.cancelBubble = true;
         if(input.length) {

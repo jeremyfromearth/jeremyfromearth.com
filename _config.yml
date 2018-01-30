@@ -44,14 +44,6 @@ plugins:
 # Extra dirs to include in build
 include: [_pages]
 
-collections:
-  projects:
-      output: true
-      permalink: /projects/:path/
-  work:
-      output: true
-      permalink: /work/:path/
-
 exclude:
     - src
     - util
@@ -71,6 +63,3 @@ exclude:
 sass:
     sass_dir: assets/css/_sass
     style: :compressed
-
-# used in work to store years
-years: []
