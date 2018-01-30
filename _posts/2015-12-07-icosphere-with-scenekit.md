@@ -16,7 +16,7 @@ __IcoSphere with one sub-division__
 ![IcoSphere with thre sub-divisions](/assets/images/blog/icosphere-3-subdivisions.png)
 __IcoSphere with three sub-divisions__
 
-Before we take a look at the code, make sure you take a look at the [extension for SCNVector](https://gist.github.com/simon-theta/8a9734849753e926a278) that I wrote about a while back. This algorithm uses two methods from that extension. Additionally, the following code also relies on a base class that I wrote about in my [previous article](https://gist.github.com/simon-theta/40d6efd44bd5bc4975f4).
+Before we take a look at the code, make sure you take a look at the [extension for SCNVector](https://gist.github.com/simon-theta/8a9734849753e926a278) that I wrote about a while back. This algorithm uses two methods from that extension. Additionally, the following code also relies on a base class that I wrote about in my [previous article](https://gist.github.com/jeremyfromearth/40d6efd44bd5bc4975f4).
 
 {% gist jeremyfromearth/1b2ca5d7da16bd781e64 %}
 
