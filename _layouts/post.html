@@ -30,13 +30,13 @@ title: blog
           {% assign comments = site.data.comments[page.slug] | sort %}
           {% for comment in comments %}
             {% assign name = comment[1].name %}
-            {% assign url = comment[1].url %}
+            {% assign website = comment[1].url %}
             {% assign date = comment[1].date %}
             {% assign message = comment[1].message %}
             <div class='comment'>
               <div class='comment-user'>
-                {% if url %}
-                <a href="{{ url }}">{{ name }}</a>:
+                {% if website != '' %}
+                <a href="{{ website }}">{{ name }}</a>:
                 {% else %}
                   {{ name }}:
                 {% endif %}
