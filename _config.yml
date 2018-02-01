@@ -19,15 +19,15 @@ description: The personal site of Jeremy Neal Brown, a creative technologist fro
 
 # Site author information
 author:
-    name: Jeremy Brown
-    email: jeremy.from.earth@gmail.com
-    url: http://jeremynealbrown.github.io
+  name: Jeremy Brown
+  email: jeremy.from.earth@gmail.com
+  url: http://jeremynealbrown.github.io
 
 # Social links
 social:
-    github: jeremynealbrown
-    twitter: JeremyFromEarth
-    vimeo: JeremyFromEarth
+  github: jeremynealbrown
+  twitter: JeremyFromEarth
+  vimeo: JeremyFromEarth
 
 # Conversion / Build settings
 markdown: kramdown
@@ -35,36 +35,39 @@ markdown: kramdown
 # This is how you put pygments config in jekyll 2.0 instead of pygments: true
 highlighter: rouge
 
-ermalink: pretty
+# Permalinks
+permalink: pretty
 
 plugins: 
   - jekyll-gist
 
-
 collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
   work:
-      output: true
-      permalink: /work/:path/
+    output: true
+    permalink: /work/:path/
 
 # Extra dirs to include in build
 include: [_pages]
 
 exclude:
-    - src
-    - util
-    - CNAME
-    - Gemfile
-    - packages
-    - Rakefile
-    - README.md
-    - .gitignore
-    - .sass-cache
-    - Gemfile.lock
-    - node_modules
-    - twitter
-    - vendor
+  - src
+  - util
+  - CNAME
+  - Gemfile
+  - packages
+  - Rakefile
+  - README.md
+  - .gitignore
+  - .sass-cache
+  - Gemfile.lock
+  - node_modules
+  - twitter
+  - vendor
 
 # Sass conversion configs
 sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+  sass_dir: assets/css/_sass
+  style: :compressed
