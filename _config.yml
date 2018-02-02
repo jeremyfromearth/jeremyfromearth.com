@@ -1,8 +1,8 @@
-baseurl: 
-url: http://jeremyfromearth.github.io
-google_analytics_key: UA-65964466-1
+encoding: UTF-8
 name: JeremyFromEarth
 title: JeremyFromEarth
+url: http://jeremyfromearth.github.io
+google_analytics_key: UA-65964466-1
 meta_description: Freelance Software Engineer with experience in graphics, networking, machine learning and interactive installations  
 description: The personal site of JeremyFromEarth, a Creative Technologist and Software Developer from Portland, Oregon
 author:
@@ -14,6 +14,8 @@ social:
   twitter: JeremyFromEarth
   vimeo: JeremyFromEarth
 markdown: kramdown
+kramdown:
+  smart_quotes:  ["apos", "apos", "ldquo", "rdquo"]
 highlighter: rouge
 permalink: pretty
 plugins: 
