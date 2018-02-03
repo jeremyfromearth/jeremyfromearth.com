@@ -2,9 +2,10 @@
 layout: post
 date: 2018-02-06
 categories:
-- code
-- uibot
-- pixelspace
+  - code
+  - uibot
+  - pixelspace
+published: false
 permalink: blog/reboot
 headline: blog
 heading: Pixelspace & UIBot
