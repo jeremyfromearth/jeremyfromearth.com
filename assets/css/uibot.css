@@ -53,7 +53,8 @@
 
 .uibot .label {
   float: left;
-  margin-right: 0.4em;
+  margin-right: 0.5em;
+  white-space: nowrap;
 }
 
 .uibot .range-min, .range-max {
@@ -96,10 +97,6 @@
 
 .uibot .checkbox:hover {
   border: 1px solid red;
-}
-
-.uibot .label {
-  margin-right: 0.5em;
 }
 
 .uibot input[type=text] {
