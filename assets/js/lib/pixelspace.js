@@ -215,7 +215,7 @@ define(["module"], function (module) {
         var col_width = width / columns;
 
         for (var i = 0; i < rows; i++) {
-          var ypos = Math.round(y) + i * row_eight + .5;
+          var ypos = Math.round(y) + i * row_height + .5;
           this.line(x, ypos, x + width, ypos);
         }
 
