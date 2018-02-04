@@ -7,9 +7,7 @@ function UIBot() {
   var uibotId = ++UIBotId;
 
   function createUIElement(target, param, container, callback) {
-    if(!target.hasOwnProperty(param.name)) {
-      console.warn('UIBots Warning: target does not contain property: ', param.name);
-    } else {
+    if(target.hasOwnProperty(param.name) || typeof(target[param.name] == 'function')) {
       var input = null;
       var type = typeof(target[param.name]); 
       switch(type) {
@@ -31,14 +29,16 @@ function UIBot() {
         input.setAttribute('data-param', param.name);
         input.id = 'uibot-' + uibotId + '-' + param.name;
       }
-      return input;
+    } else {
+      console.warn('UIBots Warning: target does not contain property: ', param.name);
     }
-    return null;
+    return input;
   }
 
   function createBooleanComponent(target, param, container, callback) {
     var div = document.createElement('div');
     div.className = 'component';
+    div.style.flexShrink = 16;
 
     var label = document.createElement('div');
     label.innerHTML = param.label;
@@ -87,6 +87,7 @@ function UIBot() {
   function createFunctionComponent(target, param, container, callback) {
     var div = document.createElement('div');
     div.className = 'component';
+    div.style.flexShrink = 16;
 
     var input = document.createElement('div');
     input.innerHTML = param.label;
@@ -98,7 +99,7 @@ function UIBot() {
 
     input.addEventListener('click', function(event) {
       var args = param.args || []
-      target[param.name].apply(null, args);
+      target[param.name].apply(target, args);
       if(callback) callback(event);
     });
 
@@ -109,6 +110,8 @@ function UIBot() {
     if(param.hasOwnProperty('options')) {
       createSelectComponent(target, param, container, callback);
     } else {
+      param.min = param.min || 0.0;
+      param.max = param.max || 1.0;
       param.step = param.step || 0.01;
       param.units = param.units || '';
 
@@ -121,33 +124,28 @@ function UIBot() {
 
       var value = document.createElement('div');
       value.innerHTML = target[param.name] + ' ' + param.units;
+      value.className = 'slider-value'; 
 
       var input = document.createElement('input');
       input.type = 'range';
-      input.min = 0;
-      input.max = 1;
+      input.min = param.min;
+      input.max = param.max;
       input.step = param.step;
       input.value = target[param.name];
       input.param = param;
-
+      
       div.appendChild(label);
       div.appendChild(input);
       div.appendChild(value);
       container.appendChild(div);
 
+      value.innerHTML = param.max + param.step + param.units;
+      value.style.minWidth = value.clientWidth + 'px';
+
       function update_value(event) {
         var v = Number(input.value);
         target[param.name] = v;
-        var formatted = Number(v);
-        if(v == 1) {
-          formatted = '1.00';
-        } else if (v == 0) {
-          formatted = '0.00';
-        } else if((v * 10) % 1 == 0) {
-          formatted = v + '0';
-        }
-        
-        value.innerHTML = formatted + param.units;
+        value.innerHTML = input.value + param.units;
         if(callback) callback(event);
       }
 
@@ -177,9 +175,11 @@ function UIBot() {
       label.className = 'label';
 
       var input = document.createElement('input');
-      input.type = 'text';
       input.value = target[param.name];
       input.placeholder = param.placeholder || "";
+      input.style.flexGrow = 1;
+      input.type = 'text';
+
 
       if(param.hasOwnProperty('max_length')) {
         input.maxLength = param.max_length;
@@ -219,6 +219,7 @@ function UIBot() {
   function createSelectComponent(target, param, container, callback) {
     var div = document.createElement('div');
     div.className = 'component';
+    div.style.flexShrink = 8;
 
     var label = document.createElement('div');
     label.innerHTML = param.label;
