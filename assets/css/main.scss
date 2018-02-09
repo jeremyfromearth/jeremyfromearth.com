@@ -294,6 +294,7 @@ header.main-header {
 
 div.about {
     ul.social-links {
+      padding: 0;
         li {
             display:inline-block;
         }
@@ -896,7 +897,7 @@ p.post-meta {
 }
 
 .comment {
-    padding: 1em;
+  padding: 1em;
  }
 
 .comment-form-container {
