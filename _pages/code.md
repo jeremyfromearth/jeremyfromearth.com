@@ -36,7 +36,7 @@ A JavaScript audio engine providing sample accurate sequencing of audio data. It
 ### [naetura](https://github.com/jeremyfromearth/naetura)
 ###### __JavaScript__
 A playground for creating visualizations of mathematical interpretations of natural phenomenon.
-<br/>[» View on Github][muse]
+<br/>[» View on Github][naetura]
 
 ### [pixelspace](https://github.com/jeremyfromearth/pixelspace)
 ###### __JavaScript__
@@ -54,7 +54,7 @@ UIBot is a utility that seeks to automate, as much as possible, the tedium of ma
 [magic-window]: https://github.com/jeremyfromearth/magic-window
 [cinder]: https://github.com/jeremyfromearth/cinder
 [metonym]: https://github.com/jeremyfromearth/metonym
-[muse]: https://github.com/jeremyfromearth/metonym
+[muse]: https://github.com/jeremyfromearth/muse
 [naetura]: https://github.com/jeremyfromearth/naetura
 [pixelspace]: https://github.com/jeremyfromearth/pixelspace
 [uibot]: https://github.com/jeremyfromearth/uibot
