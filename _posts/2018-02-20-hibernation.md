@@ -30,7 +30,7 @@ Here's the track listing:
 ## Development Log
 
 #### uibot
-In other news, I completely refactored the CSS for [UIBot][uibot]. It now uses CSS3 Flexbox for laying out components. Editing CSS is not my favorite thing to do, but I have to say that it is pretty satisfying when you find the right tool for the job. Flexbox makes seemingly sophisticated layouts simple to conceptualize and build. The layout and nesting rules it provides are simple and intuitive and in general it seems to simplify responsive design quite a bit!
+In other news, I completely refactored the CSS for [UIBot][uibot]. It now uses CSS3 Flexbox for laying out components. Editing CSS is not my favorite thing to do, but I have to say that it is pretty satisfying when you find the right tool for the job. Flexbox makes seemingly sophisticated layouts simple to conceptualize and build. The layout and nesting rules it provides are straighforward and intuitive and in general it seems to ease assembling a responsive design.
 
 #### magic-window
 I made some significant updates to [MagicWindow][magic-window] and added a new sample that demostrates the Particle Demo, from the Cinder samples, running in a MagicWindow app. I also added a getting started guide to the README file.
