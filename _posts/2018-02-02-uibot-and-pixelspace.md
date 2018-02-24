@@ -9,7 +9,6 @@ published: true
 permalink: blog/pixelspace-and-uibot
 headline: blog
 heading: Pixelspace & UIBot
-description: In this post I'll demostrate how to use a couple of my JavaScript libraries, Pixelspace & UIbot can be used together to create interactive visualizations.
 ---
 In this post I'll demostrate how two of my open source projects, [`Pixelspace`](https://github.com/jeremyfromearth/pixelspace) and [`UIBot`](https://github.com/jeremyfromearth/uibot) can be used together to create interactive visualizations in the browser. 
 
