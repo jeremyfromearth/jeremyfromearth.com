@@ -25,7 +25,7 @@ Here's the track listing:
 1. Ecclectrig, Init Ding - Microstoria
 1. Losing Houston, All India Radio - The Inevitable
 
- Enjoy :)
+[Enjoy :)][google-playlist]
 
 ## Development Log
 
