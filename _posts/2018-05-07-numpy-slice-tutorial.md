@@ -111,6 +111,6 @@ In both of the above example we leave the index for the first dimension empty. T
  [ 0.2   0.67]]
 ```
 
-The simplest way that I've found to think about these slicing operations is to remember that what is really happening is that your are taking selections along each dimension. For an even deeper dive into this feature check out the official Numpy [docs on indexing and slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html).
+The simplest way that I've found to think about these slicing operations is to think of it in terms of taking selections along each dimension. For an even deeper dive into this feature check out the official Numpy [docs on indexing and slicing](https://docs.scipy.org/doc/numpy-1.13.0/reference/arrays.indexing.html).
 
 
