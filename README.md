@@ -1,15 +1,14 @@
 # Welcome
-This is the source code for my archive and experimentation site. You can check it out [here][site].
+This is the source code for my experimentation site. You can check it out [here][site].
 
-For preview, ensure that you have [Jekyll][jekyll] installed.
+Make sure to use Ruby 2.3.5, using [RVM](https://rvm.io/).
 
-Install the Ruby deps
+Install
 ```
 bundle install
 ```
 
 Start the Jekyll server. Optionally enable auto-build using `--watch` flag
-
 ```
 jekyll serve --watch
 ```
