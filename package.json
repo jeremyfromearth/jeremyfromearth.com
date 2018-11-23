@@ -3,6 +3,9 @@
 	"version": "1.0.0",
 	"author": "jeremy <jeremy.from.earth@gmail.com>",
 	"private": true,
+  "scripts": {
+    "watch": "npx babel src --out-dir assets/js/app --presets=es2015,stage-0 --plugins=transform-es2015-modules-amd --watch"
+  },
 	"devDependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-core": "^6.26.0",
