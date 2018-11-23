@@ -25,6 +25,7 @@ require(['lib/pixelspace', 'lib/uibot', 'app/waves'], function(Pixelspace, uibot
   var uibot_container = document.getElementById('uibot');
   if(canvas) {
     var ctx = canvas.getContext('2d');
+    console.log(Waves)
     var renderer = new Waves(ctx);
     player = new Pixelspace.Player(canvas);
     player.setRenderer(renderer);

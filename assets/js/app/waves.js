@@ -49,8 +49,6 @@ define(['module', 'lib/pixelspace'], function (module, _pixelspace) {
     if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
   }
 
-  console.log(Math.PI_2);
-
   var Waves = function (_Renderer) {
     _inherits(Waves, _Renderer);
 

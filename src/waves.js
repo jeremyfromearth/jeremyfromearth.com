@@ -1,5 +1,5 @@
 import {Renderer} from 'lib/pixelspace';
-console.log(Math.PI_2);
+
 class Waves extends Renderer {
   constructor(ctx) {
     super(ctx);
