@@ -6,7 +6,7 @@ categories:
   - uibot
   - pixelspace
 published: true
-permalink: blog/pixelspace-and-uibot
+permalink: blog/pixelspace-and-uibot/
 headline: blog
 heading: Pixelspace & UIBot
 ---

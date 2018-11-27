@@ -4,7 +4,7 @@ date: 2018-02-23
 categories:
   - status
 published: true
-permalink: blog/hibernation
+permalink: blog/hibernation/
 headline: blog
 heading: Hibernation Synthesis
 extract: It's been a mild winter here in Oregon and I've kept pretty busy a variety of projects on both work and play...

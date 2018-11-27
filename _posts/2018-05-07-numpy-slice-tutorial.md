@@ -4,7 +4,7 @@ date: 2018-05-07
 categories:
   - code
 published: true
-permalink: blog/numpy-slice-tutorial
+permalink: blog/numpy-slice-tutorial/
 headline: blog
 heading: Numpy Slice Tutorial
 ---

@@ -4,7 +4,7 @@ date: 2015-12-01
 description: An introduction to creating custom 3D geometry with Swift and SceneKit
 categories:
 - code
-permalink: blog/custom-geometry-swift-scenekit
+permalink: blog/custom-geometry-swift-scenekit/
 headline: blog
 heading: Custom 3D Geometry With Swift and SceneKit
 ---

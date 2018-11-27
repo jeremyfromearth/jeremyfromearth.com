@@ -4,7 +4,7 @@ date: 2015-12-07
 description: Building on the work in the last couple of posts to create an IcoSphere
 categories:
 - code
-permalink: blog/icosphere-with-scenekit
+permalink: blog/icosphere-with-scenekit/
 headline: blog
 heading: Creating an IcoSphere with Swift & SceneKit
 ---

@@ -4,7 +4,7 @@ date: 2015-11-15
 description: An extension for Swift's SCNVector3 providing common vector operations
 categories:
 - code
-permalink: blog/scnvector3-extension
+permalink: blog/scnvector3-extension/
 headline: blog
 heading: SCNVector3 Extension for SceneKit
 ---
