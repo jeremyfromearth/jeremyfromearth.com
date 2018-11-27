@@ -23,10 +23,10 @@ In this article I'm going to summarize how to configure a development environmen
  * Easily create builds for development and production deployments
 
 ## Google Cloud Platform SDK
- * First, if you don't have it, you'll need to download and install the GCP SDK. This toolkit provides all you need for developing and deploying web apps to App Engine.
+ * First, if you don't have it, you'll need to download and install the [GCP SDK](https://cloud.google.com/sdk/docs/). This toolkit provides all you need for developing and deploying web apps to App Engine.
  
 ## App Engine + Flask
-Google provides loads of resources for learning about GCP. This tutorial on setting up a basic Flask app is very helpful if you're just getting started.
+Google provides loads of resources for learning about GCP. This [tutorial on setting up a basic Flask app](https://cloud.google.com/appengine/docs/standard/python/getting-started/python-standard-env) is very helpful if you're just getting started.
 
 We aren't too concerned with serving up Jinja based templates from Flask since we'll be taking care of rendering on the client side. So instead, we only define a single view handler. Note the path to the index.html file. Later, we'll target this folder in the Vue configuration and copy compiled code and files to it.
 
@@ -46,7 +46,7 @@ Starting up the Flask app is simple, after you've followed the configuration set
 
 ```dev_appserver.py app.yaml```
 
-dev_appserver.py is a part of the GCP SDK. It will run your app, monitor files in the project and restart the server when changes are made. It is important to note that this is one of two servers running in our dev environment and it runs on port 8080.
+`dev_appserver.py` is a part of the GCP SDK. It will run your app, monitor files in the project and restart the server when changes are made. It is important to note that this is **one of two servers** running in our dev environment and it runs on port 8080.
 
 ## File Structure
 This is probably a good moment to take a look at the file structure for the project. Note that the server and client code are in their own directories.
@@ -73,24 +73,23 @@ project/
 ```
 
 ## Setting Up Vue
-Creating a new Vue project is super simple using the Vue-CLI. If you don't already have it installed, you can do so by running:
+[Creating a new Vue project](https://cli.vuejs.org/guide/creating-a-project.html) is super simple using the Vue-CLI. If you don't already have it installed, you can do so by running:
 
 ```
 npm install -g @vue/cli
 ```
 Now you can create a new Vue project in the client directory:
-
 ```
 cd client
 vue create name-of-my-project
 ```
 
-Vue-CLI is equipped with a development server that, like the GCP dev server, will monitor your project files and re-start when changes are detected. Additionally, it serves the app using hot module reloading. This means that you don't have to refresh your app in the browser to see changes and also that your app's state is maintained across changes. The is the second of two servers running in the development environment and if dev_appserver.py is running, it will be served on port 8081.
+Vue-CLI is equipped with a development server that, like the GCP dev server, will monitor your project files and re-start when changes are detected. Additionally, it serves the app using [hot module reloading](https://webpack.js.org/concepts/hot-module-replacement/). This means that you don't have to refresh your app in the browser to see changes and also that your app's state is maintained across changes. The is the **second of two** servers running in the development environment and if `dev_appserver.py` is running, it will be served on port **8081**.
 
 You can easily start the server from the command line using the following:
 
 ```vue-cli-service serve```
-or… you can add a shortcut script to package.json for a more idiomatic syntax.
+or… you can add a shortcut script to `package.json` for a more idiomatic syntax.
 
 ```
 "scripts": {
@@ -100,9 +99,9 @@ or… you can add a shortcut script to package.json for a more idiomatic syntax.
 }
 ```
 
-Now npm run serve will start the server. Also notice the other scripts prod and dev. We'll look at those a bit later.
+Now `npm run serve` will start the server. Also notice the other scripts `prod` and `dev`. We'll look at those a bit later.
 
-To enable our front-end code to fetch data from the Flask app, we'll need to configure the Vue-CLI service to proxy requests through the first server. Fortunately, this only requires making a small update to the Vue configuration and can be done by creating a file called vue.config.js in the root of the client directory.
+To enable our front-end code to fetch data from the Flask app, we'll need to configure the Vue-CLI service to proxy requests through the first server. Fortunately, this only requires making a small update to the Vue configuration and can be done by creating a file called `vue.config.js` in the root of the client directory.
 
 ```
 module.exports = {
@@ -115,7 +114,7 @@ module.exports = {
 ## Building for Dev and Prod
 At this point we have two servers running, one for serving the Flask based API and one for serving the Vue front-end. During development, you'll most likely be concerned with the front end server.
 
-Before deploying the app, we need to compile and optimize our front end code and copy it over to the static/gen and templates/gen folders of the Flask app. I snuck in two other scripts in the above snippet, dev and prod. These scripts tell the Vue-CLI to build the project for development and production environments. All that is left is to tell Vue-CLI where to put the compiled files. We can do that in the vue.config.js file.
+Before deploying the app, we need to compile and optimize our front end code and copy it over to the `static/gen` and `templates/gen` folders of the Flask app. I snuck in two other scripts in the above snippet, `dev` and `prod`. These scripts tell the Vue-CLI to build the project for development and production environments. All that is left is to tell Vue-CLI where to put the compiled files. We can do that in the `vue.config.js` file.
 
 Note: this is the same file mentioned above, but now it returns different config options based on the arguments provided.
 
@@ -152,8 +151,8 @@ switch(command) {
 module.exports = config
 ```
 
-Now we can build for dev by running npm run dev or for production with npm run prod.
+Now we can build for dev by running `npm run dev` or for production with `npm run prod`.
 
-After running either of those you can view the app from the Flask dev server at localhost:8080. Of course any changes you make to the front-end code won't show up here until you re-compile again. Once you are ready to deploy to App Engine, you can do so by running: gcloud app deploy server/app.yaml.
+After running either of those you can view the app from the Flask dev server at `localhost:8080`. Of course any changes you make to the front-end code won't show up here until you re-compile again. Once you are ready to deploy to App Engine, you can do so by running: `gcloud app deploy server/app.yaml`.
 
 That's it! I hope others out there find this useful. Feel free to leave a comment or question.
