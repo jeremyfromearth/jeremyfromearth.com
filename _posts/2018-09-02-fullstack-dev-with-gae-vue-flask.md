@@ -5,7 +5,7 @@ description: Configuring a Full Stack Development Environment with App Engine, F
 categories:
 - code
 - cloud
-permalink: blog/fullstack-dev-with-gae-vue-flask
+permalink: blog/fullstack-dev-with-gae-vue-flask/
 headline: blog
 heading: Configuring App Engine, Flask & Vue
 ---
