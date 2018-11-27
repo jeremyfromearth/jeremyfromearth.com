@@ -3,14 +3,14 @@ name: JeremyFromEarth
 title: JeremyFromEarth
 url: http://jeremyfromearth.github.io
 google_analytics_key: UA-65964466-1
-meta_description: Freelance Software Engineer with experience in graphics, networking, machine learning and interactive installations  
-description: The personal site of JeremyFromEarth, a Creative Technologist and Software Developer from Portland, Oregon
+meta_description: Software Engineer with experience in graphics, networking, machine learning and interactive installations  
+description: The personal site of Jeremy Brown, a Software Engineer and musician from Portland, Oregon
 author:
   name: Jeremy Brown
-  email: jeremy.from.earth@gmail.com
-  url: http://jeremynealbrown.github.io
+  email: jeremynealbrown@gmail.com
+  url: http://jeremyfromearth.com
 social:
-  github: jeremynealbrown
+  github: jeremyfromearth
   twitter: JeremyFromEarth
   vimeo: JeremyFromEarth
 markdown: kramdown
