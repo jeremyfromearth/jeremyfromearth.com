@@ -1,12 +1,4 @@
-_site
-.sass-cache
-*.lock
 *.swp
 .DS_Store
-.jekyll-metadata
 node_modules/
-packages/
-twitter/
-vendor/
-.bundle/
 legacy/
