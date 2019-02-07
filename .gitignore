@@ -9,3 +9,4 @@ packages/
 twitter/
 vendor/
 .bundle/
+legacy/
