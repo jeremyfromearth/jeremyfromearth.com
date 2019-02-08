@@ -1,14 +1,15 @@
 {
   "name": "jeremyfromearth",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "author": "@jeremyfromearth",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "d3": "^5.9.0",
     "vue": "^2.5.22",
     "vue-router": "^3.0.2",
     "vuex": "^3.1.0"
