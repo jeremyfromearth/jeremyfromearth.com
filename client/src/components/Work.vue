@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Terminal/>
+    <TerminalNav/>
   </div>
 </template>
 <script>

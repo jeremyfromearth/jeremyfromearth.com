@@ -7,11 +7,11 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Terminal from './components/Terminal'
+import TerminalNav from './components/TerminalNav'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false;
-Vue.component('Terminal', Terminal)
+Vue.component('TerminalNav', TerminalNav)
 
 export default {
   name: 'JeremyFromEarth',

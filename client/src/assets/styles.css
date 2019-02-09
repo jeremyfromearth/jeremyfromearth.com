@@ -1,6 +1,23 @@
 @font-face {font-family: Terminus; src: url(./fonts/Terminus.ttf);}
 @font-face {font-family: TerminusBold; src: url(./fonts/TerminusBold.ttf);}
 
+a {
+  color: #EE0033;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #222;
+  color: white;
+}
+
 body {
+  color: #222;
   font-family: Terminus
+}
+
+h1 {
+  font-size: 8em;
+  font-weight: bold;
+  font-family: Terminus;
 }
