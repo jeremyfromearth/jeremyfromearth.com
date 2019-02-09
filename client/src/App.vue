@@ -7,22 +7,13 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Terminal from './components/Terminal'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false;
+Vue.component('Terminal', Terminal)
 
 export default {
   name: 'JeremyFromEarth',
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
