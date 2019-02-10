@@ -15,7 +15,12 @@ a:hover {
 
 body {
   color: #222;
-  font-family: Terminus
+  font-family: Terminus;
+  margin: 0;
+}
+
+html {
+
 }
 
 h1 {

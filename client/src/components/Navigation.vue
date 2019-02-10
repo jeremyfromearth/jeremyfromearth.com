@@ -3,12 +3,13 @@ export default {
   name: 'Navigation',
   data() {
     return {
+      chars: 'abcdefghijklmnopqrstuvwxyz0123456789-/',
       input: this.$router.history.current.path.split('/')[1],
       interval_id: -1,
       keyfocus: true,
-      chars: 'abcdefghijklmnopqrstuvwxyz0123456789-/',
+      top: 30,
       paths: [
-        {label: '/main', path: '/', exact: true},
+        {label: '~/', path: '/', exact: true},
         {label: '/about', path: '/about', exact: true},
         {label: '/blog', path: '/blog', exact: false},
         {label: '/contact', path: '/contact', exact: true},
@@ -27,7 +28,10 @@ export default {
 
       let new_input = i.split('/')[1]
       if(new_input == 'main') new_input = ''
-      if(this.input == new_input) return
+      if(this.input == new_input) {
+        this.top = this.input == '' ? '30vh' : '5vh'
+        return
+      }
 
       let direction = 0
       this.keyfocus = false
@@ -45,6 +49,7 @@ export default {
           } else {
             this.keyfocus = true
             document.activeElement.blur()
+            this.top = this.input == '' ? '30vh' : '5vh'
             clearInterval(this.interval_id)
           }
         }
@@ -108,7 +113,7 @@ export default {
 }
 </script>
 <template>
-  <div>
+  <div class='nav-container' v-bind:style='{top: top}'>
     <h1>{{ get_full_input_string }}<span class='blink'>_</span></h1>
     <div class='nav-links'>
       <router-link 
@@ -121,6 +126,13 @@ export default {
   </div>
 </template>
 <style scoped>
+.nav-container {
+  left: 15vw;
+  position: absolute;
+  transition: top 0.3s;
+  top: 30vh;
+}
+
 .nav-link {
   margin-right: 0.5em;
   padding: 0.2em 0.2em 0.2em 0.2em;

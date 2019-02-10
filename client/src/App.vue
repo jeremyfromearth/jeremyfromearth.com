@@ -18,3 +18,8 @@ export default {
   name: 'JeremyFromEarth',
 }
 </script>
+<style>
+#app {
+  height: 100vh;
+}
+</style>
