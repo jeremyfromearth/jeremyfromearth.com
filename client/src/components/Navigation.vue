@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     get_full_input_string() {
-      return '~/' + this.input + '_'
+      return '~/' + this.input
     }
   },
   methods: {
@@ -44,6 +44,7 @@ export default {
             this.input += new_input[this.input.length]
           } else {
             this.keyfocus = true
+            document.activeElement.blur()
             clearInterval(this.interval_id)
           }
         }
@@ -72,7 +73,10 @@ export default {
             this.paths.forEach(p=> {
               if(p.label == '/' + this.input) {valid = true}
             })
-            if(valid) this.$router.push('/' + this.input)
+            
+            if(valid) {
+              this.$router.push('/' + this.input)
+            }
           }
         break
 
@@ -100,7 +104,7 @@ export default {
 </script>
 <template>
   <div>
-    <h1>{{ get_full_input_string }}</h1>
+    <h1>{{ get_full_input_string }}<span class='blink'>_</span></h1>
     <div class='nav-links'>
       <router-link 
         v-for='(path, idx) in paths' 
@@ -126,4 +130,27 @@ export default {
   pointer-events: none;
   color: #999;
 }
+
+.blink {
+  animation-name: blinker;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% { opacity: 1.0; }
+  100% { opacity: 0.3; }
+}
+
+@-webkit-keyframes blinker {
+  0% { opacity: 1.0; }
+  100% { opacity: 0.3; }
+}
+
+@keyframes blinker {
+  0% { opacity: 1.0; }
+  100% { opacity: 0.3; }
+}
+
 </style>
