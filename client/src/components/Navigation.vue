@@ -5,6 +5,8 @@ export default {
     return {
       input: this.$router.history.current.path.split('/')[1],
       interval_id: -1,
+      keyfocus: true,
+      chars: 'abcdefghijklmnopqrstuvwxyz0123456789-/',
       paths: [
         {label: '/main', path: '/', exact: true},
         {label: '/about', path: '/about', exact: true},
@@ -22,10 +24,13 @@ export default {
   },
   methods: {
     animate_input_text(i) {
-      let direction = 0
+
       let new_input = i.split('/')[1]
       if(new_input == 'main') new_input = ''
+      if(this.input == new_input) return
 
+      let direction = 0
+      this.keyfocus = false
       clearInterval(this.interval_id)
       this.interval_id = setInterval(()=> {
         if(direction == 0) {
@@ -38,11 +43,53 @@ export default {
           if(this.input.length < new_input.length) {
             this.input += new_input[this.input.length]
           } else {
+            this.keyfocus = true
             clearInterval(this.interval_id)
           }
         }
       }, 50)
+    }, 
+    handle_key_press(e) {
+      if(!this.keyfocus) return
+      switch(e.keyCode) {
+        // Delete
+        case 8:
+          e.preventDefault();
+          e.cancelBubble = true;
+          if(this.input.length) {
+            this.input = this.input.substring(0, this.input.length - 1);
+          }
+        break;
+
+        // Enter
+        case 13:
+          e.preventDefault();
+          e.cancelBubble = true
+          if(this.input == "main") {
+            this.$router.push('/');
+          } else {
+            let valid = false
+            this.paths.forEach(p=> {
+              if(p.label == '/' + this.input) {valid = true}
+            })
+            if(valid) this.$router.push('/' + this.input)
+          }
+        break
+
+        // Valid chars
+        default:
+          var s = String.fromCharCode(e.keyCode).toLowerCase();
+          if(this.chars.indexOf(s) >= 0) {
+            this.input += s
+          }
+        break
+      }
     }
+  },
+  mounted() {
+    window.addEventListener('keyup', (e)=> {
+      this.handle_key_press(e)
+    })
   },
   watch: {
     $route(to) {
