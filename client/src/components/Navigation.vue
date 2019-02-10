@@ -50,8 +50,9 @@ export default {
         }
       }, 50)
     }, 
-    handle_key_press(e) {
+    handle_key(e) {
       if(!this.keyfocus) return
+      if(e.type == 'keydown' && e.keyCode != 8) return
       switch(e.keyCode) {
         // Delete
         case 8:
@@ -92,7 +93,11 @@ export default {
   },
   mounted() {
     window.addEventListener('keyup', (e)=> {
-      this.handle_key_press(e)
+      this.handle_key(e)
+    })
+
+    window.addEventListener('keydown', (e)=> {
+      this.handle_key(e)
     })
   },
   watch: {
@@ -132,25 +137,14 @@ export default {
 }
 
 .blink {
-  animation-name: blinker;
-  animation-duration: 0.5s;
+  animation-name: blinkframe;
+  animation-duration: 0.8s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
-@-moz-keyframes blinker {
+@keyframes blinkframe {
   0% { opacity: 1.0; }
   100% { opacity: 0.3; }
 }
-
-@-webkit-keyframes blinker {
-  0% { opacity: 1.0; }
-  100% { opacity: 0.3; }
-}
-
-@keyframes blinker {
-  0% { opacity: 1.0; }
-  100% { opacity: 0.3; }
-}
-
 </style>
