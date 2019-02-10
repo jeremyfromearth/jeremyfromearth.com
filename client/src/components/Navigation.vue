@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     animate_input_text(i) {
-
       let new_input = i.split('/')[1]
       if(new_input == 'main') new_input = ''
       if(this.input == new_input) {
@@ -140,6 +139,7 @@ export default {
 }
 
 .nav-links {
+  display: flex;
   margin-left: 4em;
 }
 
