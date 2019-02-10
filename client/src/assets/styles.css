@@ -4,11 +4,13 @@
 a {
   color: #EE0033;
   text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 a:hover {
   background-color: #222;
   color: white;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 body {
@@ -17,7 +19,8 @@ body {
 }
 
 h1 {
+  font-family: Terminus;
   font-size: 8em;
   font-weight: bold;
-  font-family: Terminus;
+  margin: 0;
 }

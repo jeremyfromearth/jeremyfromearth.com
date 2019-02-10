@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navigation/>
     <router-view></router-view>
   </div>
 </template>
@@ -7,11 +8,11 @@
 <script>
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TerminalNav from './components/TerminalNav'
+import Navigation from './components/Navigation'
 
 Vue.use(VueRouter)
 Vue.config.productionTip = false;
-Vue.component('TerminalNav', TerminalNav)
+Vue.component('Navigation', Navigation)
 
 export default {
   name: 'JeremyFromEarth',

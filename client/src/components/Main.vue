@@ -1,7 +1,5 @@
 <template>
-  <div class="main">
-    <TerminalNav/>
-  </div>
+  <div/>
 </template>
 <script>
 export default {

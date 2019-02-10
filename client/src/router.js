@@ -20,6 +20,15 @@ export default new Router({
       name: 'Blog',
       component: Blog
     }, {
+      path: '/blog/:slug',
+      name: 'BlogPost', 
+      component: Blog,
+      children: [{
+        path: ':slug',
+        name: 'Post',
+        component: Blog
+      }]
+    }, {
       path: '/contact',
       name: 'Contact',
       component: Contact
