@@ -10,18 +10,13 @@ import Work from './components/Work'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/about',
       name: 'About', 
       component: About
     }, {
       path: '/blog',
       name: 'Blog',
-      component: Blog
-    }, {
-      path: '/blog/:slug',
-      name: 'BlogPost', 
       component: Blog,
       children: [{
         path: ':slug',

@@ -1,45 +1,42 @@
 <script>
+import {
+  mapState
+} from 'vuex'
 import * as d3 from 'd3'
 
 export default {
   name: 'Sketches',
-  methods: {
-    on_resize(){
-      let h = document.documentElement.clientHeight
-      let w = document.documentElement.clientWidth
-      d3.select('#svg-sketch')
-        .attr("preserveAspectRatio", "xMinYMin meet")
-        .attr("viewBox", `0 0 ${w} ${h}`)
+  computed: {
+    ...mapState([
+      'window_size'
+    ])
+  },
+  data() {
+    return {
+      x: [0, 0]
     }
   },
-  mounted() {
-    this.on_resize()
-    window.addEventListener('resize', this.on_resize)
-  }, 
-  
+  watch: {
+    $route(to) {
+      if(to.path == '/main') {
+        d3.select('svg')
+          .select
+      }
+    }
+  }
 }
 </script>
 
 <template>
   <div id='svg-container'>
-    <svg id='svg-sketch'></svg>
+    <svg id='svg-sketch' v-bind:viewBox="'0 0 ' + window_size[0] + ' ' + window_size[1]"></svg>
   </div>
 </template>
 
 <style scoped>
 #svg-container {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-  padding-bottom: 100%;
-  vertical-align: top;
-  overflow: hidden;
-}
-
-#svg-sketch {
-  display: inline-block;
+  width: 100vw;
+  height: 100vh;
   position: absolute;
-  top: 0px;
-  left: 0;
 }
 </style>
