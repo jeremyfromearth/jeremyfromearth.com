@@ -53,7 +53,7 @@ export default {
           }
         }
       }, 50)
-    }, 
+    },
     handle_key(e) {
       if(!this.keyfocus) return
       if(e.type == 'keydown' && e.keyCode != 8) return
@@ -145,7 +145,7 @@ export default {
 
 .router-link-active {
   pointer-events: none;
-  color: #999;
+  color: #555;
 }
 
 .blink {
