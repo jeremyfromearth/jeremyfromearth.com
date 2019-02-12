@@ -1,12 +1,8 @@
 <script>
+import SketchBase from './SketchBase'
+
 export default {
   name: 'Test',
-  mounted() {
-    console.log('Test')
-  }
+  extends: SketchBase,
 }
 </script>
-
-<template>
-  <h2>Test</h2>
-</template>
