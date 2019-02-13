@@ -32,9 +32,12 @@ export default {
     pause() {
       /* Override w/ sub-class */
     }, 
+    resize() {
+      /* Override w/ sub-class */
+    },
     resume() {
       /* Override w/ sub-class */
-    }
+    }, 
   }, 
   mounted() {
     this.init() 
@@ -50,6 +53,9 @@ export default {
       } else {
         this.pause()
       }
+    }, 
+    window_size(to, from) {
+      this.resize(to, from)
     }
   }
 }
