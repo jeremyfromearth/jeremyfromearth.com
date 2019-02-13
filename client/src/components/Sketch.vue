@@ -41,18 +41,5 @@ export default {
 </script>
 
 <template>
-  <div id='svg-container'>
-    <component v-bind:is="sketch"></component>
-  </div>
+  <component v-bind:is="sketch"></component>
 </template>
-
-<style scoped>
-#svg-container {
- display: inline-block;
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%; /* aspect ratio */
-    vertical-align: top;
-    overflow: hidden; 
-}
-</style>

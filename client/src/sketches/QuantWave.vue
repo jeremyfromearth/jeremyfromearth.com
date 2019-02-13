@@ -10,9 +10,10 @@ export default {
   data() {
     return {
       y:[], 
-      theta: 0, 
+      phase: 1, 
       hz: 16,
-      sr: 0
+      sr: 0, 
+      q: 0
     }
   }, 
   methods: {
@@ -22,17 +23,24 @@ export default {
         .append('path')
     },
     update() {
-      this.sr = this.window_size[0] / 64
+      this.sr = this.window_size[0]/ (Math.abs(Math.sin(this.q+=0.001)) * 64)
+      this.hz = Math.abs(Math.sin(this.phase) * 8)
       this.y = [
         ...Array(Math.ceil(this.sr))
       ].map((_, i)=> {
-        return Math.sin(TWO_PI * i * (this.hz / this.sr) + this.theta * TWO_PI)
+        return Math.sin(TWO_PI * i * (this.hz / this.sr) + this.phase * TWO_PI)
       })
-      this.theta += 0.005
+      this.phase += 0.005
     }, 
     draw() {
-      let x_scale = d3.scaleLinear().domain([0, this.sr-1]).range([0, this.window_size[0]])
-      let y_scale = d3.scaleLinear().domain([-1, 1]).range([this.window_size[1] * 0.5 + 16, this.window_size[1] * 0.5 - 16])
+      let x_scale = 
+        d3.scaleLinear()
+          .domain([0, this.sr-1])
+        .range([0, this.window_size[0]])
+      let y_scale = 
+        d3.scaleLinear()
+          .domain([-1, 1])
+          .range([this.window_size[1] * 0.5 + 16, this.window_size[1] * 0.5 - 16])
 
       let l = d3.line()
         .x((d, i) => x_scale(i))
@@ -43,7 +51,7 @@ export default {
           .attr('d', l)
           .style('fill', 'none')
           .style('stroke', '#333')
-          .style('opacity', 0.2)
+          .style('opacity', 1.0)
           .style('stroke-width', '1px')
     }
   }
