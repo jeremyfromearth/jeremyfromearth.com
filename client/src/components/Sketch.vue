@@ -4,7 +4,6 @@ import {
 } from 'vuex'
 
 import QuantWave from '../sketches/QuantWave'
-import Test from '../sketches/Test'
 
 let sketches = [QuantWave]
 

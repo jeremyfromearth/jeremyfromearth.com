@@ -13,7 +13,8 @@ export default {
       phase: 1, 
       hz: 16,
       sr: 0, 
-      q: 0
+      q: 0,
+      i: 0
     }
   }, 
   methods: {
@@ -21,10 +22,13 @@ export default {
       this.path = d3.select('#svg-sketch')
         .append('g')
         .append('path')
+      this.bar = d3.select('#svg-sketch')
+        .append('g')
+
     },
     update() {
-      this.sr = this.window_size[0]/ (Math.abs(Math.sin(this.q+=0.001)) * 64)
-      this.hz = Math.abs(Math.sin(this.phase) * 8)
+      this.sr = this.window_size[0] / 64 // (Math.abs(Math.sin(this.q += 0.001)) * 32)
+      this.hz = 3 + Math.abs(Math.cos(this.phase) * 4)
       this.y = [
         ...Array(Math.ceil(this.sr))
       ].map((_, i)=> {
@@ -36,23 +40,46 @@ export default {
       let x_scale = 
         d3.scaleLinear()
           .domain([0, this.sr-1])
-        .range([0, this.window_size[0]])
+          .range([0, this.window_size[0]])
+
       let y_scale = 
         d3.scaleLinear()
           .domain([-1, 1])
-          .range([this.window_size[1] * 0.5 + 16, this.window_size[1] * 0.5 - 16])
+          .range([this.window_size[1] * 0.5 + 32, this.window_size[1] * 0.5 - 32])
 
       let l = d3.line()
         .x((d, i) => x_scale(i))
         .y((d, i) => y_scale(this.y[i]))
 
       this.path
-          .data([this.y])
-          .attr('d', l)
-          .style('fill', 'none')
-          .style('stroke', '#333')
-          .style('opacity', 1.0)
-          .style('stroke-width', '1px')
+        .data([this.y])
+        .attr('d', l)
+        .style('fill', 'none')
+        .style('stroke', '#333')
+        .style('opacity', 1.0)
+        .style('stroke-width', '1px')
+
+      this.hist = d3
+        .histogram()
+        .thresholds(this.window_size[0]/64)
+
+      this.bins = this.hist(this.y)
+
+      if(!this.i++) {
+        console.log(this.bins)
+      }
+
+      /*
+      this.bar
+        .attr("fill", "steelblue")
+        .selectAll("rect")
+        .data(this.bins)
+        .join("rect")
+          .attr("x", (d, i) => x_scale(i))
+          .attr("width", 10)
+          .attr("y", d => y_scale(d.length))
+          .attr("height", d => y_scale(0) - y_scale(d.length));
+      */
     }
   }
 }
