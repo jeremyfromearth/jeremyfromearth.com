@@ -68,18 +68,6 @@ export default {
       if(!this.i++) {
         console.log(this.bins)
       }
-
-      /*
-      this.bar
-        .attr("fill", "steelblue")
-        .selectAll("rect")
-        .data(this.bins)
-        .join("rect")
-          .attr("x", (d, i) => x_scale(i))
-          .attr("width", 10)
-          .attr("y", d => y_scale(d.length))
-          .attr("height", d => y_scale(0) - y_scale(d.length));
-      */
     }
   }
 }

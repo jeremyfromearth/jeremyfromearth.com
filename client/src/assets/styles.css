@@ -1,5 +1,6 @@
 @font-face {font-family: Terminus; src: url(./fonts/Terminus.ttf);}
 @font-face {font-family: TerminusBold; src: url(./fonts/TerminusBold.ttf);}
+@font-face {font-family: IBMPlexMono; src: url('./fonts/IBMPlexMono-Regular.ttf');}
 
 a {
   color: #EE0033;
@@ -13,19 +14,29 @@ a:hover {
   transition: background-color 0.2s, color 0.4s;
 }
 
+a:visited {
+  background-color: none;
+}
+
+a:active: {
+  background-color: none;
+}
+
 body {
   color: #222;
   font-family: Terminus;
   margin: 0;
+  transition: font-size 250ms;
 }
 
-html {
-
+@media only screen and (max-width: 512px) {
+  body {
+    font-size: 0.8em;
+  }
 }
 
-h1 {
-  font-family: Terminus;
-  font-size: 8em;
-  font-weight: bold;
-  margin: 0;
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 1.0em;
+  }
 }

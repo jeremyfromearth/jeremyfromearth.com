@@ -2,12 +2,13 @@
 export default {
   name: 'Navigation',
   data() {
+    console.log(this.$router.history.current)
     return {
       chars: 'abcdefghijklmnopqrstuvwxyz0123456789-/',
       input: this.$router.history.current.path.split('/')[1],
       interval_id: -1,
       keyfocus: true,
-      top: 30,
+      top: this.$router.history.current.path == '/' ? '30vh' : '4em',
       paths: [
         {label: '~/', path: '/', exact: true},
         {label: '/about', path: '/about', exact: true},
@@ -28,7 +29,7 @@ export default {
       let new_input = i.split('/')[1]
       if(new_input == 'main') new_input = ''
       if(this.input == new_input) {
-        this.top = this.input == '' ? '30vh' : '5vh'
+        this.top = this.input == '' ? '32vh' : '4em'
         return
       }
 
@@ -48,7 +49,7 @@ export default {
           } else {
             this.keyfocus = true
             document.activeElement.blur()
-            this.top = this.input == '' ? '30vh' : '5vh'
+            this.top = this.input == '' ? '32vh' : '4em'
             clearInterval(this.interval_id)
           }
         }
@@ -125,6 +126,13 @@ export default {
   </div>
 </template>
 <style scoped>
+h1 {
+  font-family: Terminus;
+  font-size: 8em;
+  font-weight: bold;
+  margin: 0;
+}
+
 .nav-container {
   left: 15vw;
   position: absolute;
@@ -145,6 +153,7 @@ export default {
 
 .router-link-active {
   pointer-events: none;
+  background-color: transparent;
   color: #555;
 }
 

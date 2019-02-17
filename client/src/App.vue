@@ -42,4 +42,5 @@ export default {
 #app {
   height: 100vh;
 }
+
 </style>
