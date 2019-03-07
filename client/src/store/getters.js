@@ -1,6 +1,6 @@
 export default {
-  get_abstracts: state => {
-    return state.abstracts
+  get_worx: state => {
+    return state.worx
   },
   window_size: state => {
     return state.window_size

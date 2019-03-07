@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from './components/About'
-import Blog from './components/Blog'
 import Contact from './components/Contact'
+import Linx from './components/Linx'
 import Main from './components/Main'
 import Projekte from './components/Projekte'
-import Work from './components/Work'
+import Worx from './components/Worx'
 
 Vue.use(Router)
 
@@ -15,18 +15,13 @@ export default new Router({
       name: 'About', 
       component: About
     }, {
-      path: '/blog',
-      name: 'Blog',
-      component: Blog,
-      children: [{
-        path: ':slug',
-        name: 'Post',
-        component: Blog
-      }]
-    }, {
       path: '/contact',
       name: 'Contact',
       component: Contact
+    }, {
+      path: '/linx', 
+      name: 'Linx', 
+      component: Linx
     }, {
       path: '/',
       name: 'Main',
@@ -36,9 +31,9 @@ export default new Router({
       name: 'Projekte',
       component: Projekte
     }, {
-      path: '/work',
-      name: 'Work', 
-      component: Work
+      path: '/worx',
+      name: 'Worx', 
+      component: Worx
     }
   ],
 });

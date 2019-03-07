@@ -1,4 +1,8 @@
 <script>
+import {
+  mapActions
+} from 'vuex'
+
 export default {
   name: 'Navigation',
   data() {
@@ -30,6 +34,7 @@ export default {
     get_full_input_string(){ return '~/' + this.input }
   },
   methods: {
+    ...mapActions(['get_work']),
     animate_input_text(i, on_complete) {
       let new_input = i.split('/')[1]
 
@@ -66,7 +71,6 @@ export default {
     },
     get_subnav_class(parent_path) {
       let root = this.$router.history.current.path.split('/')[1]
-      console.log(root, parent_path)
       return parent_path == '/'+root ? 'subnav-container visible' : 'subnav-container hidden'
     },
     handle_key(e) {
@@ -128,6 +132,7 @@ export default {
     },
   },
   mounted() {
+    this.get_work()
     window.addEventListener('keydown', (e)=> {
       this.handle_key(e)
     })
