@@ -2,7 +2,6 @@
 export default {
   name: 'Navigation',
   data() {
-    console.log(this.$router.history.current)
     return {
       chars: 'abcdefghijklmnopqrstuvwxyz0123456789-/',
       input: this.$router.history.current.path.split('/')[1],
@@ -10,32 +9,41 @@ export default {
       keyfocus: true,
       top: this.$router.history.current.path == '/' ? '30vh' : '4em',
       paths: [
-        {label: '~/', path: '/', exact: true},
-        {label: '/about', path: '/about', exact: true},
-        {label: '/blog', path: '/blog', exact: false},
-        {label: '/contact', path: '/contact', exact: true},
-        {label: '/projekte', path: '/projekte', exact: false},
-        {label: '/work', path: '/work', exact: false}
+        {label:'~/', path:'/', exact:true, router:true},
+        {label:'/blog', path:'https://medium.com/@jeremy.from.earth', exact:false, router:false},
+        {label:'/linx', path:'/linx', exact:true, router:true},
+        {label:'/observable', path:'https://observablehq.com/@jeremyfromearth', exact:true, router:false},
+        {label:'/projects', path:'/projects', exact:false, router:true,
+          subs:[
+            {label:'M.O.R.T.O.N.', path:'/projects/morton'}, 
+            {label:'Muse', path:'/projects/muse'},
+            {label:'Patch', path:'/projects/patch'},
+            {label:'UIBot', path:'/projects/uibot'}
+          ]
+        },
+        {label: '/worx', path: '/worx', exact: false, router:true},
       ]
     }
   },
   computed: {
-    get_full_input_string() {
-      return '~/' + this.input
-    }
+    current_path(){ return this.$router.history.current.path },
+    get_full_input_string(){ return '~/' + this.input }
   },
   methods: {
-    animate_input_text(i) {
+    animate_input_text(i, on_complete) {
       let new_input = i.split('/')[1]
-      if(new_input == 'main') new_input = ''
+
+      /*
       if(this.input == new_input) {
         this.top = this.input == '' ? '32vh' : '4em'
         return
       }
+      */
 
       let direction = 0
       this.keyfocus = false
       clearInterval(this.interval_id)
+
       this.interval_id = setInterval(()=> {
         if(direction == 0) {
           if(this.input.length > 0) {
@@ -51,13 +59,18 @@ export default {
             document.activeElement.blur()
             this.top = this.input == '' ? '32vh' : '4em'
             clearInterval(this.interval_id)
+            if(on_complete) on_complete()
           }
         }
       }, 50)
     },
+    get_subnav_class(parent_path) {
+      let root = this.$router.history.current.path.split('/')[1]
+      console.log(root, parent_path)
+      return parent_path == '/'+root ? 'subnav-container visible' : 'subnav-container hidden'
+    },
     handle_key(e) {
       if(!this.keyfocus) return
-      if(e.type == 'keydown' && e.keyCode != 8) return
       switch(e.keyCode) {
         // Delete
         case 8:
@@ -75,13 +88,22 @@ export default {
           if(this.input == "main") {
             this.$router.push('/');
           } else {
+
+            let path = null
             let valid = false
             this.paths.forEach(p=> {
-              if(p.label == '/' + this.input) {valid = true}
+              if(p.label == '/' + this.input) {
+                path = p
+                valid = true
+              }
             })
             
             if(valid) {
-              this.$router.push('/' + this.input)
+              if(path.router) {
+                this.$router.push('/' + path.path)
+              } else {
+                window.open(path.path, 'jeremyfromearth') 
+              }
             }
           }
         break
@@ -94,43 +116,56 @@ export default {
           }
         break
       }
-    }
+    }, 
+    on_nav_link_click(p) {
+      this.animate_input_text(p.label, ()=> {
+        if(p.router) {
+          this.$router.push(p.path)
+        } else {  
+          window.open(p.path, 'jeremyfromearth')
+        }
+      }) 
+    },
   },
   mounted() {
-    window.addEventListener('keyup', (e)=> {
-      this.handle_key(e)
-    })
-
     window.addEventListener('keydown', (e)=> {
       this.handle_key(e)
     })
-  },
-  watch: {
-    $route(to) {
-      this.animate_input_text(to.path) 
-    }
   }
 }
 </script>
 <template>
-  <div class='nav-container' v-bind:style='{top: top}'>
+  <div class='nav-container' :style='{top: top}'>
     <h1>{{ get_full_input_string }}<span class='blink'>_</span></h1>
     <div class='nav-links'>
-      <router-link 
-        v-for='(path, idx) in paths' 
-          class='nav-link' v-bind:key='idx'
-          v-bind:to='path' v-bind:exact='path.exact'>
-        {{ path.label }}
-      </router-link>
+      <div v-for='(path, idx) in paths'>
+        <div>
+          <a class='nav-link' :key='idx'
+            :to='path.path' :exact='path.exact' @click='on_nav_link_click(path)'>{{ path.label }}</a>
+          <div class='subnav-container' v-if='path.subs' :class='get_subnav_class(path.path)'>
+            <div class='subnav' v-for='(sub, idx) in path.subs' :key='idx'>
+              <span class='line-drawing'>{{ idx == path.subs.length-1 ? '&#9495; ' : '&#9507; ' }}</span>
+              <router-link :to='sub.path'>{{ sub.label }}</router-link>
+            </div>
+          </div>
+        </div>
+        <!--<a v-else class='nav-link' :key='idx' :href='path.path' target='_jfrome' :exact='path.exact'>{{ path.label }}</a>-->
+      </div>
     </div> 
   </div>
 </template>
+
 <style scoped>
 h1 {
   font-family: Terminus;
   font-size: 8em;
   font-weight: bold;
   margin: 0;
+}
+
+.line-drawing {
+  color: #999;
+  font-family: monospace;
 }
 
 .nav-container {
@@ -148,13 +183,23 @@ h1 {
 
 .nav-links {
   display: flex;
-  margin-left: 4em;
+  margin: 0.5em 0 0 4em;
 }
 
 .router-link-active {
   pointer-events: none;
   background-color: transparent;
-  color: #555;
+  color: #EE0033;
+}
+
+.subnav {
+  margin: 0 0 0 1em;
+  padding: 0.5em 0 0 0.0em;
+}
+
+.subnav-container {
+  position: absolute;
+  margin-left: 0.25em;
 }
 
 .blink {

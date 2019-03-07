@@ -2,7 +2,7 @@
 @font-face {font-family: TerminusBold; src: url(./fonts/TerminusBold.ttf);}
 
 a {
-  color: #EE0033;
+  color: #333;
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -10,7 +10,7 @@ a {
 a:hover {
   background-color: #EE0033;
   color: white;
-  transition: background-color 0.2s, color 0.4s;
+  transition: background-color 0.2s;
 }
 
 a:visited {
@@ -22,10 +22,21 @@ a:active: {
 }
 
 body {
-  color: #222;
+  background-color: #fff;
+  color: #333;
   font-family: Terminus;
   margin: 0;
   transition: font-size 250ms;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 150ms;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 150ms;
 }
 
 @media only screen and (max-width: 512px) {
