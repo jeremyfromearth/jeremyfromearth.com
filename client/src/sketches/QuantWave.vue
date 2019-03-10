@@ -66,7 +66,7 @@ export default {
       this.bins = this.hist(this.y)
 
       if(!this.i++) {
-        console.log(this.bins)
+        //console.log(this.bins)
       }
     }
   }

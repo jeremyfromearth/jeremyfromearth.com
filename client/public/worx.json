@@ -25,7 +25,8 @@
     ],
     "headline": "work",
     "link": "/work/2013/power-up-portland",
-    "layout": "work"
+    "layout": "work",
+    "slug": "power-up-portland"
   },
   {
     "location": "Washington, D.C.",
@@ -40,7 +41,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165724749\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2013/reflections",
-    "layout": "work"
+    "layout": "work",
+    "slug": "reflections"
   },
   {
     "location": "Washington, D.C.",
@@ -54,7 +56,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/102772177\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2013/navigate-the-seas",
-    "layout": "work"
+    "layout": "work",
+    "slug": "navigate-the-seas"
   },
   {
     "location": "Cuero, Texas",
@@ -68,7 +71,8 @@
     "id": "lead-a-trail-drive",
     "headline": "work",
     "link": "/work/2013/lead-a-trail-drive",
-    "layout": "work"
+    "layout": "work",
+    "slug": "lead-a-trail-drive"
   },
   {
     "location": "Winnipeg, Manitoba",
@@ -98,7 +102,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/251536677\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2014/cmhr-human-rights-now",
-    "layout": "work"
+    "layout": "work",
+    "slug": "cmhr-human-rights-now"
   },
   {
     "client": "University of California",
@@ -113,7 +118,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165915999\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2014/breast-cancer-causation",
-    "layout": "work"
+    "layout": "work",
+    "slug": "breast-cancer-causation"
   },
   {
     "location": "Greenville, North Carolina",
@@ -133,7 +139,8 @@
     ],
     "headline": "work",
     "link": "/work/2015/clemson-data-ribbon",
-    "layout": "work"
+    "layout": "work",
+    "slug": "clemson-data-ribbon"
   },
   {
     "location": "Reno, Nevada",
@@ -158,7 +165,8 @@
     ],
     "headline": "work",
     "link": "/work/2015/digital-organ-explorers",
-    "layout": "work"
+    "layout": "work",
+    "slug": "digital-organ-explorers"
   },
   {
     "location": "Sydney, Austrailia",
@@ -191,7 +199,8 @@
     ],
     "headline": "work",
     "link": "/work/2015/telstra-partnership-hub",
-    "layout": "work"
+    "layout": "work",
+    "slug": "telstra-partnership-hub"
   },
   {
     "location": "Greenville, North Carolina",
@@ -223,7 +232,8 @@
     ],
     "headline": "work",
     "link": "/work/2015/clemson-family-portrait",
-    "layout": "work"
+    "layout": "work",
+    "slug": "clemson-family-portrait"
   },
   {
     "location": "Spokane, Washington",
@@ -237,7 +247,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/164945798\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2012/floods-navigator",
-    "layout": "work"
+    "layout": "work",
+    "slug": "floods-navigator"
   },
   {
     "location": "Spokane, Washington",
@@ -251,7 +262,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165723507\" width=\"1024\" height=\"638\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2012/lab-screens",
-    "layout": "work"
+    "layout": "work",
+    "slug": "lab-screens"
   },
   {
     "location": "Spokane, Washington U.S.",
@@ -288,7 +300,8 @@
     ],
     "headline": "work",
     "link": "/work/2012/harmony-table",
-    "layout": "work"
+    "layout": "work",
+    "slug": "harmony-table"
   },
   {
     "location": "New York, New York",
@@ -302,7 +315,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165036449\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2012/weegee-murder-is-my-business",
-    "layout": "work"
+    "layout": "work",
+    "slug": "weegee-murder-is-my-business"
   },
   {
     "location": "Bonham, Texas",
@@ -316,7 +330,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165063933\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2012/rayburn",
-    "layout": "work"
+    "layout": "work",
+    "slug": "rayburn"
   },
   {
     "location": "Los Angeles, California",
@@ -354,7 +369,8 @@
     ],
     "headline": "work",
     "link": "/work/2008/in-the-studio",
-    "layout": "work"
+    "layout": "work",
+    "slug": "in-the-studio"
   },
   {
     "location": "Gettysburg, Pensylvania",
@@ -367,7 +383,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32282009?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2008/faces-of-gettysburg",
-    "layout": "work"
+    "layout": "work",
+    "slug": "faces-of-gettysburg"
   },
   {
     "location": "Washington, D.C.",
@@ -394,7 +411,8 @@
     ],
     "headline": "work",
     "link": "/work/2008/orientation-screens",
-    "layout": "work"
+    "layout": "work",
+    "slug": "orientation-screens"
   },
   {
     "location": "Bethesda, Maryland",
@@ -407,7 +425,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32282236?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of<a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2008/global-health",
-    "layout": "work"
+    "layout": "work",
+    "slug": "global-health"
   },
   {
     "location": "Bethesda, Maryland",
@@ -435,7 +454,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32282222?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2007/names-quilt",
-    "layout": "work"
+    "layout": "work",
+    "slug": "names-quilt"
   },
   {
     "location": "Bethel, NY",
@@ -449,7 +469,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/11447969?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2007/woodstock-tryptich",
-    "layout": "work"
+    "layout": "work",
+    "slug": "woodstock-tryptich"
   },
   {
     "location": "Bethesda, Maryland",
@@ -462,7 +483,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32282208?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2007/aid-activism",
-    "layout": "work"
+    "layout": "work",
+    "slug": "aid-activism"
   },
   {
     "location": "Chicago, Illinois",
@@ -504,7 +526,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32282147?color=D6A34B\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2007/macarthur-foundation-kiosk",
-    "layout": "work"
+    "layout": "work",
+    "slug": "macarthur-foundation-kiosk"
   },
   {
     "location": "Louisville, Kentucky",
@@ -517,7 +540,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/10195050?color=D6A34B\" width=\"1024\" height=\"614\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2009/book-of-hours",
-    "layout": "work"
+    "layout": "work",
+    "slug": "book-of-hours"
   },
   {
     "location": "Santa Fe, New Mexico",
@@ -530,7 +554,8 @@
     "id": "seggesser-hide-explorer",
     "headline": "work",
     "link": "/work/2009/seggesser-hide-explorer",
-    "layout": "work"
+    "layout": "work",
+    "slug": "seggesser-hide-explorer"
   },
   {
     "client": "Old Standard Sound",
@@ -557,7 +582,8 @@
     ],
     "headline": "work",
     "link": "/work/2009/old-standard-sound",
-    "layout": "work"
+    "layout": "work",
+    "slug": "old-standard-sound"
   },
   {
     "location": "Kansas City, Missouri",
@@ -570,7 +596,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/32350414?color=D6A34B\" width=\"1024\" height=\"768\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><p>Courtesy of <a href=\"https://vimeo.com/secondstory\">Second Story</a></p>",
     "headline": "work",
     "link": "/work/2009/sports-broadcasting",
-    "layout": "work"
+    "layout": "work",
+    "slug": "sports-broadcasting"
   },
   {
     "location": "Santa Fe, New Mexico",
@@ -582,7 +609,8 @@
     "id": "treaty-of-gaudalupe-hidalgo",
     "headline": "work",
     "link": "/work/2009/treaty-of-gaudalupe-hidalgo",
-    "layout": "work"
+    "layout": "work",
+    "slug": "treaty-of-gaudalupe-hidalgo"
   },
   {
     "client": "Textwise",
@@ -595,7 +623,8 @@
     "id": "query-parser",
     "headline": "work",
     "link": "/work/2017/query-parser",
-    "layout": "work"
+    "layout": "work",
+    "slug": "query-parser"
   },
   {
     "client": "Textwise",
@@ -608,7 +637,8 @@
     "id": "semantic-map",
     "headline": "work",
     "link": "/work/2017/semantic-map",
-    "layout": "work"
+    "layout": "work",
+    "slug": "semantic-map"
   },
   {
     "location": "Philadelphia, Pennsylvania",
@@ -627,7 +657,8 @@
     ],
     "headline": "work",
     "link": "/work/2010/kronos",
-    "layout": "work"
+    "layout": "work",
+    "slug": "kronos"
   },
   {
     "location": "New York, New York",
@@ -659,7 +690,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165625518\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2010/infinity-of-nations",
-    "layout": "work"
+    "layout": "work",
+    "slug": "infinity-of-nations"
   },
   {
     "location": "Portland, OR",
@@ -684,7 +716,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165072709\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2010/nike-sparq-data-visulization",
-    "layout": "work"
+    "layout": "work",
+    "slug": "nike-sparq-data-visulization"
   },
   {
     "location": "Columbus, Ohio",
@@ -722,7 +755,8 @@
     ],
     "headline": "work",
     "link": "/work/2018/woaep",
-    "layout": "work"
+    "layout": "work",
+    "slug": "woaep"
   },
   {
     "location": "Portland, Oregon",
@@ -738,7 +772,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165729989\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2011/childrens-museum-storefront",
-    "layout": "work"
+    "layout": "work",
+    "slug": "childrens-museum-storefront"
   },
   {
     "location": "Portland, Oregon",
@@ -753,7 +788,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165074357\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2011/omsi-kinect-prototype",
-    "layout": "work"
+    "layout": "work",
+    "slug": "omsi-kinect-prototype"
   },
   {
     "location": "Berlin Township, Ohio",
@@ -767,7 +803,8 @@
     "video": "<iframe src=\"https://player.vimeo.com/video/165634719\" width=\"1024\" height=\"576\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>",
     "headline": "work",
     "link": "/work/2011/virtual-estuary",
-    "layout": "work"
+    "layout": "work",
+    "slug": "virtual-estuary"
   },
   {
     "location": "San Francisco, California",
@@ -804,7 +841,8 @@
     ],
     "headline": "work",
     "link": "/work/2016/sfmoma-storyscreens",
-    "layout": "work"
+    "layout": "work",
+    "slug": "sfmoma-storyscreens"
   },
   {
     "location": "Berkeley Heights, NJ",
@@ -819,6 +857,7 @@
     "id": "bell-labs-visual-search",
     "headline": "work",
     "link": "/work/2016/bell-labs-visual-search",
-    "layout": "work"
+    "layout": "work",
+    "slug": "bell-labs-visual-search"
   }
 ]

@@ -34,7 +34,7 @@ export default {
     get_full_input_string(){ return '~/' + this.input }
   },
   methods: {
-    ...mapActions(['get_work']),
+    ...mapActions(['get_worx']),
     animate_input_text(i, on_complete) {
       let new_input = i.split('/')[1]
 
@@ -123,16 +123,19 @@ export default {
     }, 
     on_nav_link_click(p) {
       this.animate_input_text(p.label, ()=> {
+        /*
         if(p.router) {
           this.$router.push(p.path)
         } else {  
           window.open(p.path, 'jeremyfromearth')
         }
+        */
       }) 
     },
   },
   mounted() {
-    this.get_work()
+    // TODO: Move this to Worx
+    this.get_worx()
     window.addEventListener('keydown', (e)=> {
       this.handle_key(e)
     })
@@ -143,18 +146,19 @@ export default {
   <div class='nav-container' :style='{top: top}'>
     <h1>{{ get_full_input_string }}<span class='blink'>_</span></h1>
     <div class='nav-links'>
-      <div v-for='(path, idx) in paths'>
+      <div v-for='(path, idx) in paths' :key='idx'>
         <div>
-          <a class='nav-link' :key='idx'
-            :to='path.path' :exact='path.exact' @click='on_nav_link_click(path)'>{{ path.label }}</a>
-          <div class='subnav-container' v-if='path.subs' :class='get_subnav_class(path.path)'>
+          <router-link class='nav-link' 
+            :to='path.path' :exact='path.exact' 
+            @click.native='on_nav_link_click(path)'>{{ path.label }}</router-link>
+          <div class='subnav-container' 
+            v-if='path.subs' :class='get_subnav_class(path.path)'>
             <div class='subnav' v-for='(sub, idx) in path.subs' :key='idx'>
               <span class='line-drawing'>{{ idx == path.subs.length-1 ? '&#9495; ' : '&#9507; ' }}</span>
               <router-link :to='sub.path'>{{ sub.label }}</router-link>
             </div>
           </div>
         </div>
-        <!--<a v-else class='nav-link' :key='idx' :href='path.path' target='_jfrome' :exact='path.exact'>{{ path.label }}</a>-->
       </div>
     </div> 
   </div>

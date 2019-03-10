@@ -73,7 +73,8 @@ export default {
 <style scoped>
 #svg-sketch {
   display: inline-block;
-    position: absolute;
-    left: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
 }
 </style>

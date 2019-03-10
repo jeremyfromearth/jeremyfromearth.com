@@ -6,11 +6,12 @@ export default {
       commit('set_window_size', size)
     }
   }, 
-  get_work({commit}) {
-    axios.get('/work.json')
+  get_worx({commit}) {
+    axios.get('/worx.json')
       .then(res => {
-        console.log(res.data)
-        commit('set_worx', res.data)
+        let worx = res.data
+        worx = worx.sort((a,b)=> a.year - b.year)
+        commit('set_worx', worx)
       })
       .catch(err => {
         console.log(err) 

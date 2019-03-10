@@ -3,9 +3,9 @@ import {
   mapState
 } from 'vuex'
 
-//import QuantWave from '../sketches/QuantWave'
+import QuantWave from '../sketches/QuantWave'
 
-let sketches = []
+let sketches = [QuantWave]
 
 export default {
   name: 'Sketch',
@@ -17,22 +17,22 @@ export default {
   data() {
     return {
       x: [0, 0],
-      sketch: null//this.random_sketch()
+      sketch: this.random_sketch()
     }
   },
   methods: {
     random_sketch() {
-      return null//sketches[Math.floor(Math.random() * sketches.length)]
+      return sketches[Math.floor(Math.random() * sketches.length)]
     },
     update() {
       // Update the sketch
-      //if(this.sketch) this.sketch.update()
+      if(this.sketch) this.sketch.update()
     }
   },
   watch: {
     $route(to) {
       if(to.path == '/') {
-        //this.sketch = this.random_sketch() 
+        this.sketch = this.random_sketch() 
       }
     }
   }

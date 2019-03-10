@@ -1,24 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from './components/About'
-import Contact from './components/Contact'
 import Linx from './components/Linx'
 import Main from './components/Main'
-import Projekte from './components/Projekte'
+import Projects from './components/Projects'
+import Work from './components/Work'
 import Worx from './components/Worx'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [{
-      path: '/about',
-      name: 'About', 
-      component: About
-    }, {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
-    }, {
       path: '/linx', 
       name: 'Linx', 
       component: Linx
@@ -27,12 +18,20 @@ export default new Router({
       name: 'Main',
       component: Main,
     }, {
-      path: '/projekte', 
-      name: 'Projekte',
-      component: Projekte
+      path: '/projects', 
+      name: 'Projects',
+      component: Projects
     }, {
       path: '/worx',
       name: 'Worx', 
+      component: Worx,
+      children: [{
+        path: ':id', 
+        component: Work
+      }]
+    }, {
+      path: '/worx/:slug', 
+      name: 'Work',
       component: Worx
     }
   ],
