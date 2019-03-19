@@ -18,7 +18,6 @@ export default {
       })
   },
   inc_pagination({commit}) {
-    console.log('inc_pagination()')
     commit('inc_pagination') 
   },
   set_window_size({commit}, size) {

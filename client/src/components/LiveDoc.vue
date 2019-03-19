@@ -107,9 +107,6 @@ export default {
             </ul>
           </div>
         </div>
-
-        <!--<p>&raquo; Also, I seriously enjoy writing code with <a href="https://twitter.com/search?q=%23weekenddesktop&src=typd">VIM</a></p>-->
-        
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <form>
@@ -119,10 +116,8 @@ export default {
             </md-field>
           </form>
         </div>
-        <!-- Iterate through currently filtered projects -->
-        <!-- container with project | paginiation arrow -->
         <div class='project-container'>
-          <div class='pagination-controller' v-if='pagination > 0'>
+          <div class='pagination-controller' v-if='pagination > 0' @click='dec_pagination()'>
             <div class='pagination-arrow pagination-arrow-left'><h4>&laquo;</h4></div>
           </div>
           <div>
@@ -138,39 +133,8 @@ export default {
                 </div>
               </div>
             </div>
-            <!--
-            <div>
-              <div class='md-layout'>
-                <h4 class='md-layout-item-5'>2018</h4>
-                <div class='md-layout-item'>
-                    <div>
-                      <h4>Storycrafter Canvas</h4>
-                      <h5>Terra Incognita</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit eros, dapibus vitae odio sit amet, tincidunt cursus turpis. Phasellus vitae suscipit lorem, ut gravida ligula. Duis at dui facilisis, gravida purus ac, maximus nibh. Etiam justo velit, pharetra eu urna sed, molestie tincidunt sapien. Donec maximus est et tristique lobortis. Vivamus sit amet sapien eu sapien eleifend maximus eu in odio.</p>
-                    </div>
-                    <div>
-                      <h4>World of A.E.P.</h4>
-                      <h5>American Electric Power</h5>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit eros, dapibus vitae odio sit amet, tincidunt cursus turpis. Phasellus vitae suscipit lorem, ut gravida ligula. Duis at dui facilisis, gravida purus ac, maximus nibh. Etiam justo velit, pharetra eu urna sed, molestie tincidunt sapien. Donec maximus est et tristique lobortis. Vivamus sit amet sapien eu sapien eleifend maximus eu in odio.</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class='md-layout'>
-                <h4 class='md-layout-item-5'>2016</h4>
-                <div class='md-layout-item'>
-                  <div>
-                    <h4>Story Screens Render Engine</h4>
-                    <h5>San Fransisco Museum of Modern Art</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed velit eros, dapibus vitae odio sit amet, tincidunt cursus turpis. Phasellus vitae suscipit lorem, ut gravida ligula. Duis at dui facilisis, gravida purus ac, maximus nibh. Etiam justo velit, pharetra eu urna sed, molestie tincidunt sapien. Donec maximus est et tristique lobortis. Vivamus sit amet sapien eu sapien eleifend maximus eu in odio.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
           </div>
-          <div class='pagination-controller' :click='some_method()'>
+          <div class='pagination-controller' @click='inc_pagination()'>
             <div class='pagination-arrow pagination-arrow-right'><h4>&raquo;</h4></div>
           </div>
         </div>
