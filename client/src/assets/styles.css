@@ -1,32 +1,39 @@
+@font-face {font-family: IBMPlexMonoRegular; src: url(./fonts/IBMPlexMono-Regular.ttf);}
+@font-face {font-family: IBMPlexMonoSemiBold; src: url(./fonts/IBMPlexMono-SemiBold.ttf);}
 @font-face {font-family: Terminus; src: url(./fonts/Terminus.ttf);}
 @font-face {font-family: TerminusBold; src: url(./fonts/TerminusBold.ttf);}
 
+* {
+  font-family: 'IBMPlexMonoRegular', monospace;
+  line-height: 1.5;
+}
+
 a {
-  color: #333;
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
 }
 
 a:hover {
-  background-color: #EE0033;
-  color: white;
-  transition: background-color 0.2s;
+
 }
 
 a:visited {
-  background-color: none;
+
 }
 
 a:active: {
-  background-color: none;
+
 }
 
 body {
   background-color: #fff;
-  color: #333;
-  font-family: Terminus;
+  font-size: 14px;
   margin: 0;
-  transition: font-size 250ms;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  font-family: IBMPlexMonoSemiBold, monospace;
 }
 
 .hidden {
@@ -41,12 +48,12 @@ body {
 
 @media only screen and (max-width: 512px) {
   body {
-    font-size: 0.8em;
+    font-size: 10px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   body {
-    font-size: 1.0em;
+    font-size: 14px;
   }
 }

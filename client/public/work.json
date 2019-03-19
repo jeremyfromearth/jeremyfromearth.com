@@ -1,0 +1,384 @@
+{
+  "projects": [
+    {
+      "client": "Oregon Museum of Sciecne and Industry",
+      "collaborators": ["Made Clear"],
+      "description": "",
+      "id": "power-up-portland",
+      "location": "Portland, Oregon",
+      "published": true,
+      "tech": {
+        "Misc": ["Arduino"]
+      },
+      "title": "Power Up Portland",
+      "year": 2013
+    }, {
+      "client": "United States Holocaust Memorial Museum",
+      "collaborators": ["C&G Partners"],
+      "description": "Visitors to the U.S. Holocaust Memorial Museum share their thoughts in this dynamically animated motion graphics piece.",
+      "id": "holocaust-memorial-museum-reflections",
+      "location": "Washington, D.C.",
+      "published": true,
+      "title": "Reflections",
+      "year": 2013
+    }, {
+
+      "client": "National Air & Space Museum",
+      "collaborators": ["Terra Incognita"],
+      "description": "",
+      "location": "Washington, D.C.",
+      "id": "navigate-the-seas",
+      "published": true,
+      "title": "Navigate the Seas",
+      "year": 2013
+    }, {
+      "client": "Chisholm Trail Heritage Museum",
+      "collaborators": ["Terra Incognita"],
+      "description": "Touch-screen application exploring life as a cowboy on the Chisholm Trail",
+      "id": "lead-a-trail-drive",
+      "location": "Cuero, Texas",
+      "published": true,
+      "title": "Lead a Trail Drive",
+      "year": 2013
+    }, {
+      "client": "Canadian Museum for Human Rights",
+      "location": "Winnipeg, Manitoba",
+      "id": "cmhr-human-rights-now",
+      "published": true,
+      "collaborators": ["Upswell"],
+      "description": "Thirty foot data visualization wall providing a concise view of human rights issues around the world today.",
+      "tech": {
+        "C++": ["Cinder", "OpenGL"]
+      },
+      "title": "Human Rights Now",
+      "year": 2014
+    }, {
+      "client": "University of California",
+      "collaborators": ["Periscopic"],
+      "description": "HTML5 & JavaScript driven data visualization of breast cancer causation",
+      "id": "breast-cancer-causation",
+      "published": true,
+      "tech": {
+          "JavaScript": []
+        },
+      "title": "Visualizing Breast Cancer Causation",
+      "year": 2014
+    }, {
+      "client": "Clemson University",
+      "collaborators": ["Upswell"],
+      "description": "A 12x144 LED display featuring animated news, events and facts about Clemson University",
+      "id": "clemson-data-ribbon",
+      "location": "Greenville, North Carolina",
+      "published": true,
+      "tech": {
+        "Misc": ["Java", "Processing", "Arduino"]
+      },
+      "title": "Data Ribbon",
+      "year": 2015
+    }, {
+      "client": "Nevada Discovery Museum",
+      "collaborators": ["Upswell"],
+      "description": "An augmented reality application for the iPad that enables users to view content overlays against real physical models of four different human organs.",
+      "id": "digital-organ-explorers",
+      "location": "Reno, Nevada",
+      "published": true,
+      "tech": {
+        "Misc": [
+          "Swift",
+          "Django"
+        ]
+      },
+      "title": "Digital Organ Explorers",
+      "year": 2015
+    }, {
+      "client": "Telstra",
+      "collaborators": ["Wild"],
+      "description": "A thirty foot LED wall presentation platform providing executives at Telstra the ability to demonstrate the reach of Telstra across multiple industries",
+      "id": "telstra-partnership-hub",
+      "location": "Sydney, Austrailia",
+      "published": false,
+      "tech": {
+          "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"],
+          "Misc": ["MQTT"]
+        },
+      "title": "Partnership Hub",
+      "year": 2015
+    }, {
+      "client": "Clemson University",
+      "collaborators": ["Upswell"],
+      "id": "clemson-family-portrait",
+      "location": "Greenville, North Carolina",
+      "published": true,
+      "tech": {
+        "C++": ["Cinder", "Kinect", "OpenGL"]
+      },
+      "title": "Clemson Family Portrait",
+      "year": 2015
+    }, {
+      "client": "Mobius Science Center",
+      "collaborators": ["Upswell", "Renate", "Arxi"],
+      "id": "floods-navigator",
+      "location": "Spokane, Washington",
+      "published": true,
+      "title": "Missoula Floods Navigator",
+      "year": 2012
+    }, {
+      "client": "Mobius Science Center",
+      "collaborators": ["Upswell", "Renate", "Arxi"],
+      "description": "Multi-touch table allowing visitors to explore music theory through abstract visualizations and interactive instruments",
+      "id": "harmony-table",
+      "location": "Spokane, Washington U.S.",
+      "published": true,
+      "title": "Harmony Table",
+      "tech": {
+          "Misc": ["Java", "Processing", "TUIO"]
+        },
+      "year": 2012
+    }, {
+      "client": "International Center for Photography",
+      "collaborators": [],
+      "id": "weegee-murder-is-my-business",
+      "location": "New York, New York",
+      "published": true,
+      "title": "Murder is My Business",
+      "year": 2012
+    }, {
+      "client": "Sam Rayburn Library & Museum",
+      "collaborators": ["Terra Incognita"],
+      "id": "rayburn",
+      "location": "Bonham, Texas",
+      "published": true,
+      "title": "Sam Rayburn Archive Explorer",
+      "year": 2012
+    }, {
+      "client": "The Grammy Museum",
+      "collaborators": ["Second Story"],
+      "description": "Eight unique interactive installations allow visitors to record, mix, master and re-mix music with guidance provided by Grammy Award winning producers and engineers",
+      "id": "in-the-studio",
+      "location": "Los Angeles, California",
+      "published": true,
+      "title": "In the Studio",
+      "year": 2008
+    }, {
+      "client": "Gettysburg Visitors Center",
+      "collaborators": ["Second Story"],
+      "description": "Some description",
+      "id": "faces-of-gettysburg",
+      "location": "Gettysburg, Pensylvania",
+      "published": true,
+      "title": "Faces of Gettysburg",
+      "year": 2008
+    }, {
+      "client": "The Library of Congress",
+      "collaborators": ["Second Story"],
+      "categories": "data-visualization, events, info-screens",
+      "description": "Three synchronized information screens displaying event data, motion graphics and image slideshows",
+      "id": "orientation-screens",
+      "location": "Washington, D.C.",
+      "published": true,
+      "title": "Orientation Screens",
+      "year": 2008
+    }, {
+      "client": "National Library of Medicine",
+      "collaborators": ["Second Story"],
+      "id": "global-health",
+      "location": "Bethesda, Maryland",
+      "published": true,
+      "title": "Global Health Kiosks",
+      "year": 2008
+    }, {
+      "client": "National Library of Medicine",
+      "collaborators": ["Second Story"],
+      "location": "Bethesda, Maryland",
+      "id": "names-quilt",
+      "title": "Names Quilt Touch Table",
+      "published": true,
+      "year": 2007
+    }, {
+      "location": "Bethel, NY",
+      "client": "The Museum at Bethel Woods",
+      "collaborators": ["Second Story"],
+      "id": "woodstock-tryptich",
+      "title": "Woodstock Tryptich Kiosks",
+      "published": true,
+      "year": 2007
+    }, {
+      "client": "National Library of MedicineS",
+      "collaborators": ["Second Story"],
+      "id": "aid-activism",
+      "location": "Bethesda, Maryland",
+      "published": true,
+      "title": "AIDS Activism",
+      "year": 2007
+    }, {
+      "client": "John D. and Catherine T. MacArthur Foundation",
+      "collaborators": ["Second Story"],
+      "id": "macarthur-foundation-kiosk",
+      "location": "Chicago, Illinois",
+      "published": true,
+      "title": "MacArthur Foundation Experience",
+      "year": 2007
+    }, {
+      "client": "The Speed Art Museum",
+      "collaborators": ["Second Story"],
+      "location": "Louisville, Kentucky",
+      "id": "book-of-hours",
+      "published": true,
+      "title": "Book of Hours",
+      "year": 2009
+    },
+    {
+      "location": "Santa Fe, New Mexico",
+      "client": "The New Mexico History Museum",
+      "collaborators": ["Second Story"],
+      "description": "Hi-res image pan and zoom explorers allowing visitors to view artifacts in incredible detail",
+      "id": "seggesser-hide-explorer",
+      "published": true,
+      "title": "Seggesser Hide Explorer",
+      "year": 2009
+    },
+    {
+      "client": "Old Standard Sound",
+      "description": "Fullscreen site for local recording studio.",
+      "id": "old-standard-sound",
+      "title": "Old Standard Sound Website",
+      "published": true,
+      "collaborators": ["Upswell"],
+      "year": 2009
+    },
+    {
+      "client": "The Kansas City Royals Hall of Fame",
+      "collaborators": ["Second Story"],
+      "id": "sports-broadcasting",
+      "location": "Kansas City, Missouri",
+      "published": true,
+      "title": "Sports Broadcasting",
+      "year": 2009
+    },
+    {
+      "client": "New Mexico History Museum",
+      "location": "Santa Fe, New Mexico",
+      "id": "treaty-of-gaudalupe-hidalgo",
+      "published": true,
+      "title": "Treaty of Guadalupe Hidalgo",
+      "year": 2009
+    },
+    {
+      "client": "Textwise",
+      "description": "A domain specific search language designed for IP.com",
+      "id": "query-parser",
+      "published": true,
+      "tech": {
+          "Misc": ["Java", "NPM"],
+          "JavaScript": ["D3", "Node"],
+          "C++": []
+        },
+      "title": "Search Engine Query Language",
+      "year": 2017
+    },
+    {
+      "client": "Textwise",
+      "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios",
+      "published": true,
+      "tech": {
+        "JavaScript": ["D3", "Node"]
+      },
+      "title": "Semantic Map",
+      "year": 2017
+    },
+    {
+      "client": "University of Pennsylvania<br/>Museum of Archaeology and Anthropology",
+      "location": "Philadelphia, Pennsylvania",
+      "id": "kronos",
+      "published": true,
+      "title": "Kronos Archaeology Discovery",
+      "tech":{
+          "Misc": ["Java", "Android", "MySQL"]
+        },
+      "year": 2011
+    }, {
+      "client": "National Museum of the American Indian",
+      "collaborators": ["Potion"],
+      "description": "Ten interactive touch-screen object explorer applications",
+      "id": "infinity-of-nations",
+      "location": "New York, New York",
+      "published": true,
+      "title": "Infinity of Nations",
+      "year": 2010
+    }, {
+      "client": "Nike, Sparq",
+      "id": "nike-sparq-data-visulization",
+      "location": "Portland, OR",
+      "published": true,
+      "title": "Nike Sparq Data Visualizations",
+      "collaborators": ["The Makers"],
+      "categories": "data-visualization",
+      "year": 2010
+    }, {
+      "client": "American Electric Power",
+      "collaborators": ["Terra Incognita", "Northern Light", "The History Factory"],
+      "location": "Columbus, Ohio",
+      "id": "woaep",
+      "published": false,
+      "tech": {
+          "C++": ["Cinder", "OpenGL", "TUIO"]
+        },
+      "title": "World of AEP",
+      "year": 2018
+    }, {
+      "client": "Portland's Children Museum",
+      "collaborators": ["Wieden+Kennedy"],
+      "description": "Kinect promo for display in storefronts in downtown PDX",
+      "id": "childrens-museum-storefront",
+      "location": "Portland, Oregon",
+      "published": true,
+      "title": "Children's Museum Storefront",
+      "tech": {
+          "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]
+        },
+      "year": 2011
+    }, {
+      "client": "Oregon Museum of Sciecne and Industry",
+      "collaborators": ["Made Clear"],
+      "id": "omsi-kinect-prototype",
+      "location": "Portland, Oregon",
+      "published": true,
+      "title": "Strength Augmentation Prototype",
+      "tech": {
+          "C++": ["Cinder", "OpenGL", "Kinect"]
+        },
+      "year": 2011
+    }, {
+      "client": "Old Woman Creek Estuary & Visitors Center",
+      "id": "virtual-estuary",
+      "location": "Berlin Township, Ohio",
+      "published": true,
+      "title": "The Virtual Estuary",
+      "year": 2011
+    }, {
+      "client": "San Franscisco Museum of Modern Art",
+      "collaborators": ["Britelite Immersive"],
+      "id": "sfmoma-storyscreens",
+      "location": "San Francisco, California",
+      "published": true,
+      "title": "Storyscreens",
+      "tech": {
+          "C++": ["Cinder", "OpenGL", "Kinect"],
+          "Python": ["Flask", "SocketIO"]
+        },
+      "year": 2016
+    }, {
+      "location": "Berkeley Heights, NJ",
+      "client": "Bell Labs",
+      "description": "Visual search using procedurally generated geometries to explore result relevance",
+      "id": "bell-labs-visual-search",
+      "published": false,
+      "title": "Search Spheres",
+      "collaborators": "Upswell",
+      "technologies": {
+          "misc": ["Swift"]
+        },
+      "year": 2016
+    }
+  ]
+}

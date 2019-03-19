@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Linx from './components/Linx'
+import LiveDoc from './components/LiveDoc'
 import Main from './components/Main'
 import Projects from './components/Projects'
 import Work from './components/Work'
@@ -13,6 +14,10 @@ export default new Router({
       path: '/linx', 
       name: 'Linx', 
       component: Linx
+    }, {
+      path: '/livedoc', 
+      name: 'LiveDoc', 
+      component: LiveDoc
     }, {
       path: '/',
       name: 'Main',

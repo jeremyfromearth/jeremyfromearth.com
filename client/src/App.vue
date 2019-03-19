@@ -1,15 +1,34 @@
 <script>
+// Vendor imports
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import {mapActions} from 'vuex'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import Navigation from './components/Navigation'
-import Sketch from './components/Sketch'
+import {
+  MdApp, 
+  MdContent,
+  MdField,
+  MdInput,
+  MdLabel,
+  MdLayout
+} from 'vue-material/dist/components'
+
+// Site imports
+import Project from './components/Project'
 
 Vue.use(VueRouter)
+Vue.use(MdApp)
+Vue.use(MdContent)
+Vue.use(MdField)
+Vue.use(MdLayout)
 Vue.config.productionTip = false;
-Vue.component('Navigation', Navigation)
-Vue.component('Sketch', Sketch)
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('Project', Project)
+
+library.add(faCoffee)
 
 export default {
   name: 'JeremyFromEarth',
@@ -31,16 +50,5 @@ export default {
 </script>
 
 <template>
-  <div id="app">
-    <Sketch/>
-    <Navigation/>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 </template>
-
-<style>
-#app {
-  height: 100vh;
-}
-
-</style>
