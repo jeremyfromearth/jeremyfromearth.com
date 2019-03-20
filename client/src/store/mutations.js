@@ -3,10 +3,16 @@ export default {
     state.pagination = 0
   },
   dec_pagination(state) {
-    if(state.pagination - 1 >= 0) state.pagination -= 1
+    const n = state.projects_per_page
+    if(state.pagination - n >= 0) {
+      state.pagination -= n
+    } else {
+      state.pagination = 0
+    }
   },
   inc_pagination(state) {
-    if(state.pagination + 1 < state.projects.length - 3) state.pagination += 1
+    const n = state.projects_per_page
+    if(state.pagination + n < state.projects.length) state.pagination += n
   },
   set_new_data(state, value) {
     state.projects = value['projects'].sort((a, b) => b['year'] - a['year'])

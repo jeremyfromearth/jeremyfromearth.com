@@ -3,7 +3,7 @@
     {
       "client": "Oregon Museum of Sciecne and Industry",
       "collaborators": ["Made Clear"],
-      "description": "",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "power-up-portland",
       "location": "Portland, Oregon",
       "published": true,
@@ -25,7 +25,7 @@
 
       "client": "National Air & Space Museum",
       "collaborators": ["Terra Incognita"],
-      "description": "",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Washington, D.C.",
       "id": "navigate-the-seas",
       "published": true,
@@ -106,6 +106,7 @@
     }, {
       "client": "Clemson University",
       "collaborators": ["Upswell"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "clemson-family-portrait",
       "location": "Greenville, North Carolina",
       "published": true,
@@ -117,6 +118,7 @@
     }, {
       "client": "Mobius Science Center",
       "collaborators": ["Upswell", "Renate", "Arxi"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "floods-navigator",
       "location": "Spokane, Washington",
       "published": true,
@@ -137,6 +139,7 @@
     }, {
       "client": "International Center for Photography",
       "collaborators": [],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "weegee-murder-is-my-business",
       "location": "New York, New York",
       "published": true,
@@ -145,6 +148,7 @@
     }, {
       "client": "Sam Rayburn Library & Museum",
       "collaborators": ["Terra Incognita"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "rayburn",
       "location": "Bonham, Texas",
       "published": true,
@@ -162,7 +166,7 @@
     }, {
       "client": "Gettysburg Visitors Center",
       "collaborators": ["Second Story"],
-      "description": "Some description",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "faces-of-gettysburg",
       "location": "Gettysburg, Pensylvania",
       "published": true,
@@ -181,6 +185,7 @@
     }, {
       "client": "National Library of Medicine",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "global-health",
       "location": "Bethesda, Maryland",
       "published": true,
@@ -189,6 +194,7 @@
     }, {
       "client": "National Library of Medicine",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Bethesda, Maryland",
       "id": "names-quilt",
       "title": "Names Quilt Touch Table",
@@ -198,6 +204,7 @@
       "location": "Bethel, NY",
       "client": "The Museum at Bethel Woods",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "woodstock-tryptich",
       "title": "Woodstock Tryptich Kiosks",
       "published": true,
@@ -205,6 +212,7 @@
     }, {
       "client": "National Library of MedicineS",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "aid-activism",
       "location": "Bethesda, Maryland",
       "published": true,
@@ -213,6 +221,7 @@
     }, {
       "client": "John D. and Catherine T. MacArthur Foundation",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "macarthur-foundation-kiosk",
       "location": "Chicago, Illinois",
       "published": true,
@@ -221,6 +230,7 @@
     }, {
       "client": "The Speed Art Museum",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Louisville, Kentucky",
       "id": "book-of-hours",
       "published": true,
@@ -239,7 +249,7 @@
     },
     {
       "client": "Old Standard Sound",
-      "description": "Fullscreen site for local recording studio.",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "old-standard-sound",
       "title": "Old Standard Sound Website",
       "published": true,
@@ -249,6 +259,7 @@
     {
       "client": "The Kansas City Royals Hall of Fame",
       "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "sports-broadcasting",
       "location": "Kansas City, Missouri",
       "published": true,
@@ -257,6 +268,8 @@
     },
     {
       "client": "New Mexico History Museum",
+      "collaborators": ["Second Story"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Santa Fe, New Mexico",
       "id": "treaty-of-gaudalupe-hidalgo",
       "published": true,
@@ -281,13 +294,14 @@
       "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios",
       "published": true,
       "tech": {
-        "JavaScript": ["D3", "Node"]
+        "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
       },
       "title": "Semantic Map",
       "year": 2017
     },
     {
       "client": "University of Pennsylvania<br/>Museum of Archaeology and Anthropology",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Philadelphia, Pennsylvania",
       "id": "kronos",
       "published": true,
@@ -299,7 +313,7 @@
     }, {
       "client": "National Museum of the American Indian",
       "collaborators": ["Potion"],
-      "description": "Ten interactive touch-screen object explorer applications",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "infinity-of-nations",
       "location": "New York, New York",
       "published": true,
@@ -307,16 +321,18 @@
       "year": 2010
     }, {
       "client": "Nike, Sparq",
+      "collaborators": ["The Makers"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "nike-sparq-data-visulization",
       "location": "Portland, OR",
       "published": true,
       "title": "Nike Sparq Data Visualizations",
-      "collaborators": ["The Makers"],
       "categories": "data-visualization",
       "year": 2010
     }, {
       "client": "American Electric Power",
       "collaborators": ["Terra Incognita", "Northern Light", "The History Factory"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "location": "Columbus, Ohio",
       "id": "woaep",
       "published": false,
@@ -328,7 +344,7 @@
     }, {
       "client": "Portland's Children Museum",
       "collaborators": ["Wieden+Kennedy"],
-      "description": "Kinect promo for display in storefronts in downtown PDX",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "childrens-museum-storefront",
       "location": "Portland, Oregon",
       "published": true,
@@ -340,6 +356,7 @@
     }, {
       "client": "Oregon Museum of Sciecne and Industry",
       "collaborators": ["Made Clear"],
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "omsi-kinect-prototype",
       "location": "Portland, Oregon",
       "published": true,
@@ -350,6 +367,7 @@
       "year": 2011
     }, {
       "client": "Old Woman Creek Estuary & Visitors Center",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "virtual-estuary",
       "location": "Berlin Township, Ohio",
       "published": true,
@@ -357,6 +375,7 @@
       "year": 2011
     }, {
       "client": "San Franscisco Museum of Modern Art",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "collaborators": ["Britelite Immersive"],
       "id": "sfmoma-storyscreens",
       "location": "San Francisco, California",
@@ -368,10 +387,10 @@
         },
       "year": 2016
     }, {
-      "location": "Berkeley Heights, NJ",
       "client": "Bell Labs",
-      "description": "Visual search using procedurally generated geometries to explore result relevance",
+      "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "bell-labs-visual-search",
+      "location": "Berkeley Heights, NJ",
       "published": false,
       "title": "Search Spheres",
       "collaborators": "Upswell",

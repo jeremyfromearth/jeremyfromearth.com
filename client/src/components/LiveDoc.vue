@@ -10,8 +10,14 @@ import {
 export default {
   name: 'LiveDoc',
   computed: {
-    ...mapGetters(['pagination', 'project_results', 'project_sort_keys']),
-    
+    ...mapGetters([
+      'pagination', 'project_count', 
+      'project_results', 'project_sort_keys', 
+      'projects_per_page'
+    ]),
+    right_pagination_arrow_is_visibile() {
+      return this.pagination + this.projects_per_page <= this.project_count 
+    }
   },
   async mounted() {
     const icons = [
@@ -31,14 +37,15 @@ export default {
   }, 
   methods: {
     ...mapActions(['clear_project_filters', 'dec_pagination', 'inc_pagination', 'get_data']),
+    dec() {
+      this.dec_pagination()
+    }, 
+    inc() {
+      this.inc_pagination()
+    },
     projects_with_key(k) {
       return _.filter(this.project_results, {year: k})
-    },
-    some_method() {
-      console.log('some_method()')
     }
-  }, 
-  props: {
   }
 }
 </script>
@@ -80,28 +87,28 @@ export default {
         <div class='md-layout'>
           <div class='md-layout-item'>
             <h4>Python</h4>
-            <ul>
+            <ul class='tech-list'>
               <li>Flask</li><li>Keras</li><li>NumPy</li>
               <li>Pandas</li><li>Rasa</li><li>SpaCy</li><li>Tensorflow</li>
             </ul>
           </div>
           <div class='md-layout-item'>
             <h4>JavaScript</h4>
-            <ul>
+            <ul class='tech-list'>
               <li>D3</li><li>Electron</li><li>Express</li>
               <li>Node</li><li>NPM</li><li>SocketIO</li><li>Vue</li>
             </ul>
           </div>
           <div class='md-layout-item'>
             <h4>C++</h4>
-            <ul>
+            <ul class='tech-list'>
               <li>Box2D</li><li>Cinder</li><li>Kinect</li>
               <li>OSC</li><li>OpenGL</li><li>TUIO</li>
             </ul>
           </div>
           <div class='md-layout-item'>
             <h4>Misc</h4>
-            <ul>
+            <ul class='tech-list'>
               <li>Android</li><li>App Engine</li><li>Firebase</li>
               <li>Google Cloud</li><li>MongoDB</li><li>Processing</li><li>MySQL</li>
             </ul>
@@ -117,7 +124,9 @@ export default {
           </form>
         </div>
         <div class='project-container'>
-          <div class='pagination-controller' v-if='pagination > 0' @click='dec_pagination()'>
+          <div 
+            class='pagination-controller' 
+            :style="{ opacity: pagination > 0 ? 1 : 0, height: pagination > 0 ? '8rem' : 0 }" @click='dec()'>
             <div class='pagination-arrow pagination-arrow-left'><h4>&laquo;</h4></div>
           </div>
           <div>
@@ -134,8 +143,31 @@ export default {
               </div>
             </div>
           </div>
-          <div class='pagination-controller' @click='inc_pagination()'>
+          <div 
+            class='pagination-controller' 
+            :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0, 
+                      height: right_pagination_arrow_is_visibile ? '8rem' : 0}" @click='inc()'>
             <div class='pagination-arrow pagination-arrow-right'><h4>&raquo;</h4></div>
+          </div>
+        </div>
+        
+        <div class='work-history'>
+          <h3>Work History</h3>
+          <div class='md-layout'>
+            <div>
+              <h4>Software Engineer (Contract)</h4>
+              <h5>January 2010 - Present</h5>
+              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <h4>Software Engineer, Textwise</h4>
+              <h5>August 2016 - September 2017</h5>
+              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <h4>Creative Technologist, Upswell</h4>
+              <h5>Jan 2014 - Jan 2015</h5>
+              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <h4>Interactive Developer, Second Story Interactive</h4>
+              <h5>July 2007 - Jan 2010</h5>
+              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+            </div>
           </div>
         </div>
         <h3>Collaborators</h3>
@@ -188,7 +220,7 @@ export default {
   }
 
   .header-container {
-    align-items: center;
+    align-items: baseline;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -206,10 +238,10 @@ export default {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 15%;
-    justify-content: center;
     padding: 0 2px 0 2px;
+    margin-top: 4em;
     user-select: none;
+    justify-content: center;
   }
 
   .pagination-arrow-left:hover {
@@ -229,15 +261,13 @@ export default {
   .pagination-arrow-right {
     border-left: 1px solid lightgrey;
   }
-  
 
   .pagination-controller {
+    height: 8rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    transition: opacity 1.0s, height 1.0s;
   }
-
-  
 
   .projects-toolbar {
     display: flex;
@@ -247,5 +277,14 @@ export default {
 
   .project-container {
     display: flex;
+    height: 32rem;
+  }
+
+  .work-history h4, h5 {
+    line-height: 0rem;
+  }
+
+  .work-history h4 {
+    margin-top: 2.8rem;
   }
 </style>
