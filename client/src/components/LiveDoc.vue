@@ -11,12 +11,18 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
+      'keywords',
       'pagination', 'project_count', 
       'project_results', 'project_sort_keys', 
       'projects_per_page'
     ]),
     right_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page <= this.project_count 
+    }
+  },
+  data() {
+    return {
+      text: ''
     }
   },
   async mounted() {
@@ -36,12 +42,23 @@ export default {
     this.clear_project_filters()
   }, 
   methods: {
-    ...mapActions(['clear_project_filters', 'dec_pagination', 'inc_pagination', 'get_data']),
+    ...mapActions([
+      'add_keywords',
+      'clear_project_filters', 
+      'dec_pagination', 
+      'inc_pagination', 
+      'get_data',
+      'remove_keyword'
+    ]),
     dec() {
       this.dec_pagination()
     }, 
     inc() {
       this.inc_pagination()
+    },
+    on_keyword_enter() {
+      this.add_keywords(this.text)
+      this.text = ''
     },
     projects_with_key(k) {
       return _.filter(this.project_results, {year: k})
@@ -116,18 +133,28 @@ export default {
         </div>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
-          <form>
-            <md-field>
-              <label>Keywords</label> 
-              <md-input name='keywordsh' id='keywords-input'></md-input>
-            </md-field>
-          </form>
+          <div class='search-container'>
+            <div class='keyword-container'>
+              <div v-for='kw in keywords' 
+                :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)' 
+                  class="far fa-times-circle remove-keyword-icon"></i></div>
+            </div>
+            <form novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
+              <md-field>
+                <label>Keywords</label> 
+                <md-input v-model='text'></md-input>
+              </md-field>
+            </form>
+          </div>
         </div>
         <div class='project-container'>
           <div 
             class='pagination-controller' 
-            :style="{ opacity: pagination > 0 ? 1 : 0, height: pagination > 0 ? '8rem' : 0 }" @click='dec()'>
-            <div class='pagination-arrow pagination-arrow-left'><h4>&laquo;</h4></div>
+            @click='dec()'>
+            <div class='pagination-arrow pagination-arrow-left'
+              :style="{ opacity: pagination > 0 ? 1 : 0, 
+                        marginTop: pagination > 0 ? '4rem': '2rem',
+                        height: pagination > 0 ? '4rem' : 0 }" ><h4>&laquo;</h4></div>
           </div>
           <div>
             <div v-for='k in project_sort_keys' :key='k'>
@@ -145,12 +172,13 @@ export default {
           </div>
           <div 
             class='pagination-controller' 
-            :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0, 
-                      height: right_pagination_arrow_is_visibile ? '8rem' : 0}" @click='inc()'>
-            <div class='pagination-arrow pagination-arrow-right'><h4>&raquo;</h4></div>
+             @click='inc()'>
+            <div class='pagination-arrow pagination-arrow-right'
+            :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
+                      marginTop: right_pagination_arrow_is_visibile ? '4rem' : '2rem',
+                      height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
           </div>
         </div>
-        
         <div class='work-history'>
           <h3>Work History</h3>
           <div class='md-layout'>
@@ -226,6 +254,24 @@ export default {
     justify-content: space-between;
   }
 
+  .keyword {
+    border: 1px solid lightgrey;
+    border-radius: 0.5em;
+    margin-bottom: 0.25rem;
+    margin-right: 0.25rem;
+    padding: 0.32rem;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .keyword-container {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+
   .md-layout {
     margin: 0 4em 0 4rem;
   }
@@ -233,6 +279,10 @@ export default {
   .md-layout-item-5 {
     padding-right: 2em;
   } 
+
+  .remove-keyword-icon:hover {
+    color: red; 
+  }
 
   .pagination-arrow {
     cursor: pointer;
@@ -242,6 +292,7 @@ export default {
     margin-top: 4em;
     user-select: none;
     justify-content: center;
+    transition: height 0.32s, margin-top 0.32s, opacity 0.16s;
   }
 
   .pagination-arrow-left:hover {
@@ -266,7 +317,7 @@ export default {
     height: 8rem;
     display: flex;
     flex-direction: column;
-    transition: opacity 1.0s, height 1.0s;
+    transition: opacity 0.16s, height 0.32s;
   }
 
   .projects-toolbar {
@@ -278,6 +329,18 @@ export default {
   .project-container {
     display: flex;
     height: 32rem;
+  }
+
+  .search-container {
+    display: flex;
+  }
+
+  .search-container form {
+    margin-left: 1rem;
+  }
+
+  .tech-list {
+    list-style-type: none;
   }
 
   .work-history h4, h5 {

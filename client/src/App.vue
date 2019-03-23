@@ -11,13 +11,8 @@ import {
   MdApp, 
   MdContent,
   MdField,
-  MdInput,
-  MdLabel,
   MdLayout
 } from 'vue-material/dist/components'
-
-// Site imports
-import Project from './components/Project'
 
 Vue.use(VueRouter)
 Vue.use(MdApp)
@@ -26,7 +21,6 @@ Vue.use(MdField)
 Vue.use(MdLayout)
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-Vue.component('Project', Project)
 
 library.add(faCoffee)
 

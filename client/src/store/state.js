@@ -1,5 +1,7 @@
 export default {
+  index: {},
   keywords: [],
+  lookup: {},
   pagination: 0,
   project_sort_key: 'year',
   projects: [],
