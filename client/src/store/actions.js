@@ -41,8 +41,16 @@ export default {
           if(x.collaborators) s = s.concat(x.collaborators.join(' ').split(' '))
           if(x.description) s = s.concat(x.description.split(' '))
           if(x.keywords) s = s.concat(x.keywords.join(' ').split(' '))
+          if(x.year) s.push(''+x.year)
+          console.log(s)
 
+          
+          
+
+          // remove puncuation
           s = s.map(y => y.replace(/[^A-Za-z0-9\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
+
+          // remove words in stop words
           s = s.filter(y => !stopwords.includes(y) && y.length > 2)
 
           s.forEach(z => {
