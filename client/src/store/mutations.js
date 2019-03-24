@@ -16,7 +16,8 @@ export default {
       state.pagination = 0
     }
   },
-  inc_pagination(state) {
+  inc_pagination(state, value) {
+    // TODO: Need to pass in the new value here, rather than calculate it
     const n = state.projects_per_page
     if(state.pagination + n < state.projects.length) state.pagination += n
   },

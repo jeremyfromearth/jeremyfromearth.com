@@ -55,7 +55,6 @@ export default {
           // TODO: Filter stop words and index articles against terms
         })
 
-        console.log(index)
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)

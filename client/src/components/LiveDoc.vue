@@ -11,8 +11,7 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'keywords',
-      'pagination', 'project_count', 
+      'keywords', 'pagination', 'project_count', 
       'project_results', 'project_sort_keys', 
       'projects_per_page'
     ]),
@@ -147,7 +146,7 @@ export default {
             </form>
           </div>
         </div>
-        <div class='project-container'>
+        <div v-if='project_results.length' class='project-container'>
           <div 
             class='pagination-controller' 
             @click='dec()'>
@@ -156,7 +155,7 @@ export default {
                         marginTop: pagination > 0 ? '4rem': '2rem',
                         height: pagination > 0 ? '4rem' : 0 }" ><h4>&laquo;</h4></div>
           </div>
-          <div>
+          <div >
             <div v-for='k in project_sort_keys' :key='k'>
               <div class='md-layout'>
                 <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
@@ -179,22 +178,42 @@ export default {
                       height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
           </div>
         </div>
+        <div v-else>No projects matched the keywords provided</div>
         <div class='work-history'>
           <h3>Work History</h3>
           <div class='md-layout'>
             <div>
               <h4>Software Engineer (Contract)</h4>
               <h5>January 2010 - Present</h5>
-              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <ul>
+                <li>Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada</li>
+                <li>Generating project roadmaps, estimates of cost, software schematics and end user documentation</li>
+                <li>Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process</li>
+                <li>Studying fields of interest, including deep learning and natural language processing, with end goal of attaining work in new fields</li>
+              </ul>
               <h4>Software Engineer, Textwise</h4>
               <h5>August 2016 - September 2017</h5>
-              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <ul>
+                <li>Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript &amp; D3</li>
+                <li>Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures</li>
+              </ul>
               <h4>Creative Technologist, Upswell</h4>
               <h5>Jan 2014 - Jan 2015</h5>
-              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <ul>
+                <li>Architecting and engineering user analytics APIs using Python, Flask and InfluxDB for tracking anonymous metrics in immersive installation software</li>
+                <li>Prototyping and experimenting with new technologies including Arduino and Heroic Robotics LED strips, fingerprint sensors and image compositing techniques in OSX</li>
+                <li>Developing Microsoft Kinect controlled interactive experience for Clemson University using Cinder</li>
+                <li>Developing multiple interactive touch screen applications with Swift, iOS and macOS Desktop for The Nevada Discovery Museum</li>
+              </ul>
+
               <h4>Interactive Developer, Second Story Interactive</h4>
               <h5>July 2007 - Jan 2010</h5>
-              <p>Aliquam at ornare nisi, venenatis lacinia mi. Nullam viverra ornare mauris. Curabitur sit amet tincidunt lectus. Etiam eu tortor blandit, rhoncus ante eget, suscipit elit. Proin viverra leo vel sem pellentesque egestas. Sed at mattis ipsum. Suspendisse ultrices sem nisi, pellentesque laoreet augue vestibulum et.</p>
+              <ul>
+                <li>Developing award winning interactive digital installations for museums and cultural institutions including Library of Congress, National Archives and many more</li>
+                <li>Maintaining and extending MVC application framework used by development teams</li>
+                <li>Building harness testing software for simulating user input over extended periods to gather and analyze CPU/GPU and memory consumption metrics</li>
+                <li>Leading research and feasibility studies of new technologies for potential company-wide adoption</li>
+              </ul>
             </div>
           </div>
         </div>
