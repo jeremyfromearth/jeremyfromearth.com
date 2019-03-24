@@ -70,7 +70,7 @@ export default {
     <md-app-content class='content'>
       <div class='container'>
         <div class='header-container'>
-          <h1>Jeremy von <i id='globe' class='fas fa-globe-europe'></i></h1>
+          <h1><i id='globe' class='fas fa-globe-europe'></i></h1>
             <div>
             <span> 
               <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
@@ -368,5 +368,15 @@ export default {
 
   .work-history h4 {
     margin-top: 2.8rem;
+  }
+
+  .work-history ul {
+    list-style-type: none;
+    list-style-position: inside;
+    text-indent: -1.25em;
+  }
+
+  .work-history ul > li:before {
+    content: "+ ";
   }
 </style>
