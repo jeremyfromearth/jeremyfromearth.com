@@ -146,39 +146,47 @@ export default {
             </form>
           </div>
         </div>
-        <div ref='project_container' v-if='projects_paged.length' class='project-container'>
-          <div 
-            class='pagination-controller' 
-            @click='dec()'>
-            <div class='pagination-arrow pagination-arrow-left'
-              :style="{ opacity: pagination > 0 ? 1 : 0, 
-                        marginTop: pagination > 0 ? '4rem': '2rem',
-                        height: pagination > 0 ? '4rem' : 0 }" ><h4>&laquo;</h4></div>
-          </div>
-          <div >
-            <div v-for='k in project_sort_keys' :key='k'>
-              <div class='md-layout'>
-                <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
-                <div class='md-layout-item'>
-                  <div v-for='(p, i) in projects_with_key(k)' :key=i>
-                    <h4>{{ p.title }}</h4>
-                    <h5>{{ p.client }}</h5>
-                    <p>{{ p.description }}</p>
+        <div v-if='projects_paged.length' class='project-container-outer'>
+          <div ref='project_container' class='project-container'>
+            <div 
+              class='pagination-controller' 
+              @click='dec()'>
+              <div class='pagination-arrow pagination-arrow-left'
+                :style="{ opacity: pagination > 0 ? 1 : 0, 
+                          marginTop: pagination > 0 ? '4rem': '2rem',
+                          height: pagination > 0 ? '4rem' : 0 }" ><h4>&laquo;</h4></div>
+            </div>
+            <div >
+              <div v-for='k in project_sort_keys' :key='k'>
+                <div class='md-layout'>
+                  <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
+                  <div class='md-layout-item'>
+                    <div v-for='(p, i) in projects_with_key(k)' :key=i>
+                      <h4>{{ p.title }}</h4>
+                      <h5>{{ p.client }}</h5>
+                      <p>{{ p.description }}</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div 
+              class='pagination-controller' 
+               @click='inc()'>
+              <div class='pagination-arrow pagination-arrow-right'
+              :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
+                        marginTop: right_pagination_arrow_is_visibile ? '4rem' : '2rem',
+                        height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
+            </div>
           </div>
-          <div 
-            class='pagination-controller' 
-             @click='inc()'>
-            <div class='pagination-arrow pagination-arrow-right'
-            :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                      marginTop: right_pagination_arrow_is_visibile ? '4rem' : '2rem',
-                      height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
-          </div>
+          <div class='pagination-detail'>
+            {{ pagination + 1 }} - 
+            {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
+            {{ project_search_results.length }}</div>
         </div>
+
         <div v-else>No projects matched the keywords provided</div>
+
         <div class='work-history'>
           <h3>Work History</h3>
           <div class='md-layout'>
@@ -339,6 +347,11 @@ export default {
     transition: opacity 0.16s, height 0.32s;
   }
 
+  .pagination-detail {
+    font-size: 0.8em;
+    font-weight: 800;
+  }
+
   .projects-toolbar {
     display: flex;
     align-items: center;
@@ -348,6 +361,12 @@ export default {
   .project-container {
     display: flex;
     transition: height 0.2s;
+  }
+
+  .project-container-outer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .search-container {
