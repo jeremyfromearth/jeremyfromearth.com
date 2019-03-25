@@ -86,7 +86,7 @@ export default {
             </div>
         </div>
         <h2>Software Engineer</h2>
-        <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with C++, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
+        <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
         
         <div class='projects-toolbar'>
           <h3>Projects</h3>
@@ -382,41 +382,6 @@ export default {
     overflow: hidden;
   }
   
-  .project-transition-inc-enter-active, .project-transition-inc-leave-active,
-  .project-transition-dec-enter-active, .project-transition-dec-leave-active {
-    transition: left .4s, opacity 1.5s;
-  }
-
-  .project-transition-inc-enter {
-    left: 1024px !important;
-    opacity: 0;
-  }
-
-  .project-transition-inc-enter-to {
-    left: 0;
-    opacity: 1;
-  }
-  
-  .project-transition-inc-leave-to {
-    left: -1024px;
-    opacity: 0;
-  }
-
-  .project-transition-dec-enter {
-    left: -1024px !important;
-    opacity: 0;
-  }
-
-  .project-transition-dec-enter-to {
-    left: 0;
-    opacity: 1;
-  }
-  
-  .project-transition-dec-leave-to {
-    left: 1024px;
-    opacity: 0;
-  }
-
   .project-container-outer {
     display: flex;
     flex-direction: column;
