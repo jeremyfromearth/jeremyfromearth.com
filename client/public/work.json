@@ -304,7 +304,7 @@
     },
     {
       "client": "Textwise",
-      "description": "A domain specific search language designed for IP.com",
+      "description": "A domain specific search language designed for IP.com. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
       "id": "query-parser",
       "keywords": ["visualization", "data", "natural", "language", "processing"],
       "published": true,

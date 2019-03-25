@@ -21,7 +21,8 @@ export default {
   },
   data() {
     return {
-      text: ''
+      text: '',
+      project_transition_name: 'project-transition-inc'
     }
   },
   async mounted() {
@@ -50,9 +51,11 @@ export default {
       'remove_keyword'
     ]),
     dec() {
+      this.project_transition_name = 'project-transition-dec'
       this.dec_pagination()
     }, 
     inc() {
+      this.project_transition_name = 'project-transition-inc'
       this.inc_pagination()
     },
     on_keyword_enter() {
@@ -70,7 +73,7 @@ export default {
     <md-app-content class='content'>
       <div class='container'>
         <div class='header-container'>
-          <h1><i id='globe' class='fas fa-globe-europe'></i></h1>
+          <h1>Jeremy from <i id='globe' class='fas fa-globe-europe'></i></h1>
             <div>
             <span> 
               <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
@@ -84,6 +87,64 @@ export default {
         </div>
         <h2>Software Engineer</h2>
         <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with C++, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
+        
+        <div class='projects-toolbar'>
+          <h3>Projects</h3>
+          <div class='search-container'>
+            <div class='keyword-container'>
+              <div v-for='kw in keywords' 
+                :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)' 
+                  class="far fa-times-circle remove-keyword-icon"></i></div>
+            </div>
+            <form novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
+              <md-field>
+                <label>Keywords</label> 
+                <md-input v-model='text'></md-input>
+              </md-field>
+            </form>
+          </div>
+        </div>
+        <div v-if='projects_paged.length' class='project-container-outer'>
+          <div ref='project_container' class='project-container'>
+            <div 
+              class='pagination-controller' 
+              @click='dec()'>
+              <div class='pagination-arrow pagination-arrow-left'
+                :style="{ opacity: pagination > 0 ? 1 : 0, 
+                          marginTop: pagination > 0 ? '4em': '2em',
+                          height: pagination > 0 ? '4em' : 0 }" ><h4>&laquo;</h4></div>
+            </div>
+            <div class='project-outer'>
+              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='project-inner'>
+                <div class='md-layout'>
+                  <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
+                  <div class='md-layout-item'>
+                    <div v-for='(p, i) in projects_with_key(k)' :key=i>
+                      <h4>{{ p.title }}</h4>
+                      <h5>{{ p.client }}</h5>
+                      <p>{{ p.description }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div 
+              class='pagination-controller' 
+               @click='inc()'>
+              <div class='pagination-arrow pagination-arrow-right'
+              :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
+                        marginTop: right_pagination_arrow_is_visibile ? '4em' : '2em',
+                        height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
+            </div>
+          </div>
+          <div class='pagination-detail'>
+            {{ pagination + 1 }} - 
+            {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
+            {{ project_search_results.length }}</div>
+        </div>
+
+        <div v-else>No projects matched the keywords provided</div>
+
         <h3>Blog</h3>
         <p>Recent Articles</p>
         <div>
@@ -130,62 +191,6 @@ export default {
             </ul>
           </div>
         </div>
-        <div class='projects-toolbar'>
-          <h3>Projects</h3>
-          <div class='search-container'>
-            <div class='keyword-container'>
-              <div v-for='kw in keywords' 
-                :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)' 
-                  class="far fa-times-circle remove-keyword-icon"></i></div>
-            </div>
-            <form novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
-              <md-field>
-                <label>Keywords</label> 
-                <md-input v-model='text'></md-input>
-              </md-field>
-            </form>
-          </div>
-        </div>
-        <div v-if='projects_paged.length' class='project-container-outer'>
-          <div ref='project_container' class='project-container'>
-            <div 
-              class='pagination-controller' 
-              @click='dec()'>
-              <div class='pagination-arrow pagination-arrow-left'
-                :style="{ opacity: pagination > 0 ? 1 : 0, 
-                          marginTop: pagination > 0 ? '4rem': '2rem',
-                          height: pagination > 0 ? '4rem' : 0 }" ><h4>&laquo;</h4></div>
-            </div>
-            <div >
-              <div v-for='k in project_sort_keys' :key='k'>
-                <div class='md-layout'>
-                  <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
-                  <div class='md-layout-item'>
-                    <div v-for='(p, i) in projects_with_key(k)' :key=i>
-                      <h4>{{ p.title }}</h4>
-                      <h5>{{ p.client }}</h5>
-                      <p>{{ p.description }}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div 
-              class='pagination-controller' 
-               @click='inc()'>
-              <div class='pagination-arrow pagination-arrow-right'
-              :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                        marginTop: right_pagination_arrow_is_visibile ? '4rem' : '2rem',
-                        height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
-            </div>
-          </div>
-          <div class='pagination-detail'>
-            {{ pagination + 1 }} - 
-            {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
-            {{ project_search_results.length }}</div>
-        </div>
-
-        <div v-else>No projects matched the keywords provided</div>
 
         <div class='work-history'>
           <h3>Work History</h3>
@@ -284,9 +289,9 @@ export default {
   .keyword {
     border: 1px solid lightgrey;
     border-radius: 0.5em;
-    margin-bottom: 0.25rem;
-    margin-right: 0.25rem;
-    padding: 0.32rem;
+    margin-bottom: 0.25em;
+    margin-right: 0.25em;
+    padding: 0.32em;
     user-select: none;
     white-space: nowrap;
   }
@@ -297,10 +302,8 @@ export default {
     flex-wrap: wrap;
   }
 
-  
-
   .md-layout {
-    margin: 0 4em 0 4rem;
+    margin: 0 4em 0 4em;
   }
 
   .md-layout-item-5 {
@@ -341,7 +344,7 @@ export default {
   }
 
   .pagination-controller {
-    height: 8rem;
+    height: 8em;
     display: flex;
     flex-direction: column;
     transition: opacity 0.16s, height 0.32s;
@@ -350,6 +353,7 @@ export default {
   .pagination-detail {
     font-size: 0.8em;
     font-weight: 800;
+    padding: 1.5em 0 1.5em 0;
   }
 
   .projects-toolbar {
@@ -360,7 +364,57 @@ export default {
 
   .project-container {
     display: flex;
-    transition: height 0.2s;
+    width: 100%;
+  }
+
+  .project-inner {
+    position: relative;
+    left: 0;
+  }
+
+  .project-outer {
+    overflow: scroll;
+  }
+
+  .project-scrollbox {
+    width: 100%;
+    padding: 0 2em 0 2em;
+    overflow: hidden;
+  }
+  
+  .project-transition-inc-enter-active, .project-transition-inc-leave-active,
+  .project-transition-dec-enter-active, .project-transition-dec-leave-active {
+    transition: left .4s, opacity 1.5s;
+  }
+
+  .project-transition-inc-enter {
+    left: 1024px !important;
+    opacity: 0;
+  }
+
+  .project-transition-inc-enter-to {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .project-transition-inc-leave-to {
+    left: -1024px;
+    opacity: 0;
+  }
+
+  .project-transition-dec-enter {
+    left: -1024px !important;
+    opacity: 0;
+  }
+
+  .project-transition-dec-enter-to {
+    left: 0;
+    opacity: 1;
+  }
+  
+  .project-transition-dec-leave-to {
+    left: 1024px;
+    opacity: 0;
   }
 
   .project-container-outer {
@@ -374,7 +428,7 @@ export default {
   }
 
   .search-container form {
-    margin-left: 1rem;
+    margin-left: 1em;
   }
 
   .tech-list {
@@ -382,20 +436,20 @@ export default {
   }
 
   .work-history h4, h5 {
-    line-height: 0rem;
+    line-height: 0em;
   }
 
   .work-history h4 {
-    margin-top: 2.8rem;
+    margin-top: 2.8em;
   }
 
-  .work-history ul {
+  ul {
     list-style-type: none;
     list-style-position: inside;
     text-indent: -1.25em;
   }
 
-  .work-history ul > li:before {
+  ul > li:before {
     content: "+ ";
   }
 </style>
