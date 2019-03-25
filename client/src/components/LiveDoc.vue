@@ -143,7 +143,10 @@ export default {
             {{ project_search_results.length }}</div>
         </div>
 
-        <div v-else>No projects matched the keywords provided</div>
+        <div class='no-matching-projects-message' v-else>
+          <i class='fa fa-dice-d20'></i>
+          <p>No projects matched the keywords provided</p>
+        </div>
 
         <h3>Blog</h3>
         <p>Recent Articles</p>
@@ -222,9 +225,9 @@ export default {
               <h4>Interactive Developer, Second Story Interactive</h4>
               <h5>July 2007 - Jan 2010</h5>
               <ul>
-                <li>Developing award winning interactive digital installations for museums and cultural institutions including Library of Congress, National Archives and many more</li>
+                <li>Developing award winning interactive digital installations for museums and cultural institutions</li>
                 <li>Maintaining and extending MVC application framework used by development teams</li>
-                <li>Building harness testing software for simulating user input over extended periods to gather and analyze CPU/GPU and memory consumption metrics</li>
+                <li>Designed performance tests for simulating user input over extended periods for analysis and optimization of CPU/GPU performance and memory consumption</li>
                 <li>Leading research and feasibility studies of new technologies for potential company-wide adoption</li>
               </ul>
             </div>
@@ -310,6 +313,19 @@ export default {
     padding-right: 2em;
   } 
 
+  .no-matching-projects-message {
+    height: 32em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .no-matching-projects-message i {
+    font-size: 2.5em;
+  }
+
   .remove-keyword-icon:hover {
     color: red; 
   }
@@ -374,6 +390,7 @@ export default {
 
   .project-outer {
     overflow: scroll;
+    height: 32em;
   }
 
   .project-scrollbox {
