@@ -1,9 +1,25 @@
 import _ from 'lodash'
 
+const search = state => {
+  if(state.keywords.length) {
+    let terms = state.keywords.reduce((acc, obj) => {
+      acc.push(obj.term); 
+      return acc
+    }, [])
+    let results = _.values(_.pick(state.index, terms))
+    results = results.map(x => Array.from(x))
+    results = _.intersection(...results)
+    results = _.values(_.pick(state.lookup, results)).sort((a, b) => a.year - b.year).reverse()
+    return results
+  }
+  return state.projects
+}
+
 export default {
   add_keywords(state, value) {
     state.pagination = 0
     state.keywords = _.uniqBy(state.keywords.concat(value), 'term')    
+    state.project_search_results = search(state)
   },
   clear_project_filters(state) {
     state.pagination = 0
@@ -16,16 +32,18 @@ export default {
       state.pagination = 0
     }
   },
-  inc_pagination(state, value) {
-    // TODO: Need to pass in the new value here, rather than calculate it
+  inc_pagination(state) {
     const n = state.projects_per_page
-    if(state.pagination + n < state.projects.length) state.pagination += n
+    if(state.pagination + n < state.project_search_results.length) state.pagination += n
   },
   remove_keyword(state, value) {
+    state.pagination = 0
     state.keywords = state.keywords.filter(kw => kw.term != value)
+    state.project_search_results = search(state)
   },
   set_new_data(state, value) {
     state.projects = value.sort((a, b) => b['year'] - a['year'])
+    state.project_search_results = state.projects
   },
   set_project_index(state, value) {
     state.index = value

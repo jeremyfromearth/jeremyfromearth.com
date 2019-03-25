@@ -36,16 +36,15 @@ export default {
 
           let s = []
           lookup[x.id] = x
-          if(x.title) s = s.concat(x.title.split(' '))
+
+          // create a list of keywords from the various fields
           if(x.client) s = s.concat(x.client.split(' '))
           if(x.collaborators) s = s.concat(x.collaborators.join(' ').split(' '))
           if(x.description) s = s.concat(x.description.split(' '))
           if(x.keywords) s = s.concat(x.keywords.join(' ').split(' '))
+          if(x.location) s = s.concat(x.location.split(' '))
+          if(x.title) s = s.concat(x.title.split(' '))
           if(x.year) s.push(''+x.year)
-          console.log(s)
-
-          
-          
 
           // remove puncuation
           s = s.map(y => y.replace(/[^A-Za-z0-9\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
@@ -53,14 +52,12 @@ export default {
           // remove words in stop words
           s = s.filter(y => !stopwords.includes(y) && y.length > 2)
 
+          // stem each term and map it to a set of documents
           s.forEach(z => {
             let stemmed = stemmer(z.trim())
             if(!index[stemmed]) index[stemmed] = new Set()
             index[stemmed].add(x['id'])
           })
-
-          // TODO: Strip puncuation
-          // TODO: Filter stop words and index articles against terms
         })
 
         commit('set_new_data', projects)

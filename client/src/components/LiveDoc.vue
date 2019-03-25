@@ -11,12 +11,12 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'keywords', 'pagination', 'project_count', 
-      'project_results', 'project_sort_keys', 
-      'projects_per_page'
+      'keywords', 'pagination', 'projects_paged', 
+      'project_count', 'project_search_results', 
+      'project_sort_keys', 'projects_per_page'
     ]),
     right_pagination_arrow_is_visibile() {
-      return this.pagination + this.projects_per_page <= this.project_count 
+      return this.pagination + this.projects_per_page < this.project_search_results.length
     }
   },
   data() {
@@ -60,7 +60,7 @@ export default {
       this.text = ''
     },
     projects_with_key(k) {
-      return _.filter(this.project_results, {year: k})
+      return _.filter(this.projects_paged, {year: k})
     }
   }
 }
@@ -146,7 +146,7 @@ export default {
             </form>
           </div>
         </div>
-        <div v-if='project_results.length' class='project-container'>
+        <div ref='project_container' v-if='projects_paged.length' class='project-container'>
           <div 
             class='pagination-controller' 
             @click='dec()'>
@@ -347,7 +347,7 @@ export default {
 
   .project-container {
     display: flex;
-    height: 32rem;
+    transition: height 0.2s;
   }
 
   .search-container {

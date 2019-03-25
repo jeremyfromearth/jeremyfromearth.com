@@ -6,5 +6,6 @@ export default {
   project_sort_key: 'year',
   projects: [],
   projects_per_page: 3,
+  project_search_results: [],
   window_size: [0, 0],
 }
