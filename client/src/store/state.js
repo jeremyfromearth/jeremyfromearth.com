@@ -1,4 +1,5 @@
 export default {
+  blog_posts: [],
   index: {},
   keywords: [],
   lookup: {},

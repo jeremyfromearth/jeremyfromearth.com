@@ -28,6 +28,12 @@ export default {
 
     Promise.all(promises)
       .then(res => {
+        // --------------------------------------------------------
+        //
+        // Project Indexing / Technology Gathering
+        //
+        // --------------------------------------------------------
+
         const index = {}
         const lookup = {}
         const technologies = {}
@@ -71,14 +77,28 @@ export default {
           })
         })
 
+        // Convert technology sets to sorted arrays
         Object.keys(technologies).forEach(k => {
           technologies[k] = Array.from(technologies[k]).sort()
         })
 
+        // commit the project and tech data to store
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
         commit('set_technologies', technologies)
+
+        // --------------------------------------------------------
+        //
+        // Blog
+        //
+        // --------------------------------------------------------
+      
+        const blog = res[0].data['blog']
+        commit('set_blog_posts', blog)
+        
+        
+        
       })
   },
   inc_pagination({commit}) {

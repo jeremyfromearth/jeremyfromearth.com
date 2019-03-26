@@ -11,8 +11,8 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'keywords', 'pagination', 'projects_paged', 
-      'project_search_results', 
+      'blog_posts', 'keywords', 'pagination', 'projects_paged',
+      'project_search_results',
       'project_sort_keys', 'projects_per_page',
       'technologies'
     ]),
@@ -27,7 +27,7 @@ export default {
     }
   },
   async mounted() {
-    const icons = [
+    const globe = [
       'globe-europe', 'globe-africa',
       'globe-asia', 'globe-americas'
     ]
@@ -35,8 +35,8 @@ export default {
     setInterval(()=> {
       d3.selectAll('#globe')
         .attr('class', '')
-        .classed(`fas fa-${icons[0]}`, true)
-      icons.push(icons.shift())
+        .classed(`fas fa-${globe[0]}`, true)
+      globe.push(globe.shift())
     }, 500)
 
     await this.get_data()
@@ -88,7 +88,6 @@ export default {
         </div>
         <h2>Software Engineer</h2>
         <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
-        
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -153,18 +152,9 @@ export default {
         <p>Recent Articles</p>
         <div>
           <ul>
-            <li>
-              <a href='https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3'>Multiple Python kernels for Jupyter Lab with Conda</a>
-            </li>
-            <li>
-              <a href='https://medium.com/@jeremy.from.earth/using-dataclasses-firestore-to-replace-ndb-datastore-on-python-3-7-app-engine-e21199b58ef2'>Py3.7 Dataclasses + Cloud Firestore</a>
-            </li>
-            <li>
-              <a href='https://medium.com/@jeremy.from.earth/google-cloud-storage-file-upload-with-flask-javascript-64ec5bc5c42d'>Google Cloud Storage File Upload with Flask & JavaScript</a>
-            </li>
+            <li v-for='(x, i) in blog_posts' :key='i'><a href='x.url'>{{ x.title }}</a></li>
           </ul>
         </div>
-
         <h3>Stacks</h3>
         <div class='md-layout'>
           <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
@@ -174,6 +164,7 @@ export default {
             </ul>
           </div>
         </div>
+
         <div class='work-history'>
           <h3>Work History</h3>
           <div class='md-layout'>

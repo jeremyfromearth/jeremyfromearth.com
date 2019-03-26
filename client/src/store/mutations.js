@@ -41,6 +41,10 @@ export default {
     state.keywords = state.keywords.filter(kw => kw.term != value)
     state.project_search_results = search(state)
   },
+  set_blog_posts(state, value) {
+    state.blog_posts = value
+    console.log(state.blog_posts)
+  },
   set_new_data(state, value) {
     state.projects = value.sort((a, b) => b['year'] - a['year'])
     state.project_search_results = state.projects
