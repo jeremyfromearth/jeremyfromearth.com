@@ -7,5 +7,6 @@ export default {
   projects: [],
   projects_per_page: 3,
   project_search_results: [],
+  technologies: [],
   window_size: [0, 0],
 }

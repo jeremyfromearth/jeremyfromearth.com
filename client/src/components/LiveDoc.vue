@@ -12,8 +12,9 @@ export default {
   computed: {
     ...mapGetters([
       'keywords', 'pagination', 'projects_paged', 
-      'project_count', 'project_search_results', 
-      'project_sort_keys', 'projects_per_page'
+      'project_search_results', 
+      'project_sort_keys', 'projects_per_page',
+      'technologies'
     ]),
     right_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
@@ -163,38 +164,16 @@ export default {
             </li>
           </ul>
         </div>
+
         <h3>Stacks</h3>
         <div class='md-layout'>
-          <div class='md-layout-item'>
-            <h4>Python</h4>
-            <ul class='tech-list'>
-              <li>Flask</li><li>Keras</li><li>NumPy</li>
-              <li>Pandas</li><li>Rasa</li><li>SpaCy</li><li>Tensorflow</li>
-            </ul>
-          </div>
-          <div class='md-layout-item'>
-            <h4>JavaScript</h4>
-            <ul class='tech-list'>
-              <li>D3</li><li>Electron</li><li>Express</li>
-              <li>Node</li><li>NPM</li><li>SocketIO</li><li>Vue</li>
-            </ul>
-          </div>
-          <div class='md-layout-item'>
-            <h4>C++</h4>
-            <ul class='tech-list'>
-              <li>Box2D</li><li>Cinder</li><li>Kinect</li>
-              <li>OSC</li><li>OpenGL</li><li>TUIO</li>
-            </ul>
-          </div>
-          <div class='md-layout-item'>
-            <h4>Misc</h4>
-            <ul class='tech-list'>
-              <li>Android</li><li>App Engine</li><li>Firebase</li>
-              <li>Google Cloud</li><li>MongoDB</li><li>Processing</li><li>MySQL</li>
+          <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
+            <h4>{{ k }} </h4> 
+            <ul class='md-layout-item'>
+              <li v-for='t in technologies[k]' :key='t'>{{ t }}</li>
             </ul>
           </div>
         </div>
-
         <div class='work-history'>
           <h3>Work History</h3>
           <div class='md-layout'>

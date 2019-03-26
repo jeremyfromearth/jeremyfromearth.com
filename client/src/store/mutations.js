@@ -51,6 +51,9 @@ export default {
   set_project_lookup(state, value) {
     state.lookup = value
   },
+  set_technologies(state, value) {
+    state.technologies = value
+  },
   set_window_size(state, value) {
     state.window_size = value
   }, 

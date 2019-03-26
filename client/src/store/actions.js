@@ -30,14 +30,25 @@ export default {
       .then(res => {
         const index = {}
         const lookup = {}
+        const technologies = {}
         const projects = res[0].data['projects']
         const stopwords = res[1].data
         projects.forEach(x => {
 
-          let s = []
-          lookup[x.id] = x
+          if(!x.published) return
+          
+          // gather up the tech lists
+          if(x.tech) {
+            Object.keys(x.tech).forEach(k => {
+              if(!technologies[k]) technologies[k] = new Set()
+              const techs = x.tech[k]
+              techs.forEach(t => technologies[k].add(t))
+            })
+          }
 
           // create a list of keywords from the various fields
+          let s = []
+          lookup[x.id] = x
           if(x.client) s = s.concat(x.client.split(' '))
           if(x.collaborators) s = s.concat(x.collaborators.join(' ').split(' '))
           if(x.description) s = s.concat(x.description.split(' '))
@@ -60,9 +71,14 @@ export default {
           })
         })
 
+        Object.keys(technologies).forEach(k => {
+          technologies[k] = Array.from(technologies[k]).sort()
+        })
+
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
+        commit('set_technologies', technologies)
       })
   },
   inc_pagination({commit}) {

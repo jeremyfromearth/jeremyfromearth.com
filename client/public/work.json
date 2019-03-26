@@ -425,17 +425,41 @@
       "year": 2016
     }, {
       "client": "Bell Labs",
+      "collaborators": ["Upswell"],
       "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
       "id": "bell-labs-visual-search",
       "keywords": ["data", "visualization", "bell"],
       "location": "Berkeley Heights, NJ",
-      "published": false,
-      "title": "Search Spheres",
-      "collaborators": ["Upswell"],
-      "technologies": {
-          "misc": ["Swift"]
+      "published": true,
+      "tech": {
+          "Misc": ["Swift"]
         },
+      "title": "Search Spheres",
       "year": 2016
+    }, {
+      "client": "",
+      "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
+      "id": "patch",
+      "keywords": ["chatbot", "chat", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
+      "published": true,
+      "tech": {
+        "Misc": ["Google Cloud Platform"],
+        "Python": ["Rasa NLU", "NumPy", "SpaCy"],
+        "JavaScript": ["Vue", "NodeJS"]
+      },
+      "title": "Patchbot",
+      "year": 2019
+    }, {
+      "client": "Terra Incognita",
+      "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
+      "id": "canvas",
+      "keywords": ["storycrafter", "content", "realtime", "real", "time", "web", "sockets", "analytics"],
+      "published": true,
+      "tech": {
+        "JavaScript": ["Vue", "SocketIO", "Electron", "NodeJS", "NPM"]
+      },
+      "title": "Storycrafter Canvas",
+      "year": 2018
     }
   ]
 }
