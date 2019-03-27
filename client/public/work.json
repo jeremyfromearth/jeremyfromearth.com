@@ -1,11 +1,35 @@
 {
   "links": [
-    {"url": "https://gitlab.com/jeremyfromearth", "icon": "fab fa-gitlab"},
-    {"url": "https://stackoverflow.com/users/230561/jeremyfromearth", "icon": "fab fa-stack-overflow"},
-    {"url": "https://medium.com/@jeremy.from.earth", "icon": "fab fa-medium"},
-    {"url": "http://twitter.com/jeremyfromearth", "icon": "fab fa-twitter"},
-    {"url": "https://www.linkedin.com/in/jeremynealbrown", "icon": "fab fa-linkedin"},
-    {"url": "mailto:jeremynealbrown@gmail.com", "icon": "fas fa-envelope"}
+    {
+      "url": "https://gitlab.com/jeremyfromearth",
+      "icon": "fab fa-gitlab",
+      "keywords": ["git", "gitlab", "version", "control", "code", "programming"]
+    },
+    {
+      "url": "https://stackoverflow.com/users/230561/jeremyfromearth",
+      "icon": "fab fa-stack-overflow",
+      "keywords": ["stack", "overflow", "code", "programming", "question", "answer", "community"]
+    },
+    {
+      "url": "https://medium.com/@jeremy.from.earth",
+      "icon": "fab fa-medium",
+      "keywords": ["blog", "writing", "sharing", "code", "programming", "medium"]
+    },
+    {
+      "url": "http://twitter.com/jeremyfromearth",
+      "icon": "fab fa-twitter",
+      "keywords": ["twitter", "social", "sharing"]
+    },
+    {
+      "url": "https://www.linkedin.com/in/jeremynealbrown",
+      "icon": "fab fa-linkedin",
+      "keywords": ["linked", "in", "social"]
+    },
+    {
+      "url": "mailto:jeremynealbrown@gmail.com",
+      "icon": "fas fa-envelope",
+      "keywords": ["email", "e-mail", "social", "contact"]
+    }
   ],
   "blog": [{
     "url": "https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3",
@@ -44,7 +68,6 @@
     "title": "Reflections",
     "year": 2013
   }, {
-
     "client": "National Air & Space Museum",
     "collaborators": ["Terra Incognita"],
     "description": "Series A financing deployment partner network. Growth hacking success crowdsource freemium influencer crowdfunding product management prototype. Product management user experience creative first mover advantage early adopters churn rate. ",

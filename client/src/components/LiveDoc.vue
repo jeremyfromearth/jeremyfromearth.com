@@ -145,7 +145,7 @@ export default {
 
         <div class='no-matching-projects-message' v-else>
           <i class='fa fa-child'></i>
-          <p>No projects matched the keywords provided!</p>
+          <p>No projects matched the keywords provided</p>
         </div>
 
         <h3>Blog</h3>
@@ -304,7 +304,7 @@ export default {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    padding: 0 2px 0 2px;
+    padding: 0.5em;
     margin-top: 4em;
     user-select: none;
     justify-content: center;
@@ -340,7 +340,7 @@ export default {
     border-top: 1px solid lightgrey;
     font-size: 0.8em;
     font-weight: 800;
-    margin: 1em 0 0 0;
+    margin: 4em 0 0 0;
     padding: 1.0em 6em;;
   }
 
