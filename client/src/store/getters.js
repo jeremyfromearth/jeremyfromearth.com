@@ -3,6 +3,7 @@ import * as _ from 'lodash'
 export default {
   blog_posts: state => state.blog_posts,
   keywords: state => state.keywords,
+  links: state => state.links,
   pagination: state => state.pagination,
   projects_paged: state => state.project_search_results.slice(state.pagination, state.pagination + state.projects_per_page),
   projects_per_page: state => state.projects_per_page,

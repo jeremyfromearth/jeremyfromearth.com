@@ -43,7 +43,9 @@ export default {
   },
   set_blog_posts(state, value) {
     state.blog_posts = value
-    console.log(state.blog_posts)
+  },
+  set_links(state, value) {
+    state.links = value
   },
   set_new_data(state, value) {
     state.projects = value.sort((a, b) => b['year'] - a['year'])

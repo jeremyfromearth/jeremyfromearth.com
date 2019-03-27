@@ -1,4 +1,12 @@
 {
+  "links": [
+    {"url": "https://gitlab.com/jeremyfromearth", "icon": "fab fa-gitlab"},
+    {"url": "https://stackoverflow.com/users/230561/jeremyfromearth", "icon": "fab fa-stack-overflow"},
+    {"url": "https://medium.com/@jeremy.from.earth", "icon": "fab fa-medium"},
+    {"url": "http://twitter.com/jeremyfromearth", "icon": "fab fa-twitter"},
+    {"url": "https://www.linkedin.com/in/jeremynealbrown", "icon": "fab fa-linkedin"},
+    {"url": "mailto:jeremynealbrown@gmail.com", "icon": "fas fa-envelope"}
+  ],
   "blog": [{
     "url": "https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3",
     "title": "Multiple Python kernels for Jupyter Lab with Conda",
@@ -103,10 +111,7 @@
     "location": "Reno, Nevada",
     "published": true,
     "tech": {
-      "Misc": [
-        "Swift",
-        "Django"
-      ]
+      "Misc": ["Swift", "iOS"]
     },
     "title": "Digital Organ Explorers",
     "year": 2015
@@ -117,10 +122,9 @@
     "id": "telstra-partnership-hub",
     "keywords": ["telstra", "wild", "physics", "kinect"],
     "location": "Sydney, Austrailia",
-    "published": false,
+    "published": true,
     "tech": {
-        "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"],
-        "Misc": ["MQTT"]
+        "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
       },
     "title": "Partnership Hub",
     "year": 2015
@@ -321,8 +325,7 @@
     "keywords": ["visualization", "data", "natural", "language", "processing"],
     "published": true,
     "tech": {
-        "Misc": ["Java", "NPM"],
-        "JavaScript": ["D3", "Node"],
+        "JavaScript": ["D3", "NodeJS"],
         "C++": []
       },
     "title": "Search Engine Query Language",
@@ -349,7 +352,8 @@
     "published": true,
     "title": "Kronos Archaeology Discovery",
     "tech":{
-        "Misc": ["Java", "Android", "MySQL"]
+        "Misc": ["Java", "Android", "MySQL"],
+        "Python": []
       },
     "year": 2011
   }, {
@@ -380,7 +384,7 @@
     "location": "Columbus, Ohio",
     "id": "woaep",
     "keywords": ["multitouch", "aep"],
-    "published": false,
+    "published": true,
     "tech": {
         "C++": ["Cinder", "OpenGL", "TUIO"]
       },

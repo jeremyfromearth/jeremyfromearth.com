@@ -30,6 +30,14 @@ export default {
       .then(res => {
         // --------------------------------------------------------
         //
+        // Links
+        //
+        // --------------------------------------------------------
+        const links = res[0].data['links']
+        commit('set_links', links)
+
+        // --------------------------------------------------------
+        //
         // Project Indexing / Technology Gathering
         //
         // --------------------------------------------------------
@@ -41,7 +49,7 @@ export default {
         const stopwords = res[1].data
         projects.forEach(x => {
 
-          if(!x.published) return
+          //if(!x.published) return
           
           // gather up the tech lists
           if(x.tech) {
@@ -96,9 +104,6 @@ export default {
       
         const blog = res[0].data['blog']
         commit('set_blog_posts', blog)
-        
-        
-        
       })
   },
   inc_pagination({commit}) {

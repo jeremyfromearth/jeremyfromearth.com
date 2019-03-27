@@ -11,10 +11,10 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'blog_posts', 'keywords', 'pagination', 'projects_paged',
-      'project_search_results',
-      'project_sort_keys', 'projects_per_page',
-      'technologies'
+      'blog_posts', 'keywords', 'links', 
+      'pagination', 'projects_paged',
+      'project_search_results', 'project_sort_keys', 
+      'projects_per_page', 'technologies'
     ]),
     right_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
@@ -75,19 +75,19 @@ export default {
       <div class='container'>
         <div class='header-container'>
           <h1>Jeremy from <i id='globe' class='fas fa-globe-europe'></i></h1>
-            <div>
-            <span> 
-              <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
-              <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
-              <a href='https://medium.com/@jeremy.from.earth'><i class='fab fa-medium'></i></a>&nbsp;
-              <a href='http://twitter.com/jeremyfromearth'><i class='fab fa-twitter'></i></a>&nbsp;
-              <a href='https://www.linkedin.com/in/jeremynealbrown/'><i class='fab fa-linkedin'></i></a>&nbsp;
-              <a href='mailto:jeremynealbrown@gmail.com'><i class='fas fa-envelope'></i></a>&nbsp; 
-            </span>
-            </div>
+          <div>
+            <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
+            <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
+            <a href='https://medium.com/@jeremy.from.earth'><i class='fab fa-medium'></i></a>&nbsp;
+            <a href='http://twitter.com/jeremyfromearth'><i class='fab fa-twitter'></i></a>&nbsp;
+            <a href='https://www.linkedin.com/in/jeremynealbrown/'><i class='fab fa-linkedin'></i></a>&nbsp;
+            <a href='mailto:jeremynealbrown@gmail.com'><i class='fas fa-envelope'></i></a>&nbsp; 
+          </div>
         </div>
         <h2>Software Engineer</h2>
-        <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
+        <p>
+          Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.
+        </p>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -144,8 +144,8 @@ export default {
         </div>
 
         <div class='no-matching-projects-message' v-else>
-          <i class='fa fa-dice-d20'></i>
-          <p>No projects matched the keywords provided</p>
+          <i class='fa fa-child'></i>
+          <p>No projects matched the keywords provided!</p>
         </div>
 
         <h3>Blog</h3>
@@ -337,9 +337,11 @@ export default {
   }
 
   .pagination-detail {
+    border-top: 1px solid lightgrey;
     font-size: 0.8em;
     font-weight: 800;
-    padding: 1.5em 0 1.5em 0;
+    margin: 1em 0 0 0;
+    padding: 1.0em 6em;;
   }
 
   .projects-toolbar {

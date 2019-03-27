@@ -2,6 +2,7 @@ export default {
   blog_posts: [],
   index: {},
   keywords: [],
+  links: [],
   lookup: {},
   pagination: 0,
   project_sort_key: 'year',
