@@ -51,6 +51,7 @@
     "id": "power-up-portland",
     "keywords": ["arduino", "omsi", "buttons", "physical", "sensor"],
     "location": "Portland, Oregon",
+    "platforms": ["Windows"],
     "published": true,
     "tech": {
       "Misc": ["Arduino"]
@@ -64,6 +65,7 @@
     "id": "holocaust-memorial-museum-reflections",
     "keywords": ["holocaust", "quotes", "crowd", "sourced"],
     "location": "Washington, D.C.",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Reflections",
     "year": 2013
@@ -74,6 +76,7 @@
     "location": "Washington, D.C.",
     "id": "navigate-the-seas",
     "keywords": ["smithsonian", "aviation"],
+    "platforms": ["Windows"],
     "published": true,
     "title": "Navigate the Seas",
     "year": 2013
@@ -84,6 +87,7 @@
     "id": "lead-a-trail-drive",
     "keywords": ["game", "simulation"],
     "location": "Cuero, Texas",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Lead a Trail Drive",
     "year": 2013
@@ -92,6 +96,7 @@
     "location": "Winnipeg, Manitoba",
     "id": "cmhr-human-rights-now",
     "keywords": ["human", "rights", "projection", "data", "visualization"],
+    "platforms": ["macOS"],
     "published": true,
     "collaborators": ["Upswell"],
     "description": "Pitch funding client startup creative hypotheses business-to-business advisor iPhone sales. Creative infographic ecosystem technology business plan innovator facebook. Stock success angel investor strategy MVP analytics vesting period hackathon product management.",
@@ -106,6 +111,7 @@
     "description": "Business-to-consumer agile development pivot. Direct mailing iPad facebook leverage series A financing first mover advantage. Pivot alpha infographic customer channels learning curve bootstrapping seed money business plan hypotheses social proof partner network gamification.",
     "id": "breast-cancer-causation",
     "keywords": ["data", "visualization", "canvas", "breast", "cancer"],
+    "platforms": ["Web"],
     "published": true,
     "tech": {
         "JavaScript": []
@@ -119,6 +125,7 @@
     "id": "clemson-data-ribbon",
     "keywords": ["clemson", "football", "sports", "kinect", "gesture"],
     "location": "Greenville, North Carolina",
+    "platforms": ["Windows"],
     "published": true,
     "tech": {
       "Misc": ["Java", "Processing", "Arduino"]
@@ -132,6 +139,7 @@
     "id": "digital-organ-explorers",
     "keywords": ["augmented", "reality", "health", "science"],
     "location": "Reno, Nevada",
+    "platforms": ["iOS"],
     "published": true,
     "tech": {
       "Misc": ["Swift", "iOS"]
@@ -145,6 +153,7 @@
     "id": "telstra-partnership-hub",
     "keywords": ["telstra", "wild", "physics", "kinect"],
     "location": "Sydney, Austrailia",
+    "platforms": ["Windows"],
     "published": true,
     "tech": {
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
@@ -158,6 +167,7 @@
     "id": "clemson-family-portrait",
     "keywords": ["led", "arduino", "heroic", "robotics", "data", "visualization"],
     "location": "Greenville, North Carolina",
+    "platforms": ["Windows"],
     "published": true,
     "tech": {
       "C++": ["Cinder", "Kinect", "OpenGL"]
@@ -171,6 +181,7 @@
     "id": "floods-navigator",
     "keywords": ["science", "geology", "mobius", "floods", "geography", "mappping", "map"],
     "location": "Spokane, Washington",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Missoula Floods Navigator",
     "year": 2012
@@ -181,6 +192,7 @@
     "id": "harmony-table",
     "keywords": ["music", "sound", "composition", "data", "visualization", "multitouch"],
     "location": "Spokane, Washington U.S.",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
     "tech": {
@@ -194,6 +206,7 @@
     "id": "weegee-murder-is-my-business",
     "keywords": ["photography", "new", "york", "nyc", "icp"],
     "location": "New York, New York",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Weegee - Murder is My Business",
     "year": 2012
@@ -204,6 +217,7 @@
     "id": "rayburn",
     "keywords": ["archive", "collections", "government"],
     "location": "Bonham, Texas",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Sam Rayburn Archive Explorer",
     "year": 2012
@@ -214,6 +228,7 @@
     "id": "in-the-studio",
     "keywords": ["music", "recording", "simulation", "sound", "audio"],
     "location": "Los Angeles, California",
+    "platforms": ["Windows"],
     "published": true,
     "title": "In the Studio",
     "year": 2008
@@ -224,6 +239,7 @@
     "id": "faces-of-gettysburg",
     "keywords": ["history", "war"],
     "location": "Gettysburg, Pensylvania",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Faces of Gettysburg",
     "year": 2008
@@ -235,6 +251,7 @@
     "id": "orientation-screens",
     "keywords": ["government", "events", "data", "visualization"],
     "location": "Washington, D.C.",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Orientation Screens",
     "year": 2008
@@ -245,6 +262,7 @@
     "id": "global-health",
     "keywords": ["science", "health", "government"],
     "location": "Bethesda, Maryland",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Global Health Kiosks",
     "year": 2008
@@ -256,6 +274,7 @@
     "id": "names-quilt",
     "keywords": ["table", "touchscreen", "aids", "quilts"],
     "title": "Names Quilt Touch Table",
+    "platforms": ["Windows"],
     "published": true,
     "year": 2007
   }, {
@@ -266,6 +285,7 @@
     "id": "woodstock-tryptich",
     "keywords": ["woodstock", "music"],
     "title": "Woodstock Tryptich Kiosks",
+    "platforms": ["Windows"],
     "published": true,
     "year": 2007
   }, {
@@ -275,6 +295,7 @@
     "id": "aid-activism",
     "keywords": ["health", "aids", "touchscreen"],
     "location": "Bethesda, Maryland",
+    "platforms": ["Windows"],
     "published": true,
     "title": "AIDS Activism",
     "year": 2007
@@ -284,6 +305,7 @@
     "description": "Incubator pitch creative technology scrum project partnership investor launch party twitter seed money. Holy grail agile development equity accelerator buyer first mover advantage. Series A financing direct mailing beta.",
     "id": "macarthur-foundation-kiosk",
     "location": "Chicago, Illinois",
+    "platforms": ["Windows"],
     "published": true,
     "title": "MacArthur Foundation Experience",
     "year": 2007
@@ -294,6 +316,7 @@
     "location": "Louisville, Kentucky",
     "id": "book-of-hours",
     "keywords": ["manuscript", "touchscreen"],
+    "platforms": ["Windows"],
     "published": true,
     "title": "Book of Hours",
     "year": 2009
@@ -305,6 +328,7 @@
     "description": "Backing burn rate deployment customer market churn rate traction ecosystem. Branding disruptive advisor freemium partnership customer monetization traction infographic twitter vesting period user experience seed money release. Funding iPad analytics. Metrics buyer entrepreneur client twitter rockstar startup channels.",
     "id": "seggesser-hide-explorer",
     "keywords": ["history"],
+    "platforms": ["Web"],
     "published": true,
     "title": "Seggesser Hide Explorer",
     "year": 2009
@@ -315,6 +339,7 @@
     "id": "old-standard-sound",
     "keywords": ["music", "sound", "recording"],
     "title": "Old Standard Sound Website",
+    "platforms": ["Web"],
     "published": true,
     "collaborators": ["Upswell"],
     "year": 2009
@@ -326,6 +351,7 @@
     "id": "sports-broadcasting",
     "keywords": ["sports"],
     "location": "Kansas City, Missouri",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Sports Broadcasting",
     "year": 2009
@@ -337,6 +363,7 @@
     "location": "Santa Fe, New Mexico",
     "id": "treaty-of-gaudalupe-hidalgo",
     "keywords": ["history", "government"],
+    "platforms": ["Windows"],
     "published": true,
     "title": "Treaty of Guadalupe Hidalgo",
     "year": 2009
@@ -346,6 +373,7 @@
     "description": "A domain specific search language designed for IP.com. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
     "id": "query-parser",
     "keywords": ["visualization", "data", "natural", "language", "processing"],
+    "platforms": ["Web", "Linux"],
     "published": true,
     "tech": {
         "JavaScript": ["D3", "NodeJS"],
@@ -359,6 +387,7 @@
     "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
     "id": "semantic-map",
     "keywords": ["data", "visualization", "natural", "language", "processing"],
+    "platforms": ["Web"],
     "published": true,
     "tech": {
       "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
@@ -372,12 +401,14 @@
     "location": "Philadelphia, Pennsylvania",
     "id": "kronos",
     "keywords": ["archaeology", "discovery", "kronos"],
+    "platforms": ["Windows"],
     "published": true,
     "title": "Kronos Archaeology Discovery",
     "tech":{
         "Misc": ["Java", "Android", "MySQL"],
         "Python": []
       },
+    "tldr": "",
     "year": 2011
   }, {
     "client": "National Museum of the American Indian",
@@ -386,8 +417,10 @@
     "id": "infinity-of-nations",
     "keywords": ["history", "culture", "native", "american"],
     "location": "New York, New York",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Infinity of Nations",
+    "tldr": "On the road, under the weather, 30 days in October",
     "year": 2010
   }, {
     "client": "Nike",
@@ -396,8 +429,10 @@
     "id": "nike-sparq-data-visulization",
     "keywords": ["sensor", "sports", "nike", "wearable", "data", "visualization"],
     "location": "Portland, OR",
+    "platforms": ["macOS", "Windows"],
     "published": true,
     "title": "Nike Sparq Data Visualizations",
+    "tldr": "Deep in the basement lab of the world's (fill in the blanks)",
     "categories": "data-visualization",
     "year": 2010
   }, {
@@ -407,11 +442,13 @@
     "location": "Columbus, Ohio",
     "id": "woaep",
     "keywords": ["multitouch", "aep"],
+    "platforms": ["macOS"],
     "published": true,
     "tech": {
         "C++": ["Cinder", "OpenGL", "TUIO"]
       },
     "title": "World of AEP",
+    "tldr": "Twenty six screens of raw American Electric Power",
     "year": 2018
   }, {
     "client": "Portland's Children Museum",
@@ -420,11 +457,13 @@
     "id": "childrens-museum-storefront",
     "keywords": ["kinect", "physics", "interactive", "gesture"],
     "location": "Portland, Oregon",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Children's Museum Storefront",
     "tech": {
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]
       },
+    "tldr": "Kinect + rigid body physics = boom klang",
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -433,11 +472,13 @@
     "id": "omsi-kinect-prototype",
     "keywords": ["kinect", "physics", "augmented", "reality"],
     "location": "Portland, Oregon",
+    "platforms": ["Windows", "Kinect"],
     "published": true,
-    "title": "Strength Augmentation Prototype",
+    "title": "Kinect, Artifical Humans Prototype",
     "tech": {
         "C++": ["Cinder", "OpenGL", "Kinect"]
       },
+    "tldr": "A Kinect powered prototype for my favorite childhood museum",
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -445,8 +486,10 @@
     "id": "virtual-estuary",
     "keywords": ["game", "conservation"],
     "location": "Berlin Township, Ohio",
+    "platforms": ["Windows"],
     "published": true,
     "title": "The Virtual Estuary",
+    "tldr": "A fun interactive game in the middle of nowhere in Ohio",
     "year": 2011
   }, {
     "client": "San Franscisco Museum of Modern Art",
@@ -455,49 +498,74 @@
     "id": "sfmoma-storyscreens",
     "keywords": ["sfmoma", "moma", "data", "visualization", "events"],
     "location": "San Francisco, California",
+    "platforms": ["Windows"],
     "published": true,
     "title": "Storyscreens",
     "tech": {
         "C++": ["Cinder", "OpenGL", "Kinect"],
         "Python": ["Flask", "SocketIO"]
       },
+    "tldr": "Sixteen screens trying subtly to fit in at the art museum",
     "year": 2016
   }, {
     "client": "Bell Labs",
     "collaborators": ["Upswell"],
-    "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
+    "description": "The Search Spheres are an experimental search interface that I developed for my collaborators over at Upswell for Bell Labs. Increasingly dense spheres represent a collection of search results, with the most relevant results at the center. With pinch and zoom gestures, users can fluidly scan and rotate through hundreds of search results with ease.",
+    "featured": false,
     "id": "bell-labs-visual-search",
     "keywords": ["data", "visualization", "bell"],
     "location": "Berkeley Heights, NJ",
+    "platforms": ["iOS"],
     "published": true,
     "tech": {
         "Misc": ["Swift"]
       },
     "title": "Search Spheres",
+    "tldr": "An experimental geometric search interface",
     "year": 2016
   }, {
     "client": "",
-    "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
+    "description": "Patch is a so-called Smart Bot, a concept that I have been working on for a couple of years. As a smart bot, Patch uses various artificial intelligence techniques to learn all about a specialized topic. In Patch's case, he knows all about analog synthesizers. It can carry on a basic conversation with both novices and experienced enthusiast. I am currently seeking new work that involves building other types of smart bots like Patch for museums or other phsyical spaces.",
+    "featured": true,
     "id": "patch",
-    "keywords": ["chatbot", "chat", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
+    "keywords": ["chatbot", "chat", "music", "sound", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
+    "platforms": ["Web"],
     "published": true,
     "tech": {
       "Misc": ["Google Cloud Platform"],
       "Python": ["Rasa NLU", "NumPy", "SpaCy"],
       "JavaScript": ["Vue", "NodeJS"]
     },
-    "title": "Patchbot",
+    "title": "Patch the Synthbot",
+    "tldr": "A know it all chatbot, eager to share it's knowledge of vintage synthesizers",
     "year": 2019
   }, {
     "client": "Terra Incognita",
-    "description": "Hypotheses graphical user interface advisor twitter iteration freemium. First mover advantage monetization channels facebook iteration iPhone ownership supply chain growth hacking direct mailing founders marketing long tail. Termsheet launch party gamification. Seed money interaction design crowdsource stock market business model canvas traction freemium value proposition direct mailing pivot angel investor.",
+    "description": "Canvas is a scalable and cross platform content presentation software capable of displaying full-screen web apps on touch screens in public spaces. It allows content producers using the Storycrafter platform to easily publish content without the need for manually copying content using removable media or otherwise. I architected and developed both the front end desktop application and the server side application that connects to the Storycrafter CMS and notifies deployments of content updates.",
+    "featured": true,
     "id": "canvas",
     "keywords": ["storycrafter", "content", "realtime", "real", "time", "web", "sockets", "analytics"],
+    "platforms": ["macOS", "Windows"],
     "published": true,
     "tech": {
       "JavaScript": ["Vue", "SocketIO", "Electron", "NodeJS", "NPM"]
     },
     "title": "Storycrafter Canvas",
+    "tldr": "Content publishing for public spaces, made easy",
+    "year": 2018
+  }, {
+    "client": "",
+    "description": "Metonym is an open source web app that I develop and maintain, designed to enable chatbot creators and others who require large amounts of conversational data to quickly generating it from a few examples. The application provides a small scripting langauge for transforming a single line of formatted text into thousands of permutations.",
+    "featured": true,
+    "id": "canvas",
+    "keywords": ["natural", "language", "processing", "recursive", "parse", "chatbots", "chat", "conversation"],
+    "platforms": ["Web"],
+    "published": true,
+    "tech": {
+      "JavaScript": ["Vue", "SocketIO", "Electron", "NodeJS", "NPM"]
+    },
+    "title": "Metonym NLP Training Tool",
+    "tldr": "A tool for generating nlp training data",
     "year": 2018
   }]
 }

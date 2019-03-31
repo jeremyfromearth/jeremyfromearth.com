@@ -86,7 +86,7 @@ export default {
         </div>
         <h2>Software Engineer</h2>
         <p>
-          Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on a wide array of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.
+          Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on various types of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.
         </p>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
@@ -112,17 +112,21 @@ export default {
               <div class='pagination-arrow pagination-arrow-left'
                 :style="{ opacity: pagination > 0 ? 1 : 0, 
                           marginTop: pagination > 0 ? '4em': '2em',
-                          height: pagination > 0 ? '4em' : 0 }" ><h4>&laquo;</h4></div>
+                          height: pagination > 0 ? '4em' : 0 }" >
+              <h3><i class="fas fa-angle-double-up"></i></h3></div>
             </div>
             <div class='project-outer'>
-              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='project-inner'>
+              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='project-group-inner'>
                 <div class='md-layout'>
                   <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item'>
-                    <div v-for='(p, i) in projects_with_key(k)' :key=i>
-                      <h4>{{ p.title }}</h4>
-                      <h5>{{ p.client }}</h5>
-                      <p>{{ p.description }}</p>
+                    <div v-for='(p, i) in projects_with_key(k)' :key=i class='project'>
+                      <div class='project-heading'>
+                        <h4>{{ p.title }} </h4>
+                        <h5 v-if='p.client'>,&nbsp;{{ p.client }}</h5>&nbsp;
+                        <i class='fa fa-angle-double-right project-hover-icon'></i>
+                      </div>
+                      <p>{{ p.tldr || p.description }}</p>
                     </div>
                   </div>
                 </div>
@@ -134,7 +138,8 @@ export default {
               <div class='pagination-arrow pagination-arrow-right'
               :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
                         marginTop: right_pagination_arrow_is_visibile ? '4em' : '2em',
-                        height: right_pagination_arrow_is_visibile ? '4em' : 0}"><h4>&raquo;</h4></div>
+                        height: right_pagination_arrow_is_visibile ? '4em' : 0}">
+                <h3><i class="fas fa-angle-double-down"></i></h3></div>
             </div>
           </div>
           <div class='pagination-detail'>
@@ -304,29 +309,32 @@ export default {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    padding: 0.5em;
+    padding: 0.0em 1.0em 0.0em 1.0em;
     margin-top: 4em;
     user-select: none;
     justify-content: center;
     transition: height 0.32s, margin-top 0.32s, opacity 0.16s;
   }
 
+  .pagination-arrow-left {
+    border-bottom: 1px solid lightgrey;
+    padding: 0px 1.5em 0 1.5em;
+  }
+
   .pagination-arrow-left:hover {
     color: red;
-    border-right: 1px solid red;
-  }
+    border-bottom: 1px solid red;
 
-  .pagination-arrow-left {
-    border-right: 1px solid lightgrey;
-  }
-
-  .pagination-arrow-right:hover {
-    color: red;
-    border-left: 1px solid red;
   }
 
   .pagination-arrow-right {
-    border-left: 1px solid lightgrey;
+    border-top: 1px solid lightgrey;
+    padding: 0px 1.5em 0 1.5em;
+  }
+  
+  .pagination-arrow-right:hover {
+    color: red;
+    border-top: 1px solid red;
   }
 
   .pagination-controller {
@@ -344,6 +352,30 @@ export default {
     padding: 1.0em 6em;;
   }
 
+  .project:hover .project-hover-icon {
+    opacity: 1;
+  }
+
+  .project p {
+    margin: 0; 
+  }
+
+  .project h4 {
+    white-space: nowrap;
+  }
+
+  .project h5 {
+    white-space: nowrap;
+  }
+  
+  .project-heading {
+    display: flex;
+    align-items: baseline;
+    whitespace: no-wrap;
+  }
+
+  
+
   .projects-toolbar {
     display: flex;
     align-items: center;
@@ -355,14 +387,20 @@ export default {
     width: 100%;
   }
 
-  .project-inner {
+  .project-group-inner {
     position: relative;
     left: 0;
+  }
+
+  .project-hover-icon {
+    opacity: 0;
+    transition: opacity 0.2s;
   }
 
   .project-outer {
     overflow: scroll;
     height: 32em;
+    width: 70%;
   }
 
   .project-scrollbox {
@@ -406,4 +444,7 @@ export default {
   ul > li:before {
     content: "+ ";
   }
+
+  
+  
 </style>
