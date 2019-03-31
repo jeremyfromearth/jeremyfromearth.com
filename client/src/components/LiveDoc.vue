@@ -116,8 +116,7 @@ export default {
               <h3><i class="fas fa-angle-double-up"></i></h3></div>
             </div>
             <div class='project-outer'>
-              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='project-group-inner'>
-                <div class='md-layout'>
+              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
                   <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item'>
                     <div v-for='(p, i) in projects_with_key(k)' :key=i class='project'>
@@ -129,7 +128,6 @@ export default {
                       <p>{{ p.tldr || p.description }}</p>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
             <div 
@@ -374,7 +372,9 @@ export default {
     whitespace: no-wrap;
   }
 
-  
+  .project-heading h4, h5 {
+    margin-bottom: 0.25em;
+  }
 
   .projects-toolbar {
     display: flex;
@@ -388,6 +388,7 @@ export default {
   }
 
   .project-group-inner {
+    flex-wrap: nowrap;
     position: relative;
     left: 0;
   }

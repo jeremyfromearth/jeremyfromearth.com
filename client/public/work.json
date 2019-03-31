@@ -370,16 +370,16 @@
   },
   {
     "client": "Textwise",
-    "description": "A domain specific search language designed for IP.com. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "description": "A domain specific query language designed for Textwise & IP.com",
     "id": "query-parser",
-    "keywords": ["visualization", "data", "natural", "language", "processing"],
+    "keywords": ["visualization", "data", "natural", "language", "processing", "compiler", "parser", "query", "recursive", "descent"],
     "platforms": ["Web", "Linux"],
     "published": true,
     "tech": {
         "JavaScript": ["D3", "NodeJS"],
         "C++": []
       },
-    "title": "Search Engine Query Language",
+    "title": "Solmer Query Syntax Parser",
     "year": 2017
   },
   {
@@ -392,6 +392,7 @@
     "tech": {
       "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
     },
+    "tldr": "A hexbin data visualization of tens of thousands of patent documents",
     "title": "Semantic Map",
     "year": 2017
   },
@@ -537,7 +538,7 @@
       "JavaScript": ["Vue", "NodeJS"]
     },
     "title": "Patch the Synthbot",
-    "tldr": "A know it all chatbot, eager to share it's knowledge of vintage synthesizers",
+    "tldr": "A know it all synth geek chatbot",
     "year": 2019
   }, {
     "client": "Terra Incognita",
