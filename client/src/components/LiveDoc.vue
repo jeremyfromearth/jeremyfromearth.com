@@ -14,16 +14,21 @@ export default {
       'blog_posts', 'keywords', 'links', 
       'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
-      'projects_per_page', 'technologies'
+      'projects_per_page', 'technologies', 
+      'topics', 'topics_palette'
     ]),
-    right_pagination_arrow_is_visibile() {
+    down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
+    },
+    globe_color() { 
+      return this.topic_color(this.globe_index) 
     }
   },
   data() {
     return {
-      text: '',
-      project_transition_name: 'project-transition-inc'
+      globe_index: 0,
+      project_transition_name: 'project-transition-inc',
+      search_text: ''
     }
   },
   async mounted() {
@@ -37,6 +42,7 @@ export default {
         .attr('class', '')
         .classed(`fas fa-${globe[0]}`, true)
       globe.push(globe.shift())
+      this.globe_index++ 
     }, 500)
 
     await this.get_data()
@@ -60,11 +66,14 @@ export default {
       this.inc_pagination()
     },
     on_keyword_enter() {
-      this.add_keywords(this.text)
-      this.text = ''
+      this.add_keywords(this.search_text)
+      this.search_text = ''
     },
     projects_with_key(k) {
       return _.filter(this.projects_paged, {year: k})
+    }, 
+    topic_color(i) {
+      return this.topics_palette[i % this.topics_palette.length]
     }
   }
 }
@@ -74,7 +83,7 @@ export default {
     <md-app-content class='content'>
       <div class='container'>
         <div class='header-container'>
-          <h1>Jeremy from <i id='globe' class='fas fa-globe-europe'></i></h1>
+          <h1>Jeremy from <i id='globe' class='fas fa-globe-europe' :style='{color: globe_color}'></i></h1>
           <div>
             <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
             <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
@@ -85,9 +94,7 @@ export default {
           </div>
         </div>
         <h2>Software Engineer</h2>
-        <p>
-          Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I build applications with <span>C++</span>, Java, JavaScript and Python. I work on various types of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.
-        </p>
+        <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -98,22 +105,22 @@ export default {
             </div>
             <form novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
               <md-field>
-                <label>Keywords</label> 
-                <md-input v-model='text'></md-input>
+                <label>Search</label> 
+                <md-input v-model='search_text'></md-input>
               </md-field>
             </form>
           </div>
         </div>
         <div v-if='projects_paged.length' class='project-container-outer'>
           <div ref='project_container' class='project-container'>
-            <div 
-              class='pagination-controller' 
-              @click='dec()'>
-              <div class='pagination-arrow pagination-arrow-left'
-                :style="{ opacity: pagination > 0 ? 1 : 0, 
-                          marginTop: pagination > 0 ? '4em': '2em',
-                          height: pagination > 0 ? '4em' : 0 }" >
-              <h3><i class="fas fa-angle-double-up"></i></h3></div>
+            <div class='topic-legend'>
+              <h4>Topics</h4>
+              <ul>
+                <li v-for='(t, i) in topics' :key='i'>
+                  <div class='topic-legend-color-block' 
+                  :style='{ backgroundColor: topic_color(i) }'/>{{t}}
+                </li>
+              </ul>
             </div>
             <div class='project-outer'>
               <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
@@ -130,14 +137,26 @@ export default {
                   </div>
               </div>
             </div>
-            <div 
-              class='pagination-controller' 
-               @click='inc()'>
-              <div class='pagination-arrow pagination-arrow-right'
-              :style="{ opacity: right_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                        marginTop: right_pagination_arrow_is_visibile ? '4em' : '2em',
-                        height: right_pagination_arrow_is_visibile ? '4em' : 0}">
-                <h3><i class="fas fa-angle-double-down"></i></h3></div>
+            <div class='pagination-controller-container'>
+              <div 
+                class='pagination-controller' 
+                @click='dec()'>
+                <div class='pagination-arrow pagination-arrow-up'
+                  :style="{ opacity: pagination > 0 ? 1 : 0, 
+                            marginTop: pagination > 0 ? '4em': '2em',
+                            height: pagination > 0 ? '4em' : 0 }" >
+                <h3><i class="fas fa-angle-double-up"></i></h3></div>
+              </div>
+              <div 
+                class='pagination-controller' 
+                 @click='inc()'>
+                <div class='pagination-arrow pagination-arrow-down'
+                :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
+                          marginTop: down_pagination_arrow_is_visibile ? '4em' : '8em',
+                          height: down_pagination_arrow_is_visibile ? '4em' : 0}">
+                  <h3><i class="fas fa-angle-double-down"></i></h3>
+                </div>
+              </div>
             </div>
           </div>
           <div class='pagination-detail'>
@@ -314,23 +333,23 @@ export default {
     transition: height 0.32s, margin-top 0.32s, opacity 0.16s;
   }
 
-  .pagination-arrow-left {
+  .pagination-arrow-up {
     border-bottom: 1px solid lightgrey;
     padding: 0px 1.5em 0 1.5em;
   }
 
-  .pagination-arrow-left:hover {
+  .pagination-arrow-up:hover {
     color: red;
     border-bottom: 1px solid red;
 
   }
 
-  .pagination-arrow-right {
+  .pagination-arrow-down {
     border-top: 1px solid lightgrey;
     padding: 0px 1.5em 0 1.5em;
   }
   
-  .pagination-arrow-right:hover {
+  .pagination-arrow-down:hover {
     color: red;
     border-top: 1px solid red;
   }
@@ -342,12 +361,18 @@ export default {
     transition: opacity 0.16s, height 0.32s;
   }
 
+  .pagination-controller-container {
+    display: flex;
+    flex-direction: column;
+  }
+
   .pagination-detail {
     border-top: 1px solid lightgrey;
     font-size: 0.8em;
     font-weight: 800;
     margin: 4em 0 0 0;
     padding: 1.0em 6em;;
+    user-select: none;
   }
 
   .project:hover .project-hover-icon {
@@ -385,6 +410,7 @@ export default {
   .project-container {
     display: flex;
     width: 100%;
+    justify-content: space-around;
   }
 
   .project-group-inner {
@@ -400,7 +426,6 @@ export default {
 
   .project-outer {
     overflow: scroll;
-    height: 32em;
     width: 70%;
   }
 
@@ -428,6 +453,34 @@ export default {
     list-style-type: none;
   }
 
+  .topic-legend-color-block {
+    background-color: #ffcc00;
+    height: .927em;
+    margin-right: 1em;
+    width: 1.5em;
+  }
+
+  .topic-legend ul {
+    padding: 0;
+  }
+
+  .topic-legend ul > li:before {
+    list-style-type: none;
+    padding: 0;
+    text-indent: 0;
+  }
+
+  .topic-legend ul > li:before {
+    content: none;
+  } 
+
+  .topic-legend li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+  }
+
   .work-history h4, h5 {
     line-height: 0em;
   }
@@ -435,17 +488,4 @@ export default {
   .work-history h4 {
     margin-top: 2.8em;
   }
-
-  ul {
-    list-style-type: none;
-    list-style-position: inside;
-    text-indent: -1.25em;
-  }
-
-  ul > li:before {
-    content: "+ ";
-  }
-
-  
-  
 </style>

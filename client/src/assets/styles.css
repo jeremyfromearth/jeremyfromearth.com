@@ -8,6 +8,7 @@
 }
 
 a {
+  color: #368e43;
   text-decoration: none;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -22,6 +23,14 @@ a:visited {
 
 a:active: {
 
+}
+
+.md-theme-default a:not(.md-button) {
+  color: #999;
+}
+
+.md-theme-default a:hover:not(.md-button) {
+  color: #777;
 }
 
 body {
@@ -39,6 +48,16 @@ h1, h2, h3, h4, h5, h6 {
 .hidden {
   opacity: 0;
   transition: opacity 150ms;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+  text-indent: -1.25em;
+}
+
+ul > li:before {
+  content: "+ ";
 }
 
 .visible {

@@ -10,5 +10,7 @@ export default {
   project_sort_keys: (state, getters) =>  _.uniq(_.map(getters.projects_paged, 'year')),
   project_search_results: state => state.project_search_results,
   technologies: state => state.technologies,
+  topics: state => state.topics,
+  topics_palette: state => state.topics_palette,
   window_size: state => state.window_size
 }

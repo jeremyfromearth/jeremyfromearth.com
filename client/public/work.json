@@ -57,6 +57,7 @@
       "Misc": ["Arduino"]
     },
     "title": "Power Up Portland",
+    "topics": ["Installation"],
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
@@ -68,6 +69,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Reflections",
+    "topics": ["Installation"],
     "year": 2013
   }, {
     "client": "National Air & Space Museum",
@@ -79,6 +81,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Navigate the Seas",
+    "topics": ["Installation"],
     "year": 2013
   }, {
     "client": "Chisholm Trail Heritage Museum",
@@ -90,6 +93,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Lead a Trail Drive",
+    "topics": ["Installation"],
     "year": 2013
   }, {
     "client": "Canadian Museum for Human Rights",
@@ -104,6 +108,7 @@
       "C++": ["Cinder", "OpenGL"]
     },
     "title": "Human Rights Now",
+    "topics": ["Visualization", "Installation"],
     "year": 2014
   }, {
     "client": "University of California",
@@ -117,6 +122,7 @@
         "JavaScript": []
       },
     "title": "Visualizing Breast Cancer Causation",
+    "topics": ["Visualization", "Installation"],
     "year": 2014
   }, {
     "client": "Clemson University",
@@ -131,6 +137,7 @@
       "Misc": ["Java", "Processing", "Arduino"]
     },
     "title": "Data Ribbon",
+    "topics": ["Installation"],
     "year": 2015
   }, {
     "client": "Nevada Discovery Museum",
@@ -145,6 +152,7 @@
       "Misc": ["Swift", "iOS"]
     },
     "title": "Digital Organ Explorers",
+    "topics": ["Installation"],
     "year": 2015
   }, {
     "client": "Telstra",
@@ -159,6 +167,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
       },
     "title": "Partnership Hub",
+    "topics": ["Installation"],
     "year": 2015
   }, {
     "client": "Clemson University",
@@ -173,6 +182,7 @@
       "C++": ["Cinder", "Kinect", "OpenGL"]
     },
     "title": "Clemson Family Portrait",
+    "topics": ["Installation"],
     "year": 2015
   }, {
     "client": "Mobius Science Center",
@@ -184,6 +194,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Missoula Floods Navigator",
+    "topics": ["Installation"],
     "year": 2012
   }, {
     "client": "Mobius Science Center",
@@ -195,6 +206,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
+    "topics": ["Installation"],
     "tech": {
         "Misc": ["Java", "Processing", "TUIO"]
       },
@@ -209,6 +221,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Weegee - Murder is My Business",
+    "topics": ["Installation"],
     "year": 2012
   }, {
     "client": "Sam Rayburn Library & Museum",
@@ -220,6 +233,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Sam Rayburn Archive Explorer",
+    "topics": ["Installation", "Search"],
     "year": 2012
   }, {
     "client": "The Grammy Museum",
@@ -231,6 +245,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "In the Studio",
+    "topics": ["Installation"],
     "year": 2008
   }, {
     "client": "Gettysburg Visitors Center",
@@ -242,6 +257,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Faces of Gettysburg",
+    "topics": ["Installation"],
     "year": 2008
   }, {
     "client": "The Library of Congress",
@@ -254,6 +270,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Orientation Screens",
+    "topics": ["Installation"],
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -265,6 +282,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Global Health Kiosks",
+    "topics": ["Installation"],
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -274,6 +292,7 @@
     "id": "names-quilt",
     "keywords": ["table", "touchscreen", "aids", "quilts"],
     "title": "Names Quilt Touch Table",
+    "topics": ["Installation"],
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -285,6 +304,7 @@
     "id": "woodstock-tryptich",
     "keywords": ["woodstock", "music"],
     "title": "Woodstock Tryptich Kiosks",
+    "topics": ["Installation"],
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -298,6 +318,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "AIDS Activism",
+    "topics": ["Installation"],
     "year": 2007
   }, {
     "client": "John D. and Catherine T. MacArthur Foundation",
@@ -308,6 +329,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "MacArthur Foundation Experience",
+    "topics": ["Installation"],
     "year": 2007
   }, {
     "client": "The Speed Art Museum",
@@ -319,6 +341,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Book of Hours",
+    "topics": ["Installation"],
     "year": 2009
   },
   {
@@ -331,17 +354,19 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Seggesser Hide Explorer",
+    "topics": ["Installation"],
     "year": 2009
   },
   {
     "client": "Old Standard Sound",
+    "collaborators": ["Upswell"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
     "id": "old-standard-sound",
     "keywords": ["music", "sound", "recording"],
-    "title": "Old Standard Sound Website",
     "platforms": ["Web"],
     "published": true,
-    "collaborators": ["Upswell"],
+    "title": "Old Standard Sound Website",
+    "topics": ["Website"],
     "year": 2009
   },
   {
@@ -354,6 +379,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Sports Broadcasting",
+    "topics": ["Installation"],
     "year": 2009
   },
   {
@@ -366,11 +392,12 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Treaty of Guadalupe Hidalgo",
+    "topics": ["Installation"],
     "year": 2009
   },
   {
     "client": "Textwise",
-    "description": "A domain specific query language designed for Textwise & IP.com",
+    "description": "A domain specific query language developed for Textwise & IP.com",
     "id": "query-parser",
     "keywords": ["visualization", "data", "natural", "language", "processing", "compiler", "parser", "query", "recursive", "descent"],
     "platforms": ["Web", "Linux"],
@@ -380,6 +407,7 @@
         "C++": []
       },
     "title": "Solmer Query Syntax Parser",
+    "topics": ["AI", "Search"],
     "year": 2017
   },
   {
@@ -394,6 +422,7 @@
     },
     "tldr": "A hexbin data visualization of tens of thousands of patent documents",
     "title": "Semantic Map",
+    "topics": ["AI", "Search"],
     "year": 2017
   },
   {
@@ -410,7 +439,8 @@
         "Python": []
       },
     "tldr": "",
-    "year": 2011
+    "topics": ["Installation"],
+    "year": 2010
   }, {
     "client": "National Museum of the American Indian",
     "collaborators": ["Potion"],
@@ -422,6 +452,7 @@
     "published": true,
     "title": "Infinity of Nations",
     "tldr": "On the road, under the weather, 30 days in October",
+    "topics": ["Installation"],
     "year": 2010
   }, {
     "client": "Nike",
@@ -434,7 +465,7 @@
     "published": true,
     "title": "Nike Sparq Data Visualizations",
     "tldr": "Deep in the basement lab of the world's (fill in the blanks)",
-    "categories": "data-visualization",
+    "topics": ["Visualization"],
     "year": 2010
   }, {
     "client": "American Electric Power",
@@ -450,6 +481,7 @@
       },
     "title": "World of AEP",
     "tldr": "Twenty six screens of raw American Electric Power",
+    "topics": ["Installation"],
     "year": 2018
   }, {
     "client": "Portland's Children Museum",
@@ -465,6 +497,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]
       },
     "tldr": "Kinect + rigid body physics = boom klang",
+    "topics": ["Installation"],
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -480,6 +513,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect"]
       },
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
+    "topics": ["Installation"],
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -491,6 +525,7 @@
     "published": true,
     "title": "The Virtual Estuary",
     "tldr": "A fun interactive game in the middle of nowhere in Ohio",
+    "topics": ["Installation"],
     "year": 2011
   }, {
     "client": "San Franscisco Museum of Modern Art",
@@ -507,6 +542,7 @@
         "Python": ["Flask", "SocketIO"]
       },
     "tldr": "Sixteen screens trying subtly to fit in at the art museum",
+    "topics": ["Installation"],
     "year": 2016
   }, {
     "client": "Bell Labs",
@@ -514,7 +550,7 @@
     "description": "The Search Spheres are an experimental search interface that I developed for my collaborators over at Upswell for Bell Labs. Increasingly dense spheres represent a collection of search results, with the most relevant results at the center. With pinch and zoom gestures, users can fluidly scan and rotate through hundreds of search results with ease.",
     "featured": false,
     "id": "bell-labs-visual-search",
-    "keywords": ["data", "visualization", "bell"],
+    "keywords": ["ai", "data", "ml", "visualization", "bell"],
     "location": "Berkeley Heights, NJ",
     "platforms": ["iOS"],
     "published": true,
@@ -523,13 +559,14 @@
       },
     "title": "Search Spheres",
     "tldr": "An experimental geometric search interface",
+    "topics": ["Installation", "Search"],
     "year": 2016
   }, {
     "client": "",
     "description": "Patch is a so-called Smart Bot, a concept that I have been working on for a couple of years. As a smart bot, Patch uses various artificial intelligence techniques to learn all about a specialized topic. In Patch's case, he knows all about analog synthesizers. It can carry on a basic conversation with both novices and experienced enthusiast. I am currently seeking new work that involves building other types of smart bots like Patch for museums or other phsyical spaces.",
     "featured": true,
     "id": "patch",
-    "keywords": ["chatbot", "chat", "music", "sound", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
+    "keywords": ["ai", "chatbot", "chat", "music", "sound", "ml", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
     "platforms": ["Web"],
     "published": true,
     "tech": {
@@ -539,6 +576,7 @@
     },
     "title": "Patch the Synthbot",
     "tldr": "A know it all synth geek chatbot",
+    "topics": ["Chatbots", "NLP"],
     "year": 2019
   }, {
     "client": "Terra Incognita",
@@ -553,6 +591,7 @@
     },
     "title": "Storycrafter Canvas",
     "tldr": "Content publishing for public spaces, made easy",
+    "topics": ["Installation"],
     "year": 2018
   }, {
     "client": "",
@@ -566,7 +605,8 @@
       "JavaScript": ["Vue", "SocketIO", "Electron", "NodeJS", "NPM"]
     },
     "title": "Metonym NLP Training Tool",
-    "tldr": "A tool for generating nlp training data",
+    "tldr": "A tool for generating NLP training data",
+    "topics": ["NLP"],
     "year": 2018
   }]
 }

@@ -7,7 +7,7 @@ export default {
       keywords
         .replace(/,/g, ' ')
         .split(' ')
-        .filter(s => s != '' && s.length > 2)
+        .filter(s => s != '' && s.length > 1)
         .map(s => {
           return {original: s.trim(), term: stemmer(s.trim().toLowerCase())}
         })
@@ -44,32 +44,38 @@ export default {
 
         const index = {}
         const lookup = {}
-        const technologies = {}
         const projects = res[0].data['projects']
         const stopwords = res[1].data
-        projects.forEach(x => {
+        const technologies = {}
+        const topics = new Set()
 
-          //if(!x.published) return
+        projects.forEach(proj => {
+
+          if(!proj.published) return
           
           // gather up the tech lists
-          if(x.tech) {
-            Object.keys(x.tech).forEach(k => {
+          if(proj.tech) {
+            Object.keys(proj.tech).forEach(k => {
               if(!technologies[k]) technologies[k] = new Set()
-              const techs = x.tech[k]
+              const techs = proj.tech[k]
               techs.forEach(t => technologies[k].add(t))
             })
           }
 
+          // add topics
+          if(proj.topics) proj.topics.forEach(topic => topics.add(topic))
+
           // create a list of keywords from the various fields
           let s = []
-          lookup[x.id] = x
-          if(x.client) s = s.concat(x.client.split(' '))
-          if(x.collaborators) s = s.concat(x.collaborators.join(' ').split(' '))
-          if(x.description) s = s.concat(x.description.split(' '))
-          if(x.keywords) s = s.concat(x.keywords.join(' ').split(' '))
-          if(x.location) s = s.concat(x.location.split(' '))
-          if(x.title) s = s.concat(x.title.split(' '))
-          if(x.year) s.push(''+x.year)
+          lookup[proj.id] = proj
+          if(proj.client) s = s.concat(proj.client.split(' '))
+          if(proj.collaborators) s = s.concat(proj.collaborators.join(' ').split(' '))
+          if(proj.description) s = s.concat(proj.description.split(' '))
+          if(proj.tldr) s = s.concat(proj.tldr.split(' '))
+          if(proj.keywords) s = s.concat(proj.keywords.join(' ').split(' '))
+          if(proj.location) s = s.concat(proj.location.split(' '))
+          if(proj.title) s = s.concat(proj.title.split(' '))
+          if(proj.year) s.push(''+ proj.year)
 
           // remove puncuation
           s = s.map(y => y.replace(/[^A-Za-z0-9\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
@@ -81,7 +87,7 @@ export default {
           s.forEach(z => {
             let stemmed = stemmer(z.trim())
             if(!index[stemmed]) index[stemmed] = new Set()
-            index[stemmed].add(x['id'])
+            index[stemmed].add(proj['id'])
           })
         })
 
@@ -90,11 +96,13 @@ export default {
           technologies[k] = Array.from(technologies[k]).sort()
         })
 
+
         // commit the project and tech data to store
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
         commit('set_technologies', technologies)
+        commit('set_topics', Array.from(topics).sort())
 
         // --------------------------------------------------------
         //

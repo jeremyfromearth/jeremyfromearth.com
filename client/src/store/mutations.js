@@ -60,6 +60,9 @@ export default {
   set_technologies(state, value) {
     state.technologies = value
   },
+  set_topics(state, value) {
+    state.topics = value
+  },
   set_window_size(state, value) {
     state.window_size = value
   }, 
