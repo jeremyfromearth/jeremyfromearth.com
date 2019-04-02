@@ -13,17 +13,11 @@ a {
   transition: background-color 0.2s, color 0.2s;
 }
 
-a:hover {
+a:hover {}
 
-}
+a:visited {}
 
-a:visited {
-
-}
-
-a:active: {
-
-}
+a:active: {}
 
 .md-theme-default a:not(.md-button) {
   color: #999;
@@ -35,7 +29,6 @@ a:active: {
 
 body {
   background-color: #fff;
-  font-size: 13px;
   margin: 0;
 }
 
