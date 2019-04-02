@@ -115,25 +115,24 @@ export default {
           <div ref='project_container' class='project-container'>
             <div class='topic-legend'>
               <h4>Topics</h4>
-              <ul>
-                <li v-for='(t, i) in topics' :key='i'>
+                <div class='topic-legend-item' v-for='(t, i) in topics' :key='i'>
                   <div class='topic-legend-color-block' 
-                  :style='{ backgroundColor: topic_color(i) }'/>{{t}}
-                </li>
-              </ul>
+                  :style='{ backgroundColor: topic_color(i) }'/><div class='topic-legend-item-text'>{{t}}</div>
+                </div>
             </div>
             <div class='project-outer'>
               <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
                   <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item'>
-                    <div v-for='(p, i) in projects_with_key(k)' :key=i class='project'>
+                    <Project v-for='(p, i) in projects_with_key(k)' :data='p' :key='i'/>
+                      <!--
                       <div class='project-heading'>
                         <h4>{{ p.title }} </h4>
                         <h5 v-if='p.client'>,&nbsp;{{ p.client }}</h5>&nbsp;
                         <i class='fa fa-angle-double-right project-hover-icon'></i>
                       </div>
                       <p>{{ p.tldr || p.description }}</p>
-                    </div>
+                      -->
                   </div>
               </div>
             </div>
@@ -165,7 +164,7 @@ export default {
             {{ project_search_results.length }}</div>
         </div>
 
-        <div class='no-matching-projects-message' v-else>
+        <div v-else class='no-matching-projects-message'>
           <i class='fa fa-child'></i>
           <p>No projects matched the keywords provided</p>
         </div>
@@ -279,6 +278,10 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .header-container a {
+    padding: 0.25em; 
   }
 
   .keyword {
@@ -455,30 +458,16 @@ export default {
 
   .topic-legend-color-block {
     background-color: #ffcc00;
-    height: .927em;
-    margin-right: 1em;
-    width: 1.5em;
+    height: .9em;
+    width: 1.46em;
+    margin-right: 0.8em;
   }
 
-  .topic-legend ul {
-    padding: 0;
-  }
-
-  .topic-legend ul > li:before {
-    list-style-type: none;
-    padding: 0;
-    text-indent: 0;
-  }
-
-  .topic-legend ul > li:before {
-    content: none;
-  } 
-
-  .topic-legend li {
-    list-style-type: none;
+  .topic-legend-item {
     display: flex;
     align-items: center;
-    font-size: 0.9em;
+    list-style-type: none;
+    font-size: 0.80em;
   }
 
   .work-history h4, h5 {
