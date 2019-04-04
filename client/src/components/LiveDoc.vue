@@ -1,5 +1,4 @@
 <script>
-import * as d3 from 'd3'
 import * as _ from 'lodash'
 
 import {
@@ -26,22 +25,22 @@ export default {
   },
   data() {
     return {
+      project_idx: 0,
       globe_index: 0,
-      project_transition_name: 'project-transition-inc',
-      search_text: ''
+      search_text: '',
+      project_transition_name: 'project-group-inner-down',
+      globe_icon_class: 'fas fa-globe-europe',
     }
   },
   async mounted() {
     const globe = [
-      'globe-europe', 'globe-africa',
-      'globe-asia', 'globe-americas'
+      'fas fa-globe-europe', 'fas fa-globe-africa',
+      'fas fa-globe-asia', 'fas fa-globe-americas'
     ]
     
     setInterval(()=> {
-      d3.selectAll('#globe')
-        .attr('class', '')
-        .classed(`fas fa-${globe[0]}`, true)
-      globe.push(globe.shift())
+      this.globe_icon_class = globe.shift()
+      globe.push(this.globe_icon_class)
       this.globe_index++ 
     }, 500)
 
@@ -58,11 +57,13 @@ export default {
       'remove_keyword'
     ]),
     dec() {
-      this.project_transition_name = 'project-transition-dec'
+      this.project_transition_name = 'project-group-inner-up'
+      this.project_idx = 0
       this.dec_pagination()
     }, 
     inc() {
-      this.project_transition_name = 'project-transition-inc'
+      this.project_transition_name = 'project-group-inner-down'
+      this.project_idx = 0
       this.inc_pagination()
     },
     on_keyword_enter() {
@@ -83,7 +84,7 @@ export default {
     <md-app-content class='content'>
       <div class='container'>
         <div class='header-container'>
-          <h1>Jeremy from <i id='globe' class='fas fa-globe-europe' :style='{color: globe_color}'></i></h1>
+          <h1>Jeremy from <i id='globe' :class='globe_icon_class' :style='{color: globe_color}'></i></h1>
           <div>
             <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
             <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
@@ -121,38 +122,28 @@ export default {
                 </div>
             </div>
             <div class='project-outer'>
-              <div v-for='(k,i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
-                  <div class='md-layout-item-5'><h4>{{ k }}</h4></div>
-                  <div class='md-layout-item'>
-                    <Project v-for='(p, i) in projects_with_key(k)' :data='p' :key='i'/>
-                      <!--
-                      <div class='project-heading'>
-                        <h4>{{ p.title }} </h4>
-                        <h5 v-if='p.client'>,&nbsp;{{ p.client }}</h5>&nbsp;
-                        <i class='fa fa-angle-double-right project-hover-icon'></i>
-                      </div>
-                      <p>{{ p.tldr || p.description }}</p>
-                      -->
+              <transition-group :name='project_transition_name' tag='div' mode='out-in'>
+                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
+                  <div class='md-layout-item-5' :key='"year-"+k'><h4>{{ k }}</h4></div>
+                  <div class='md-layout-item' :key='"project-"+k'>
+                    <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='i * 5' :key='j'/>
                   </div>
-              </div>
+                </div>
+              </transition-group>
             </div>
             <div class='pagination-controller-container'>
-              <div 
-                class='pagination-controller' 
-                @click='dec()'>
+              <div class='pagination-controller' @click='dec()'>
                 <div class='pagination-arrow pagination-arrow-up'
                   :style="{ opacity: pagination > 0 ? 1 : 0, 
-                            marginTop: pagination > 0 ? '4em': '2em',
-                            height: pagination > 0 ? '4em' : 0 }" >
+                            marginTop: pagination > 0 ? '4em': '4em',
+                            height: pagination > 0 ? '4em' : '2em' }" >
                 <h3><i class="fas fa-angle-double-up"></i></h3></div>
               </div>
-              <div 
-                class='pagination-controller' 
-                 @click='inc()'>
+              <div class='pagination-controller' @click='inc()'>
                 <div class='pagination-arrow pagination-arrow-down'
                 :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                          marginTop: down_pagination_arrow_is_visibile ? '4em' : '8em',
-                          height: down_pagination_arrow_is_visibile ? '4em' : 0}">
+                          marginTop: down_pagination_arrow_is_visibile ? '4em' : '6em',
+                          height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
                   <h3><i class="fas fa-angle-double-down"></i></h3>
                 </div>
               </div>
@@ -378,32 +369,6 @@ export default {
     user-select: none;
   }
 
-  .project:hover .project-hover-icon {
-    opacity: 1;
-  }
-
-  .project p {
-    margin: 0; 
-  }
-
-  .project h4 {
-    white-space: nowrap;
-  }
-
-  .project h5 {
-    white-space: nowrap;
-  }
-  
-  .project-heading {
-    display: flex;
-    align-items: baseline;
-    whitespace: no-wrap;
-  }
-
-  .project-heading h4, h5 {
-    margin-bottom: 0.25em;
-  }
-
   .projects-toolbar {
     display: flex;
     align-items: center;
@@ -417,14 +382,10 @@ export default {
   }
 
   .project-group-inner {
+    display: flex;
     flex-wrap: nowrap;
     position: relative;
     left: 0;
-  }
-
-  .project-hover-icon {
-    opacity: 0;
-    transition: opacity 0.2s;
   }
 
   .project-outer {
@@ -437,11 +398,53 @@ export default {
     padding: 0 2em 0 2em;
     overflow: hidden;
   }
-  
   .project-container-outer {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /*---------------------- Transition Up/Down  ----------------------*/
+  .project-group-inner-down-enter {
+    transform: translate(0, 4px);
+  }
+
+  .project-group-inner-down-enter, 
+  .project-group-inner-down-leave-to, 
+  .project-group-inner-up-enter, 
+  .project-group-inner-up-leave-to {
+    opacity: 0;
+    display: none;
+  }
+
+  .project-group-inner-down-leave-to {
+    transform: translate(0, -8px);
+  }
+
+  .project-group-inner-down-enter-to, 
+  .project-group-inner-up-enter-to {
+    opacity: 1;
+  }
+
+  .project-group-inner-down-enter-active, .project-group-inner-down-leave-active, 
+  .project-group-inner-up-enter-active, .project-group-inner-up-leave-active {
+    transition: all 0.3s;
+    display: flex;
+  }
+
+  .project-group-inner-down-enter-active, 
+  .project-group-inner-up-enter-active {
+    transition-delay: 0.35s;
+  }
+
+  /*---------------------- Transition Up  ----------------------*/
+
+  .project-group-inner-up-enter {
+    transform: translate(0, -4px);
+  }
+
+  .project-group-inner-up-leave-to {
+    transform: translate(0, 8px);
   }
 
   .search-container {

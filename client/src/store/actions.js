@@ -22,7 +22,7 @@ export default {
   },
   async get_data({commit}) {
 		let promises = [
-      axios.get('/work.json'),
+      axios.get('/site.json'),
       axios.get('/stop.json')
     ]
 
@@ -70,6 +70,7 @@ export default {
           if(proj.client) s = s.concat(proj.client.split(' '))
           if(proj.collaborators) s = s.concat(proj.collaborators.join(' ').split(' '))
           if(proj.description) s = s.concat(proj.description.split(' '))
+          if(proj.title) s = s.concat(proj.title.split(' '))
           if(proj.tldr) s = s.concat(proj.tldr.split(' '))
           if(proj.keywords) s = s.concat(proj.keywords.join(' ').split(' '))
           if(proj.location) s = s.concat(proj.location.split(' '))
@@ -89,7 +90,7 @@ export default {
             index[stemmed].add(proj['id'])
           })
         })
-
+        
         // Convert technology sets to sorted arrays
         Object.keys(technologies).forEach(k => {
           technologies[k] = Array.from(technologies[k]).sort()
