@@ -67,7 +67,7 @@ export default {
     <div class='project'>
       <div class='project-heading'>
         <h4>{{ title }} </h4>
-        <h5 v-if='client'>,&nbsp;{{ client }}</h5>&nbsp;
+        <h5 v-if='client'>,&nbsp;{{ client }}</h5>
         <i class='fa fa-angle-double-right project-hover-icon'></i>
       </div>
       <p>{{ tldr }}</p>
@@ -86,7 +86,8 @@ export default {
 
 .project-hover-icon {
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: all 0.2s;
+  position: relative;
 }
 
 .project h4 {
@@ -101,6 +102,11 @@ export default {
   display: flex;
   align-items: baseline;
   whitespace: no-wrap;
+}
+
+.project-heading:hover .project-hover-icon {
+  opacity: 1;
+  transform: translate(4px);
 }
 
 .project-heading h4, h5 {

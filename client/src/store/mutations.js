@@ -60,6 +60,9 @@ export default {
   set_technologies(state, value) {
     state.technologies = value
   },
+  set_text(state, value) {
+    state.text = value
+  },
   set_topics(state, value) {
     state.topics = value
   },

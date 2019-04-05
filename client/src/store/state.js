@@ -10,6 +10,7 @@ export default {
   projects_per_page: 8,
   project_search_results: [],
   technologies: [],
+  text: {},
   topics: [],
   topics_palette: [
     // 6 distinct colors

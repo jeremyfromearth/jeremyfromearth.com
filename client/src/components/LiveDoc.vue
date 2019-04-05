@@ -13,7 +13,7 @@ export default {
       'blog_posts', 'keywords', 'links', 
       'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
-      'projects_per_page', 'technologies', 
+      'projects_per_page', 'technologies', 'text',
       'topics', 'topics_palette'
     ]),
     down_pagination_arrow_is_visibile() {
@@ -95,7 +95,7 @@ export default {
           </div>
         </div>
         <h2>Software Engineer</h2>
-        <p>Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Deep Learning, Natural Langauge Processing and related fields.</p>
+        <p>{{text['intro']}}</p>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -289,6 +289,10 @@ export default {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .md-field label {
+    font-size: inherit;
   }
 
   .md-layout {

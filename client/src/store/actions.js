@@ -46,6 +46,7 @@ export default {
         const projects = res[0].data['projects']
         const stopwords = res[1].data
         const technologies = {}
+        const text = res[0].data['text']
         let topics = new Set()
 
         projects.forEach(proj => {
@@ -110,6 +111,7 @@ export default {
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
         commit('set_technologies', technologies)
+        commit('set_text', text)
         commit('set_topics', topics)
 
         // --------------------------------------------------------
