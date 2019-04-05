@@ -19,12 +19,7 @@ export default {
     down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
     },
-    globe_color() { 
-      return this.topic_color(this.globe_index) 
-    }, 
     pagination_text() {
-      
-      console.log(this.pagination)
       const result_count = this.project_search_results.length
       switch(result_count) {
         case 1:
@@ -34,7 +29,6 @@ export default {
         default:
           return `${this.pagination + 1} - 
             ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}` 
-
       }
     }
   },
@@ -99,7 +93,7 @@ export default {
     <md-app-content class='content'>
       <div class='container'>
         <div class='header-container'>
-          <h1>Jeremy from <i id='globe' :class='globe_icon_class' :style='{color: globe_color}'></i></h1>
+          <h1>Jeremy from <i id='globe' :class='globe_icon_class'></i></h1>
           <div>
             <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
             <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
@@ -332,10 +326,6 @@ export default {
     font-size: 2.5em;
   }
 
-  .remove-keyword-icon:hover {
-    color: red; 
-  }
-
   .pagination-arrow {
     cursor: pointer;
     display: flex;
@@ -424,7 +414,6 @@ export default {
     align-items: center;
   }
 
-  /*---------------------- Transition Up/Down  ----------------------*/
   .project-group-inner-down-enter {
     transform: translate(0, 4px);
   }
@@ -457,14 +446,16 @@ export default {
     transition-delay: 0.35s;
   }
 
-  /*---------------------- Transition Up  ----------------------*/
-
   .project-group-inner-up-enter {
     transform: translate(0, -4px);
   }
 
   .project-group-inner-up-leave-to {
     transform: translate(0, 8px);
+  }
+
+  .remove-keyword-icon:hover {
+    color: red; 
   }
 
   .search-container {

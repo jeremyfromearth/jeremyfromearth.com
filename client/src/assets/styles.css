@@ -4,6 +4,7 @@
 @font-face {font-family: TerminusBold; src: url(./fonts/TerminusBold.ttf);}
 
 * {
+  color: #003f5c;
   font-family: 'IBMPlexMonoRegular', monospace;
 }
 
@@ -29,6 +30,7 @@ a:active: {}
 
 body {
   background-color: #fff;
+  color: #00283a;
   margin: 0;
 }
 

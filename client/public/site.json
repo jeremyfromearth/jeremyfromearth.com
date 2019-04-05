@@ -304,6 +304,7 @@
     "id": "names-quilt",
     "keywords": ["table", "touchscreen", "aids", "quilts"],
     "title": "Names Quilt Touch Table",
+    "tldr": "Will something like this ever happen in the U.S. again?",
     "topics": ["Interactive Installations"],
     "platforms": ["Windows"],
     "published": true,
@@ -317,6 +318,7 @@
     "keywords": ["woodstock", "music"],
     "title": "Woodstock Tryptich Kiosks",
     "topics": ["Interactive Installations"],
+    "tldr": "Very groovy touchscreen tryptich, inviting visitors to flashback into the 1950's, 60's and 70's",
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -330,6 +332,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "AIDS Activism",
+    "tldr": "Video interviews with advocates and activsts",
     "topics": ["Interactive Installations"],
     "year": 2007
   }, {
@@ -341,6 +344,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "MacArthur Foundation Experience",
+    "tldr": "One of my first and favorite projects from my time at Second Story",
     "topics": ["Interactive Installations"],
     "year": 2007
   }, {
@@ -353,6 +357,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Book of Hours",
+    "tldr": "Illuminated manuscripts for the digital era",
     "topics": ["Interactive Installations"],
     "year": 2009
   },
@@ -366,6 +371,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Seggesser Hide Explorer",
+    "tldr": "Deep zoom image explorers with hotspots (pretty innovative at the time)",
     "topics": ["Interactive Installations"],
     "year": 2009
   },
@@ -378,6 +384,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Old Standard Sound Website",
+    "tldr": "Seven days, asthma, prednisone and herbal tea",
     "topics": [],
     "year": 2009
   },
@@ -391,6 +398,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Sports Broadcasting",
+    "tldr": "Something about sports...",
     "topics": ["Interactive Installations"],
     "year": 2009
   },
@@ -404,6 +412,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Treaty of Guadalupe Hidalgo",
+    "tldr": "Magic document translators",
     "topics": ["Interactive Installations"],
     "year": 2009
   },
@@ -419,6 +428,7 @@
         "C++": []
       },
     "title": "Solmer Query Syntax Parser",
+    "tldr": "A domain specific langauge for searching over a corpus of ten million patent documents",
     "topics": ["Artifical Intelligence", "Search Tools"],
     "year": 2017
   },
@@ -432,8 +442,8 @@
     "tech": {
       "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
     },
-    "tldr": "A hexbin data visualization of tens of thousands of patent documents",
     "title": "Semantic Map",
+    "tldr": "Hexbins, quadtrees, trapezoids, jawbreakers, ten million patents... what else can we add to it?",
     "topics": ["Artifical Intelligence", "Search Tools"],
     "year": 2017
   },
@@ -450,8 +460,8 @@
         "Misc": ["Java", "Android", "MySQL"],
         "Python": []
       },
-    "tldr": "",
-    "topics": ["Interactive Installations"],
+    "tldr": "Android app for recording archaeological finds at Mt. Lykaion in Greece",
+    "topics": ["Search Tools"],
     "year": 2010
   }, {
     "client": "National Museum of the American Indian",
@@ -587,7 +597,7 @@
       "JavaScript": ["Vue", "NodeJS"]
     },
     "title": "Patch the Synthbot",
-    "tldr": "A know it all synth geek chatbot",
+    "tldr": "A know it all synthesizer geek chatbot",
     "topics": ["Smart Bots", "Natural Language Processing"],
     "year": 2019
   }, {
