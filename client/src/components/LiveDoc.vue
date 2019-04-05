@@ -21,6 +21,21 @@ export default {
     },
     globe_color() { 
       return this.topic_color(this.globe_index) 
+    }, 
+    pagination_text() {
+      
+      console.log(this.pagination)
+      const result_count = this.project_search_results.length
+      switch(result_count) {
+        case 1:
+          return 'Just the one.'
+        case this.pagination + 1:
+          return 'Last one!'
+        default:
+          return `${this.pagination + 1} - 
+            ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}` 
+
+      }
     }
   },
   data() {
@@ -149,10 +164,11 @@ export default {
               </div>
             </div>
           </div>
-          <div class='pagination-detail'>
-            {{ pagination + 1 }} - 
-            {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
-            {{ project_search_results.length }}</div>
+          <div class='pagination-detail'>{{ pagination_text }}</div>
+          <!--<div class='pagination-detail'>
+          {{ pagination + 1 }} - 
+          {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
+          {{ project_search_results.length }}</div>-->
         </div>
 
         <div v-else class='no-matching-projects-message'>
