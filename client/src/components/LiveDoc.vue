@@ -148,7 +148,8 @@ export default {
               <div class='pagination-controller' @click='inc()'>
                 <div class='pagination-arrow pagination-arrow-down'
                 :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                          marginTop: pagination == 0 ? '2em' : down_pagination_arrow_is_visibile ? '4em' : '6em',
+                          marginTop: pagination == 0 ? '2em' : 
+                            down_pagination_arrow_is_visibile ? '4em' : '6em',
                           height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
                   <h3><i class="fas fa-angle-double-down"></i></h3>
                 </div>
@@ -156,10 +157,6 @@ export default {
             </div>
           </div>
           <div class='pagination-detail'>{{ pagination_text }}</div>
-          <!--<div class='pagination-detail'>
-          {{ pagination + 1 }} - 
-          {{ Math.min(pagination +  projects_per_page, project_search_results.length) }} / 
-          {{ project_search_results.length }}</div>-->
         </div>
 
         <div v-else class='no-matching-projects-message'>

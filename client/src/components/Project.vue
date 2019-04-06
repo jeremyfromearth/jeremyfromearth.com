@@ -68,7 +68,7 @@ export default {
       <div class='project-heading'>
         <h4>{{ title }} </h4>
         <h5 v-if='client'>,&nbsp;{{ client }}</h5>
-        <i class='fa fa-angle-double-right project-hover-icon'></i>
+        <i class='fas fa-thumbtack project-hover-icon'></i>
       </div>
       <p>{{ tldr }}</p>
     </div>

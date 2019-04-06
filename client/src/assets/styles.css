@@ -20,11 +20,18 @@ a:visited {}
 a:active: {}
 
 .md-theme-default a:not(.md-button) {
-  color: #005c3a;
+  color: #999;
 }
 
 .md-theme-default a:hover:not(.md-button) {
-  color: #005c3a;
+  color: #777;
+}
+
+body {
+  color: #003f5c;
+  background-color: #fff;
+  /*color: #00283a;*/
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
