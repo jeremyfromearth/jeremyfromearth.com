@@ -34,7 +34,6 @@ export default {
   },
   data() {
     return {
-      project_idx: 0,
       globe_index: 0,
       search_text: '',
       project_transition_name: 'project-group-inner-down',
@@ -67,12 +66,10 @@ export default {
     ]),
     dec() {
       this.project_transition_name = 'project-group-inner-up'
-      this.project_idx = 0
       this.dec_pagination()
     }, 
     inc() {
       this.project_transition_name = 'project-group-inner-down'
-      this.project_idx = 0
       this.inc_pagination()
     },
     on_keyword_enter() {
@@ -151,7 +148,7 @@ export default {
               <div class='pagination-controller' @click='inc()'>
                 <div class='pagination-arrow pagination-arrow-down'
                 :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                          marginTop: down_pagination_arrow_is_visibile ? '4em' : '6em',
+                          marginTop: pagination == 0 ? '2em' : down_pagination_arrow_is_visibile ? '4em' : '6em',
                           height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
                   <h3><i class="fas fa-angle-double-down"></i></h3>
                 </div>
@@ -394,8 +391,6 @@ export default {
   .project-group-inner {
     display: flex;
     flex-wrap: nowrap;
-    position: relative;
-    left: 0;
   }
 
   .project-outer {

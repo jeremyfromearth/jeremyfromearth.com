@@ -68,8 +68,8 @@
       "Misc": ["Arduino"]
     },
     "title": "Power Up Portland",
+    "tldr": "Big buttons, bright colors, a super loud analog telephone wired up to an Arduino and kids bouncing off the walls",
     "topics": ["Interactive Installations"],
-    "tldr": "",
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
@@ -81,6 +81,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Reflections",
+    "tldr": "Programmatic motion graphics display impressions and memories of the Holocaust",
     "topics": ["Interactive Installations"],
     "year": 2013
   }, {
@@ -93,6 +94,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Navigate the Seas",
+    "tldr": "One of three touch screen games for the Air & Space Museum",
     "topics": ["Interactive Installations"],
     "year": 2013
   }, {
@@ -105,6 +107,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Lead a Trail Drive",
+    "tldr": "All you need to know about russling cattle",
     "topics": ["Interactive Installations"],
     "year": 2013
   }, {
@@ -120,6 +123,7 @@
       "C++": ["Cinder", "OpenGL"]
     },
     "title": "Human Rights Now",
+    "tldr": "Thirty foot media wall with data visualizations of modern day Human Rights facts and figures",
     "topics": ["Data Visualization", "Interactive Installations"],
     "year": 2014
   }, {
@@ -134,7 +138,8 @@
         "JavaScript": []
       },
     "title": "Visualizing Breast Cancer Causation",
-    "topics": ["Data Visualization", "Interactive Installations"],
+    "tldr": "Complex network graph data visualization with vanilla JavaScript",
+    "topics": ["Data Visualization", "Search Tools"],
     "year": 2014
   }, {
     "client": "Clemson University",
@@ -149,6 +154,7 @@
       "Misc": ["Java", "Processing", "Arduino"]
     },
     "title": "Data Ribbon",
+    "tldr": "12x144 LED array displays event data and realtime alerts and news at the Clemson recruiting center",
     "topics": ["Interactive Installations"],
     "year": 2015
   }, {
@@ -164,6 +170,7 @@
       "Misc": ["Swift", "iOS"]
     },
     "title": "Digital Organ Explorers",
+    "tldr": "Four augmented reality isntallations on iPad provide hotspot overlays above cast iron models of human organs",
     "topics": ["Interactive Installations"],
     "year": 2015
   }, {
@@ -179,7 +186,8 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
       },
     "title": "Partnership Hub",
-    "topics": ["Interactive Installations"],
+    "tldr": "Kinect + particles + iPad controlled data visualizations for Aussie telecom giant Telstra",
+    "topics": ["Interactive Installations", "Data Visualization"],
     "year": 2015
   }, {
     "client": "Clemson University",
@@ -195,6 +203,7 @@
     },
     "title": "Clemson Family Portrait",
     "topics": ["Interactive Installations"],
+    "tldr": "Kinect controlled three screen interactive for the Clemson recruiting center",
     "year": 2015
   }, {
     "client": "Mobius Science Center",
@@ -206,6 +215,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Missoula Floods Navigator",
+    "tldr": "Map based explorer apps tell the story of the Missoula Floods ",
     "topics": ["Interactive Installations"],
     "year": 2012
   }, {
@@ -218,7 +228,8 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
-    "topics": ["Interactive Installations"],
+    "tldr": "Multi-touch table for exploring relationships between musical notes and keys",
+    "topics": ["Interactive Installations", "Data Visualization"],
     "tech": {
         "Misc": ["Java", "Processing", "TUIO"]
       },
@@ -233,6 +244,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Weegee - Murder is My Business",
+    "tldr": "An exciting view into a profilific and eccentric crime photographer",
     "topics": ["Interactive Installations"],
     "year": 2012
   }, {
@@ -245,6 +257,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Sam Rayburn Archive Explorer",
+    "tldr": "Document explorer touch wall with fluid user interface",
     "topics": ["Interactive Installations", "Search Tools"],
     "year": 2012
   }, {
@@ -257,6 +270,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "In the Studio",
+    "tldr": "Eight unique interactive recording studio simulations for the Grammy's Museum in L.A.",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -269,7 +283,8 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Faces of Gettysburg",
-    "topics": ["Interactive Installations"],
+    "tldr": "Visual and relational search tool for Gettysburg soldiers database",
+    "topics": ["Interactive Installations", "Search Tools"],
     "year": 2008
   }, {
     "client": "The Library of Congress",
@@ -282,6 +297,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Orientation Screens",
+    "tldr": "Multi-screen event and media presentations positioned throughout the Library of Congress",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -294,6 +310,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Global Health Kiosks",
+    "tldr": "Six touchscreen apps featuring interviews and footage from global health initiatives",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -318,7 +335,7 @@
     "keywords": ["woodstock", "music"],
     "title": "Woodstock Tryptich Kiosks",
     "topics": ["Interactive Installations"],
-    "tldr": "Very groovy touchscreen tryptich, inviting visitors to flashback into the 1950's, 60's and 70's",
+    "tldr": "Very groovy touchscreen tryptich, inviting visitors to flashback into the 50's, 60's and 70's",
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -442,13 +459,13 @@
     "tech": {
       "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
     },
-    "title": "Semantic Map",
-    "tldr": "Hexbins, quadtrees, trapezoids, jawbreakers, ten million patents... what else can we add to it?",
+    "title": "The Semantic Map",
+    "tldr": "Hexbins, quadtrees, ten million patents... what else can we add to it?",
     "topics": ["Artifical Intelligence", "Search Tools"],
     "year": 2017
   },
   {
-    "client": "University of Pennsylvania Museum of Archaeology and Anthropology",
+    "client": "University of Pennsylvania",
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
     "location": "Philadelphia, Pennsylvania",
     "id": "kronos",
