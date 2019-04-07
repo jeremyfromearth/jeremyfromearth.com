@@ -45,7 +45,8 @@
   "blog": [{
     "url": "https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3",
     "title": "Multiple Python kernels for Jupyter Lab with Conda",
-    "keywords": ["jupyter", "data", "conda", "python", "science", "notebooks"]
+    "keywords": ["jupyter", "data", "conda", "python", "science", "notebooks"],
+    "topics": ["Natural Language Processing"]
   }, {
     "url": "https://medium.com/@jeremy.from.earth/using-dataclasses-firestore-to-replace-ndb-datastore-on-python-3-7-app-engine-e21199b58ef2",
     "title": "Py3.7 Dataclasses + Cloud Firestore",
@@ -68,7 +69,7 @@
       "Misc": ["Arduino"]
     },
     "title": "Power Up Portland",
-    "tldr": "Big buttons, bright colors, a super loud analog telephone wired up to an Arduino and kids bouncing off the walls",
+    "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
     "topics": ["Interactive Installations"],
     "year": 2013
   }, {
@@ -81,7 +82,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Reflections",
-    "tldr": "Programmatic motion graphics display impressions and memories of the Holocaust",
+    "tldr": "Crowd sourced impressions of the Holocaust",
     "topics": ["Interactive Installations"],
     "year": 2013
   }, {
@@ -123,7 +124,7 @@
       "C++": ["Cinder", "OpenGL"]
     },
     "title": "Human Rights Now",
-    "tldr": "Thirty foot media wall with data visualizations of modern day Human Rights facts and figures",
+    "tldr": "Thirty foot media wall of facts, figures and data visualization",
     "topics": ["Data Visualization", "Interactive Installations"],
     "year": 2014
   }, {
@@ -154,7 +155,7 @@
       "Misc": ["Java", "Processing", "Arduino"]
     },
     "title": "Data Ribbon",
-    "tldr": "12x144 LED array displays event data and realtime alerts and news at the Clemson recruiting center",
+    "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": ["Interactive Installations"],
     "year": 2015
   }, {
@@ -170,7 +171,7 @@
       "Misc": ["Swift", "iOS"]
     },
     "title": "Digital Organ Explorers",
-    "tldr": "Four augmented reality isntallations on iPad provide hotspot overlays above cast iron models of human organs",
+    "tldr": "Augmented reality graphics overlay models of human organs",
     "topics": ["Interactive Installations"],
     "year": 2015
   }, {
@@ -186,7 +187,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
       },
     "title": "Partnership Hub",
-    "tldr": "Kinect + particles + iPad controlled data visualizations for Aussie telecom giant Telstra",
+    "tldr": "Particle systems interacting with human forms via Kinect",
     "topics": ["Interactive Installations", "Data Visualization"],
     "year": 2015
   }, {
@@ -203,7 +204,7 @@
     },
     "title": "Clemson Family Portrait",
     "topics": ["Interactive Installations"],
-    "tldr": "Kinect controlled three screen interactive for the Clemson recruiting center",
+    "tldr": "Three screen Kinect controlled interactive wall",
     "year": 2015
   }, {
     "client": "Mobius Science Center",
@@ -228,7 +229,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
-    "tldr": "Multi-touch table for exploring relationships between musical notes and keys",
+    "tldr": "Multitouch table exploring musical relationships",
     "topics": ["Interactive Installations", "Data Visualization"],
     "tech": {
         "Misc": ["Java", "Processing", "TUIO"]
@@ -244,7 +245,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Weegee - Murder is My Business",
-    "tldr": "An exciting view into a profilific and eccentric crime photographer",
+    "tldr": "A raw look at the progenitor of crime scene photography",
     "topics": ["Interactive Installations"],
     "year": 2012
   }, {
@@ -270,7 +271,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "In the Studio",
-    "tldr": "Eight unique interactive recording studio simulations for the Grammy's Museum in L.A.",
+    "tldr": "Interactive recording studio simulations",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -283,7 +284,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Faces of Gettysburg",
-    "tldr": "Visual and relational search tool for Gettysburg soldiers database",
+    "tldr": "Image and relational search tools for soldier database",
     "topics": ["Interactive Installations", "Search Tools"],
     "year": 2008
   }, {
@@ -297,7 +298,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Orientation Screens",
-    "tldr": "Multi-screen event and media presentations positioned throughout the Library of Congress",
+    "tldr": "Event info and media presentation screens",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -310,7 +311,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Global Health Kiosks",
-    "tldr": "Six touchscreen apps featuring interviews and footage from global health initiatives",
+    "tldr": "Interviews and footage from global health initiatives",
     "topics": ["Interactive Installations"],
     "year": 2008
   }, {
@@ -335,7 +336,7 @@
     "keywords": ["woodstock", "music", "installation"],
     "title": "Woodstock Tryptich Kiosks",
     "topics": ["Interactive Installations"],
-    "tldr": "Very groovy touchscreen tryptich, inviting visitors to flashback into the 50's, 60's and 70's",
+    "tldr": "Groovy touchscreen flashback to the 50's, 60's and 70's",
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -361,8 +362,8 @@
     "location": "Chicago, Illinois",
     "platforms": ["Windows"],
     "published": true,
-    "title": "MacArthur Foundation Experience",
-    "tldr": "One of my first and favorite projects from my time at Second Story",
+    "title": "Foundation Kiosk",
+    "tldr": "One of my favorite projects from my time at Second Story",
     "topics": ["Interactive Installations"],
     "year": 2007
   }, {
@@ -389,7 +390,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Seggesser Hide Explorer",
-    "tldr": "Deep zoom image explorers with hotspots (pretty innovative at the time)",
+    "tldr": "Deep zoom image explorers with hotspots",
     "topics": ["Interactive Installations"],
     "year": 2009
   },
@@ -446,7 +447,7 @@
         "C++": []
       },
     "title": "Solmer Query Syntax Parser",
-    "tldr": "A domain specific langauge for searching over a corpus of ten million patent documents",
+    "tldr": "A domain specific langauge for patent document search",
     "topics": ["Artifical Intelligence", "Search Tools"],
     "year": 2017
   },
@@ -461,7 +462,7 @@
       "JavaScript": ["D3", "Node", "NPM", "JavaScript"]
     },
     "title": "The Semantic Map",
-    "tldr": "Hexbins, quadtrees, ten million patents... what else can we add to it?",
+    "tldr": "Hexbins, quadtrees, trapezoids... what else can we add to it?",
     "topics": ["Artifical Intelligence", "Search Tools"],
     "year": 2017
   },
@@ -478,7 +479,7 @@
         "Misc": ["Java", "Android", "MySQL"],
         "Python": []
       },
-    "tldr": "Android app for recording archaeological finds at Mt. Lykaion in Greece",
+    "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": ["Search Tools"],
     "year": 2010
   }, {
@@ -503,7 +504,7 @@
     "location": "Portland, OR",
     "platforms": ["macOS", "Windows"],
     "published": true,
-    "title": "Nike Sparq Data Visualizations",
+    "title": "Sparq Data Visualizations",
     "tldr": "Deep in the basement lab of the world's (fill in the blanks)",
     "topics": ["Data Visualization"],
     "year": 2010
@@ -548,7 +549,7 @@
     "location": "Portland, Oregon",
     "platforms": ["Windows", "Kinect"],
     "published": true,
-    "title": "Kinect, Artifical Humans Prototype",
+    "title": "Artifical Humans",
     "tech": {
         "C++": ["Cinder", "OpenGL", "Kinect"]
       },

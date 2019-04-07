@@ -120,12 +120,14 @@ export default {
         </div>
         <div v-if='projects_paged.length' class='project-container-outer'>
           <div ref='project_container' class='project-container'>
-            <div class='topic-legend'>
-              <h4>Topics</h4>
-                <div class='topic-legend-item' v-for='(t, i) in topics' :key='i'>
-                  <div class='topic-legend-color-block' 
-                  :style='{ backgroundColor: topic_color(i) }'/><div class='topic-legend-item-text'>{{t}}</div>
-                </div>
+            <div class='meta-container'>
+              <div class='topic-legend'>
+                <h4>Topics</h4>
+                  <div class='topic-legend-item' v-for='(t, i) in topics' :key='i'>
+                    <div class='topic-legend-color-block' 
+                    :style='{ backgroundColor: topic_color(i) }'/><div class='topic-legend-item-text'>{{t}}</div>
+                  </div>
+              </div>
             </div>
             <div class='project-outer'>
               <transition-group :name='project_transition_name' tag='div' mode='out-in'>
@@ -160,7 +162,7 @@ export default {
         </div>
 
         <div v-else class='no-matching-projects-message'>
-          <i class='fa fa-child'></i>
+          <i class='fa fa-child no-match-icon'></i>
           <p>No projects matched the keywords provided</p>
         </div>
 
@@ -320,6 +322,22 @@ export default {
     font-size: 2.5em;
   }
 
+  @keyframes jump {
+    0% {
+      transform: translate(0, 0);
+    }
+    30% {
+      transform: translate(0, -10px);
+    }
+    100% {
+      transform: translate(0, 0px);
+    }
+  }
+
+  .no-match-icon {
+     animation: jump .8s infinite;
+  }
+
   .pagination-arrow {
     cursor: pointer;
     display: flex;
@@ -382,7 +400,8 @@ export default {
   .project-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 1.3em 0 1.3em;
   }
 
   .project-group-inner {
@@ -391,8 +410,7 @@ export default {
   }
 
   .project-outer {
-    overflow: scroll;
-    width: 70%;
+    flex-grow: 1;
   }
 
   .project-scrollbox {
@@ -474,6 +492,7 @@ export default {
     align-items: center;
     list-style-type: none;
     font-size: 0.80em;
+    white-space: nowrap;
   }
 
   .work-history h4, h5 {

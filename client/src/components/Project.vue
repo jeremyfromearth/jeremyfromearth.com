@@ -63,19 +63,19 @@ export default {
 </script>
 
 <template>
-  <transition name='project'>
-    <div class='project'>
-      <div class='project-heading'>
-        <h4>{{ title }} </h4>
-        <h5 v-if='client'>,&nbsp;{{ client }}</h5>
-        <i class='fas fa-thumbtack project-hover-icon'></i>
-      </div>
-      <p>{{ tldr }}</p>
+  <div class='project'>
+    <div class='project-heading'>
+      <h4>{{ title }}</h4><span v-if='client != ""'> &nbsp;–&nbsp;</span><h5 v-if='client'>{{ client }} </h5>
     </div>
-  </transition>
+    <p>{{ tldr }}</p>
+  </div>
 </template>
 
 <style scoped>
+.project:first-child {
+  margin-top: 2em;
+}
+
 .project p {
   margin: 0; 
 }
