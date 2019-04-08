@@ -18,9 +18,9 @@ export default {
     const tldr = this.data.tldr || this.data.description
 
     // Set the starting text to a percentage of the actual text
-    this.title = title.slice(0, Math.floor(title.length * 0.4))
-    this.client = client.slice(0, Math.floor(client.length * 0.2))
-    this.tldr = tldr.slice(0, Math.floor(tldr.length * 0.8))
+    this.title = title.slice(0, Math.floor(title.length * 1))
+    this.client = client.slice(0, Math.floor(client.length * 1))
+    this.tldr = tldr.slice(0, Math.floor(tldr.length * 0.2))
 
     let frame = 0
     let keep_going = true
@@ -34,11 +34,15 @@ export default {
         }
         if(this.client.length < client.length) {
           keep_going = true
-          this.client += client[this.client.length] 
+          if(this.title == title) {
+            this.client += client[this.client.length] 
+          }
         }
         if(this.tldr.length < tldr.length) {
           keep_going = true
-          this.tldr += tldr[this.tldr.length] 
+          if(this.client == client) {
+            this.tldr += tldr[this.tldr.length] 
+          }
         }
       } else {
         keep_going = true;
@@ -46,7 +50,7 @@ export default {
 
       if(!keep_going) clearInterval(this.interval_id)
       frame++
-    }, 32)
+    }, 8)
   },
   name: 'Project',
   props: {
@@ -64,20 +68,35 @@ export default {
 
 <template>
   <div class='project'>
-    <div class='project-heading'>
-      <h4>{{ title }}</h4><span v-if='client != ""'> &nbsp;–&nbsp;</span><h5 v-if='client'>{{ client }} </h5>
-    </div>
+    <h4>{{ title }}</h4>
+    <h5 v-if='client'>{{ client }} </h5>
     <p>{{ tldr }}</p>
   </div>
 </template>
 
 <style scoped>
 .project:first-child {
+  margin-top: 4em;
+}
+
+.project {
   margin-top: 2em;
 }
 
 .project p {
   margin: 0; 
+}
+
+.project:hover h4 {
+  text-decoration: underline;
+}
+
+.project h5 {
+  white-space: nowrap;
+}
+
+.project h4, h5 {
+  margin: 0.4em 0 0.4em 0;;
 }
 
 .project-enter {
@@ -88,14 +107,6 @@ export default {
   opacity: 0;
   transition: all 0.2s;
   position: relative;
-}
-
-.project h4 {
-  white-space: nowrap;
-}
-
-.project h5 {
-  white-space: nowrap;
 }
 
 .project-heading {
@@ -109,7 +120,5 @@ export default {
   transform: translate(4px);
 }
 
-.project-heading h4, h5 {
-  margin-bottom: 0.25em;
-}
+
 </style>

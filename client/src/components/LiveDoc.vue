@@ -38,6 +38,7 @@ export default {
       search_text: '',
       project_transition_name: 'project-group-inner-down',
       globe_icon_class: 'fas fa-globe-europe',
+      project_container_height: null,
     }
   },
   async mounted() {
@@ -75,6 +76,13 @@ export default {
     on_keyword_enter() {
       this.add_keywords(this.search_text)
       this.search_text = ''
+    },
+    on_project_transition() {
+      if(this.$refs.project_transition) {
+        const h = this.$refs.project_transition.$el.clientHeight
+        console.log(h)
+        this.project_container_height = h
+      }
     },
     projects_with_key(k) {
       return _.filter(this.projects_paged, {year: k})
@@ -119,7 +127,7 @@ export default {
           </div>
         </div>
         <div v-if='projects_paged.length' class='project-container-outer'>
-          <div ref='project_container' class='project-container'>
+          <div ref='project_container' class='project-container' :style='{height: project_container_height + "px"}'>
             <div class='meta-container'>
               <div class='topic-legend'>
                 <h4>Topics</h4>
@@ -130,11 +138,11 @@ export default {
               </div>
             </div>
             <div class='project-outer'>
-              <transition-group :name='project_transition_name' tag='div' mode='out-in'>
-                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i' class='md-layout project-group-inner'>
+              <transition-group v-on:afterLeave='on_project_transition' ref='project_transition' :name='project_transition_name' tag='div'>
+                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i' class='md-layout'>
                   <div class='md-layout-item-5' :key='"year-"+k'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item' :key='"project-"+k'>
-                    <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='i * 5' :key='j'/>
+                    <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='16+i * 5' :key='j'/>
                   </div>
                 </div>
               </transition-group>
@@ -357,7 +365,6 @@ export default {
   .pagination-arrow-up:hover {
     color: red;
     border-bottom: 1px solid red;
-
   }
 
   .pagination-arrow-down {
@@ -401,11 +408,13 @@ export default {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    padding: 0 1.3em 0 1.3em;
+    padding: 0 1.4em 0 1.4em;
+    min-height: initial;
+    overflow: hidden;
+    transition: height 0.8s;
   }
 
-  .project-group-inner {
-    display: flex;
+  .project {
     flex-wrap: nowrap;
   }
 
@@ -413,27 +422,26 @@ export default {
     flex-grow: 1;
   }
 
-  .project-scrollbox {
-    width: 100%;
-    padding: 0 2em 0 2em;
-    overflow: hidden;
-  }
   .project-container-outer {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .project-group-inner-down-enter {
-    transform: translate(0, 4px);
+  .project-group-inner-down-enter,
+  .project-group-inner-up-enter {
+    display: none;
   }
-
-  .project-group-inner-down-enter, 
-  .project-group-inner-down-leave-to, 
-  .project-group-inner-up-enter, 
+  
+  .project-group-inner-down-enter,
+  .project-group-inner-down-leave-to,
+  .project-group-inner-up-enter,
   .project-group-inner-up-leave-to {
     opacity: 0;
-    display: none;
+  }
+
+  .project-group-inner-down-enter {
+    transform: translate(0, 4px);
   }
 
   .project-group-inner-down-leave-to {
@@ -447,13 +455,13 @@ export default {
 
   .project-group-inner-down-enter-active, .project-group-inner-down-leave-active, 
   .project-group-inner-up-enter-active, .project-group-inner-up-leave-active {
-    transition: all 0.3s;
+    transition: all .3s;
     display: flex;
   }
 
   .project-group-inner-down-enter-active, 
   .project-group-inner-up-enter-active {
-    transition-delay: 0.35s;
+    transition-delay: .35s;
   }
 
   .project-group-inner-up-enter {

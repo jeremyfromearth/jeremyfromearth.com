@@ -7,7 +7,7 @@ export default {
   pagination: 0,
   project_sort_key: 'year',
   projects: [],
-  projects_per_page: 8,
+  projects_per_page: 4,
   project_search_results: [],
   technologies: [],
   text: {},

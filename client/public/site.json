@@ -35,7 +35,7 @@
     }
   ],
   "topics": [
-    "Artifical Intelligence",
+    "Machine Intelligence",
     "Natural Language Processing",
     "Chatbots",
     "Search Tools",
@@ -446,9 +446,9 @@
         "JavaScript": ["D3", "NodeJS"],
         "C++": []
       },
-    "title": "Solmer Query Syntax Parser",
+    "title": "Gist Search Syntax",
     "tldr": "A domain specific langauge for patent document search",
-    "topics": ["Artifical Intelligence", "Search Tools"],
+    "topics": ["Machine Intelligence", "Search Tools"],
     "year": 2017
   },
   {
@@ -463,7 +463,7 @@
     },
     "title": "The Semantic Map",
     "tldr": "Hexbins, quadtrees, trapezoids... what else can we add to it?",
-    "topics": ["Artifical Intelligence", "Search Tools"],
+    "topics": ["Machine Intelligence", "Search Tools"],
     "year": 2017
   },
   {
