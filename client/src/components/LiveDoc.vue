@@ -78,10 +78,11 @@ export default {
       this.search_text = ''
     },
     on_project_transition() {
+      console.log('on_project_transition')
       if(this.$refs.project_transition) {
         const h = this.$refs.project_transition.$el.clientHeight
-        console.log(h)
-        this.project_container_height = h
+        this.project_container_height = Math.max(h, this.project_container_height)
+        console.log(this.project_container_height)
       }
     },
     projects_with_key(k) {
@@ -100,12 +101,20 @@ export default {
         <div class='header-container'>
           <h1>Jeremy from <i id='globe' :class='globe_icon_class'></i></h1>
           <div>
-            <a href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
-            <a href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
-            <a href='https://medium.com/@jeremy.from.earth'><i class='fab fa-medium'></i></a>&nbsp;
-            <a href='http://twitter.com/jeremyfromearth'><i class='fab fa-twitter'></i></a>&nbsp;
-            <a href='https://www.linkedin.com/in/jeremynealbrown/'><i class='fab fa-linkedin'></i></a>&nbsp;
-            <a href='mailto:jeremynealbrown@gmail.com'><i class='fas fa-envelope'></i></a>&nbsp; 
+            <a alt='gitlab' 
+              href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
+            <a title='stack overflow'
+              href='https://stackoverflow.com/users/230561/jeremyfromearth'><i class='fab fa-stack-overflow'></i></a>&nbsp;
+            <a title='medium' 
+              href='https://medium.com/@jeremy.from.earth'><i class='fab fa-medium'></i></a>&nbsp;
+            <a title='twitter' 
+              href='http://twitter.com/jeremyfromearth'><i class='fab fa-twitter'></i></a>&nbsp;
+            <a title='linked in'
+              href='https://www.linkedin.com/in/jeremynealbrown/'><i class='fab fa-linkedin'></i></a>&nbsp;
+            <a title='vimeo'
+              href='https://vimeo.com/jeremyfromearth'><i class='fab fa-vimeo'></i></a>&nbsp; 
+            <a title='email'
+              href='mailto:jeremynealbrown@gmail.com'><i class='fas fa-envelope'></i></a>&nbsp; 
           </div>
         </div>
         <h2>Software Engineer</h2>
@@ -138,8 +147,11 @@ export default {
               </div>
             </div>
             <div class='project-outer'>
-              <transition-group v-on:afterLeave='on_project_transition' ref='project_transition' :name='project_transition_name' tag='div'>
-                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i' class='md-layout'>
+              <transition-group 
+                v-on:afterEnter='on_project_transition' 
+                ref='project_transition' 
+                :name='project_transition_name' tag='div'>
+                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout'>
                   <div class='md-layout-item-5' :key='"year-"+k'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item' :key='"project-"+k'>
                     <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='16+i * 5' :key='j'/>
@@ -415,7 +427,7 @@ export default {
   }
 
   .project {
-    flex-wrap: nowrap;
+    overflow: hidden;
   }
 
   .project-outer {
