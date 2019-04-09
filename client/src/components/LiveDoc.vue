@@ -19,6 +19,7 @@ export default {
     down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
     },
+    
     pagination_text() {
       const result_count = this.project_search_results.length
       switch(result_count) {
@@ -39,6 +40,7 @@ export default {
       project_transition_name: 'project-group-inner-down',
       globe_icon_class: 'fas fa-globe-europe',
       project_container_height: null,
+      no_match_class: 'fa fa-ghost no-match-icon',
     }
   },
   async mounted() {
@@ -75,6 +77,7 @@ export default {
       this.inc_pagination()
     },
     on_keyword_enter() {
+      this.no_match_class = Math.random() > 0.5 ? 'fa fa-ghost no-match-icon' : 'fa fa-child no-match-icon'
       this.add_keywords(this.search_text)
       this.search_text = ''
     },
@@ -107,6 +110,10 @@ export default {
         <div class='header-container'>
           <h1>Jeremy from <i id='globe' :class='globe_icon_class'></i></h1>
           <div>
+            <a v-for='link in links' 
+               class='header-link' title='link.title' 
+               href='link.url' :key='link.url'><i :class='link.icon'></i></a>
+            <!--
             <a alt='gitlab' 
               href='https://gitlab.com/jeremyfromearth'><i class='fab fa-gitlab'></i></a>&nbsp;
             <a title='stack overflow'
@@ -121,6 +128,7 @@ export default {
               href='https://vimeo.com/jeremyfromearth'><i class='fab fa-vimeo'></i></a>&nbsp; 
             <a title='email'
               href='mailto:jeremynealbrown@gmail.com'><i class='fas fa-envelope'></i></a>&nbsp; 
+            -->
           </div>
         </div>
         <h2>Software Engineer</h2>
@@ -188,7 +196,7 @@ export default {
         </div>
 
         <div v-else class='no-matching-projects-message'>
-          <i class='fa fa-child no-match-icon'></i>
+          <i :class='no_match_class'></i>
           <p>No projects matched the keywords provided</p>
         </div>
 

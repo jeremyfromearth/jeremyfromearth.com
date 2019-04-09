@@ -4,34 +4,46 @@
   },
   "links": [
     {
-      "url": "https://gitlab.com/jeremyfromearth",
       "icon": "fab fa-gitlab",
-      "keywords": ["git", "gitlab", "version", "control", "code", "programming"]
+      "keywords": ["git", "gitlab", "version", "control", "code", "programming"],
+      "title": "gitlab",
+      "url": "https://gitlab.com/jeremyfromearth"
     },
     {
-      "url": "https://stackoverflow.com/users/230561/jeremyfromearth",
       "icon": "fab fa-stack-overflow",
-      "keywords": ["stack", "overflow", "code", "programming", "question", "answer", "community"]
+      "keywords": ["stack", "overflow", "code", "programming", "question", "answer", "community"],
+      "title": "stack overflow",
+      "url": "https://stackoverflow.com/users/230561/jeremyfromearth"
     },
     {
-      "url": "https://medium.com/@jeremy.from.earth",
       "icon": "fab fa-medium",
-      "keywords": ["blog", "writing", "sharing", "code", "programming", "medium"]
+      "keywords": ["blog", "writing", "sharing", "code", "programming", "medium"],
+      "title": "medium",
+      "url": "https://medium.com/@jeremy.from.earth"
     },
     {
-      "url": "http://twitter.com/jeremyfromearth",
       "icon": "fab fa-twitter",
-      "keywords": ["twitter", "social", "sharing"]
+      "keywords": ["twitter", "social", "sharing"],
+      "title": "twitter",
+      "url": "http://twitter.com/jeremyfromearth"
     },
     {
-      "url": "https://www.linkedin.com/in/jeremynealbrown",
       "icon": "fab fa-linkedin",
-      "keywords": ["linked", "in", "social"]
+      "keywords": ["linked", "in", "social"],
+      "title": "linked in",
+      "url": "https://www.linkedin.com/in/jeremynealbrown"
     },
     {
-      "url": "mailto:jeremynealbrown@gmail.com",
+      "icon": "fab fa-vimeo",
+      "keywords": ["vimeo", "content", "video"],
+      "title": "vimeo",
+      "url": "https://vimeo.com/jeremyfromearth"
+    },
+    {
       "icon": "fas fa-envelope",
-      "keywords": ["email", "e-mail", "social", "contact"]
+      "keywords": ["email", "e-mail", "social", "contact"],
+      "title": "email",
+      "url": "mailto:jeremynealbrown@gmail.com"
     }
   ],
   "topics": [
