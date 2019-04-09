@@ -1,57 +1,5 @@
 <script>
 export default {
-  data() {
-    return {
-      title: '',
-      client: '',
-      tldr: '',
-      interval_id: null,
-    }
-  },
-  destroyed() {
-    clearInterval(this.interval_id)
-  },
-  mounted() {
-    const title = this.data.title
-    const client = this.data.client
-    const delay = this.show_delay
-    const tldr = this.data.tldr || this.data.description
-
-    // Set the starting text to a percentage of the actual text
-    this.title = title.slice(0, Math.floor(title.length * 1))
-    this.client = client.slice(0, Math.floor(client.length * 1))
-    this.tldr = tldr.slice(0, Math.floor(tldr.length * 0.1))
-
-    let frame = 0
-    let keep_going = true
-
-    this.interval_id = setInterval(()=> {
-      keep_going = false 
-      if(frame >= delay) {
-        if(this.title.length < title.length) {
-          keep_going = true
-          this.title += title[this.title.length] 
-        }
-        if(this.client.length < client.length) {
-          keep_going = true
-          if(this.title == title) {
-            this.client += client[this.client.length] 
-          }
-        }
-        if(this.tldr.length < tldr.length) {
-          keep_going = true
-          if(this.client == client) {
-            this.tldr += tldr[this.tldr.length] 
-          }
-        }
-      } else {
-        keep_going = true;
-      }
-
-      if(!keep_going) clearInterval(this.interval_id)
-      frame++
-    }, 8)
-  },
   name: 'Project',
   props: {
     data: {
@@ -68,26 +16,43 @@ export default {
 
 <template>
   <div class='project'>
-    <h4>{{ title }}</h4>
-    <h5 v-if='client'>{{ client }} </h5>
-    <p>{{ tldr }}</p>
-    <div class='media-link-container'>
-      <i v-if='data.images' class='fa fa-images'></i>
-      <i v-if='data.video' class='fa fa-video'></i>
-      <i v-if='data.url' class='fa fa-link'></i>
+    <i class='fas fa-check-circle project-pin'></i>
+    <div class='project-inner'>
+      <div class='project-heading'>
+        <h4>{{ data.title }}</h4>
+        <div class='media-link-container'>
+          <i v-if='data.images' class='fa fa-images media-link'></i>
+          <i v-if='data.video' class='fa fa-video media-link'></i>
+          <i v-if='data.url' class='fa fa-link media-link'></i>
+        </div>
+      </div>
+      <h5 v-if='data.client'>{{ data.client }} </h5>
+      <p>{{ data.tldr }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
 .media-link-container {
-  font-size: 0.8em;
+  font-size: 1.0em;
   display: flex;
   opacity: 0;
+  display: none;
+  margin: 0 0 0 1em;
 }
 
 .media-link-container i {
-  margin: 0.4em 1em 0 0;
+  margin: 0.4em 2em 0 0;
+  transition: color 0.2s;
+}
+
+.media-link-container i:hover {
+  color:red;
+}
+
+.project:hover .media-link-container {
+  opacity: 1;
+  display: flex;
 }
 
 .project:first-child {
@@ -95,19 +60,12 @@ export default {
 }
 
 .project {
+  display: flex;
   margin-top: 2em;
 }
 
 .project p {
   margin: 0; 
-}
-
-.project:hover h4 {
-  text-decoration: underline;
-}
-
-.project:hover .media-link-container {
-  opacity: 1;
 }
 
 .project h5 {
@@ -118,26 +76,35 @@ export default {
   margin: 0.4em 0 0.4em 0;;
 }
 
-.project-enter {
-  opacity: 0;
-}
-
-.project-hover-icon {
-  opacity: 0;
-  transition: all 0.2s;
-  position: relative;
-}
-
 .project-heading {
   display: flex;
   align-items: baseline;
   whitespace: no-wrap;
 }
 
-.project-heading:hover .project-hover-icon {
-  opacity: 1;
-  transform: translate(4px);
+.project-inner {
+  transition: transform 0.2s;
 }
 
+.project:hover .project-inner {
+  transform: translate(4em, 0);
+}
 
+.project-pin {
+  align-self: center;
+  font-size: 0em;
+  opacity: 0;
+  position: absolute;
+  transition: opacity .2s, font-size .2s;
+}
+
+.project-pin:hover {
+  color: red;
+}
+
+.project:hover .project-pin {
+  opacity: 1;
+  font-size: 3em;
+  display: block;
+}
 </style>
