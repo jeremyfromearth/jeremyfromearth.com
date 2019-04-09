@@ -14,7 +14,7 @@ export default {
       'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
       'projects_per_page', 'technologies', 'text',
-      'topics', 'topics_palette'
+      'topics', 'topics_palette', 'window_size'
     ]),
     down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
@@ -55,6 +55,7 @@ export default {
 
     await this.get_data()
     this.clear_project_filters()
+    setTimeout(this.on_project_transition, 1000)
   }, 
   methods: {
     ...mapActions([
@@ -78,11 +79,9 @@ export default {
       this.search_text = ''
     },
     on_project_transition() {
-      console.log('on_project_transition')
       if(this.$refs.project_transition) {
         const h = this.$refs.project_transition.$el.clientHeight
-        this.project_container_height = Math.max(h, this.project_container_height)
-        console.log(this.project_container_height)
+        this.project_container_height = h
       }
     },
     projects_with_key(k) {
@@ -90,6 +89,11 @@ export default {
     }, 
     topic_color(i) {
       return this.topics_palette[i % this.topics_palette.length]
+    }
+  }, 
+  watch: {
+    window_size: function() {
+      this.on_project_transition()
     }
   }
 }

@@ -187,7 +187,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"]
       },
     "title": "Partnership Hub",
-    "tldr": "Particle systems interacting with human forms via Kinect",
+    "tldr": "Gesture controlled particle system and data visualizations",
     "topics": ["Interactive Installations", "Data Visualization"],
     "year": 2015
   }, {
@@ -607,6 +607,7 @@
     "description": "Patch is a so-called Smart Bot, a concept that I have been working on for a couple of years. As a smart bot, Patch uses various artificial intelligence techniques to learn all about a specialized topic. In Patch's case, he knows all about analog synthesizers. It can carry on a basic conversation with both novices and experienced enthusiast. I am currently seeking new work that involves building other types of smart bots like Patch for museums or other phsyical spaces.",
     "featured": true,
     "id": "patch",
+    "images": ["patch.jpg"],
     "keywords": ["ai", "chatbot", "chat", "music", "sound", "ml", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
     "platforms": ["Web"],
     "published": true,
@@ -618,6 +619,8 @@
     "title": "Patch the Synthbot",
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": ["Chatbots", "Natural Language Processing"],
+    "url": "http://patch.jeremyfromearth.com",
+    "video": "http://vimeo.com/203942309",
     "year": 2019
   }, {
     "client": "Terra Incognita",

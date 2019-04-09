@@ -20,7 +20,7 @@ export default {
     // Set the starting text to a percentage of the actual text
     this.title = title.slice(0, Math.floor(title.length * 1))
     this.client = client.slice(0, Math.floor(client.length * 1))
-    this.tldr = tldr.slice(0, Math.floor(tldr.length * 0.2))
+    this.tldr = tldr.slice(0, Math.floor(tldr.length * 0.1))
 
     let frame = 0
     let keep_going = true
@@ -71,10 +71,25 @@ export default {
     <h4>{{ title }}</h4>
     <h5 v-if='client'>{{ client }} </h5>
     <p>{{ tldr }}</p>
+    <div class='media-link-container'>
+      <i v-if='data.images' class='fa fa-images'></i>
+      <i v-if='data.video' class='fa fa-video'></i>
+      <i v-if='data.url' class='fa fa-link'></i>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.media-link-container {
+  font-size: 0.8em;
+  display: flex;
+  opacity: 0;
+}
+
+.media-link-container i {
+  margin: 0.4em 1em 0 0;
+}
+
 .project:first-child {
   margin-top: 4em;
 }
@@ -89,6 +104,10 @@ export default {
 
 .project:hover h4 {
   text-decoration: underline;
+}
+
+.project:hover .media-link-container {
+  opacity: 1;
 }
 
 .project h5 {
