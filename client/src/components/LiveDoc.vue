@@ -80,7 +80,9 @@ export default {
     },
     on_project_transition() {
       if(this.$refs.project_transition) {
-        const h = this.$refs.project_transition.$el.clientHeight
+        const h1 = this.$refs.project_transition.$el.clientHeight
+        const h2 = this.$refs.topic_legend.clientHeight
+        const h = Math.max(h1, h2)
         this.project_container_height = h
       }
     },
@@ -142,8 +144,8 @@ export default {
         <div v-if='projects_paged.length' class='project-container-outer'>
           <div ref='project_container' class='project-container' :style='{height: project_container_height + "px"}'>
             <div class='meta-container'>
-              <div class='topic-legend'>
-                <h4>Topics</h4>
+              <div ref='topic_legend' class='topic-legend'>
+                <h4>Disciplines</h4>
                   <div class='topic-legend-item' v-for='(t, i) in topics' :key='i'>
                     <div class='topic-legend-color-block' 
                     :style='{ backgroundColor: topic_color(i) }'/><div class='topic-legend-item-text'>{{t}}</div>
@@ -333,6 +335,10 @@ export default {
     padding-right: 2em;
   } 
 
+  .meta-container {
+    display: flex;
+  }
+
   .no-matching-projects-message {
     height: 32em;
     width: 100%;
@@ -502,6 +508,13 @@ export default {
 
   .tech-list {
     list-style-type: none;
+  }
+
+  .topic-legend {
+    align-self: flex-end;
+    background-color: #f8f8f8;
+    padding: 0 1em 1em;
+    border-radius: 0.4em;
   }
 
   .topic-legend-color-block {
