@@ -95,7 +95,12 @@ export default {
           technologies[k] = Array.from(technologies[k]).sort()
         })
 
-        topics.forEach(t => topic_idx[t.id] = t)
+        // Map topics to their ids 
+        // And init some props
+        topics.forEach(t => {
+          t.highlight = false
+          topic_idx[t.id] = t
+        })
 
         // commit the project and tech data to store
         commit('set_links', links)

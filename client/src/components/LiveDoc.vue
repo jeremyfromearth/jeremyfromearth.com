@@ -139,9 +139,10 @@ export default {
               <div ref='topic_legend' class='topic-legend'>
                 <h4>Disciplines</h4>
                   <div class='topic-legend-item' v-for='t in topics' :key='t.id'>
-                    <div class='topic-legend-color-block' 
-                    :style='{ backgroundColor: topics_palette[t.palette] }'/>
-                      <div class='topic-legend-item-text'>{{t.title}}</div>
+                    <div class='topic-legend-color-block' :style='{ backgroundColor: topics_palette[t.palette] }'/>
+                      <div class='topic-legend-item-text' :style='{
+                        textShadow: t.highlight ? "0 0 16px #00293d" : null
+                      }'>{{t.title}}</div>
                   </div>
               </div>
             </div>
@@ -161,9 +162,9 @@ export default {
             <div class='pagination-controller-container'>
               <div class='pagination-controller' @click='dec()'>
                 <div class='pagination-arrow pagination-arrow-up'
-                  :style="{ opacity: pagination > 0 ? 1 : 0, 
-                            marginTop: pagination > 0 ? '4em': '4em',
-                            height: pagination > 0 ? '4em' : '2em' }" >
+                  :style="{opacity: pagination > 0 ? 1 : 0, 
+                           marginTop: pagination > 0 ? '4em': '4em',
+                           height: pagination > 0 ? '4em' : '2em'}" >
                 <h3><i class="fas fa-angle-double-up"></i></h3></div>
               </div>
               <div class='pagination-controller' @click='inc()'>
@@ -529,6 +530,18 @@ export default {
     font-size: 0.80em;
     white-space: nowrap;
   }
+
+  .topic-legend-item-text {
+    transition: text-shadow .4s;
+    text-shadow: 0;
+  }
+
+  /*
+  .topic-legend-item-text.highlight {
+    text-decoration: underline;
+    text-shadow: 0 0 8px #ffffff;
+  }
+  */
 
   .work-history h4, h5 {
     line-height: 0em;
