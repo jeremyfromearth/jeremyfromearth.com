@@ -19,8 +19,10 @@ export default {
       return result.sort((a, b) => this.topics_palette.indexOf(a) - this.topics_palette.indexOf(b))
     },
     get_chart_class() {
-      if(this.topic_count == 0) return ''
-      return ['one-topic', 'two-topic', 'three-topic', 'four-topic'][this.topic_count-1]
+      const count = this.topic_count
+      const classes = ['one', 'two', 'three', 'four']
+      if(count < 1 || count > classes.length) return ''
+      return `${classes[count-1]}-topic`
     }, 
     get_chart_item_class() {
       if(this.topic_count == 0) return ''
@@ -81,12 +83,13 @@ export default {
     height: 100%;
   }
 
-  .three-topic,
-  .four-topic {
+  .three-topic {
     flex-direction: column;
   }
 
-  .four-topic-item {
-    flex-grow: 2;
+  .four-topic {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
   }
 </style>
