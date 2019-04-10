@@ -20,7 +20,7 @@ export default {
     },
     get_chart_class() {
       const count = this.topic_count
-      const classes = ['one', 'two', 'three', 'four']
+      const classes = ['mono', 'duo', 'trio', 'quad']
       if(count < 1 || count > classes.length) return ''
       return `${classes[count-1]}-topic`
     }, 
@@ -62,32 +62,32 @@ export default {
   }
 
   .topic-chart-inner:hover {
-    transform: rotate(180deg) scale(1.4);
+    transform: rotate(1.57rad) scale(1.4);
     cursor: pointer;
   }
 
-  .one-topic,
-  .two-topic, 
-  .three-topic, 
-  .four-topic {
+  .mono-topic,
+  .duo-topic, 
+  .trio-topic, 
+  .quad-topic {
     display: flex;
     width: 100%;
     height: 100%;
   }
 
-  .one-topic-item, 
-  .two-topic-item,
-  .three-topic-item, 
-  .four-topic-item {
+  .mono-topic-item, 
+  .duo-topic-item,
+  .trio-topic-item, 
+  .quad-topic-item {
     width: 100%;
     height: 100%;
   }
 
-  .three-topic {
+  .trio-topic {
     flex-direction: column;
   }
 
-  .four-topic {
+  .quad-topic {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
