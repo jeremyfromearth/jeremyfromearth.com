@@ -47,7 +47,8 @@ export default {
         const stopwords = res[1].data
         const technologies = {}
         const text = res[0].data['text']
-        let topics = new Set()
+        const topics = res[0].data['topics']
+        const topic_idx = {}
 
         projects.forEach(proj => {
 
@@ -61,9 +62,6 @@ export default {
               techs.forEach(t => technologies[k].add(t))
             })
           }
-
-          // add topics
-          if(proj.topics) proj.topics.forEach(topic => topics.add(topic))
 
           // create a list of keywords from the various fields
           let s = []
@@ -97,13 +95,7 @@ export default {
           technologies[k] = Array.from(technologies[k]).sort()
         })
 
-        // Create an index of id to topic
-        const topic_index = {}
-        const topic_json = res[0].data['topics']
-        topic_json.forEach((x, i) => topic_index[x] = i)
-        topics = Array.from(topics).sort((a, b) => {
-          return topic_index[a] - topic_index[b] 
-        })
+        topics.forEach(t => topic_idx[t.id] = t)
 
         // commit the project and tech data to store
         commit('set_links', links)
@@ -113,6 +105,7 @@ export default {
         commit('set_technologies', technologies)
         commit('set_text', text)
         commit('set_topics', topics)
+        commit('set_topic_index', topic_idx)
 
         // --------------------------------------------------------
         //

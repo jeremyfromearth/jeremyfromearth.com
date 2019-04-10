@@ -47,12 +47,13 @@
     }
   ],
   "topics": [
-    "Machine Intelligence",
-    "Natural Language Processing",
-    "Chatbots",
-    "Search Tools",
-    "Data Visualization",
-    "Interactive Installations"
+    {"id": "ai", "palette": 0, "title": "Machine Intelligence"},
+    {"id": "nlp", "palette": 1, "title": "Natural Language Processing"},
+    {"id": "bots", "palette": 2, "title": "Chatbots"},
+    {"id": "search", "palette": 3, "title": "Search Tools"},
+    {"id": "vis", "palette": 4, "title": "Data Visualization"},
+    {"id": "install", "palette": 5, "title": "Interactive Installations"},
+    {"id": "fs", "palette": 6, "title": "Fullstack Development"}
   ],
   "blog": [{
     "url": "https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3",
@@ -82,7 +83,7 @@
     },
     "title": "Power Up Portland",
     "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
@@ -95,7 +96,7 @@
     "published": true,
     "title": "Reflections",
     "tldr": "Crowd sourced impressions of the Holocaust",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2013
   }, {
     "client": "National Air & Space Museum",
@@ -108,7 +109,7 @@
     "published": true,
     "title": "Navigate the Seas",
     "tldr": "One of three touch screen games for the Air & Space Museum",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2013
   }, {
     "client": "Chisholm Trail Heritage Museum",
@@ -121,7 +122,7 @@
     "published": true,
     "title": "Lead a Trail Drive",
     "tldr": "All you need to know about russling cattle",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2013
   }, {
     "client": "Canadian Museum for Human Rights",
@@ -137,7 +138,7 @@
     },
     "title": "Human Rights Now",
     "tldr": "Thirty foot media wall of facts, figures and data visualization",
-    "topics": ["Data Visualization", "Interactive Installations"],
+    "topics": {},
     "year": 2014
   }, {
     "client": "University of California",
@@ -152,14 +153,14 @@
       },
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Complex network graph data visualization with vanilla JavaScript",
-    "topics": ["Data Visualization", "Search Tools"],
+    "topics": {},
     "year": 2014
   }, {
     "client": "Clemson University",
     "collaborators": ["Upswell"],
     "description": "Innovator influencer creative validation marketing success leverage venture low hanging fruit buyer. A/B testing business-to-consumer churn rate innovator social media angel investor disruptive. Business model canvas series A financing buyer twitter handshake.",
     "id": "clemson-data-ribbon",
-    "keywords": ["clemson", "football", "sports", "kinect", "gesture", "installation"],
+    "keywords": ["led", "arduino", "heroic", "robotics", "kinect", "gesture", "installation"],
     "location": "Greenville, North Carolina",
     "platforms": ["Windows"],
     "published": true,
@@ -168,7 +169,7 @@
     },
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2015
   }, {
     "client": "Nevada Discovery Museum",
@@ -184,7 +185,7 @@
     },
     "title": "Digital Organ Explorers",
     "tldr": "Augmented reality graphics overlay models of human organs",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2015
   }, {
     "client": "Telstra",
@@ -200,14 +201,14 @@
       },
     "title": "Partnership Hub",
     "tldr": "Gesture controlled particle system and data visualizations",
-    "topics": ["Interactive Installations", "Data Visualization"],
+    "topics": {},
     "year": 2015
   }, {
     "client": "Clemson University",
     "collaborators": ["Upswell"],
     "description": "Direct mailing deployment network effects partner network buzz assets. Startup launch party responsive web design holy grail. Bandwidth advisor customer marketing learning curve social media business model canvas long tail.",
     "id": "clemson-family-portrait",
-    "keywords": ["led", "arduino", "heroic", "robotics", "data", "visualization", "installation"],
+    "keywords": ["kinect", "installation", "cinder"],
     "location": "Greenville, North Carolina",
     "platforms": ["Windows"],
     "published": true,
@@ -215,7 +216,7 @@
       "C++": ["Cinder", "Kinect", "OpenGL"]
     },
     "title": "Clemson Family Portrait",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "tldr": "Three screen Kinect controlled interactive wall",
     "year": 2015
   }, {
@@ -229,7 +230,7 @@
     "published": true,
     "title": "Missoula Floods Navigator",
     "tldr": "Map based explorer apps tell the story of the Missoula Floods ",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2012
   }, {
     "client": "Mobius Science Center",
@@ -242,7 +243,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "Multitouch table exploring musical relationships",
-    "topics": ["Interactive Installations", "Data Visualization"],
+    "topics": {},
     "tech": {
         "Misc": ["Java", "Processing", "TUIO"]
       },
@@ -258,7 +259,7 @@
     "published": true,
     "title": "Weegee - Murder is My Business",
     "tldr": "A raw look at the progenitor of crime scene photography",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2012
   }, {
     "client": "Sam Rayburn Library & Museum",
@@ -271,7 +272,7 @@
     "published": true,
     "title": "Sam Rayburn Archive Explorer",
     "tldr": "Document explorer touch wall with fluid user interface",
-    "topics": ["Interactive Installations", "Search Tools"],
+    "topics": {},
     "year": 2012
   }, {
     "client": "The Grammy Museum",
@@ -284,7 +285,7 @@
     "published": true,
     "title": "In the Studio",
     "tldr": "Interactive recording studio simulations",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2008
   }, {
     "client": "Gettysburg Visitors Center",
@@ -297,7 +298,7 @@
     "published": true,
     "title": "Faces of Gettysburg",
     "tldr": "Image and relational search tools for soldier database",
-    "topics": ["Interactive Installations", "Search Tools"],
+    "topics": {},
     "year": 2008
   }, {
     "client": "The Library of Congress",
@@ -311,7 +312,7 @@
     "published": true,
     "title": "Orientation Screens",
     "tldr": "Event info and media presentation screens",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -324,7 +325,7 @@
     "published": true,
     "title": "Global Health Kiosks",
     "tldr": "Interviews and footage from global health initiatives",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -335,7 +336,7 @@
     "keywords": ["table", "touchscreen", "aids", "quilts", "installation"],
     "title": "Names Quilt Touch Table",
     "tldr": "Will something like this ever happen in the U.S. again?",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -347,7 +348,7 @@
     "id": "woodstock-tryptich",
     "keywords": ["woodstock", "music", "installation"],
     "title": "Woodstock Tryptich Kiosks",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "tldr": "Groovy touchscreen flashback to the 50's, 60's and 70's",
     "platforms": ["Windows"],
     "published": true,
@@ -363,7 +364,7 @@
     "published": true,
     "title": "AIDS Activism",
     "tldr": "Video interviews with advocates and activsts",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2007
   }, {
     "client": "John D. and Catherine T. MacArthur Foundation",
@@ -376,7 +377,7 @@
     "published": true,
     "title": "Foundation Kiosk",
     "tldr": "One of my favorite projects from my time at Second Story",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2007
   }, {
     "client": "The Speed Art Museum",
@@ -389,7 +390,7 @@
     "published": true,
     "title": "Book of Hours",
     "tldr": "Illuminated manuscripts for the digital era",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2009
   },
   {
@@ -403,7 +404,7 @@
     "published": true,
     "title": "Seggesser Hide Explorer",
     "tldr": "Deep zoom image explorers with hotspots",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2009
   },
   {
@@ -416,7 +417,7 @@
     "published": true,
     "title": "Old Standard Sound Website",
     "tldr": "Seven days, asthma, prednisone and herbal tea",
-    "topics": [],
+    "topics": {},
     "year": 2009
   },
   {
@@ -430,7 +431,7 @@
     "published": true,
     "title": "Sports Broadcasting",
     "tldr": "Something about sports...",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2009
   },
   {
@@ -444,7 +445,7 @@
     "published": true,
     "title": "Treaty of Guadalupe Hidalgo",
     "tldr": "Magic document translators",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2009
   },
   {
@@ -460,7 +461,7 @@
       },
     "title": "Gist Search Syntax",
     "tldr": "A domain specific langauge for patent document search",
-    "topics": ["Machine Intelligence", "Search Tools"],
+    "topics": {},
     "year": 2017
   },
   {
@@ -475,7 +476,7 @@
     },
     "title": "The Semantic Map",
     "tldr": "Hexbins, quadtrees, trapezoids... what else can we add to it?",
-    "topics": ["Machine Intelligence", "Search Tools"],
+    "topics": {},
     "year": 2017
   },
   {
@@ -492,7 +493,7 @@
         "Python": []
       },
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
-    "topics": ["Search Tools"],
+    "topics": {},
     "year": 2010
   }, {
     "client": "National Museum of the American Indian",
@@ -505,7 +506,7 @@
     "published": true,
     "title": "Infinity of Nations",
     "tldr": "On the road, under the weather, 30 days in October",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2010
   }, {
     "client": "Nike",
@@ -518,7 +519,7 @@
     "published": true,
     "title": "Sparq Data Visualizations",
     "tldr": "Deep in the basement lab of the world's (fill in the blanks)",
-    "topics": ["Data Visualization"],
+    "topics": {},
     "year": 2010
   }, {
     "client": "American Electric Power",
@@ -534,7 +535,23 @@
       },
     "title": "World of AEP",
     "tldr": "Twenty six screens of raw American Electric Power",
-    "topics": ["Interactive Installations"],
+    "topics": {
+      "nlp": {
+        "Python": ["Rasa"]
+      },
+      "fs": {
+        "Python": ["Flask"],
+        "JavaScript": ["Vue"],
+        "Misc": ["Google Cloud"]
+      },
+      "install": {
+        "C++": ["Cinder", "OpenGL"],
+        "JavaScript": ["Electron", "NodeJS"]
+      },
+      "ai": {
+        "Python": ["Tensorflow", "SpaCy"]
+      }
+    },
     "year": 2018
   }, {
     "client": "Portland's Children Museum",
@@ -550,7 +567,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]
       },
     "tldr": "Kinect + rigid body physics = boom klang",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -566,7 +583,7 @@
         "C++": ["Cinder", "OpenGL", "Kinect"]
       },
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -578,7 +595,7 @@
     "published": true,
     "title": "The Virtual Estuary",
     "tldr": "A fun interactive game in the middle of nowhere in Ohio",
-    "topics": ["Interactive Installations"],
+    "topics": {},
     "year": 2011
   }, {
     "client": "San Franscisco Museum of Modern Art",
@@ -612,7 +629,7 @@
       },
     "title": "Search Spheres",
     "tldr": "An experimental geometric search interface",
-    "topics": ["Interactive Installations", "Search Tools"],
+    "topics": {},
     "year": 2016
   }, {
     "client": "",
@@ -630,7 +647,17 @@
     },
     "title": "Patch the Synthbot",
     "tldr": "A know it all synthesizer geek chatbot",
-    "topics": ["Chatbots", "Natural Language Processing"],
+    "topics": {
+      "bots": {
+        "Python": ["Rasa"]
+      },
+      "fs": {
+        "JavaScript": ["Vue"]
+      },
+      "nlp": {
+        "Python": ["Rasa", "SpaCy"]
+      }
+    },
     "url": "http://patch.jeremyfromearth.com",
     "video": "http://vimeo.com/203942309",
     "year": 2019
@@ -647,7 +674,13 @@
     },
     "title": "Storycrafter Canvas",
     "tldr": "Content publishing for public spaces, made easy",
-    "topics": ["Interactive Installations"],
+    "topics": {
+      "fs": {
+        "Python": ["Flask"],
+        "JavaScript": ["Vue", "NodeJS", "Electron"],
+        "Misc": ["Google Cloud"]
+      }
+    },
     "year": 2018
   }, {
     "client": "",
@@ -662,7 +695,16 @@
     },
     "title": "Metonym NLP Training Tool",
     "tldr": "A tool for generating NLP training data",
-    "topics": ["Natural Language Processing"],
-    "year": 2018
+    "topics": {
+      "nlp": {
+        "Python": ["Flask"]
+      },
+      "fs": {
+        "Python": ["Flask"],
+        "JavaScript": ["Vue"],
+        "Misc": ["Google Cloud"]
+      }
+    },
+    "year": 2019
   }]
 }

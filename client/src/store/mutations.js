@@ -66,6 +66,9 @@ export default {
   set_topics(state, value) {
     state.topics = value
   },
+  set_topic_index(state, value) {
+    state.topic_index = value
+  },
   set_window_size(state, value) {
     state.window_size = value
   }, 

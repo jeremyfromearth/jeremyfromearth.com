@@ -14,6 +14,7 @@ export default {
   technologies: state => state.technologies,
   text: state => state.text,
   topics: state => state.topics,
+  topic_index: state => state.topic_index,
   topics_palette: state => state.topics_palette,
   window_size: state => state.window_size
 }

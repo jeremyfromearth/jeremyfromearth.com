@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Project from './components/Project'
+import TopicSwatch from './components/TopicSwatch'
 
 import {
   MdApp, 
@@ -23,6 +24,7 @@ Vue.use(MdLayout)
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Project', Project)
+Vue.component('TopicSwatch', TopicSwatch)
 
 library.add(faCoffee)
 

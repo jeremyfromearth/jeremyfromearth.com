@@ -8,7 +8,7 @@ export default {
     }, 
     show_delay: {
       type: Number, 
-      default: () => 0
+      default: ()=> 0
     }
   }, 
 }
@@ -16,7 +16,7 @@ export default {
 
 <template>
   <div class='project'>
-    <i class='fas fa-check-circle project-pin'></i>
+    <TopicSwatch :data='data.topics' class='project-pin'/> 
     <div class='project-inner'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
@@ -42,7 +42,7 @@ export default {
 }
 
 .media-link-container i {
-  margin: 0.4em 2em 0 0;
+  margin: 0.4em 1.4em 0 0;
   transition: color 0.2s;
 }
 
@@ -87,15 +87,16 @@ export default {
 }
 
 .project:hover .project-inner {
-  transform: translate(4em, 0);
+  transform: translate(3em, 0);
 }
 
 .project-pin {
+  transform: translate(0, -2px);
   align-self: center;
-  font-size: 0em;
   opacity: 0;
   position: absolute;
-  transition: opacity .2s, font-size .2s;
+  transition: opacity 0.2s, transform 0.4s;
+  transition-delay: 0.1s;
 }
 
 .project-pin:hover {
@@ -104,7 +105,7 @@ export default {
 
 .project:hover .project-pin {
   opacity: 1;
-  font-size: 3em;
+  transform: translate(0, 0);
   display: block;
 }
 </style>

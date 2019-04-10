@@ -138,9 +138,10 @@ export default {
             <div class='meta-container'>
               <div ref='topic_legend' class='topic-legend'>
                 <h4>Disciplines</h4>
-                  <div class='topic-legend-item' v-for='(t, i) in topics' :key='i'>
+                  <div class='topic-legend-item' v-for='t in topics' :key='t.id'>
                     <div class='topic-legend-color-block' 
-                    :style='{ backgroundColor: topic_color(i) }'/><div class='topic-legend-item-text'>{{t}}</div>
+                    :style='{ backgroundColor: topics_palette[t.palette] }'/>
+                      <div class='topic-legend-item-text'>{{t.title}}</div>
                   </div>
               </div>
             </div>
@@ -518,6 +519,7 @@ export default {
     height: .9em;
     width: 1.46em;
     margin-right: 0.8em;
+    border-radius: 0.2em;
   }
 
   .topic-legend-item {
