@@ -1,4 +1,5 @@
 import axios from 'axios'
+import _ from 'lodash'
 import * as stemmer from 'stemmer'
 
 export default {
@@ -55,11 +56,13 @@ export default {
           if(!proj.published) return
           
           // gather up the tech lists
-          if(proj.tech) {
-            Object.keys(proj.tech).forEach(k => {
-              if(!technologies[k]) technologies[k] = new Set()
-              const techs = proj.tech[k]
-              techs.forEach(t => technologies[k].add(t))
+          if(proj.topics) {
+            _.forIn(proj.topics, (topic) => {
+              _.forIn(topic, (lang, key) => {
+                if(!technologies[key]) technologies[key] = new Set()
+                const tech = technologies[key]
+                lang.forEach(x => tech.add(x))
+              })
             })
           }
 
