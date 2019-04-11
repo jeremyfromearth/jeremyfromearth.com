@@ -57,7 +57,10 @@ export default {
 
     await this.get_data()
     this.clear_project_filters()
-    setTimeout(this.on_project_transition, 1000)
+
+    setTimeout(()=> {
+      this.on_project_transition()
+    }, 1000)
   }, 
   methods: {
     ...mapActions([
@@ -84,7 +87,7 @@ export default {
     on_project_transition() {
       if(this.$refs.project_transition) {
         const h1 = this.$refs.project_transition.$el.clientHeight
-        const h2 = this.$refs.topic_legend.clientHeight
+        const h2 = this.$refs.topic_legend.clientHeight + this.$refs.meta_description.clientHeight
         const h = Math.max(h1, h2)
         this.project_container_height = h
       }
@@ -117,7 +120,6 @@ export default {
         </div>
         <h2>Software Engineer</h2>
         <p>{{text['intro']}}</p>
-
         <h3>Blog</h3>
         <p>Recent Articles</p>
         <div>
@@ -153,6 +155,7 @@ export default {
         <div v-if='projects_paged.length' class='project-container-outer'>
           <div ref='project_container' class='project-container' :style='{height: project_container_height + "px"}'>
             <div class='meta-container'>
+              <div ref='meta_description' class='meta-description'><p>This is effectively an archive of every software development project I've worked on over the years. You can search through them using keywords. Hover over a project to learn more.</p></div>
               <div ref='topic_legend' class='topic-legend'>
                 <h4>Disciplines</h4>
                   <div class='topic-legend-item' v-for='t in topics' :key='t.id'>
@@ -188,7 +191,7 @@ export default {
                 <div class='pagination-arrow pagination-arrow-down'
                 :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
                           marginTop: pagination == 0 ? '2em' : 
-                            down_pagination_arrow_is_visibile ? '4em' : '6em',
+                          down_pagination_arrow_is_visibile ? '4em' : '6em',
                           height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
                   <h3><i class="fas fa-angle-double-down"></i></h3>
                 </div>
@@ -337,6 +340,16 @@ export default {
 
   .meta-container {
     display: flex;
+    flex-grow: 0;
+    flex-shrink: 3;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .meta-description {
+    font-size: 0.8em;
+    font-style: italic;
+    flex-grow: 0;
   }
 
   .no-matching-projects-message {
@@ -431,7 +444,6 @@ export default {
     width: 100%;
     justify-content: space-between;
     padding: 0 1.4em 0 1.4em;
-    min-height: initial;
     overflow: hidden;
     transition: height 0.8s;
   }
@@ -442,6 +454,7 @@ export default {
 
   .project-outer {
     flex-grow: 1;
+    width: 100%;
   }
 
   .project-container-outer {
@@ -493,6 +506,8 @@ export default {
   .project-group-inner-up-leave-to {
     transform: translate(0, 8px);
   }
+
+  
 
   .remove-keyword-icon:hover {
     color: red; 

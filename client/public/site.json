@@ -80,7 +80,7 @@
     "published": true,
     "title": "Power Up Portland",
     "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
-    "topics": {"install": {"Misc": ["Arduino"]}},
+    "topics": {"install": {"Random": ["Arduino"]}},
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
@@ -161,7 +161,7 @@
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": {
-      "install": {"Misc": ["Java", "Processing", "Arduino"]}, 
+      "install": {"Random": ["Java", "Processing", "Arduino"]}, 
       "vis": {}
     },
     "year": 2015
@@ -176,7 +176,7 @@
     "published": true,
     "title": "Digital Organ Explorers",
     "tldr": "Augmented reality graphics overlay models of human organs",
-    "topics": {"install": {"Misc": ["Swift"]}},
+    "topics": {"install": {"Random": ["Swift"]}},
     "year": 2015
   }, {
     "client": "Telstra",
@@ -189,7 +189,7 @@
     "published": true,
     "title": "Partnership Hub",
     "tldr": "Gesture controlled particle system and data visualizations",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"], "Databases": ["Redis"]}},
     "year": 2015
   }, {
     "client": "Clemson University",
@@ -228,7 +228,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "Multitouch table exploring musical relationships",
-    "topics": {"install": {"Misc": ["Java", "Processing"]}, "vis": {}},
+    "topics": {"install": {"Random": ["Java", "Processing"]}, "vis": {}},
     "year": 2012
   }, {
     "client": "International Center for Photography",
@@ -446,7 +446,7 @@
     "tldr": "A domain specific langauge for patent document search",
     "topics": {
       "vis": {"JavaScript": ["D3", "Node"]}, 
-      "search": {"C++": ["stdlib"], "Misc": ["Java"]}
+      "search": {"C++": ["stdlib"], "Random": ["Java"]}
     },
     "year": 2017
   },
@@ -461,7 +461,8 @@
     "tldr": "Hexbin based data visualization patent corpus search results",
     "topics": {
       "search":{},
-      "vis": {"JavaScript": ["D3", "Node", "NPM"]}
+      "vis": {"JavaScript": ["D3", "Node", "NPM"]},
+      "ai": {}
     },
     "year": 2017
   },
@@ -477,9 +478,23 @@
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
       "search": {},
-      "fs": {"Misc": ["Java", "Android", "SQL"]}
+      "fs": {"Random": ["Java", "Android"], "Databases": ["SQLite"]} 
     },
     "year": 2010
+  }, {
+    "client": "Upswell", 
+    "description": "TBD", 
+    "id": "measure", 
+    "keywords": ["analytics", "data", "statistics", "stats"], 
+    "published": true, 
+    "platorms": ["Web"], 
+    "title": "Measure, Analytics",
+    "tldr": "Custom analytics tracking for interactive installations",
+    "topics": {
+      "install": {"Python": []}, 
+      "fs": {"Databases": ["InfluxDB"], "JavaScript": ["D3"]} 
+    }, 
+    "year": 2015
   }, {
     "client": "National Museum of the American Indian",
     "collaborators": ["Potion"],
@@ -558,7 +573,7 @@
     "topics": {
       "install": {
         "C++": ["Cinder", "OpenGL"], 
-        "Misc": ["Arduino"]
+        "Random": ["Arduino"]
       }
     },
     "year": 2011
@@ -608,7 +623,8 @@
     "tldr": "An experimental geometric search interface",
     "topics": {
       "search": {
-        "Misc": ["Swift"]
+        "Random": ["Swift"],
+        "Databases": ["MySQL"]
       }
     },
     "year": 2016
@@ -625,7 +641,7 @@
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
       "bots": {"Python": ["Keras", "Rasa"]},
-      "fs": {"JavaScript": ["Vue"]},
+      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"]},
       "nlp": {"Python": ["Rasa", "SpaCy"]}
     },
     "url": "http://patch.jeremyfromearth.com",
@@ -644,7 +660,8 @@
     "topics": {
       "fs": {
         "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
-        "Misc": ["Google Cloud"]
+        "Random": ["Google Cloud"], 
+        "Databases": ["MongoDB"]
       }
     },
     "year": 2018
@@ -659,8 +676,8 @@
     "title": "Metonym NLP Training Tool",
     "tldr": "A tool for generating NLP training data",
     "topics": {
-      "nlp": {"Python": ["Flask", "Rasa"]},
-      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Misc": ["Google Cloud"]}
+      "nlp": {"Python": ["Flask", "Rasa", "Conda"]},
+      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Random": ["Google Cloud"]}
     },
     "year": 2019
   }]
