@@ -90,7 +90,7 @@ export default {
           s = s.map(y => y.replace(/[^A-Za-z0-9+\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
 
           // remove words in stop words
-          s = s.filter(y => !stopwords.includes(y) && y.length > 2)
+          s = s.filter(y => !stopwords.includes(y) && y.length >= 2)
 
           // stem each term and map it to a set of documents
           s.forEach(z => {
