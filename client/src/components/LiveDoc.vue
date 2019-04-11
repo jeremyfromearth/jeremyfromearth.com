@@ -117,6 +117,23 @@ export default {
         </div>
         <h2>Software Engineer</h2>
         <p>{{text['intro']}}</p>
+
+        <h3>Blog</h3>
+        <p>Recent Articles</p>
+        <div>
+          <ul>
+            <li v-for='(x, i) in blog_posts' :key='i'><a href='x.url'>{{ x.title }}</a></li>
+          </ul>
+        </div>
+        <h3>Stacks</h3>
+        <div class='md-layout'>
+          <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
+            <h4>{{ k }} </h4> 
+            <ul class='md-layout-item'>
+              <li v-for='t in technologies[k]' :key='t'>{{ t }}</li>
+            </ul>
+          </div>
+        </div>
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -186,22 +203,7 @@ export default {
           <p>No projects matched the keywords provided</p>
         </div>
 
-        <h3>Blog</h3>
-        <p>Recent Articles</p>
-        <div>
-          <ul>
-            <li v-for='(x, i) in blog_posts' :key='i'><a href='x.url'>{{ x.title }}</a></li>
-          </ul>
-        </div>
-        <h3>Stacks</h3>
-        <div class='md-layout'>
-          <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
-            <h4>{{ k }} </h4> 
-            <ul class='md-layout-item'>
-              <li v-for='t in technologies[k]' :key='t'>{{ t }}</li>
-            </ul>
-          </div>
-        </div>
+        
 
         <div class='work-history'>
           <h3>Work History</h3>

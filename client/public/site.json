@@ -134,8 +134,7 @@
     "tldr": "Thirty foot media wall of facts, figures and data visualization",
     "topics": {
       "install": {"C++":["Cinder", "OpenGL"]}, 
-      "vis": {},
-      "fs": {"Misc": ["SocketIO"]}
+      "vis": {}
     },
     "year": 2014
   }, {
@@ -229,7 +228,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "Multitouch table exploring musical relationships",
-    "topics": {"install": {"Misc": ["Java", "Processing", "TUIO"]}, "vis": {}},
+    "topics": {"install": {"Misc": ["Java", "Processing"]}, "vis": {}},
     "year": 2012
   }, {
     "client": "International Center for Photography",
@@ -478,7 +477,7 @@
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
       "search": {},
-      "fs": {"Misc": ["Java", "Android", "SQLite"], "Python": ["MySQL"]}
+      "fs": {"Misc": ["Java", "Android", "SQL"]}
     },
     "year": 2010
   }, {
@@ -644,8 +643,8 @@
     "tldr": "Content publishing for public spaces, made easy",
     "topics": {
       "fs": {
-        "JavaScript": ["Vue", "Node", "Electron"],
-        "Misc": ["Google Cloud", "SocketIO"]
+        "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
+        "Misc": ["Google Cloud"]
       }
     },
     "year": 2018
