@@ -56,18 +56,25 @@ export default {
           if(!proj.published) return
           
           // gather up the tech lists
+          let tech = new Set()
+          let languages = new Set()
+
           if(proj.topics) {
             _.forIn(proj.topics, (topic) => {
               _.forIn(topic, (lang, key) => {
                 if(!technologies[key]) technologies[key] = new Set()
-                const tech = technologies[key]
-                lang.forEach(x => tech.add(x))
+                languages.add(key)
+                lang.forEach(x => {
+                  tech.add(x)
+                  technologies[key].add(x)
+                })
               })
             })
           }
 
           // create a list of keywords from the various fields
-          let s = []
+          let s = Array.from(tech).concat(Array.from(languages))
+
           lookup[proj.id] = proj
           if(proj.client) s = s.concat(proj.client.split(' '))
           if(proj.collaborators) s = s.concat(proj.collaborators.join(' ').split(' '))
@@ -80,7 +87,7 @@ export default {
           if(proj.year) s.push(''+ proj.year)
 
           // remove puncuation
-          s = s.map(y => y.replace(/[^A-Za-z0-9\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
+          s = s.map(y => y.replace(/[^A-Za-z0-9+\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
 
           // remove words in stop words
           s = s.filter(y => !stopwords.includes(y) && y.length > 2)
@@ -114,6 +121,8 @@ export default {
         commit('set_text', text)
         commit('set_topics', topics)
         commit('set_topic_index', topic_idx)
+
+        console.log(index)
 
         // --------------------------------------------------------
         //

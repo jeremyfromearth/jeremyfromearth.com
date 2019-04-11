@@ -669,7 +669,7 @@
     "client": "",
     "description": "Metonym is an open source web app that I develop and maintain, designed to enable chatbot creators and others who require large amounts of conversational data to quickly generating it from a few examples. The application provides a small scripting langauge for transforming a single line of formatted text into thousands of permutations.",
     "featured": true,
-    "id": "canvas",
+    "id": "metonym",
     "keywords": ["natural", "language", "processing", "recursive", "parse", "chatbots", "chat", "conversation"],
     "platforms": ["Web"],
     "published": true,
