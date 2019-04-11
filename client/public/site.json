@@ -448,8 +448,7 @@
     "tldr": "Magic document translators",
     "topics": {"install": {}},
     "year": 2009
-  },
-  {
+  }, {
     "client": "Textwise",
     "description": "A domain specific query language developed for Textwise & IP.com",
     "id": "query-parser",
@@ -463,8 +462,21 @@
       "search": {"C++": ["stdlib"], "Random": ["Java"]}
     },
     "year": 2017
-  },
-  {
+  }, {
+    "client": "Textwise", 
+    "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci.", 
+    "id": "textwise-treemap", 
+    "keywords": ["textwise", "treemap", "nlp", "data", "visualization", "wordclouds", "d3", "clustering", "search"], 
+    "platforms": ["web"],
+    "published": true, 
+    "title": "Textwise Treemap Component", 
+    "tldr": "A treemap for visualizing semantically clustered patent documents", 
+    "topics": {
+      "vis": {"JavaScript": ["D3", "Node", "NPM"]}, 
+      "search": {"JavaScript": []}
+    }, 
+    "year": 2019
+  }, {
     "client": "Textwise",
     "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
     "id": "semantic-map",
