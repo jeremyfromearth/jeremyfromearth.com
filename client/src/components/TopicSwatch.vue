@@ -29,6 +29,9 @@ export default {
       return `${this.get_chart_class()}-item`
     }
   },
+  mounted() {
+    console.log(this.data)
+  },
   props: {
     data: {
       type: Object,
