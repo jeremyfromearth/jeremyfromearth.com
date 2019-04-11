@@ -114,8 +114,8 @@ export default {
           <h1>Jeremy from <i id='globe' :class='globe_icon_class'></i></h1>
           <div class='header-links'>
             <a v-for='link in links' 
-               class='header-link' title='link.title' 
-               href='link.url' :key='link.url'><i :class='link.icon'></i></a>
+               class='header-link' :title='link.title' 
+               :href='link.url' :key='link.url'><i :class='link.icon'></i></a>
           </div>
         </div>
         <h2>Software Engineer</h2>
@@ -132,7 +132,7 @@ export default {
           <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
             <h4>{{ k }} </h4> 
             <ul class='md-layout-item'>
-              <li v-for='t in technologies[k]' :key='t'>{{ t }}</li>
+              <li v-for='t in technologies[k]' :key='t.label'>{{ t.label }}</li>
             </ul>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default {
                   <div class='topic-legend-item' v-for='t in topics' :key='t.id'>
                     <div class='topic-legend-color-block' :style='{ backgroundColor: topics_palette[t.palette] }'/>
                       <div class='topic-legend-item-text' :style='{
-                        textShadow: t.highlight ? "0 0 16px #00293d" : null
+                        textShadow: t.highlight ? `0 0 4px ${topics_palette[t.palette]}` : null
                       }'>{{t.title}}</div>
                   </div>
               </div>
@@ -209,7 +209,7 @@ export default {
         
 
         <div class='work-history'>
-          <h3>Work History</h3>
+          <h3>Employment History</h3>
           <div class='md-layout'>
             <div>
               <h4>Software Engineer (Contract)</h4>

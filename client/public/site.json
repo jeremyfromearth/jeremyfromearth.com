@@ -420,8 +420,22 @@
     "tldr": "Something about sports...",
     "topics": {"install":{}},
     "year": 2009
-  },
-  {
+  }, {
+    "client": "Weiden+Kennedy", 
+    "collaborators": ["Weiden+Kennedy"],
+    "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique.", 
+    "id": "wk12", 
+    "keywords": ["wk12", "weiden+kennedy", "kinect", "images", "video", "3d", "opengl"],
+    "location": "Portland, OR", 
+    "platforms": ["Windows"],
+    "published": true, 
+    "title": "WK+12 Party App", 
+    "tldr": "Fun Kinect controlled 3D image gallery for WK12 party", 
+    "topics": {
+      "install": {"C++": ["Cinder", "OpenGL", "Kinect"]}
+    },
+    "year": 2012
+  }, {
     "client": "New Mexico History Museum",
     "collaborators": ["Second Story"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",

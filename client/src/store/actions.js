@@ -102,8 +102,12 @@ export default {
         
         // Convert technology sets to sorted arrays
         Object.keys(technologies).forEach(k => {
-          technologies[k] = Array.from(technologies[k]).sort()
+          technologies[k] = Array.from(technologies[k]).map(x => {
+            return {label: x, highlight: false}
+          }).sort((a, b)=> a.label < b.label ? -1 : 1)
         })
+
+        console.log(technologies)
 
         // Map topics to their ids 
         // And init some props
