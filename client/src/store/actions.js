@@ -132,6 +132,16 @@ export default {
       
         const blog = res[0].data['blog']
         commit('set_blog_posts', blog)
+
+        // --------------------------------------------------------
+        //
+        // Employment
+        //
+        // --------------------------------------------------------
+      
+        const employment = res[0].data['employment']
+        commit('set_employment', employment)
+
       })
   },
   inc_pagination({commit}) {

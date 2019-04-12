@@ -44,6 +44,9 @@ export default {
   set_blog_posts(state, value) {
     state.blog_posts = value
   },
+  set_employment(state, value) {
+   state.employment = value
+  },
   set_links(state, value) {
     state.links = value
   },

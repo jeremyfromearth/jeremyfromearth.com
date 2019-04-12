@@ -58,21 +58,12 @@ export default {
 </template>
 
 <style scoped>
-  .topic-swatch-inner {
-    height: 2em;
-    width: 2em;
+  .highlighter {
+    position: absolute;
     align-self: center;
-    overflow: hidden;
-    border-radius: 0.2em;
-    transition: all 0.2s;
-    transform-origin: center;
+    justify-self: center;
   }
-
-  .topic-swatch-inner:hover {
-    transform: rotate(1.57rad) scale(1.4);
-    cursor: pointer;
-  }
-
+  
   .mono-topic,
   .duo-topic, 
   .trio-topic, 
@@ -90,13 +81,28 @@ export default {
     height: 100%;
   }
 
-  .trio-topic {
-    flex-direction: column;
-  }
-
   .quad-topic {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+  }
+
+  .topic-swatch-inner {
+    height: 2em;
+    width: 2em;
+    align-self: center;
+    overflow: hidden;
+    border-radius: 0.2em;
+    transition: all 0.2s;
+    transform-origin: center;
+  }
+
+  .topic-swatch-inner:hover {
+    transform: rotate(1.57rad) scale(1.4);
+    cursor: pointer;
+  }
+
+  .trio-topic {
+    flex-direction: column;
   }
 </style>

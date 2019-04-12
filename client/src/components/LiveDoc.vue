@@ -10,7 +10,7 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'blog_posts', 'keywords', 'links', 
+      'blog_posts', 'employment', 'keywords', 'links', 
       'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
       'projects_per_page', 'technologies', 'text',
@@ -19,7 +19,6 @@ export default {
     down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
     },
-    
     pagination_text() {
       const result_count = this.project_search_results.length
       switch(result_count) {
@@ -124,7 +123,7 @@ export default {
         <p>Recent Articles</p>
         <div>
           <ul>
-            <li v-for='(x, i) in blog_posts' :key='i'><a href='x.url'>{{ x.title }}</a></li>
+            <li v-for='(x, i) in blog_posts' :key='i'><a :href='x.url'>{{ x.title }}</a></li>
           </ul>
         </div>
         <h3>Stacks</h3>
@@ -202,52 +201,29 @@ export default {
           </div>
           <div class='pagination-detail'>{{ pagination_text }}</div>
         </div>
-
+        <!-- No Matching Projects -->
         <div v-else class='no-matching-projects-message'>
           <i :class='no_match_class'></i>
           <p>No projects matched the keywords provided</p>
         </div>
 
-        
+        <!-- Employment History -->
 
         <div class='work-history'>
           <h3>Employment History</h3>
           <div class='md-layout'>
-            <div>
-              <h4>Software Engineer (Contract)</h4>
-              <h5>January 2010 - Present</h5>
+            <div v-for='(e, i) in employment' :key='i'> 
+              <h4>{{e.role}}</h4>
+              <h5>{{e.timespan}}</h5>
               <ul>
-                <li>Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada</li>
-                <li>Generating project roadmaps, estimates of cost, software schematics and end user documentation</li>
-                <li>Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process</li>
-                <li>Studying fields of interest, including deep learning and natural language processing, with end goal of attaining work in new fields</li>
-              </ul>
-              <h4>Software Engineer, Textwise</h4>
-              <h5>August 2016 - September 2017</h5>
-              <ul>
-                <li>Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript &amp; D3</li>
-                <li>Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures</li>
-              </ul>
-              <h4>Creative Technologist, Upswell</h4>
-              <h5>Jan 2014 - Jan 2015</h5>
-              <ul>
-                <li>Architecting and engineering user analytics APIs using Python, Flask and InfluxDB for tracking anonymous metrics in immersive installation software</li>
-                <li>Prototyping and experimenting with new technologies including Arduino and Heroic Robotics LED strips, fingerprint sensors and image compositing techniques in OSX</li>
-                <li>Developing Microsoft Kinect controlled interactive experience for Clemson University using Cinder</li>
-                <li>Developing multiple interactive touch screen applications with Swift, iOS and macOS Desktop for The Nevada Discovery Museum</li>
-              </ul>
-
-              <h4>Interactive Developer, Second Story Interactive</h4>
-              <h5>July 2007 - Jan 2010</h5>
-              <ul>
-                <li>Developing award winning interactive digital installations for museums and cultural institutions</li>
-                <li>Maintaining and extending MVC application framework used by development teams</li>
-                <li>Designed performance tests for simulating user input over extended periods for analysis and optimization of CPU/GPU performance and memory consumption</li>
-                <li>Leading research and feasibility studies of new technologies for potential company-wide adoption</li>
+                <li v-for='(d, j) in e.descriptions' :key='j'>{{d}}</li>
               </ul>
             </div>
           </div>
         </div>
+
+        <!-- Collaborators -->
+
         <h3>Collaborators</h3>
         <div class='md-layout'>
           <div class='md-layout-item'>
@@ -269,6 +245,9 @@ export default {
             <p>Wieden+Kennedy</p>
           </div>
         </div>
+
+        <!-- Ethos -->
+
         <h3>Ethos</h3>
         <ul>
           <li>Agile FTW.</li>

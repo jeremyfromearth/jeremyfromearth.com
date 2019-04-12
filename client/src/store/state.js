@@ -1,5 +1,6 @@
 export default {
   blog_posts: [],
+  employment: [],
   index: {},
   keywords: [],
   links: [],

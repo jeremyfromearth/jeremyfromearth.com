@@ -69,6 +69,41 @@
     "title": "Google Cloud Storage File Upload with Flask & JavaScript",
     "keywords": ["google", "cloud", "platform", "javascript", "upload"]
   }],
+  "employment": [{
+    "title": "Software Engineer (Contract)",
+    "timespan": "January 2010 - Present",
+    "descriptions": [
+      "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada", 
+      "Generating project roadmaps, estimates of cost, software schematics and end user documentation", 
+      "Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process", 
+      "Studying fields of interest, including deep learning and natural language processing, with end goal of attaining work in new fields"
+    ]
+  }, {
+    "title": "Software Engineer, Textwise",
+    "timespan": "August 2016 - September 2017", 
+    "descriptions": [
+      "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript & D3",
+      "Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
+    ]
+  }, {
+    "title": "Creative Technologist, Upswell", 
+    "timespan": "Jan 2014 - Jan 2015",
+    "descriptions": [
+      "Architecting and engineering user analytics APIs using Python, Flask and InfluxDB for tracking anonymous metrics in immersive installation software",
+      "Prototyping and experimenting with new technologies including Arduino and Heroic Robotics LED strips, fingerprint sensors and image compositing techniques in OSX",
+      "Developing Microsoft Kinect controlled interactive experience for Clemson University using Cinder",
+      "Developing multiple interactive touch screen applications with Swift, iOS and macOS Desktop for The Nevada Discovery Museum"
+    ]
+  }, {
+    "title": "Interactive Developer, Second Story Interactive",
+    "timespan": "July 2007 - Jan 2010",
+    "descriptions": [
+      "Developing award winning interactive digital installations for museums and cultural institutions",
+      "Maintaining and extending MVC application framework used by development teams",
+      "Designed performance tests for simulating user input over extended periods for analysis and optimization of CPU/GPU performance and memory consumption",
+      "Leading research and feasibility studies of new technologies for potential company-wide adoption"
+    ]
+  }],
   "projects": [{
     "client": "Oregon Museum of Sciecne and Industry",
     "collaborators": ["Made Clear"],
@@ -147,7 +182,7 @@
     "published": true,
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Complex network graph data visualization with vanilla JavaScript",
-    "topics": {"vis": {}},
+    "topics": {"vis": {"JavaScript": ["D3"]}},
     "year": 2014
   }, {
     "client": "Clemson University",
@@ -473,9 +508,23 @@
     "tldr": "A treemap for visualizing semantically clustered patent documents", 
     "topics": {
       "vis": {"JavaScript": ["D3", "Node", "NPM"]}, 
-      "search": {"JavaScript": []}
+      "search": {"JavaScript": ["D3", "Node", "NPM"]}
     }, 
     "year": 2019
+  }, {
+    "client": "Terra Incognita", 
+    "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
+    "id": "storycrafter-analytics", 
+    "keywords": ["analytics", "metrics", "time", "series"],
+    "platforms": ["WWW"], 
+    "published": true,
+    "title": "Storycrafter Analytics", 
+    "tldr": "A user interaction metics gathering API for the Storycrafter platform", 
+    "topics": {
+      "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
+      "vis": {"JavaScript": ["Node", "NPM", "D3"]}
+    }, 
+    "year": 2018
   }, {
     "client": "Textwise",
     "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
@@ -484,11 +533,11 @@
     "platforms": ["Web"],
     "published": true,
     "title": "The Semantic Map",
-    "tldr": "Hexbin based data visualization patent corpus search results",
+    "tldr": "Hexbin, quadtrees, thousands of lines of code and... Boom",
     "topics": {
-      "search":{},
+      "search":{"JavaScript": ["D3", "Node", "NPM"]},
       "vis": {"JavaScript": ["D3", "Node", "NPM"]},
-      "ai": {}
+      "ai": {"C++": []}
     },
     "year": 2017
   },
@@ -517,7 +566,7 @@
     "title": "Measure, Analytics",
     "tldr": "Custom analytics tracking for interactive installations",
     "topics": {
-      "install": {"Python": []}, 
+      "vis": {"JavaScript": ["D3"]},
       "fs": {"Databases": ["InfluxDB"], "JavaScript": ["D3"]} 
     }, 
     "year": 2015
@@ -687,7 +736,6 @@
     "topics": {
       "fs": {
         "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
-        "Random": ["Google Cloud"], 
         "Databases": ["MongoDB"]
       }
     },

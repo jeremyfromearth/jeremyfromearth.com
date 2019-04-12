@@ -43,7 +43,7 @@ export default {
 
 <template>
   <div class='project'>
-    <TopicSwatch :data='data.topics' class='project-pin' v-on:highlight='highlight'/> 
+    <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight'/> 
     <div class='project-inner'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
@@ -117,7 +117,7 @@ export default {
   transform: translate(3em, 0);
 }
 
-.project-pin {
+.topic-swatch {
   transform: translate(0, -2px);
   align-self: center;
   opacity: 0;
@@ -126,11 +126,11 @@ export default {
   transition-delay: 0.1s;
 }
 
-.project-pin:hover {
+.topic-swatch:hover {
   color: red;
 }
 
-.project:hover .project-pin {
+.project:hover .topic-swatch {
   opacity: 1;
   transform: translate(0, 0);
   display: block;
