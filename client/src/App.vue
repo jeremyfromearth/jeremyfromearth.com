@@ -2,10 +2,12 @@
 // Vendor imports
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import {mapActions} from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+import Gallery from './components/Gallery'
 import Project from './components/Project'
 import TopicSwatch from './components/TopicSwatch'
 
@@ -23,6 +25,8 @@ Vue.use(MdField)
 Vue.use(MdLayout)
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.component('Gallery', Gallery)
 Vue.component('Project', Project)
 Vue.component('TopicSwatch', TopicSwatch)
 
@@ -30,6 +34,9 @@ library.add(faCoffee)
 
 export default {
   name: 'JeremyFromEarth',
+  computed: {
+    ...mapGetters(['gallery_id'])
+  },
   methods: {
     ...mapActions([
         'set_window_size'
@@ -48,5 +55,17 @@ export default {
 </script>
 
 <template>
-  <router-view></router-view>
+  <div>
+    <router-view></router-view>
+    <Gallery v-if='gallery_id != null' class='gallery'/>
+  </div>
 </template>
+
+<style scoped>
+  .gallery {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+</style>

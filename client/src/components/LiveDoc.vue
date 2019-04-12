@@ -10,8 +10,8 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'blog_posts', 'employment', 'keywords', 'links', 
-      'pagination', 'projects_paged',
+      'blog_posts', 'employment', 'gallery_id', 'keywords', 
+      'links', 'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
       'projects_per_page', 'technologies', 'text',
       'topics', 'topics_palette', 'window_size'
@@ -109,16 +109,22 @@ export default {
   <md-app>
     <md-app-content class='content'>
       <div class='container'>
+        <!-- Header --> 
         <div class='header-container'>
-          <h1>Jeremy from <i id='globe' :class='globe_icon_class'></i></h1>
+          <h1>J from <i id='globe' :class='globe_icon_class'></i></h1>
           <div class='header-links'>
             <a v-for='link in links' 
                class='header-link' :title='link.title' 
                :href='link.url' :key='link.url'><i :class='link.icon'></i></a>
           </div>
         </div>
+
+        <!-- Intro -->
         <h2>Software Engineer</h2>
         <p>{{text['intro']}}</p>
+
+        <!-- Blog -->
+
         <h3>Blog</h3>
         <p>Recent Articles</p>
         <div>
@@ -126,6 +132,9 @@ export default {
             <li v-for='(x, i) in blog_posts' :key='i'><a :href='x.url'>{{ x.title }}</a></li>
           </ul>
         </div>
+
+        <!-- Stacks -->
+
         <h3>Stacks</h3>
         <div class='md-layout'>
           <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
@@ -137,6 +146,9 @@ export default {
             </ul>
           </div>
         </div>
+
+        <!-- Projects -->
+
         <div class='projects-toolbar'>
           <h3>Projects</h3>
           <div class='search-container'>
@@ -201,7 +213,9 @@ export default {
           </div>
           <div class='pagination-detail'>{{ pagination_text }}</div>
         </div>
+
         <!-- No Matching Projects -->
+
         <div v-else class='no-matching-projects-message'>
           <i :class='no_match_class'></i>
           <p>No projects matched the keywords provided</p>
@@ -228,11 +242,13 @@ export default {
         <div class='md-layout'>
           <div class='md-layout-item'>
             <p>Britelite Immersive</p>
-            <p>Cibo</p>
+            <p>Cibo Design</p>
             <p>C&amp;G Partners</p>
             <p>The History Factory</p>
+            <p>Instrument</p>
           </div>
           <div class='md-layout-item'>
+            <p>Made Clear</p>
             <p>The Makers</p>
             <p>Northern Light</p>
             <p>Potion Design</p>
@@ -240,6 +256,7 @@ export default {
           </div>
           <div class='md-layout-item'>
             <p>Second Story</p>
+            <p>Textwise</p>
             <p>Terra Incognita</p>
             <p>Upswell</p>
             <p>Wieden+Kennedy</p>
@@ -256,7 +273,6 @@ export default {
           <li>Rolling your own is fun. Rolling for others requires empathy.</li>
           <li>The terrain between simplicity and complexity is smooth and continuous.</li>
         </ul>
-        <!--<p>If you send me a haiku, I'll send you one back.</p>-->
       </div>
     </md-app-content>
   </md-app>
@@ -269,11 +285,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-self: center;
+    padding-top: 16px;
   }
 
   .content {
     display: flex;
     flex-direction: column;
+    padding: 0;
   }
 
   .header-container {

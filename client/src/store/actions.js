@@ -141,7 +141,6 @@ export default {
       
         const employment = res[0].data['employment']
         commit('set_employment', employment)
-
       })
   },
   inc_pagination({commit}) {
@@ -149,6 +148,9 @@ export default {
   },
   remove_keyword({commit}, kw) {
     commit('remove_keyword', kw) 
+  },
+  set_gallery_id({commit}, id) {
+    commit('set_gallery_id', id)
   },
   set_window_size({commit}, size) {
     if(size.length >= 2 && !isNaN(size[0]) > 0 && !isNaN(size[1]) > 0) {

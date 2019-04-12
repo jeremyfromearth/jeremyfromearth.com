@@ -28,13 +28,6 @@ a:active: {}
   color: #777;
 }
 
-body {
-  color: #003f5c;
-  background-color: #fff;
-  /*color: #00283a;*/
-  margin: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: IBMPlexMonoSemiBold, monospace;
   line-height: 1.0;

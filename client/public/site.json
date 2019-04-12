@@ -1,6 +1,6 @@
 {
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and related fields."
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization."
   },
   "links": [
     {
@@ -169,7 +169,7 @@
     "tldr": "Thirty foot media wall of facts, figures and data visualization",
     "topics": {
       "install": {"C++":["Cinder", "OpenGL"]}, 
-      "vis": {}
+      "vis": {"C++": ["Cinder", "OpenGL"]}
     },
     "year": 2014
   }, {
@@ -728,6 +728,7 @@
     "description": "Canvas is a scalable and cross platform content presentation software capable of displaying full-screen web apps on touch screens in public spaces. It allows content producers using the Storycrafter platform to easily publish content without the need for manually copying content using removable media or otherwise. I architected and developed both the front end desktop application and the server side application that connects to the Storycrafter CMS and notifies deployments of content updates.",
     "featured": true,
     "id": "canvas",
+    "images": [],
     "keywords": ["storycrafter", "content", "realtime", "real", "time", "web", "sockets", "analytics", "installation"],
     "platforms": ["macOS", "Windows"],
     "published": true,

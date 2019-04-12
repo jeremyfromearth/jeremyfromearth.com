@@ -47,6 +47,9 @@ export default {
   set_employment(state, value) {
    state.employment = value
   },
+  set_gallery_id(state, value) {
+    state.gallery_id = value
+  },
   set_links(state, value) {
     state.links = value
   },
@@ -58,7 +61,7 @@ export default {
     state.index = value
   },
   set_project_lookup(state, value) {
-    state.lookup = value
+    state.project_lookup = value
   },
   set_technologies(state, value) {
     state.technologies = value
