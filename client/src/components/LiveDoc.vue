@@ -132,7 +132,9 @@ export default {
           <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
             <h4>{{ k }} </h4> 
             <ul class='md-layout-item'>
-              <li v-for='t in technologies[k]' class='tech-list-item' :key='t.label'>{{ t.label }}</li>
+              <li v-for='t in technologies[k]' 
+                class='tech-list-item' :key='t.label' 
+                :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null}'>{{ t.label }}</li>
             </ul>
           </div>
         </div>
@@ -527,6 +529,7 @@ export default {
 
   .tech-list-item {
     white-space: nowrap;
+    transition: text-shadow 0.4s;
   }
 
   .topic-legend {

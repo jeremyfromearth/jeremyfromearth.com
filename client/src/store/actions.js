@@ -124,8 +124,6 @@ export default {
         commit('set_topics', topics)
         commit('set_topic_index', topic_idx)
 
-        console.log(index)
-
         // --------------------------------------------------------
         //
         // Blog

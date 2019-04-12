@@ -1,6 +1,33 @@
 <script>
+import {mapGetters} from 'vuex'
+
 export default {
   name: 'Project',
+  computed: {
+    ...mapGetters([
+        'technologies', 
+        'topics_palette',
+        'topics',
+      ])
+  },
+  methods: {
+    highlight(topic, value) {
+      const t = this.data.topics[topic.id]
+      const color = this.topics_palette[topic.palette] 
+      if(t) {
+        Object.keys(t).forEach(lang => {
+          t[lang].forEach(tech => {
+            this.technologies[lang].forEach(t => {
+              if(t.label == tech) {
+                t.highlight = value
+                t.color = color
+              }
+            })
+          })
+        })
+      }
+    }
+  },
   props: {
     data: {
       type: Object,
@@ -16,7 +43,7 @@ export default {
 
 <template>
   <div class='project'>
-    <TopicSwatch :data='data.topics' class='project-pin'/> 
+    <TopicSwatch :data='data.topics' class='project-pin' v-on:highlight='highlight'/> 
     <div class='project-inner'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>

@@ -459,7 +459,7 @@
     "tldr": "A domain specific langauge for patent document search",
     "topics": {
       "vis": {"JavaScript": ["D3", "Node"]}, 
-      "search": {"C++": ["stdlib"], "Random": ["Java"]}
+      "search": {"C++": ["stdlib"], "Random": ["Java"], "JavaScript": ["D3", "Node", "NPM"]}
     },
     "year": 2017
   }, {
@@ -668,7 +668,8 @@
     "topics": {
       "bots": {"Python": ["Keras", "Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"]},
-      "nlp": {"Python": ["Rasa", "SpaCy"]}
+      "nlp": {"Python": ["Rasa", "SpaCy"]}, 
+      "ai": {"Python": ["Keras"]}
     },
     "url": "http://patch.jeremyfromearth.com",
     "video": "http://vimeo.com/203942309",

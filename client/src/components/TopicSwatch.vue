@@ -27,10 +27,11 @@ export default {
     get_chart_item_class() {
       if(this.topic_count == 0) return ''
       return `${this.get_chart_class()}-item`
+    },
+    highlight(topic, value) {
+      topic.highlight = value
+      this.$emit('highlight', topic, value)
     }
-  },
-  mounted() {
-    console.log(this.data)
   },
   props: {
     data: {
@@ -42,14 +43,14 @@ export default {
 </script>
 
 <template>
-  <div class='topic-chart'>
-    <div class='topic-chart-inner'>
+  <div class='topic-swatch'>
+    <div class='topic-swatch-inner'>
       <div :class='get_chart_class()'>
         <div v-for='(t, i) in get_topics()' 
           :class='get_chart_item_class()' 
           :key='i' :style='{backgroundColor: topics_palette[t.palette]}'
-          @mouseenter='()=> t.highlight = true'
-          @mouseleave='()=> t.highlight = false'>
+          @mouseenter='highlight(t, true)'
+          @mouseleave='highlight(t, false)'>
         </div>
       </div>
     </div>
@@ -57,7 +58,7 @@ export default {
 </template>
 
 <style scoped>
-  .topic-chart-inner {
+  .topic-swatch-inner {
     height: 2em;
     width: 2em;
     align-self: center;
@@ -67,7 +68,7 @@ export default {
     transform-origin: center;
   }
 
-  .topic-chart-inner:hover {
+  .topic-swatch-inner:hover {
     transform: rotate(1.57rad) scale(1.4);
     cursor: pointer;
   }
