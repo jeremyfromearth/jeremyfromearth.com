@@ -352,6 +352,8 @@ export default {
     font-size: 0.8em;
     font-style: italic;
     flex-grow: 0;
+    padding:  0 1em;
+    border-left: 1px solid #ccc;
   }
 
   .no-matching-projects-message {
@@ -508,8 +510,6 @@ export default {
   .project-group-inner-up-leave-to {
     transform: translate(0, 8px);
   }
-
-  
 
   .remove-keyword-icon:hover {
     color: red; 
