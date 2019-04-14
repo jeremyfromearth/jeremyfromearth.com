@@ -13,7 +13,8 @@ export default {
       'gallery_id',
       'project_lookup',
       'topic_index', 
-      'topics_palette'
+      'topics_palette', 
+      'window_size'
     ]), 
     gradient: function() {
       const p = this.project_lookup[this.gallery_id]
@@ -37,7 +38,10 @@ export default {
       image_count: 0,
       image_idx: 0,
       image_paths: [],
+      image_width: '80%', 
+      image_height: '80%',
       interval_id: 0,
+      loading: true,
       open: true,
       radians: -0.8,
       visible: false
@@ -51,14 +55,37 @@ export default {
     close() {
       this.set_gallery_id(null)
     },
+    dec() {
+      this.image_idx = this.image_idx - 1 % this.image_paths.length
+      this.load_image()
+    },
+    inc() {
+      this.image_idx = (this.image_idx + 1) % this.image_paths.length
+      this.load_image()
+    },
     load_image() {
+      this.loading = true
       const image_path = `/images/projects/${this.image_paths[this.image_idx]}`
       if(!this.images.includes(image_path)) {
         const img = new Image()
         img.src = image_path 
         img.addEventListener('load', ()=> {
-          this.images[this.image_idx] = img.src 
-          this.$forceUpdate()
+          let r = 1
+          const w = this.window_size[0]
+          const h = this.window_size[1]
+
+          if(img.width >= img.height) {
+            r = img.height / img.width
+            this.image_width = w * 0.8
+            this.image_height = this.image_width * r
+          } else {
+            r = img.width / img.height
+            this.image_height = h * 0.8
+            this.image_width = this.image_height * r
+          }
+
+          this.current_image = this.images[this.image_idx] = img
+          this.loading = false
         })
       }
     }
@@ -67,13 +94,11 @@ export default {
     this.image_idx = 0
     this.image_paths = this.project_lookup[this.gallery_id].images
 
-    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
-    */
-    
+
     this.visible = true
     this.load_image()
   }
@@ -88,10 +113,11 @@ export default {
     
     <div class='image-container-outer'>
       <transition name='image-container'>
-        <div v-if='visible' class='image-container'>
-          <div v-for='(img, i) in images' :key='i' class='image'>
+        <div v-if='visible' class='image-container' 
+          :style='{width: `${image_width}px`, height: `${image_height}px`}'>
+          <div class='image'>
             <transition name='image'>
-              <img v-if='i == image_idx && images[image_idx]' class='md-image image' :src='img'>
+              <img v-if='!loading' class='md-image' :src='current_image.src' :key='current_image.src'>
             </transition>
           </div>
         </div>
@@ -103,6 +129,10 @@ export default {
         <i class="far fa-times-circle"></i>
       </div>
     </transition>
+
+    <div class='controls'> 
+    
+    </div>
   </div>
 </template>
 
@@ -162,15 +192,16 @@ export default {
 .image {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
-.image-enter {
+.image-enter, .image-leave {
   opacity: 0;
 }
 
-.image-enter-active {
-  transition: all 2.0s;
-  transition-delay: 6.4s;
+
+.image-enter-active, .image-leave-active {
+  transition: all 0.8s;
 }
 
 .image-container {
@@ -178,15 +209,15 @@ export default {
   padding: 1em;
   width: 80%;
   height: 80%;
+  transition: all .4s;
 }
 
-.image-container-enter {
+.image-container-enter, .image-container-leave {
   opacity: 0;
   transform: translate(0, 30px);
 }
 
 .image-container-enter-active {
-  transition: all .4s;
   transition-delay: 0.4s;
 }
 
@@ -205,6 +236,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
 }
 
 </style>

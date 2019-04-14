@@ -285,7 +285,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-self: center;
-    padding-top: 16px;
+    padding: 16px;
   }
 
   .content {
