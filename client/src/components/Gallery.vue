@@ -55,6 +55,33 @@ export default {
     close() {
       this.set_gallery_id(null)
     },
+    calc_image_size() {
+      let r = 1
+      const w = this.window_size[0]
+      const h = this.window_size[1] 
+        - this.$refs.controls.clientHeight - 
+          this.$refs.close_button.clientHeight
+
+      if(this.current_image.width >= this.current_image.height) {
+        r = this.current_image.height / this.current_image.width
+        this.image_width = w * 0.8
+        this.image_height = this.image_width * r
+        if(this.image_height > h) {
+          r = this.current_image.width / this.current_image.height
+          this.image_height = h * 0.8
+          this.image_width = this.image_height * r
+        }
+      } else {
+        r = this.current_image.width / this.current_image.height
+        this.image_height = h * 0.8
+        this.image_width = this.image_height * r
+        if(this.image_width > w) {
+          r = this.current_image.height / this.current_image_width
+          this.image_width = w * 0.8
+          this.image_height = this.image_width * r
+        }
+      }
+    },
     dec() {
       this.image_idx = this.image_idx - 1 % this.image_paths.length
       this.load_image()
@@ -70,21 +97,8 @@ export default {
         const img = new Image()
         img.src = image_path 
         img.addEventListener('load', ()=> {
-          let r = 1
-          const w = this.window_size[0]
-          const h = this.window_size[1]
-
-          if(img.width >= img.height) {
-            r = img.height / img.width
-            this.image_width = w * 0.8
-            this.image_height = this.image_width * r
-          } else {
-            r = img.width / img.height
-            this.image_height = h * 0.8
-            this.image_width = this.image_height * r
-          }
-
           this.current_image = this.images[this.image_idx] = img
+          this.calc_image_size() 
           this.loading = false
         })
       }
@@ -98,15 +112,18 @@ export default {
     this.image_idx = 0
     this.image_paths = this.project_lookup[this.gallery_id].images
 
-    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
-    */
 
     this.visible = true
     this.load_image()
+  }, 
+  watch: {
+    window_size: function() {
+      this.calc_image_size()
+    }
   }
 }
 </script>
@@ -119,7 +136,7 @@ export default {
 
     <div class='image-container-outer'>
       <transition name='close-button'>
-        <div v-if='visible' class='close-button'  @click='visible=false'>
+        <div ref='close_button' v-if='visible' class='close-button'  @click='visible=false'>
           <i class="far fa-times-circle"></i>
         </div>
       </transition>
@@ -129,13 +146,13 @@ export default {
           :style='{width: `${image_width}px`, height: `${image_height}px`}'>
           <div class='image'>
             <transition name='image'>
-              <img v-if='!loading' class='md-image' :src='current_image.src' :key='current_image.src'>
+              <img v-if='current_image' class='md-image' :src='current_image.src' :key='current_image.src'>
             </transition>
           </div>
         </div>
       </transition>
 
-      <div class='controls'> 
+      <div ref='controls' class='controls'> 
         <div class='button' v-for='(img, i) in image_paths' 
              :key='i' @click='set_image_idx(i)' :style='{pointerEvents: `${image_idx != i} ? all : none`}'>
           <i v-if='i == image_idx' class="fas fa-circle"></i>
@@ -199,12 +216,13 @@ export default {
 
 .controls {
   align-self: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.5);
   border-radius: 0.2em;
-  color: #aaa;
+  color: white;
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
-  margin-bottom: 2em;
+  margin: 1em 0 2em 0;
   padding: 0.4em;
 }
 
@@ -224,23 +242,23 @@ export default {
   position: relative;
 }
 
-.image-enter, .image-leave {
+.image-enter {
   opacity: 0;
 }
 
-
 .image-enter-active, .image-leave-active {
-  transition: all 0.8s;
+  transition: all 0.4s;
 }
 
 .image-container {
-  background-color: white;
-  padding: 1em;
-  width: 80%;
-  height: 80%;
-  transition: all .4s;
   align-self: center;
+  background-color: white;
+  flex-shrink: 1;
+  height: 80%;
   justify-self: center;
+  padding: 1em;
+  transition: all .4s;
+  width: 80%;
 }
 
 .image-container-enter, .image-container-leave {
