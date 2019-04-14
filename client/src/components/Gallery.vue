@@ -48,7 +48,9 @@ export default {
     }
   },
   destroyed() {
+    console.log('destroyed')
     clearInterval(this.interval_id)
+    window.removeEventListener('keydown', this.on_key_down_throttle)
   },
   methods: {
     ...mapActions(['set_gallery_id']), 
@@ -58,8 +60,8 @@ export default {
     calc_image_size() {
       let r = 1
       const w = this.window_size[0]
-      const h = this.window_size[1] 
-        - this.$refs.controls.clientHeight - 
+      const h = this.window_size[1] -
+        this.$refs.controls.clientHeight - 
           this.$refs.close_button.clientHeight
 
       if(this.current_image.width >= this.current_image.height) {
@@ -103,6 +105,21 @@ export default {
         })
       }
     }, 
+    on_key_down(evt) {
+      console.log('on_key_down')
+      if(evt.key == 'ArrowRight') {
+        this.set_image_idx(
+          this.image_idx + 1 > this.image_paths.length - 1 ? 
+            0 : this.image_idx + 1)
+      }
+
+      if(evt.key == 'ArrowLeft') {
+        this.set_image_idx(
+          this.image_idx - 1 < 0 ? 
+            this.image_paths.length - 1 : 
+              this.image_idx - 1)
+      }
+    },
     set_image_idx(i) {
       this.image_idx = i
       this.load_image()
@@ -119,6 +136,8 @@ export default {
 
     this.visible = true
     this.load_image()
+    this.on_key_down_throttle = _.throttle(this.on_key_down, 500), {leading: true}
+    window.addEventListener('keydown', this.on_key_down_throttle)
   }, 
   watch: {
     window_size: function() {
