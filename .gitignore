@@ -3,3 +3,4 @@
 node_modules/
 legacy/
 client/public/images
+client/dist/
