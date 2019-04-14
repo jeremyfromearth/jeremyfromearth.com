@@ -48,7 +48,6 @@ export default {
     }
   },
   destroyed() {
-    console.log('destroyed')
     clearInterval(this.interval_id)
     window.removeEventListener('keydown', this.on_key_down_throttle)
   },
@@ -106,7 +105,6 @@ export default {
       }
     }, 
     on_key_down(evt) {
-      console.log('on_key_down')
       if(evt.key == 'ArrowRight') {
         this.set_image_idx(
           this.image_idx + 1 > this.image_paths.length - 1 ? 
@@ -129,10 +127,12 @@ export default {
     this.image_idx = 0
     this.image_paths = this.project_lookup[this.gallery_id].images
 
+    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
+    */
 
     this.visible = true
     this.load_image()
@@ -161,26 +161,32 @@ export default {
       </transition>
 
       <transition name='image-container'>
-        <div v-if='visible' class='image-container' 
+        <div v-if='visible && current_image' class='image-container' 
           :style='{width: `${image_width}px`, height: `${image_height}px`}'>
           <div class='image'>
             <transition name='image'>
               <img v-if='current_image' class='md-image' :src='current_image.src' :key='current_image.src'>
             </transition>
           </div>
+          
         </div>
       </transition>
 
       <transition name='controls' appear>
         <div ref='controls' class='controls'> 
           <div class='button' v-for='(img, i) in image_paths' 
-               :key='i' @click='set_image_idx(i)' :style='{pointerEvents: `${image_idx != i} ? all : none`}'>
+               :key='i' @click='set_image_idx(i)'>
             <i v-if='i == image_idx' class="fas fa-circle"></i>
             <i v-else class="far fa-circle"></i>
           </div>
         </div>
       </transition>
     </div>
+    <transition name='spinner'>
+      <div v-if='loading' class='spinner'>
+        <i class="fas fa-spinner"></i>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -304,4 +310,36 @@ img {
   position: absolute;
 }
 
+.spinner {
+  animation: spinner-rotation 1s linear infinite;
+  color: white;
+  font-size: 3em;
+  left: 48%;
+  position: absolute;
+  top: 45%;
+  transform-origin: center;
+  z-index: 1;
+}
+
+.spinner-enter {
+  opacity: 0;
+}
+
+.spinner-leave-to {
+  opacity: 0;
+}
+
+.spinner-enter-active, .spinner-leave-active {
+  transition: opacity 0.2s;
+}
+
+@keyframes spinner-rotation {
+  from {
+    transform: rotate(0deg); 
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>
