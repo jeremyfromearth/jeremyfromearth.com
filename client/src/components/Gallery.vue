@@ -152,13 +152,15 @@ export default {
         </div>
       </transition>
 
-      <div ref='controls' class='controls'> 
-        <div class='button' v-for='(img, i) in image_paths' 
-             :key='i' @click='set_image_idx(i)' :style='{pointerEvents: `${image_idx != i} ? all : none`}'>
-          <i v-if='i == image_idx' class="fas fa-circle"></i>
-          <i v-else class="far fa-circle"></i>
+      <transition name='controls' appear>
+        <div ref='controls' class='controls'> 
+          <div class='button' v-for='(img, i) in image_paths' 
+               :key='i' @click='set_image_idx(i)' :style='{pointerEvents: `${image_idx != i} ? all : none`}'>
+            <i v-if='i == image_idx' class="fas fa-circle"></i>
+            <i v-else class="far fa-circle"></i>
+          </div>
         </div>
-      </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -172,13 +174,11 @@ export default {
   z-index: -1;
 }
 
-.background-enter, .background-leave-to {
-  opacity: 0;
-}
+.background-enter, 
+.background-leave-to { opacity: 0; }
 
-.background-enter-active, .background-leave-active {
-  transition: opacity 0.4s;
-}
+.background-enter-active, 
+.background-leave-active { transition: opacity 0.4s; }
 
 .close-button {
   padding: 0.5em;
@@ -202,17 +202,12 @@ export default {
   transform: rotate(90deg);
 }
 
-.close-button-enter-to {
-  right: 1em;
-}
+.close-button-enter-to { right: 1em; }
 
-.close-button-enter-active, .close-button-leave-active {
-  transition: all 0.4s;
-}
+.close-button-enter-active, 
+.close-button-leave-active { transition: all 0.4s; }
 
-.close-button-leave-active {
-  transform: rotate(90deg);
-}
+.close-button-leave-active { transform: rotate(90deg); }
 
 .controls {
   align-self: center;
@@ -222,7 +217,7 @@ export default {
   display: flex;
   flex-shrink: 0;
   justify-content: space-between;
-  margin: 1em 0 2em 0;
+  margin: 2em 0 4em 0;
   padding: 0.4em;
 }
 
@@ -236,19 +231,24 @@ export default {
   cursor: pointer;
 }
 
+.controls-enter { opacity: 0; }
+
+.controls-enter-active, 
+.controls-leave-active { 
+  transition: all 0.4s; 
+  transition-delay: 0.8s;
+}
+
 .image {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.image-enter {
-  opacity: 0;
-}
+.image-enter { opacity: 0; }
 
-.image-enter-active, .image-leave-active {
-  transition: all 0.4s;
-}
+.image-enter-active, 
+.image-leave-active { transition: all 0.4s; }
 
 .image-container {
   align-self: center;
@@ -266,9 +266,7 @@ export default {
   transform: translate(0, 30px);
 }
 
-.image-container-enter-active {
-  transition-delay: 0.4s;
-}
+.image-container-enter-active { transition-delay: 0.4s; }
 
 .image-container-outer {
   position: absolute;
