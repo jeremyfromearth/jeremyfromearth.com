@@ -697,7 +697,9 @@
     "tldr": "Sixteen screens trying subtly to fit in at the art museum",
     "topics": {
       "install": {
-        "C++": ["Cinder", "OpenGL", "Kinect"],
+        "C++": ["Cinder", "OpenGL", "Kinect"]
+      }, 
+      "fs": {
         "Python": ["SocketIO", "Flask"]
       }
     },

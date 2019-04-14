@@ -88,16 +88,22 @@ export default {
           this.loading = false
         })
       }
+    }, 
+    set_image_idx(i) {
+      this.image_idx = i
+      this.load_image()
     }
   },
   mounted() {
     this.image_idx = 0
     this.image_paths = this.project_lookup[this.gallery_id].images
 
+    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
+    */
 
     this.visible = true
     this.load_image()
@@ -110,8 +116,14 @@ export default {
     <transition name='background' v-on:after-leave="close">
       <div v-if='visible' class='background' :style='{backgroundImage: gradient}' @click='visible=false'/>
     </transition>
-    
+
     <div class='image-container-outer'>
+      <transition name='close-button'>
+        <div v-if='visible' class='close-button'  @click='visible=false'>
+          <i class="far fa-times-circle"></i>
+        </div>
+      </transition>
+
       <transition name='image-container'>
         <div v-if='visible' class='image-container' 
           :style='{width: `${image_width}px`, height: `${image_height}px`}'>
@@ -122,16 +134,14 @@ export default {
           </div>
         </div>
       </transition>
-    </div>
 
-    <transition name='close-button'>
-      <div v-if='visible' class='close-button'  @click='visible=false'>
-        <i class="far fa-times-circle"></i>
+      <div class='controls'> 
+        <div class='button' v-for='(img, i) in image_paths' 
+             :key='i' @click='set_image_idx(i)' :style='{pointerEvents: `${image_idx != i} ? all : none`}'>
+          <i v-if='i == image_idx' class="fas fa-circle"></i>
+          <i v-else class="far fa-circle"></i>
+        </div>
       </div>
-    </transition>
-
-    <div class='controls'> 
-    
     </div>
   </div>
 </template>
@@ -154,12 +164,11 @@ export default {
 }
 
 .close-button {
+  padding: 0.5em;
+  align-self: flex-end;
   color: white;
   font-size: 3em;
   opacity: 0.8;
-  position: absolute;
-  right: 1em;
-  top: 1em;
   transition: all 0.8s;;
   z-index: 1;
 }
@@ -173,7 +182,6 @@ export default {
 .close-button-enter, .close-button-leave-to {
   color: #ccc;
   opacity: 0;
-  right: 0;
   transform: rotate(90deg);
 }
 
@@ -187,6 +195,27 @@ export default {
 
 .close-button-leave-active {
   transform: rotate(90deg);
+}
+
+.controls {
+  align-self: center;
+  background-color: white;
+  border-radius: 0.2em;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 0.4em;
+}
+
+.controls .button {
+  padding: 0 0.2em; 
+  transition: all 0.2s;
+}
+
+.controls .button:hover {
+  color: #eee; 
+  cursor: pointer;
 }
 
 .image {
@@ -210,6 +239,8 @@ export default {
   width: 80%;
   height: 80%;
   transition: all .4s;
+  align-self: center;
+  justify-self: center;
 }
 
 .image-container-enter, .image-container-leave {
@@ -222,14 +253,13 @@ export default {
 }
 
 .image-container-outer {
-  pointer-events: none;
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
 }
 
 img {
