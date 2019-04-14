@@ -501,6 +501,10 @@
     "client": "Textwise", 
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci.", 
     "id": "textwise-treemap", 
+    "images": [
+      "textwise-treemap-01.jpg",
+      "textwise-treemap-02.jpg"
+    ],
     "keywords": ["textwise", "treemap", "nlp", "data", "visualization", "wordclouds", "d3", "clustering", "search"], 
     "platforms": ["web"],
     "published": true, 
@@ -671,6 +675,15 @@
     "description": "Infrastructure startup beta virality ramen deployment market low hanging fruit scrum project user experience return on investment. Innovator monetization freemium stock. Agile development equity focus incubator paradigm shift gen-z influencer iPhone burn rate graphical user interface infrastructure buyer alpha business plan.",
     "collaborators": ["Britelite Immersive"],
     "id": "sfmoma-storyscreens",
+    "images": [
+      "sfmoma-exterior-01.jpg",
+      "sfmoma-interior-01.jpg", 
+      "sfmoma-interior-02.jpg", 
+      "sfmoma-interior-03.jpg", 
+      "sfmoma-interior-04.jpg", 
+      "sfmoma-interior-05.jpg", 
+      "sfmoma-interior-06.jpg"
+    ],
     "keywords": ["sfmoma", "moma", "data", "visualization", "events", "installation"],
     "location": "San Francisco, California",
     "platforms": ["Windows"],

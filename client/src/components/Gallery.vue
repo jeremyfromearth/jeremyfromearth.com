@@ -24,7 +24,7 @@ export default {
 
         const c = []
         topics.forEach(t => c.push(this.topics_palette[t.palette]))
-        if(c.length == 1) c.push('#ffffff')
+        if(c.length == 1) c.push('#000')
         return `linear-gradient(${this.radians}rad, ${c.join(',')})`
       }
       return '#ffffff'
@@ -39,7 +39,6 @@ export default {
     }
   },
   destroyed() {
-    console.log('destroyed')
     clearInterval(this.interval_id)
   },
   methods: {
@@ -64,10 +63,13 @@ export default {
       <div v-if='visible' class='background' :style='{backgroundImage: gradient}' @click='visible=false'/>
     </transition>
     <transition name='close-button'>
-    <div v-if='visible' class='close-button'  @click='visible=false'>
-        <i class="far fa-window-close"></i>
+      <div v-if='visible' class='close-button'  @click='visible=false'>
+        <i class="fas fa-brain"></i>
       </div>
     </transition>
+    <div class='image'>
+
+    </div>
   </div>
 </template>
 
@@ -88,31 +90,36 @@ export default {
 }
 
 .close-button {
-  color: white;
+  color: #ccc;
   font-size: 3em;
-  opacity: 0.5;
+  opacity: 0.8;
   position: absolute;
   right: 1em;
   top: 1em;
-  transition: color 0.4s;
+  transition: all 0.8s;;
 }
 
 .close-button:hover {
-  opacity: 0.9;
+  color: white;
   cursor: pointer;
 }
 
 .close-button-enter, .close-button-leave-to {
   opacity: 0;
   right: 0;
+  transform: rotate(90deg);
 }
 
 .close-button-enter-to {
-  opacity: 0.5;
+  opacity: 1;
   right: 1em;
 }
 
 .close-button-enter-active, .close-button-leave-active {
-  transition: opacity 0.2s, right 0.4s;
+  transition: all 0.4s;
+}
+
+.close-button-leave-active {
+  transform: rotate(90deg);
 }
 </style>
