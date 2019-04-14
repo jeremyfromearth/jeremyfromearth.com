@@ -99,7 +99,7 @@ export default {
             index[stemmed].add(proj['id'])
           })
         })
-        
+
         // Convert technology sets to sorted arrays
         Object.keys(technologies).forEach(k => {
           technologies[k] = Array.from(technologies[k]).map(x => {

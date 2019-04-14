@@ -9,7 +9,7 @@ const search = state => {
     let results = _.values(_.pick(state.index, terms))
     results = results.map(x => Array.from(x))
     results = _.intersection(...results)
-    results = _.values(_.pick(state.lookup, results)).sort((a, b) => a.year - b.year).reverse()
+    results = _.values(_.pick(state.project_lookup, results)).sort((a, b) => b.year - a.year)
     return results
   }
   return state.projects
