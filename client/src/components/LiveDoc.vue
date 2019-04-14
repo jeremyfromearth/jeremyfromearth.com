@@ -292,6 +292,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 0;
+    transition: 0.5s -webkit-filter linear;
   }
 
   .header-container {
