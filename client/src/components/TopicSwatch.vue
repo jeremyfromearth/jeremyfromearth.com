@@ -93,13 +93,6 @@ export default {
     align-self: center;
     overflow: hidden;
     border-radius: 0.2em;
-    transition: all 0.2s;
-    transform-origin: center;
-  }
-
-  .topic-swatch-inner:hover {
-    transform: rotate(1.57rad) scale(1.4);
-    cursor: pointer;
   }
 
   .trio-topic {

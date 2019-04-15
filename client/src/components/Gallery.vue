@@ -127,12 +127,10 @@ export default {
     this.image_idx = 0
     this.image_paths = this.project_lookup[this.gallery_id].images
 
-    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
-    */
 
     this.visible = true
     this.load_image()

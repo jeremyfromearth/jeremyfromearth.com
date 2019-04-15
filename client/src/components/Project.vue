@@ -95,6 +95,7 @@ export default {
 .project {
   display: flex;
   margin-top: 2em;
+  overflow: visible;
 }
 
 .project p {
@@ -116,10 +117,12 @@ export default {
 }
 
 .project-inner {
-  transition: transform 0.2s;
+  transition: transform 0.2s ease-in-out;
+  transition-delay: 0.2s;
 }
 
 .project:hover .project-inner {
+  transition-delay: 0s;
   transform: translate(3em, 0);
 }
 
@@ -130,6 +133,7 @@ export default {
   position: absolute;
   transition: opacity 0.2s, transform 0.4s;
   transition-delay: 0.1s;
+  transform-origin: center;
 }
 
 .topic-swatch:hover {
@@ -139,6 +143,7 @@ export default {
 .project:hover .topic-swatch {
   opacity: 1;
   transform: translate(0, 0);
+  transform: rotate(1.57rad) scale(1.4);
   display: block;
 }
 </style>

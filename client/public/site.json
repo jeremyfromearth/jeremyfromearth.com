@@ -161,6 +161,12 @@
     "location": "Winnipeg, Manitoba",
     "id": "cmhr-human-rights-now",
     "keywords": ["human", "rights", "projection", "data", "visualization", "installation"],
+    "images": [
+      "cmhr_hrnow_01.jpg",
+      "cmhr_hrnow_06.jpg", 
+      "cmhr-interior-02.jpg", 
+      "cmhr-screen-02.jpg"
+    ],
     "platforms": ["macOS"],
     "published": true,
     "collaborators": ["Upswell"],
@@ -189,6 +195,9 @@
     "collaborators": ["Upswell"],
     "description": "Innovator influencer creative validation marketing success leverage venture low hanging fruit buyer. A/B testing business-to-consumer churn rate innovator social media angel investor disruptive. Business model canvas series A financing buyer twitter handshake.",
     "id": "clemson-data-ribbon",
+    "images": [
+      "clemson_data_ribbon.jpg"
+    ],
     "keywords": ["led", "arduino", "heroic", "robotics", "kinect", "gesture", "installation"],
     "location": "Greenville, North Carolina",
     "platforms": ["Windows"],
@@ -231,6 +240,12 @@
     "collaborators": ["Upswell"],
     "description": "Direct mailing deployment network effects partner network buzz assets. Startup launch party responsive web design holy grail. Bandwidth advisor customer marketing learning curve social media business model canvas long tail.",
     "id": "clemson-family-portrait",
+    "images": [
+      "clemson_cfp_01.jpg",
+      "clemson_cfp_02.jpg",
+      "clemson_cfp_03.jpg",
+      "clemson_cfp_04.jpg"
+    ],
     "keywords": ["kinect", "installation", "cinder"],
     "location": "Greenville, North Carolina",
     "platforms": ["Windows"],
