@@ -19,5 +19,6 @@ export default {
   topics: state => state.topics,
   topic_index: state => state.topic_index,
   topics_palette: state => state.topics_palette,
+  video_id: state => state.video_id,
   window_size: state => state.window_size
 }

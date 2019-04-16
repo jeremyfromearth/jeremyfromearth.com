@@ -37,7 +37,7 @@ library.add(faCoffee)
 export default {
   name: 'JeremyFromEarth',
   computed: {
-    ...mapGetters(['gallery_id'])
+    ...mapGetters(['gallery_id', 'video_id'])
   },
   methods: {
     ...mapActions([
@@ -60,6 +60,7 @@ export default {
   <div>
     <router-view></router-view>
     <Gallery v-if='gallery_id != null' class='gallery'/>
+    <VimeoPlayer v-if='video_id != null'/>
   </div>
 </template>
 

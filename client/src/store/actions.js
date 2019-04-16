@@ -152,6 +152,9 @@ export default {
   set_gallery_id({commit}, id) {
     commit('set_gallery_id', id)
   },
+  set_video_id({commit}, id) {
+    commit('set_video_id', id)
+  },
   set_window_size({commit}, size) {
     if(size.length >= 2 && !isNaN(size[0]) > 0 && !isNaN(size[1]) > 0) {
       commit('set_window_size', size)

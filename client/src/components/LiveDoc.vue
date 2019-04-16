@@ -65,19 +65,18 @@ export default {
     */
 
     window.addEventListener('scroll', ()=> {
-      //console.log('hello', window.scrollY)
+      /*
       if(this.$refs.job_title) { 
         const title = this.$refs.job_title
         const r = title.getBoundingClientRect()
         const scroll_top = window.pageYOffset || document.documentElement.scrollTop
         const bottom = r.top + scroll_top + r.bottom
 
-        /*
         if(r.bottom < window.scrollY) {
           console.log('Gonna change job title')
         }
-        */
       }
+      */
     })
   }, 
   methods: {

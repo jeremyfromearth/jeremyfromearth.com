@@ -1,29 +1,30 @@
 <script>
-//import Player from '@vimeo/player'
+import Player from '@vimeo/player'
+
+import { mapGetters } from 'vuex'
 
 export default {
-  name: 'VimeoPlayer', 
-  props: {
-    src: {
-      type: String, 
-      default: ()=> ''
+  name: 'VimeoPlayer',
+  computed: {
+    ...mapGetters(['video_id'])
+  },
+  data() {
+    return {
+      player: null,
     }
+  },
+  mounted() {
+    this.player = 
+      new Player('player', {
+        id: this.video_id
+      })
+    console.log(this.player)
   }
 }
 </script>
 
 <template>
-  <div/>
-<!--
-<div>
-  <div style='padding:56.25% 0 0 0;position:relative;'>
-    <iframe :src='src'
-      style="position:absolute;top:0;left:0;width:100%;height:100%;" 
-      frameborder="0" allow="autoplay; fullscreen" allowfullscreen>
-    </iframe>
-  </div>
-</div>
--->
+  <div id='player'></div>
 </template>
 
 <style scoped>
