@@ -57,9 +57,28 @@ export default {
     await this.get_data()
     this.clear_project_filters()
 
+    /*
+    // TODO: Consider removing this
     setTimeout(()=> {
       this.on_project_transition()
     }, 1000)
+    */
+
+    window.addEventListener('scroll', ()=> {
+      //console.log('hello', window.scrollY)
+      if(this.$refs.job_title) { 
+        const title = this.$refs.job_title
+        const r = title.getBoundingClientRect()
+        const scroll_top = window.pageYOffset || document.documentElement.scrollTop
+        const bottom = r.top + scroll_top + r.bottom
+
+        /*
+        if(r.bottom < window.scrollY) {
+          console.log('Gonna change job title')
+        }
+        */
+      }
+    })
   }, 
   methods: {
     ...mapActions([
@@ -120,7 +139,7 @@ export default {
         </div>
 
         <!-- Intro -->
-        <h2>Software Engineer</h2>
+        <h2 ref='job_title'>Software Engineer</h2>
         <p>{{text['intro']}}</p>
 
         <!-- Blog -->

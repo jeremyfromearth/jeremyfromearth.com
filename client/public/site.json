@@ -189,6 +189,7 @@
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Complex network graph data visualization with vanilla JavaScript",
     "topics": {"vis": {"JavaScript": ["D3"]}},
+    "video": "https://player.vimeo.com/video/165915999",
     "year": 2014
   }, {
     "client": "Clemson University",
@@ -714,7 +715,7 @@
       "sfmoma-interior-05.jpg", 
       "sfmoma-interior-06.jpg"
     ],
-    "keywords": ["sfmoma", "moma", "data", "visualization", "events", "installation"],
+    "keywords": ["sfmoma", "moma", "data", "visualization", "events", "installation", "interactive"],
     "location": "San Francisco, California",
     "platforms": ["Windows"],
     "published": true,

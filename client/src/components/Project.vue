@@ -23,6 +23,7 @@ export default {
       if(t) {
         Object.keys(t).forEach(lang => {
           t[lang].forEach(tech => {
+            // TODO: Consider setting highlighted in an action
             this.technologies[lang].forEach(t => {
               if(t.label == tech) {
                 t.highlight = value
@@ -118,7 +119,7 @@ export default {
 
 .project-inner {
   transition: transform 0.2s ease-in-out;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 }
 
 .project:hover .project-inner {

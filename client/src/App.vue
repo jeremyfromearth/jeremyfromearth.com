@@ -10,6 +10,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import Gallery from './components/Gallery'
 import Project from './components/Project'
 import TopicSwatch from './components/TopicSwatch'
+import VimeoPlayer from './components/VimeoPlayer'
 
 import {
   MdApp, 
@@ -29,6 +30,7 @@ Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Gallery', Gallery)
 Vue.component('Project', Project)
 Vue.component('TopicSwatch', TopicSwatch)
+Vue.component('VimeoPlayer', VimeoPlayer)
 
 library.add(faCoffee)
 
