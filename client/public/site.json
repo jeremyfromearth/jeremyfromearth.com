@@ -561,6 +561,7 @@
       "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
       "vis": {"JavaScript": ["Node", "NPM", "D3"]}
     }, 
+    "videos": ["310668666"],
     "year": 2018
   }, {
     "client": "Textwise",
@@ -658,6 +659,7 @@
         "C++": ["Cinder", "OpenGL"]
       }
     },
+    "videos": ["280790298"],
     "year": 2018
   }, {
     "client": "Portland's Children Museum",

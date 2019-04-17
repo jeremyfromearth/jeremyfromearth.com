@@ -22,10 +22,10 @@ export default {
     Promise.all([
       this.player.getVideoWidth(),
       this.player.getVideoHeight()
-      
     ]).then(result => {
       this.ready = true
       this.$emit('ready', result)
+      this.$refs.player.firstChild.style.position = 'unset'
     })
   }, 
   props: {
