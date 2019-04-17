@@ -274,6 +274,7 @@
     "title": "Missoula Floods Navigator",
     "tldr": "Map based explorer apps tell the story of the Missoula Floods ",
     "topics": {"install": {}},
+    "videos": ["164945798"],
     "year": 2012
   }, {
     "client": "Mobius Science Center",
@@ -300,6 +301,7 @@
     "title": "Weegee - Murder is My Business",
     "tldr": "A raw look at the progenitor of crime scene photography",
     "topics": {"install":{}},
+    "videos": ["165036449"],
     "year": 2012
   }, {
     "client": "Sam Rayburn Library & Museum",
@@ -313,6 +315,7 @@
     "title": "Sam Rayburn Archive Explorer",
     "tldr": "Document explorer touch wall with fluid user interface",
     "topics": {"install": {}},
+    "videos": ["165063933"],
     "year": 2012
   }, {
     "client": "The Grammy Museum",
@@ -584,6 +587,11 @@
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
     "location": "Philadelphia, Pennsylvania",
     "id": "kronos",
+    "images": [
+      "kronos_01.jpg",
+      "kronos_02.jpg",
+      "kronos_03.jpg"
+    ],
     "keywords": ["archaeology", "discovery", "kronos"],
     "platforms": ["Windows"],
     "published": true,
@@ -613,6 +621,13 @@
     "collaborators": ["Potion"],
     "description": "Interaction design business-to-consumer user experience handshake return on investment churn rate release influencer validation burn rate business-to-business responsive web design early adopters. First mover advantage marketing channels.",
     "id": "infinity-of-nations",
+    "images": [
+      "nmai_infinity_01.jpg",
+      "nmai_infinity_02.jpg",
+      "nmai_infinity_03.jpg",
+      "nmai_infinity_04.jpg",
+      "nmai_infinity_05.jpg"
+    ],
     "keywords": ["history", "culture", "native", "american"],
     "location": "New York, New York",
     "platforms": ["Windows"],
@@ -622,21 +637,28 @@
     "topics": {
       "install": {} 
     },
+    "videos": ["164945996"],
     "year": 2010
   }, {
     "client": "Nike",
     "collaborators": ["The Makers"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
     "id": "nike-sparq-data-visulization",
+    "images": [
+      "nike_sparq_radar_chart_01.jpg", 
+      "nike_sparq_radar_chart_02.jpg", 
+      "nike_sparq_radar_chart_03.jpg"
+    ],
     "keywords": ["sensor", "sports", "nike", "wearable", "data", "visualization"],
     "location": "Portland, OR",
     "platforms": ["macOS", "Windows"],
     "published": true,
     "title": "Sparq Data Visualizations",
-    "tldr": "Deep in the basement lab of the world's (fill in the blanks)",
+    "tldr": "Radar chart data visualizations for performance metrics gathered by in shoe sensor",
     "topics": {
       "vis": {} 
     },
+    "videos": ["165072709"],
     "year": 2010
   }, {
     "client": "American Electric Power",
@@ -677,6 +699,9 @@
         "C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]
       }
     },
+    "videos": [
+      "165729989"
+    ],
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -695,6 +720,9 @@
         "Random": ["Arduino"]
       }
     },
+    "videos": [
+      "165074357"
+    ],
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -704,11 +732,12 @@
     "location": "Berlin Township, Ohio",
     "platforms": ["Windows"],
     "published": true,
-    "title": "The Virtual Estuary",
+    "title": "Estuary Awareness",
     "tldr": "A fun interactive game in the middle of nowhere in Ohio",
     "topics": {
       "install": {}
     },
+    "videos": ["165634719"],
     "year": 2011
   }, {
     "client": "San Franscisco Museum of Modern Art",

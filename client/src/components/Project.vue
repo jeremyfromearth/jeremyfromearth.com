@@ -56,8 +56,7 @@ export default {
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
         <div class='media-link-container'>
-          <i v-if='data.images || data.videos' class='fa fa-images media-link' @click='set_gallery_id(data.id)'></i>
-          <i v-if='data.video' class='fa fa-video media-link' @click='set_video_id(data.video)'></i>
+          <i v-if='data.images || data.videos' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i>
           <i v-if='data.url' class='fa fa-link media-link'></i>
         </div>
       </div>

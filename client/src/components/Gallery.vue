@@ -202,7 +202,7 @@ export default {
       </transition>
 
       <transition name='controls' appear>
-        <div ref='controls' class='controls'> 
+      <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'> 
           <div class='button' v-for='(img, i) in content_paths' 
                :key='i' @click='set_content_idx(i)'>
             <i v-if='i == content_idx' class="fas fa-circle"></i>

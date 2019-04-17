@@ -27,6 +27,7 @@ export default {
       this.$emit('ready', result)
       this.$refs.player.firstChild.style.position = 'unset'
     })
+
   }, 
   props: {
     video_id: {
@@ -45,11 +46,12 @@ export default {
 </template>
 
 <style scoped>
+
 .player {
-  width: 100%;
   height: 100%;
   position: absolute;
   transition: opacity 0.4s;
   transition-delay: 0.4s;
+  width: 100%;
 }
 </style>

@@ -113,7 +113,7 @@ export default {
       <div class='container'>
         <!-- Header --> 
         <div class='header-container'>
-          <h1>J from <i id='globe' :class='globe_icon_class'></i></h1>
+          <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.0</h4></span></div>
           <div class='header-links'>
             <a v-for='link in links' 
                class='header-link' :title='link.title' 
@@ -312,6 +312,15 @@ export default {
     margin-left: 1.2em; 
   }
 
+  .header-title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .header-title h4 {
+    margin-left: 0.4em;
+  }
+
   .keyword {
     border: 1px solid lightgrey;
     border-radius: 0.5em;
@@ -450,10 +459,6 @@ export default {
     padding: 0 1.4em 0 1.4em;
     overflow: hidden;
     transition: height 0.8s;
-  }
-
-  .project {
-    overflow: hidden;
   }
 
   .project-outer {
