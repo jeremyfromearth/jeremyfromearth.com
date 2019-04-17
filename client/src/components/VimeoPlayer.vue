@@ -11,7 +11,7 @@ export default {
   },
   mounted() {
     this.player = 
-      new Player('player', {
+      new Player(`player-${this.video_id}`, {
         byline: false,
         id: this.video_id,
         dnt: true,
@@ -27,7 +27,6 @@ export default {
       this.$emit('ready', result)
       this.$refs.player.firstChild.style.position = 'unset'
     })
-
   }, 
   props: {
     video_id: {
@@ -42,7 +41,7 @@ export default {
 </script>
 
 <template>
-  <div ref='player' id='player' class='player' :style='{opacity: ready ? 1 : 0}'></div>
+  <div ref='player' :id='`player-${video_id}`' class='player' :style='{opacity: ready ? 1 : 0}'></div>
 </template>
 
 <style scoped>

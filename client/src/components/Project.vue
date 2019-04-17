@@ -1,4 +1,5 @@
 <script>
+
 import {
   mapActions,
   mapGetters, 
@@ -9,6 +10,7 @@ export default {
   computed: {
     ...mapGetters([
         'technologies', 
+        'topic_index',
         'topics_palette',
         'topics',
       ])
@@ -18,7 +20,18 @@ export default {
         'set_gallery_id', 
         'set_video_id'
       ]),
-    highlight(topic, value) {
+
+    highlight() {
+      //console.log('highlight()')
+      //console.log(this.data)
+      /*
+      Object.keys(this.data.topics).forEach(t => {
+        if(this.topic_index[t]) {
+          
+        }
+      })
+      */
+      /*
       const t = this.data.topics[topic.id]
       const color = this.topics_palette[topic.palette] 
       if(t) {
@@ -34,6 +47,10 @@ export default {
           })
         })
       }
+      */
+    }, 
+    unhighlight() {
+      //console.log('unhighlight()')
     }
   },
   props: {
@@ -45,12 +62,12 @@ export default {
       type: Number, 
       default: ()=> 0
     }
-  }, 
+  }
 }
 </script>
 
 <template>
-  <div class='project'>
+  <div class='project' @mouseenter='highlight' @mouseleave='unhighlight'>
     <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight'/> 
     <div class='project-inner'>
       <div class='project-heading'>

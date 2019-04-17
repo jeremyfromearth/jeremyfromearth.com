@@ -164,8 +164,7 @@
     "images": [
       "cmhr_hrnow_01.jpg",
       "cmhr_hrnow_06.jpg", 
-      "cmhr-interior-02.jpg", 
-      "cmhr-screen-02.jpg"
+      "cmhr-interior-02.jpg"
     ],
     "platforms": ["macOS"],
     "published": true,
@@ -177,6 +176,7 @@
       "install": {"C++":["Cinder", "OpenGL"]}, 
       "vis": {"C++": ["Cinder", "OpenGL"]}
     },
+    "videos": ["251536677"],
     "year": 2014
   }, {
     "client": "University of California",
@@ -195,7 +195,7 @@
     "published": true,
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Complex network graph data visualization with vanilla JavaScript",
-    "topics": {"vis": {"JavaScript": ["D3"]}},
+    "topics": {"vis": {"JavaScript": []}, "fs": {"JavaScript": []}},
     "videos": ["165915999"],
     "year": 2014
   }, {
@@ -250,9 +250,10 @@
     "id": "clemson-family-portrait",
     "images": [
       "clemson_cfp_01.jpg",
-      "clemson_cfp_02.jpg",
-      "clemson_cfp_03.jpg",
-      "clemson_cfp_04.jpg"
+      "clemson_cfp_05.jpg",
+      "clemson_cfp_06.jpg",
+      "clemson_cfp_07.jpg",
+      "clemson_cfp_03.jpg"
     ],
     "keywords": ["kinect", "installation", "cinder"],
     "location": "Greenville, North Carolina",
@@ -564,7 +565,7 @@
       "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
       "vis": {"JavaScript": ["Node", "NPM", "D3"]}
     }, 
-    "videos": ["310668666"],
+    "videos": ["310668666", "310651231"],
     "year": 2018
   }, {
     "client": "Textwise",

@@ -103,18 +103,20 @@ export default {
             img.src = image_path
             img.addEventListener('load', ()=> {
               this.current_content = this.content[this.content_idx] = img
+              this.current_content.type = 'image'
               this.calc_content_size() 
               this.loading = false
             })
           } else {
             this.current_content = this.content[this.content_idx]
+            this.current_content.type = 'image'
             this.calc_content_size()
             this.loading = false
           }
           break
         case 'video':
           this.loading = true
-          this.current_content = {video: true, src: current.src}
+          this.current_content = {src: current.src, type: 'video'}
           break
       }
     }, 
@@ -156,7 +158,7 @@ export default {
         }) : [])
   
     this.interval_id = setInterval(()=> {
-      this.radians += 0.0004
+      this.radians += 0.0008
       this.$forceUpdate()
     }, 1/60)
 
@@ -180,29 +182,31 @@ export default {
       <div v-if='visible' class='background' :style='{backgroundImage: gradient}' @click='visible=false'/>
     </transition>
 
-    <div class='image-container-outer'>
+    <div class='content-container-outer'>
       <transition name='close-button'>
         <div ref='close_button' v-if='visible' class='close-button'  @click='visible=false'>
           <i class="far fa-times-circle"></i>
         </div>
       </transition>
 
-      <transition name='image-container'>
-        <div v-if='visible && current_content' class='image-container' 
-          :style='{width: `${content_width}px`, height: `${content_height}px`}'>
-          <div class='image'>
-            <transition name='image'>
-              <img v-if='current_content && content_paths[content_idx].type == "image"' 
+      <transition name='content-container'>
+        <div v-if='visible && current_content' class='content-container' 
+          :style='{width: `${content_width}px`, height: `${content_height}px`, 
+            backgroundColor: current_content.type == "image" ? "white" : "transparent"}'>
+          <div class='content'>
+            <transition name='content'>
+              <img v-if='current_content && current_content.type == "image"' 
                 class='md-image' :src='current_content.src' :key='current_content.src'>
-              <VimeoPlayer v-else-if='current_content.video' v-on:ready='on_vimeo_player_ready'
-                :video_id='current_content.src' :key='current_content.src'/>
+              <VimeoPlayer v-else-if='current_content && current_content.type == "video"' 
+                v-on:ready='on_vimeo_player_ready' :video_id='current_content.src' 
+                :key='current_content.src'/>
             </transition>
           </div>
         </div>
       </transition>
 
       <transition name='controls' appear>
-      <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'> 
+        <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'> 
           <div class='button' v-for='(img, i) in content_paths' 
                :key='i' @click='set_content_idx(i)'>
             <i v-if='i == content_idx' class="fas fa-circle"></i>
@@ -289,20 +293,19 @@ export default {
   transition-delay: 0.8s;
 }
 
-.image {
+.content {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.image-enter { opacity: 0; }
+.content-enter { opacity: 0; }
 
-.image-enter-active, 
-.image-leave-active { transition: all 0.4s; }
+.content-enter-active, 
+.content-leave-active { transition: all 0.4s; }
 
-.image-container {
+.content-container {
   align-self: center;
-  background-color: white;
   flex-shrink: 1;
   height: 80%;
   justify-self: center;
@@ -311,14 +314,14 @@ export default {
   width: 80%;
 }
 
-.image-container-enter, .image-container-leave {
+.content-container-enter, .content-container-leave {
   opacity: 0;
   transform: translate(0, 30px);
 }
 
-.image-container-enter-active { transition-delay: 0.4s; }
+.content-container-enter-active { transition-delay: 0.4s; }
 
-.image-container-outer {
+.content-container-outer {
   position: absolute;
   width: 100%;
   height: 100%;
