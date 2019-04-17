@@ -21,36 +21,31 @@ export default {
         'set_video_id'
       ]),
 
-    highlight() {
-      //console.log('highlight()')
-      //console.log(this.data)
-      /*
+    highlight(value) { 
       Object.keys(this.data.topics).forEach(t => {
-        if(this.topic_index[t]) {
-          
-        }
-      })
-      */
-      /*
-      const t = this.data.topics[topic.id]
-      const color = this.topics_palette[topic.palette] 
-      if(t) {
-        Object.keys(t).forEach(lang => {
-          t[lang].forEach(tech => {
-            // TODO: Consider setting highlighted in an action
-            this.technologies[lang].forEach(t => {
-              if(t.label == tech) {
-                t.highlight = value
-                t.color = color
-              }
-            })
+        const topic = this.topic_index[t]
+        const color = this.topics_palette[topic.palette]
+        if(topic) topic.highlight = value
+        const languages = this.data.topics[t]
+        Object.keys(languages).forEach(lang=> {
+          const project_tech = languages[lang]
+          this.technologies[lang].forEach(tech => {
+            if(project_tech.includes(tech.label)) {
+              tech.highlight = value
+              tech.color = color
+            }
           })
         })
-      }
-      */
+      })
     }, 
     unhighlight() {
       //console.log('unhighlight()')
+      Object.keys(this.data.topics).forEach(t => {
+        if(this.topic_index[t]) {
+          this.topic_index[t].highlight = false
+          //console.log(this.topic_index[t])    
+        }
+      })
     }
   },
   props: {
@@ -67,8 +62,8 @@ export default {
 </script>
 
 <template>
-  <div class='project' @mouseenter='highlight' @mouseleave='unhighlight'>
-    <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight'/> 
+  <div class='project' @mouseenter='highlight' @mouseleave='highlight(false)'>
+    <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight(true)'/> 
     <div class='project-inner'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>

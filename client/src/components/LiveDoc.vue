@@ -30,7 +30,8 @@ export default {
           return `${this.pagination + 1} - 
             ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}` 
       }
-    }
+    }, 
+    
   },
   data() {
     return {
@@ -96,6 +97,17 @@ export default {
     projects_with_key(k) {
       return _.filter(this.projects_paged, {year: k})
     }, 
+    stack_is_highlighted() {
+      let highlight = false
+      Object.keys(this.technologies).forEach(lang => {
+        const tech = this.technologies[lang]
+        tech.forEach(tech => {
+          if(tech.highlight) highlight = true
+        })
+      })
+
+      return highlight
+    },
     topic_color(i) {
       return this.topics_palette[i % this.topics_palette.length]
     }
@@ -144,7 +156,8 @@ export default {
             <ul class='md-layout-item'>
               <li v-for='t in technologies[k]' 
                 class='tech-list-item' :key='t.label' 
-                :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null}'>{{ t.label }}</li>
+                :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null, 
+                  opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.4 : 1}'>{{ t.label }}</li>
             </ul>
           </div>
         </div>
@@ -534,7 +547,7 @@ export default {
 
   .tech-list-item {
     white-space: nowrap;
-    transition: text-shadow 0.4s;
+    transition: text-shadow 1.0s, opacity 0.2s;
   }
 
   .topic-legend {
