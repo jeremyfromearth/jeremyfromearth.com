@@ -56,7 +56,7 @@ export default {
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
         <div class='media-link-container'>
-          <i v-if='data.images' class='fa fa-images media-link' @click='set_gallery_id(data.id)'></i>
+          <i v-if='data.images || data.videos' class='fa fa-images media-link' @click='set_gallery_id(data.id)'></i>
           <i v-if='data.video' class='fa fa-video media-link' @click='set_video_id(data.video)'></i>
           <i v-if='data.url' class='fa fa-link media-link'></i>
         </div>
@@ -145,7 +145,7 @@ export default {
 .project:hover .topic-swatch {
   opacity: 1;
   transform: translate(0, 0);
-  transform: rotate(1.57rad) scale(1.4);
+  transform: rotate(-1.57rad) scale(1.4);
   display: block;
 }
 </style>

@@ -60,7 +60,6 @@ export default {
   <div>
     <router-view></router-view>
     <Gallery v-if='gallery_id != null' class='gallery'/>
-    <VimeoPlayer v-if='video_id != null'/>
   </div>
 </template>
 

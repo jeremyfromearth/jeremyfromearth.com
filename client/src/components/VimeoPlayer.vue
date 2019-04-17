@@ -1,31 +1,55 @@
 <script>
 import Player from '@vimeo/player'
 
-import { mapGetters } from 'vuex'
-
 export default {
   name: 'VimeoPlayer',
-  computed: {
-    ...mapGetters(['video_id'])
-  },
   data() {
     return {
       player: null,
+      ready: false,
     }
   },
   mounted() {
     this.player = 
       new Player('player', {
-        id: this.video_id
+        byline: false,
+        id: this.video_id,
+        dnt: true,
+        responsive: true,
+        title: false,
       })
-    console.log(this.player)
+
+    Promise.all([
+      this.player.getVideoWidth(),
+      this.player.getVideoHeight()
+      
+    ]).then(result => {
+      this.ready = true
+      this.$emit('ready', result)
+    })
+  }, 
+  props: {
+    video_id: {
+      type: String, 
+      default: ()=> ''
+    }
+  }, 
+  destroyed() {
+    if(this.player) this.player.destroy()
   }
 }
 </script>
 
 <template>
-  <div id='player'></div>
+  <div ref='player' id='player' class='player' :style='{opacity: ready ? 1 : 0}'></div>
 </template>
 
 <style scoped>
+.player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: opacity 0.4s;
+  transition-delay: 0.4s;
+}
 </style>

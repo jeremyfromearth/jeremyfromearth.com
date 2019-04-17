@@ -183,13 +183,20 @@
     "collaborators": ["Periscopic"],
     "description": "Business-to-consumer agile development pivot. Direct mailing iPad facebook leverage series A financing first mover advantage. Pivot alpha infographic customer channels learning curve bootstrapping seed money business plan hypotheses social proof partner network gamification.",
     "id": "breast-cancer-causation",
+    "images": [
+      "uc_breast_cancer_causation_01.jpg",
+      "uc_breast_cancer_causation_02.jpg",
+      "uc_breast_cancer_causation_03.jpg",
+      "uc_breast_cancer_causation_04.jpg",
+      "uc_breast_cancer_causation_05.jpg"
+    ],
     "keywords": ["data", "visualization", "canvas", "breast", "cancer"],
     "platforms": ["Web"],
     "published": true,
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Complex network graph data visualization with vanilla JavaScript",
     "topics": {"vis": {"JavaScript": ["D3"]}},
-    "video": "165915999",
+    "videos": ["165915999"],
     "year": 2014
   }, {
     "client": "Clemson University",

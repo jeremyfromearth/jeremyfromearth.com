@@ -33,16 +33,16 @@ export default {
   },
   data() {
     return {
-      current_image: null,
-      images: [],
-      image_count: 0,
-      image_idx: 0,
-      image_paths: [],
-      image_width: '80%', 
-      image_height: '80%',
+      current_content: null,
+      content: [],
+      content_idx: 0,
+      content_paths: [],
+      content_width: '80%', 
+      content_height: '80%',
       interval_id: 0,
       loading: true,
       open: true,
+      video: null,
       radians: -0.8,
       visible: false
     }
@@ -56,90 +56,119 @@ export default {
     close() {
       this.set_gallery_id(null)
     },
-    calc_image_size() {
+    calc_content_size() {
       let r = 1
       const w = this.window_size[0]
       const h = this.window_size[1] -
         this.$refs.controls.clientHeight - 
           this.$refs.close_button.clientHeight
 
-      if(this.current_image.width >= this.current_image.height) {
-        r = this.current_image.height / this.current_image.width
-        this.image_width = w * 0.8
-        this.image_height = this.image_width * r
-        if(this.image_height > h) {
-          r = this.current_image.width / this.current_image.height
-          this.image_height = h * 0.8
-          this.image_width = this.image_height * r
+      if(this.current_content.width >= this.current_content.height) {
+        r = this.current_content.height / this.current_content.width
+        this.content_width = w * 0.8
+        this.content_height = this.content_width * r
+        if(this.content_height > h) {
+          r = this.current_content.width / this.current_content.height
+          this.content_height = h * 0.8
+          this.content_width = this.content_height * r
         }
       } else {
-        r = this.current_image.width / this.current_image.height
-        this.image_height = h * 0.8
-        this.image_width = this.image_height * r
-        if(this.image_width > w) {
-          r = this.current_image.height / this.current_image_width
-          this.image_width = w * 0.8
-          this.image_height = this.image_width * r
+        r = this.current_content.width / this.current_content.height
+        this.content_height = h * 0.8
+        this.content_width = this.content_height * r
+        if(this.content_width > w) {
+          r = this.current_content.height / this.current_content_width
+          this.content_width = w * 0.8
+          this.content_height = this.content_width * r
         }
       }
     },
     dec() {
-      this.image_idx = this.image_idx - 1 % this.image_paths.length
-      this.load_image()
+      this.content_idx = this.content_idx - 1 % this.content_paths.length
+      this.load_next()
     },
     inc() {
-      this.image_idx = (this.image_idx + 1) % this.image_paths.length
-      this.load_image()
+      this.content_idx = (this.content_idx + 1) % this.content_paths.length
+      this.load_next()
     },
-    load_image() {
+    load_next() {
       this.loading = true
-      const image_path = `/images/projects/${this.image_paths[this.image_idx]}`
-      if(!this.images.includes(image_path)) {
-        const img = new Image()
-        img.src = image_path 
-        img.addEventListener('load', ()=> {
-          this.current_image = this.images[this.image_idx] = img
-          this.calc_image_size() 
-          this.loading = false
-        })
+      const current = this.content_paths[this.content_idx]
+
+      switch(current.type) { 
+        case 'image':
+          if(!this.content[this.content_idx]) {
+            const image_path = `/images/projects/${current.src}`
+            const img = new Image()
+            img.src = image_path
+            img.addEventListener('load', ()=> {
+              this.current_content = this.content[this.content_idx] = img
+              this.calc_content_size() 
+              this.loading = false
+            })
+          } else {
+            this.current_content = this.content[this.content_idx]
+            this.calc_content_size()
+            this.loading = false
+          }
+          break
+        case 'video':
+          this.loading = true
+          this.current_content = {video: true, src: current.src}
+          break
       }
     }, 
     on_key_down(evt) {
       if(evt.key == 'ArrowRight') {
-        this.set_image_idx(
-          this.image_idx + 1 > this.image_paths.length - 1 ? 
-            0 : this.image_idx + 1)
+        this.set_content_idx(
+          this.content_idx + 1 > this.content_paths.length - 1 ? 
+            0 : this.content_idx + 1)
       }
 
       if(evt.key == 'ArrowLeft') {
-        this.set_image_idx(
-          this.image_idx - 1 < 0 ? 
-            this.image_paths.length - 1 : 
-              this.image_idx - 1)
+        this.set_content_idx(
+          this.content_idx - 1 < 0 ? 
+            this.content_paths.length - 1 : 
+              this.content_idx - 1)
       }
     },
-    set_image_idx(i) {
-      this.image_idx = i
-      this.load_image()
+    on_vimeo_player_ready(size) {
+      this.loading = false
+      this.current_content.width = size[0]
+      this.current_content.height = size[1]
+      this.calc_content_size()
+    },
+    set_content_idx(i) {
+      this.content_idx = i
+      this.load_next()
     }
   },
   mounted() {
-    this.image_idx = 0
-    this.image_paths = this.project_lookup[this.gallery_id].images
-
+    this.content_idx = 0
+    const proj = this.project_lookup[this.gallery_id]
+    this.content_paths = 
+      [].concat(proj.videos ? proj.videos : [])
+        .map(x => {
+          return {type: 'video', src: x}
+        })
+      .concat(proj.images ? proj.images.map(x => {
+          return {type: 'image', src: x} 
+        }) : [])
+  
     this.interval_id = setInterval(()=> {
       this.radians += 0.0004
       this.$forceUpdate()
     }, 1/60)
 
-    this.visible = true
-    this.load_image()
-    this.on_key_down_throttle = _.throttle(this.on_key_down, 500), {leading: true}
+    this.on_key_down_throttle = 
+      _.throttle(this.on_key_down, 500), {leading: true}
     window.addEventListener('keydown', this.on_key_down_throttle)
+    this.visible = true
+    this.set_content_idx(0)
   }, 
   watch: {
     window_size: function() {
-      this.calc_image_size()
+      this.calc_content_size()
     }
   }
 }
@@ -159,22 +188,24 @@ export default {
       </transition>
 
       <transition name='image-container'>
-        <div v-if='visible && current_image' class='image-container' 
-          :style='{width: `${image_width}px`, height: `${image_height}px`}'>
+        <div v-if='visible && current_content' class='image-container' 
+          :style='{width: `${content_width}px`, height: `${content_height}px`}'>
           <div class='image'>
             <transition name='image'>
-              <img v-if='current_image' class='md-image' :src='current_image.src' :key='current_image.src'>
+              <img v-if='current_content && content_paths[content_idx].type == "image"' 
+                class='md-image' :src='current_content.src' :key='current_content.src'>
+              <VimeoPlayer v-else-if='current_content.video' v-on:ready='on_vimeo_player_ready'
+                :video_id='current_content.src' :key='current_content.src'/>
             </transition>
           </div>
-          
         </div>
       </transition>
 
       <transition name='controls' appear>
         <div ref='controls' class='controls'> 
-          <div class='button' v-for='(img, i) in image_paths' 
-               :key='i' @click='set_image_idx(i)'>
-            <i v-if='i == image_idx' class="fas fa-circle"></i>
+          <div class='button' v-for='(img, i) in content_paths' 
+               :key='i' @click='set_content_idx(i)'>
+            <i v-if='i == content_idx' class="fas fa-circle"></i>
             <i v-else class="far fa-circle"></i>
           </div>
         </div>
@@ -225,12 +256,8 @@ export default {
   transform: rotate(90deg);
 }
 
-.close-button-enter-to { right: 1em; }
-
 .close-button-enter-active, 
 .close-button-leave-active { transition: all 0.4s; }
-
-.close-button-leave-active { transform: rotate(90deg); }
 
 .controls {
   align-self: center;
