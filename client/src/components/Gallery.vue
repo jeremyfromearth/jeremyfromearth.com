@@ -157,10 +157,12 @@ export default {
           return {type: 'image', src: x} 
         }) : [])
   
+    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0008
       this.$forceUpdate()
     }, 1/60)
+    */
 
     this.on_key_down_throttle = 
       _.throttle(this.on_key_down, 500), {leading: true}
@@ -178,7 +180,7 @@ export default {
 
 <template>
   <div v-if='open'>
-    <transition name='background' v-on:after-leave="close">
+    <transition name='background' v-on:after-leave="close" @click='visible=false'>
       <div v-if='visible' class='background' :style='{backgroundImage: gradient}' @click='visible=false'/>
     </transition>
 
@@ -270,6 +272,7 @@ export default {
   display: flex;
   flex-shrink: 0;
   justify-content: space-between;
+  pointer-events: all;
   margin: 2em 0 4em 0;
   padding: 0.4em;
 }
@@ -310,6 +313,7 @@ export default {
   height: 80%;
   justify-self: center;
   padding: 1em;
+  pointer-events: all;
   transition: all .4s;
   width: 80%;
 }
@@ -328,6 +332,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  pointer-events: none;
   z-index: 1;
 }
 

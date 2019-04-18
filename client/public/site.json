@@ -394,7 +394,7 @@
     "published": true,
     "title": "Orientation Screens",
     "tldr": "Event info and media presentation screens",
-    "topics": {"install":{}, "vis": {}},
+    "topics": {"install":{}},
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -602,7 +602,7 @@
     "platforms": ["WWW"], 
     "published": true,
     "title": "Storycrafter Analytics", 
-    "tldr": "A user interaction metics gathering API for the Storycrafter platform", 
+    "tldr": "Anonymous user metics capture and data visualization for the Storycrafter platform", 
     "topics": {
       "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
       "vis": {"JavaScript": ["Node", "NPM", "D3"]}
@@ -613,11 +613,20 @@
     "client": "Textwise",
     "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
     "id": "semantic-map",
+    "images": [
+      "semantic-map-01.jpg",
+      "semantic-map-02.jpg",
+      "semantic-map-03.jpg",
+      "semantic-map-04.jpg",
+      "semantic-map-05.jpg",
+      "semantic-map-06.jpg",
+      "semantic-map-07.jpg"
+    ],
     "keywords": ["data", "visualization", "natural", "language", "processing"],
     "platforms": ["Web"],
     "published": true,
     "title": "The Semantic Map",
-    "tldr": "Hexbin, quadtrees, thousands of lines of code and... Boom",
+    "tldr": "tSNE derived hexbin visualization of search over ten million patent documents",
     "topics": {
       "search":{"JavaScript": ["D3", "Node", "NPM"]},
       "vis": {"JavaScript": ["D3", "Node", "NPM"]},
@@ -821,7 +830,7 @@
     "collaborators": ["Upswell"],
     "description": "The Search Spheres are an experimental search interface that I developed for my collaborators over at Upswell for Bell Labs. Increasingly dense spheres represent a collection of search results, with the most relevant results at the center. With pinch and zoom gestures, users can fluidly scan and rotate through hundreds of search results with ease.",
     "featured": false,
-    "id": "bell-labs-visual-search",
+    "id": "bell-labs-search-spheres",
     "keywords": ["ai", "data", "ml", "visualization", "bell"],
     "location": "Berkeley Heights, NJ",
     "platforms": ["iOS"],
@@ -829,6 +838,7 @@
     "title": "Search Spheres",
     "tldr": "An experimental geometric search interface",
     "topics": {
+      "vis": {},
       "search": {
         "Random": ["Swift"],
         "Databases": ["MySQL"]
@@ -850,7 +860,7 @@
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
       "bots": {"Python": ["Rasa"]},
-      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"]},
+      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Random": ["Google Cloud"]},
       "nlp": {"Python": ["SpaCy"]}, 
       "ai": {"Python": ["Keras"]}
     },

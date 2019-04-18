@@ -12,6 +12,7 @@ export default {
   mounted() {
     this.player = 
       new Player(`player-${this.video_id}`, {
+        autoplay: true,
         byline: false,
         id: this.video_id,
         dnt: true,
