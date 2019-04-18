@@ -41,7 +41,8 @@ export default {
 </script>
 
 <template>
-  <div ref='player' :id='`player-${video_id}`' class='player' :style='{opacity: ready ? 1 : 0}'></div>
+  <div ref='player' :id='`player-${video_id}`' 
+    class='player' :style='{opacity: ready ? 1 : 0}'></div>
 </template>
 
 <style scoped>

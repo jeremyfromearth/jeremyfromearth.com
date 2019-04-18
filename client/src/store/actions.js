@@ -44,7 +44,8 @@ export default {
 
         const index = {}
         const lookup = {}
-        const projects = res[0].data['projects'].filter(p => p.published)
+        const projects = 
+          res[0].data['projects'].filter(p => p.published)
         const stopwords = res[1].data
         const technologies = {}
         const text = res[0].data['text']

@@ -108,11 +108,12 @@
     "client": "Oregon Museum of Sciecne and Industry",
     "collaborators": ["Made Clear"],
     "description": "Venture user experience conversion business-to-business market advisor assets bandwidth. Direct mailing ownership leverage disruptive early adopters startup deployment freemium client agile development business plan ecosystem crowdsource.",
+    "featured": false,
     "id": "power-up-portland",
     "keywords": ["arduino", "omsi", "buttons", "physical", "sensor", "installation"],
     "location": "Portland, Oregon",
     "platforms": ["Windows"],
-    "published": true,
+    "published": false,
     "title": "Power Up Portland",
     "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
     "topics": {"install": {"Random": ["Arduino"]}},
@@ -121,6 +122,7 @@
     "client": "United States Holocaust Memorial Museum",
     "collaborators": ["C&G Partners"],
     "description": "Alpha advisor success bandwidth disruptive. Supply chain stock branding stealth success buyer growth hacking return on investment. Analytics incubator focus leverage innovator graphical user interface MVP niche market strategy lean startup channels.",
+    "featured": false,
     "id": "holocaust-memorial-museum-reflections",
     "keywords": ["holocaust", "quotes", "crowd", "sourced", "installation"],
     "location": "Washington, D.C.",
@@ -129,11 +131,13 @@
     "title": "Reflections",
     "tldr": "Crowd sourced impressions of the Holocaust",
     "topics": {"install": {}},
+    "videos": ["165724749"],
     "year": 2013
   }, {
     "client": "National Air & Space Museum",
     "collaborators": ["Terra Incognita"],
     "description": "Series A financing deployment partner network. Growth hacking success crowdsource freemium influencer crowdfunding product management prototype. Product management user experience creative first mover advantage early adopters churn rate. ",
+    "featured": false,
     "location": "Washington, D.C.",
     "id": "navigate-the-seas",
     "keywords": ["smithsonian", "aviation", "installation"],
@@ -142,11 +146,13 @@
     "title": "Navigate the Seas",
     "tldr": "One of three touch screen games for the Air & Space Museum",
     "topics": {"install": {}},
+    "videos": ["275439914"],
     "year": 2013
   }, {
     "client": "Chisholm Trail Heritage Museum",
     "collaborators": ["Terra Incognita"],
     "description": "Growth hacking value proposition lean startup A/B testing stealth funding MVP product management disruptive first mover advantage. Termsheet traction scrum project vesting period crowdsource marketing freemium gen-z.",
+    "featured": false,
     "id": "lead-a-trail-drive",
     "keywords": ["game", "simulation", "installation"],
     "location": "Cuero, Texas",
@@ -158,6 +164,7 @@
     "year": 2013
   }, {
     "client": "Canadian Museum for Human Rights",
+    "featured": true,
     "location": "Winnipeg, Manitoba",
     "id": "cmhr-human-rights-now",
     "keywords": ["human", "rights", "projection", "data", "visualization", "installation"],
@@ -182,6 +189,7 @@
     "client": "University of California",
     "collaborators": ["Periscopic"],
     "description": "Business-to-consumer agile development pivot. Direct mailing iPad facebook leverage series A financing first mover advantage. Pivot alpha infographic customer channels learning curve bootstrapping seed money business plan hypotheses social proof partner network gamification.",
+    "featured": true,
     "id": "breast-cancer-causation",
     "images": [
       "uc_breast_cancer_causation_01.jpg",
@@ -202,6 +210,7 @@
     "client": "Clemson University",
     "collaborators": ["Upswell"],
     "description": "Innovator influencer creative validation marketing success leverage venture low hanging fruit buyer. A/B testing business-to-consumer churn rate innovator social media angel investor disruptive. Business model canvas series A financing buyer twitter handshake.",
+    "featured": false,
     "id": "clemson-data-ribbon",
     "images": [
       "clemson_data_ribbon.jpg"
@@ -221,6 +230,7 @@
     "client": "Nevada Discovery Museum",
     "collaborators": ["Upswell"],
     "description": "Customer funding non-disclosure agreement business model canvas network effects A/B testing channels lean startup long tail. Business plan lean startup market iteration. Pitch success mass market crowdfunding sales startup long tail strategy beta validation alpha series A financing partnership.",
+    "featured": true,
     "id": "digital-organ-explorers",
     "keywords": ["augmented", "reality", "health", "science", "installation"],
     "location": "Reno, Nevada",
@@ -234,6 +244,7 @@
     "client": "Telstra",
     "collaborators": ["Wild"],
     "description": "Strategy crowdsource android analytics gamification supply chain product management angel investor non-disclosure agreement hypotheses prototype beta social media. Traction mass market deployment startup iPad interaction design network effects alpha accelerator value proposition.",
+    "featured": false,
     "id": "telstra-partnership-hub",
     "keywords": ["telstra", "wild", "physics", "kinect", "installation"],
     "location": "Sydney, Austrailia",
@@ -247,6 +258,7 @@
     "client": "Clemson University",
     "collaborators": ["Upswell"],
     "description": "Direct mailing deployment network effects partner network buzz assets. Startup launch party responsive web design holy grail. Bandwidth advisor customer marketing learning curve social media business model canvas long tail.",
+    "featured": true,
     "id": "clemson-family-portrait",
     "images": [
       "clemson_cfp_01.jpg",
@@ -267,6 +279,7 @@
     "client": "Mobius Science Center",
     "collaborators": ["Upswell", "Renate", "Arxi"],
     "description": "Deployment A/B testing non-disclosure agreement iPhone bandwidth twitter first mover advantage gamification accelerator paradigm shift incubator customer sales MVP. Gamification funding android analytics business plan startup scrum project holy grail series A financing twitter branding.",
+    "featured": true,
     "id": "floods-navigator",
     "keywords": ["science", "geology", "mobius", "floods", "geography", "mappping", "map", "installation"],
     "location": "Spokane, Washington",
@@ -281,6 +294,7 @@
     "client": "Mobius Science Center",
     "collaborators": ["Upswell", "Renate", "Arxi"],
     "description": "Multi-touch table allowing visitors to explore music theory through abstract visualizations and interactive instruments",
+    "featured": true,
     "id": "harmony-table",
     "keywords": ["music", "sound", "composition", "data", "visualization", "multitouch", "installation"],
     "location": "Spokane, Washington U.S.",
@@ -294,6 +308,7 @@
     "client": "International Center for Photography",
     "collaborators": [],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "featured": true,
     "id": "weegee-murder-is-my-business",
     "keywords": ["photography", "new", "york", "nyc", "icp", "installation"],
     "location": "New York, New York",
@@ -308,6 +323,7 @@
     "client": "Sam Rayburn Library & Museum",
     "collaborators": ["Terra Incognita"],
     "description": "Supply chain iteration seed money success direct mailing iPad ownership series A financing branding. Metrics research & development facebook conversion churn rate funding customer business-to-consumer angel investor product management startup.",
+    "featured": true,
     "id": "rayburn",
     "keywords": ["archive", "collections", "government", "installation"],
     "location": "Bonham, Texas",
@@ -322,7 +338,18 @@
     "client": "The Grammy Museum",
     "collaborators": ["Second Story"],
     "description": "Eight unique interactive installations allow visitors to record, mix, master and re-mix music with guidance provided by Grammy Award winning producers and engineers",
+    "featured": true,
     "id": "in-the-studio",
+    "images": [
+      "grammy_its_01.jpg",
+      "grammy_its_08.jpg",
+      "grammy_its_02.jpg",
+      "grammy_its_03.jpg",
+      "grammy_its_04.jpg",
+      "grammy_its_05.jpg",
+      "grammy_its_06.jpg",
+      "grammy_its_07.jpg"
+    ],
     "keywords": ["music", "recording", "simulation", "sound", "audio", "installation"],
     "location": "Los Angeles, California",
     "platforms": ["Windows"],
@@ -332,11 +359,16 @@
     "topics": {
       "install": {} 
     },
+    "videos": [
+      "331258610", 
+      "331259736"
+    ],
     "year": 2008
   }, {
     "client": "Gettysburg Visitors Center",
     "collaborators": ["Second Story"],
     "description": "Buyer gen-z growth hacking launch party pitch paradigm shift seed money business model canvas. Focus angel investor startup lean startup gen-z. Sales hackathon series A financing metrics alpha backing focus research & development seed money ramen pitch.",
+    "featured": true,
     "id": "faces-of-gettysburg",
     "keywords": ["history", "war", "installation"],
     "location": "Gettysburg, Pensylvania",
@@ -354,6 +386,7 @@
     "collaborators": ["Second Story"],
     "categories": "data-visualization, events, info-screens",
     "description": "Three synchronized information screens displaying event data, motion graphics and image slideshows",
+    "featured": false,
     "id": "orientation-screens",
     "keywords": ["government", "events", "data", "visualization", "installation"],
     "location": "Washington, D.C.",
@@ -367,6 +400,7 @@
     "client": "National Library of Medicine",
     "collaborators": ["Second Story"],
     "description": "Partner network innovator interaction design churn rate user experience early adopters entrepreneur ramen iPhone research & development. Buzz market business plan advisor social media startup burn rate gen-z analytics disruptive business-to-consumer validation success.",
+    "featured": false,
     "id": "global-health",
     "keywords": ["science", "health", "government", "installation"],
     "location": "Bethesda, Maryland",
@@ -380,6 +414,7 @@
     "client": "National Library of Medicine",
     "collaborators": ["Second Story"],
     "description": "Facebook founders focus prototype mass market handshake angel investor branding release assets client. Business-to-business investor gen-z burn rate sales long tail series A financing founders analytics MVP interaction design. Channels innovator metrics bootstrapping backing creative low hanging fruit product management influencer burn rate research & development. Incubator business-to-consumer freemium equity first mover advantage alpha buyer conversion.",
+    "featured": false,
     "location": "Bethesda, Maryland",
     "id": "names-quilt",
     "keywords": ["table", "touchscreen", "aids", "quilts", "installation"],
@@ -419,6 +454,7 @@
     "client": "John D. and Catherine T. MacArthur Foundation",
     "collaborators": ["Second Story"],
     "description": "Incubator pitch creative technology scrum project partnership investor launch party twitter seed money. Holy grail agile development equity accelerator buyer first mover advantage. Series A financing direct mailing beta.",
+    "featured": true,
     "id": "macarthur-foundation-kiosk",
     "images": [
       "macarthur_foundation_01.jpg",
@@ -457,6 +493,7 @@
     "client": "The New Mexico History Museum",
     "collaborators": ["Second Story"],
     "description": "Backing burn rate deployment customer market churn rate traction ecosystem. Branding disruptive advisor freemium partnership customer monetization traction infographic twitter vesting period user experience seed money release. Funding iPad analytics. Metrics buyer entrepreneur client twitter rockstar startup channels.",
+    "featured": false,
     "id": "seggesser-hide-explorer",
     "keywords": ["history", "installation"],
     "platforms": ["Web"],
@@ -470,6 +507,7 @@
     "client": "Old Standard Sound",
     "collaborators": ["Upswell"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "featured": false,
     "id": "old-standard-sound",
     "keywords": ["music", "sound", "recording"],
     "platforms": ["Web"],
@@ -511,6 +549,7 @@
     "client": "New Mexico History Museum",
     "collaborators": ["Second Story"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "featured": false,
     "location": "Santa Fe, New Mexico",
     "id": "treaty-of-gaudalupe-hidalgo",
     "keywords": ["history", "government", "installation"],
@@ -523,6 +562,7 @@
   }, {
     "client": "Textwise",
     "description": "A domain specific query language developed for Textwise & IP.com",
+    "featured": true,
     "id": "query-parser",
     "keywords": ["visualization", "data", "natural", "language", "processing", "compiler", "parser", "query", "recursive", "descent"],
     "platforms": ["Web", "Linux"],
@@ -537,6 +577,7 @@
   }, {
     "client": "Textwise", 
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci.", 
+    "featured": true,
     "id": "textwise-treemap", 
     "images": [
       "textwise-treemap-01.jpg",
@@ -555,6 +596,7 @@
   }, {
     "client": "Terra Incognita", 
     "description": "The Semantic Map is a data visualization and exploration tool that enables Intellectual Property researchers to compare patent portfolios. Founders incubator angel investor seed money social media graphical user interface disruptive. Angel investor conversion partnership ramen product management entrepreneur customer mass market. Branding partnership A/B testing traction strategy funding conversion responsive web design.",
+    "featured": true,
     "id": "storycrafter-analytics", 
     "keywords": ["analytics", "metrics", "time", "series"],
     "platforms": ["WWW"], 
@@ -565,7 +607,7 @@
       "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
       "vis": {"JavaScript": ["Node", "NPM", "D3"]}
     }, 
-    "videos": ["310668666", "310651231"],
+    "videos": ["310668666"],
     "year": 2018
   }, {
     "client": "Textwise",
@@ -586,6 +628,7 @@
   {
     "client": "University of Pennsylvania",
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "featured": false,
     "location": "Philadelphia, Pennsylvania",
     "id": "kronos",
     "images": [
@@ -606,9 +649,10 @@
   }, {
     "client": "Upswell", 
     "description": "TBD", 
+    "featured": false,
     "id": "measure", 
     "keywords": ["analytics", "data", "statistics", "stats"], 
-    "published": true, 
+    "published": false, 
     "platorms": ["Web"], 
     "title": "Measure, Analytics",
     "tldr": "Custom analytics tracking for interactive installations",
@@ -621,6 +665,7 @@
     "client": "National Museum of the American Indian",
     "collaborators": ["Potion"],
     "description": "Interaction design business-to-consumer user experience handshake return on investment churn rate release influencer validation burn rate business-to-business responsive web design early adopters. First mover advantage marketing channels.",
+    "featured": true,
     "id": "infinity-of-nations",
     "images": [
       "nmai_infinity_01.jpg",
@@ -644,6 +689,7 @@
     "client": "Nike",
     "collaborators": ["The Makers"],
     "description": "Aenean vestibulum erat vitae quam imperdiet, a mattis neque sagittis. Fusce eu erat dolor. Quisque lacinia elit eget felis venenatis, et commodo lacus dignissim. Curabitur aliquet augue eget sem ultrices tristique. Fusce vel sem commodo, bibendum mi quis, lobortis orci. Nulla vel elit id sem dictum rhoncus sed pharetra dui. Nam eu consequat mauris.",
+    "featured": true,
     "id": "nike-sparq-data-visulization",
     "images": [
       "nike_sparq_radar_chart_01.jpg", 
@@ -665,6 +711,7 @@
     "client": "American Electric Power",
     "collaborators": ["Terra Incognita", "Northern Light", "The History Factory"],
     "description": "Graphical user interface iPhone holy grail validation. Business-to-consumer pivot influencer alpha infographic business model canvas startup. Business-to-consumer churn rate twitter niche market crowdfunding market client. Bandwidth beta seed round vesting period niche market strategy return on investment pivot stock learning curve sales pitch.",
+    "featured": true,
     "location": "Columbus, Ohio",
     "id": "woaep",
     "images": [
@@ -688,6 +735,7 @@
     "client": "Portland's Children Museum",
     "collaborators": ["Wieden+Kennedy"],
     "description": "Stock growth hacking vesting period. User experience infrastructure launch party facebook termsheet learning curve hypotheses client gen-z equity metrics analytics freemium. Assets infographic alpha influencer termsheet launch party holy grail freemium social media iPad pitch android.",
+    "featured": false,
     "id": "childrens-museum-storefront",
     "keywords": ["kinect", "physics", "interactive", "gesture", "installation"],
     "location": "Portland, Oregon",
@@ -708,12 +756,13 @@
     "client": "Oregon Museum of Sciecne and Industry",
     "collaborators": ["Made Clear"],
     "description": "Non-disclosure agreement customer prototype metrics. Accelerator iPad influencer social proof buzz responsive web design metrics validation interaction design leverage product management innovator early adopters incubator. A/B testing incubator supply chain prototype responsive web design non-disclosure agreement crowdsource backing pitch success product management MVP venture.",
+    "featured": true,
     "id": "omsi-kinect-prototype",
     "keywords": ["kinect", "physics", "augmented", "reality", "installation"],
     "location": "Portland, Oregon",
     "platforms": ["Windows", "Kinect"],
     "published": true,
-    "title": "Artifical Humans",
+    "title": "Augmenting Human Fitness",
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
     "topics": {
       "install": {
@@ -728,13 +777,14 @@
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
     "description": "Graphical user interface bandwidth ramen technology twitter. Stealth iPhone early adopters product management strategy ecosystem twitter branding startup business-to-consumer value proposition supply chain. Entrepreneur social proof holy grail facebook. Venture seed money business model canvas network effects holy grail innovator partnership entrepreneur product management direct mailing churn rate funding crowdfunding.",
+    "featured": false,
     "id": "virtual-estuary",
     "keywords": ["game", "conservation", "intallation"],
     "location": "Berlin Township, Ohio",
     "platforms": ["Windows"],
     "published": true,
     "title": "Estuary Awareness",
-    "tldr": "A fun interactive game in the middle of nowhere in Ohio",
+    "tldr": "A fun interactive game in small visitors center in Ohio",
     "topics": {
       "install": {}
     },
@@ -743,6 +793,7 @@
   }, {
     "client": "San Franscisco Museum of Modern Art",
     "description": "Infrastructure startup beta virality ramen deployment market low hanging fruit scrum project user experience return on investment. Innovator monetization freemium stock. Agile development equity focus incubator paradigm shift gen-z influencer iPhone burn rate graphical user interface infrastructure buyer alpha business plan.",
+    "featured": true,
     "collaborators": ["Britelite Immersive"],
     "id": "sfmoma-storyscreens",
     "images": [
@@ -761,12 +812,8 @@
     "title": "Storyscreens",
     "tldr": "Sixteen screens trying subtly to fit in at the art museum",
     "topics": {
-      "install": {
-        "C++": ["Cinder", "OpenGL", "Kinect"]
-      }, 
-      "fs": {
-        "Python": ["SocketIO", "Flask"]
-      }
+      "install": {"C++": ["Cinder", "OpenGL", "Kinect"]}, 
+      "fs": {"Python": ["SocketIO", "Flask"]}
     },
     "year": 2016
   }, {
@@ -787,33 +834,32 @@
         "Databases": ["MySQL"]
       }
     },
+    "videos": [
+      "331263268"
+    ],
     "year": 2016
   }, {
     "client": "",
     "description": "Patch is a so-called Smart Bot, a concept that I have been working on for a couple of years. As a smart bot, Patch uses various artificial intelligence techniques to learn all about a specialized topic. In Patch's case, he knows all about analog synthesizers. It can carry on a basic conversation with both novices and experienced enthusiast. I am currently seeking new work that involves building other types of smart bots like Patch for museums or other phsyical spaces.",
     "featured": true,
     "id": "patch",
-    "images": ["patch.jpg"],
     "keywords": ["ai", "chatbot", "chat", "music", "sound", "ml", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
     "platforms": ["Web"],
     "published": true,
     "title": "Patch the Synthbot",
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
-      "bots": {"Python": ["Keras", "Rasa"]},
+      "bots": {"Python": ["Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"]},
-      "nlp": {"Python": ["Rasa", "SpaCy"]}, 
+      "nlp": {"Python": ["SpaCy"]}, 
       "ai": {"Python": ["Keras"]}
     },
-    "url": "http://patch.jeremyfromearth.com",
-    "video": "http://vimeo.com/203942309",
     "year": 2019
   }, {
     "client": "Terra Incognita",
     "description": "Canvas is a scalable and cross platform content presentation software capable of displaying full-screen web apps on touch screens in public spaces. It allows content producers using the Storycrafter platform to easily publish content without the need for manually copying content using removable media or otherwise. I architected and developed both the front end desktop application and the server side application that connects to the Storycrafter CMS and notifies deployments of content updates.",
     "featured": true,
     "id": "canvas",
-    "images": [],
     "keywords": ["storycrafter", "content", "realtime", "real", "time", "web", "sockets", "analytics", "installation"],
     "platforms": ["macOS", "Windows"],
     "published": true,
