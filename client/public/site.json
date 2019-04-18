@@ -544,7 +544,7 @@
     ],
     "keywords": ["textwise", "treemap", "nlp", "data", "visualization", "wordclouds", "d3", "clustering", "search"], 
     "platforms": ["web"],
-    "published": true, 
+    "published": false, 
     "title": "Textwise Treemap Component", 
     "tldr": "A treemap for visualizing semantically clustered patent documents", 
     "topics": {

@@ -44,7 +44,7 @@ export default {
 
         const index = {}
         const lookup = {}
-        const projects = res[0].data['projects']
+        const projects = res[0].data['projects'].filter(p => p.published)
         const stopwords = res[1].data
         const technologies = {}
         const text = res[0].data['text']
@@ -53,8 +53,6 @@ export default {
 
         projects.forEach(proj => {
 
-          if(!proj.published) return
-          
           // gather up the tech lists
           let tech = new Set()
           let languages = new Set()

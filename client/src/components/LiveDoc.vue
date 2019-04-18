@@ -139,7 +139,7 @@ export default {
 
         <!-- Blog -->
 
-        <h3>Blog</h3>
+        <div class='section-title'><h3>Blog</h3><a href='http://medium.com/@jeremy.from.earth'><i class='fa fa-link'></i></a></div>
         <p>Recent Articles</p>
         <div>
           <ul>
@@ -531,6 +531,15 @@ export default {
 
   .remove-keyword-icon:hover {
     color: red; 
+  }
+
+  .section-title {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .section-title i {
+    margin-left: 0.8em;
   }
 
   .search-container {
