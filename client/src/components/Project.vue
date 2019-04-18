@@ -62,7 +62,7 @@ export default {
 </script>
 
 <template>
-  <div class='project' @mouseenter='highlight' @mouseleave='highlight(false)' @click='set_gallery_id(data.id)'>
+  <div class='project' @mouseenter='highlight' @mouseleave='highlight(false)'>
     <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight(true)'/> 
     <div class='project-inner'>
       <div class='project-heading'>
