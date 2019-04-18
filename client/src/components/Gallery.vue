@@ -191,8 +191,7 @@ export default {
 
       <transition name='content-container'>
         <div v-if='visible && current_content' class='content-container' 
-          :style='{width: `${content_width}px`, height: `${content_height}px`, 
-            backgroundColor: current_content.type == "image" ? "white" : "transparent"}'>
+          :style='{width: `${content_width}px`, height: `${content_height}px`}'>
           <div class='content'>
             <transition name='content'>
               <img v-if='current_content && current_content.type == "image"' 
@@ -306,6 +305,7 @@ export default {
 
 .content-container {
   align-self: center;
+  background-color: rgba(0, 0, 0, 0.4);
   flex-shrink: 1;
   height: 80%;
   justify-self: center;
