@@ -157,7 +157,7 @@ export default {
               <li v-for='t in technologies[k]' 
                 class='tech-list-item' :key='t.label' 
                 :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null, 
-                  opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.4 : 1}'>{{ t.label }}</li>
+                  opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1}'>{{ t.label }}</li>
             </ul>
           </div>
         </div>
@@ -556,7 +556,7 @@ export default {
 
   .tech-list-item {
     white-space: nowrap;
-    transition: text-shadow 1.0s, opacity 0.2s;
+    transition: text-shadow 1.0s, opacity 0.8s ease-in;
   }
 
   .topic-legend {
