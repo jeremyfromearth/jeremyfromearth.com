@@ -63,6 +63,9 @@ export default {
   set_project_lookup(state, value) {
     state.project_lookup = value
   },
+  set_tech_ordering(state, value) {
+    state.tech_ordering = value
+  },
   set_technologies(state, value) {
     state.technologies = value
   },

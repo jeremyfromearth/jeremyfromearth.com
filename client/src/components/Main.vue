@@ -13,8 +13,8 @@ export default {
       'blog_posts', 'employment', 'gallery_id', 'keywords', 
       'links', 'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
-      'projects_per_page', 'technologies', 'text',
-      'topics', 'topics_palette', 'window_size'
+      'projects_per_page', 'tech_ordering', 'technologies', 
+      'text', 'topics', 'topics_palette', 'window_size'
     ]),
     down_pagination_arrow_is_visibile() {
       return this.pagination + this.projects_per_page < this.project_search_results.length
@@ -151,7 +151,7 @@ export default {
 
         <h3>Stacks</h3>
         <div class='md-layout'>
-          <div v-for='k in Object.keys(technologies).sort()' :key='k' class='md-layout-item'>
+          <div v-for='k in tech_ordering' :key='k' class='md-layout-item'>
             <h4>{{ k }} </h4> 
             <ul class='md-layout-item'>
               <li v-for='t in technologies[k]' 

@@ -14,6 +14,7 @@ export default {
       state.pagination, state.pagination + state.projects_per_page),
   projects_per_page: state => state.projects_per_page,
   project_search_results: state => state.project_search_results,
+  tech_ordering: state => state.tech_ordering,
   technologies: state => state.technologies,
   text: state => state.text,
   topics: state => state.topics,

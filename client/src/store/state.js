@@ -11,6 +11,7 @@ export default {
   project_lookup: {},
   projects_per_page: 4,
   project_search_results: [],
+  tech_ordering: [],
   technologies: [],
   text: {},
   topics: [],

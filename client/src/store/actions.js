@@ -59,7 +59,7 @@ export default {
           t.selected = false
           topic_idx[t.id] = t
         })
-
+        
         // map each project to a list of keywords derived from various fields
         projects.forEach(proj => {
 
@@ -77,7 +77,6 @@ export default {
             Object.keys(proj.topics).forEach(topic => {
               const topic_kw = topic_idx[topic].title.toLowerCase().split(' ')
               s = s.concat(topic_kw)
-              console.log(s)
               _.forIn(proj.topics[topic], (lang, key) => {
                 if(!technologies[key]) technologies[key] = new Set()
                 lang.forEach(x => {
@@ -116,15 +115,17 @@ export default {
         Object.keys(technologies).forEach(k => {
           technologies[k] = Array.from(technologies[k]).map(x => {
             return {label: x, highlight: false, color: null}
-          }).sort((a, b)=> a.label < b.label ? -1 : 1)
+          }).sort((a, b)=> {
+            return a.label < b.label ? -1 : 1
+          })
         })
-
 
         // commit the project and tech data to store
         commit('set_links', links)
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
+        commit('set_tech_ordering', res[0].data['tech_ordering'])
         commit('set_technologies', technologies)
         commit('set_text', text)
         commit('set_topics', topics)

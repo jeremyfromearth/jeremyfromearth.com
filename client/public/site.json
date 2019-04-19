@@ -99,13 +99,12 @@
     "published": false,
     "title": "Power Up Portland",
     "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
-    "topics": {"install": {"Random": ["Arduino"]}},
+    "topics": {"install": {"Other": ["Arduino"]}},
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
     "collaborators": ["C&G Partners"],
-    "content_priority": "video",
-    "content": [{"type": "video", "id": "165724749"}],
+    "content": [{"type": "video", "src": "165724749"}],
     "featured": false,
     "id": "holocaust-memorial-museum-reflections",
     "keywords": ["holocaust", "quotes", "crowd", "sourced", "installation"],
@@ -201,7 +200,7 @@
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": {
-      "install": {"Random": ["Java", "Processing", "Arduino"]}, 
+      "install": {"Other": ["Java", "Processing", "Arduino"]}, 
       "vis": {}
     },
     "year": 2015
@@ -217,7 +216,7 @@
     "published": true,
     "title": "Digital Organ Explorers",
     "tldr": "Augmented reality graphics overlay models of human organs",
-    "topics": {"install": {"Random": ["Swift"]}},
+    "topics": {"install": {"Other": ["Swift"]}},
     "year": 2015
   }, {
     "client": "Telstra",
@@ -286,7 +285,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "Multitouch table exploring musical relationships",
-    "topics": {"install": {"Random": ["Java", "Processing"]}, "vis": {}},
+    "topics": {"install": {"Other": ["Java", "Processing"]}, "vis": {}},
     "year": 2012
   }, {
     "client": "International Center for Photography",
@@ -588,7 +587,7 @@
     "tldr": "A domain specific langauge for patent document search",
     "topics": {
       "vis": {"JavaScript": ["D3", "Node"]}, 
-      "search": {"C++": ["stdlib"], "Random": ["Java"], "JavaScript": ["D3", "Node", "NPM"]}
+      "search": {"C++": ["stdlib"], "Other": ["Java"], "JavaScript": ["D3", "Node", "NPM"]}
     },
     "year": 2017
   }, {
@@ -662,7 +661,7 @@
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
       "search": {},
-      "fs": {"Random": ["Java", "Android"], "Databases": ["SQLite"]} 
+      "fs": {"Other": ["Java", "Android"], "Databases": ["SQLite"]} 
     },
     "year": 2010
   }, {
@@ -714,12 +713,7 @@
   }, {
     "client": "American Electric Power",
     "collaborators": ["Terra Incognita", "Northern Light", "The History Factory"],
-    "content": [
-      {"type": "image", "src": "woaep-01.jpg"},
-      {"type": "image", "src": "woaep-02.jpg"},
-      {"type": "image", "src": "woaep-03.jpg"},
-      {"type": "video", "src": "280790298"}
-    ],
+    "content": [{"type": "video", "src": "280790298"}],
     "featured": true,
     "location": "Columbus, Ohio",
     "id": "woaep",
@@ -756,7 +750,7 @@
     "published": true,
     "title": "Augmenting Human Fitness",
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"], "Random": ["Arduino"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL"], "Other": ["Arduino"]}},
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -806,7 +800,7 @@
     "published": true,
     "title": "Search Spheres",
     "tldr": "An experimental geometric search interface",
-    "topics": {"vis": {}, "search": {"Random": ["Swift"], "Databases": ["MySQL"]}},
+    "topics": {"vis": {}, "search": {"Other": ["Swift"], "Databases": ["MySQL"]}},
     "year": 2016
   }, {
     "client": "",
@@ -820,7 +814,7 @@
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
       "bots": {"Python": ["Rasa"]},
-      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Random": ["Google Cloud"]},
+      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Other": ["Google Cloud"]},
       "nlp": {"Python": ["SpaCy"]}, 
       "ai": {"Python": ["Keras"]}
     },
@@ -854,13 +848,14 @@
     "tldr": "A tool for generating NLP training data",
     "topics": {
       "nlp": {"Python": ["Flask", "Rasa", "Conda"]},
-      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Random": ["Google Cloud"]}
+      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Other": ["Google Cloud"]}
     },
     "year": 2019
   }],
+  "tech_ordering": ["JavaScript", "Python", "C++", "Databases", "Other"],
   "text": {
     "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
-    "project_sidebar": "This is effectively an archive of every software development project I've worked on over the years. You can search through them using keywords. Hover over a project to learn more."
+    "project_sidebar": "This is effectively an archive of every software development project I've led. You can search through it using keywords. Hover over a project to learn more."
   },
   "topics": [
     {"id": "ai", "palette": 0, "title": "Machine Intelligence"},
