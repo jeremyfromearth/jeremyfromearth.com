@@ -183,7 +183,7 @@ export default {
         <div v-if='projects_paged.length' class='project-container-outer'>
           <div ref='project_container' class='project-container' :style='{height: project_container_height + "px"}'>
             <div class='meta-container'>
-              <div ref='meta_description' class='meta-description'><p>This is effectively an archive of every software development project I've worked on over the years. You can search through them using keywords. Hover over a project to learn more.</p></div>
+              <div ref='meta_description' class='meta-description'><p>{{text['project_sidebar']}}</p></div>
               <div ref='topic_legend' class='topic-legend'>
                 <h4>Disciplines</h4>
                   <div class='topic-legend-item' v-for='t in topics' :key='t.id' @click='add_keywords(t.title); on_project_transition()'>

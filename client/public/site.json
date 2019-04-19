@@ -859,7 +859,8 @@
     "year": 2019
   }],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization."
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
+    "project_sidebar": "This is effectively an archive of every software development project I've worked on over the years. You can search through them using keywords. Hover over a project to learn more."
   },
   "topics": [
     {"id": "ai", "palette": 0, "title": "Machine Intelligence"},
