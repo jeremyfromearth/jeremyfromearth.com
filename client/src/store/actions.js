@@ -49,20 +49,37 @@ export default {
         const stopwords = res[1].data
         const technologies = {}
         const text = res[0].data['text']
-        const topics = res[0].data['topics']
-        const topic_idx = {}
 
+        // map topics to their ids and init  props
+        const topic_idx = {}
+        const topics = res[0].data['topics']
+
+        topics.forEach(t => {
+          t.highlight = false
+          t.selected = false
+          topic_idx[t.id] = t
+        })
+
+        // map each project to a list of keywords derived from various fields
         projects.forEach(proj => {
 
           // gather up the tech lists
           let tech = new Set()
           let languages = new Set()
 
+          // map each project to it's text id
+          lookup[proj.id] = proj
+
+          // a list of keywords
+          let s = Array.from(tech).concat(Array.from(languages))
+
           if(proj.topics) {
-            _.forIn(proj.topics, (topic) => {
-              _.forIn(topic, (lang, key) => {
+            Object.keys(proj.topics).forEach(topic => {
+              const topic_kw = topic_idx[topic].title.toLowerCase().split(' ')
+              s = s.concat(topic_kw)
+              console.log(s)
+              _.forIn(proj.topics[topic], (lang, key) => {
                 if(!technologies[key]) technologies[key] = new Set()
-                languages.add(key)
                 lang.forEach(x => {
                   tech.add(x)
                   technologies[key].add(x)
@@ -71,10 +88,6 @@ export default {
             })
           }
 
-          // create a list of keywords from the various fields
-          let s = Array.from(tech).concat(Array.from(languages))
-
-          lookup[proj.id] = proj
           if(proj.client) s = s.concat(proj.client.split(' '))
           if(proj.collaborators) s = s.concat(proj.collaborators.join(' ').split(' '))
           if(proj.description) s = s.concat(proj.description.split(' '))
@@ -106,12 +119,6 @@ export default {
           }).sort((a, b)=> a.label < b.label ? -1 : 1)
         })
 
-        // Map topics to their ids 
-        // And init some props
-        topics.forEach(t => {
-          t.highlight = false
-          topic_idx[t.id] = t
-        })
 
         // commit the project and tech data to store
         commit('set_links', links)
