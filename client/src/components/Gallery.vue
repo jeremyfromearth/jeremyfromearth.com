@@ -148,7 +148,11 @@ export default {
   mounted() {
     this.content_idx = 0
     const proj = this.project_lookup[this.gallery_id]
-    this.content_paths = 
+    this.content_paths = proj.content
+      
+      /*.map(c => {
+      
+    })
       [].concat(proj.videos ? proj.videos : [])
         .map(x => {
           return {type: 'video', src: x}
@@ -156,6 +160,7 @@ export default {
       .concat(proj.images ? proj.images.map(x => {
           return {type: 'image', src: x} 
         }) : [])
+    */
   
     /*
     this.interval_id = setInterval(()=> {
@@ -309,6 +314,7 @@ export default {
 .content-container {
   align-self: center;
   background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0.2em;
   flex-shrink: 1;
   height: 80%;
   justify-self: center;

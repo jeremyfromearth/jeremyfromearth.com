@@ -242,7 +242,7 @@ export default {
           <h3>Employment History</h3>
           <div class='md-layout'>
             <div v-for='(e, i) in employment' :key='i'> 
-              <h4>{{e.role}}</h4>
+              <h4>{{e.title}}</h4>
               <h5>{{e.timespan}}</h5>
               <ul>
                 <li v-for='(d, j) in e.descriptions' :key='j'>{{d}}</li>
