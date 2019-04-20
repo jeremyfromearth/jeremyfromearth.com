@@ -47,12 +47,12 @@ export default {
 
 <template>
   <div>
+    <router-view></router-view>
+    <Gallery v-if='gallery_id != null' class='gallery'/>
     <div class='top-bar'>
       <div v-for='(color, i) in topics_palette' :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
       </div>
     </div>
-    <router-view></router-view>
-    <Gallery v-if='gallery_id != null' class='gallery'/>
   </div>
 </template>
 
@@ -65,8 +65,11 @@ export default {
   }
 
   .top-bar {
+    top: 0;
+    width: 100%;
+    position: fixed;
     display: flex;
-    height: 2px;
+    height: 4px;
   }
 
   .top-bar-item {
