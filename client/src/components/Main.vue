@@ -512,13 +512,13 @@ export default {
 
   .project-group-inner-down-enter-active, .project-group-inner-down-leave-active, 
   .project-group-inner-up-enter-active, .project-group-inner-up-leave-active {
-    transition: all .3s;
+    transition: all .2s;
     display: flex;
   }
 
   .project-group-inner-down-enter-active, 
   .project-group-inner-up-enter-active {
-    transition-delay: .35s;
+    transition-delay: .2s;
   }
 
   .project-group-inner-up-enter {

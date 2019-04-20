@@ -69,7 +69,7 @@ export default {
         <h4>{{ data.title }}</h4>
         <div class='media-link-container'>
           <i v-if='data.content.length != 0' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i>
-          <i v-if='data.url' class='fa fa-link media-link'></i>
+          <a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a>
         </div>
       </div>
       <h5 v-if='data.client'>{{ data.client }} </h5>

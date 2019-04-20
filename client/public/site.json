@@ -40,6 +40,13 @@
     "title": "Creative Technologist, Upswell"
   }, {
     "descriptions": [
+      "Developing interactive network graph data visualization of breast cancer causation for University of California, San Francisco",
+      "Developing front end admin tools for Twitter Reverb"
+    ],
+    "timespan": "January 2014 to June 2014",
+    "title": "Data Visualization Developer, Periscopic"
+  }, {
+    "descriptions": [
       "Developing award winning interactive digital installations for museums and cultural institutions",
       "Maintaining and extending MVC application framework used by development teams",
       "Designed performance tests for simulating user input over extended periods for analysis and optimization of CPU/GPU performance and memory consumption",
@@ -140,7 +147,7 @@
     "keywords": ["game", "simulation", "installation"],
     "location": "Cuero, Texas",
     "platforms": ["Windows"],
-    "published": true,
+    "published": false,
     "title": "Lead a Trail Drive",
     "tldr": "All you need to know about russling cattle",
     "topics": {"install": {}},
@@ -207,15 +214,22 @@
   }, {
     "client": "Nevada Discovery Museum",
     "collaborators": ["Upswell"],
-    "content": [],
+    "content": [
+      {"type": "image", "src": "nvdm-io-01.jpg"},
+      {"type": "image", "src": "nvdm-io-02.jpg"},
+      {"type": "image", "src": "nvdm-io-05.jpg"},
+      {"type": "image", "src": "nvdm-io-03.jpg"},
+      {"type": "image", "src": "nvdm-io-06.jpg"},
+      {"type": "image", "src": "nvdm-io-04.jpg"}
+    ],
     "featured": true,
     "id": "digital-organ-explorers",
     "keywords": ["augmented", "reality", "health", "science", "installation"],
     "location": "Reno, Nevada",
     "platforms": ["iOS"],
     "published": true,
-    "title": "Digital Organ Explorers",
-    "tldr": "Augmented reality graphics overlay models of human organs",
+    "title": "Inside Out Exhibit",
+    "tldr": "Multiple touchscreen apps integrating augmented reality, face recognition and other physical sensors",
     "topics": {"install": {"Other": ["Swift"]}},
     "year": 2015
   }, {
@@ -270,7 +284,8 @@
     "client": "Mobius Science Center",
     "collaborators": ["Upswell", "Renate", "Arxi"],
     "content": [
-      {"type": "image", "src": "mobius_harmony_table_00.jpg"},
+      {"type": "video", "src": "331503446"},
+      {"type": "image", "src": "mobius_harmony_table_08.jpg"},
       {"type": "image", "src": "mobius_harmony_table_01.jpg"},
       {"type": "image", "src": "mobius_harmony_table_02.jpg"},
       {"type": "image", "src": "mobius_harmony_table_03.jpg"},
@@ -284,7 +299,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
-    "tldr": "Multitouch table exploring musical relationships",
+    "tldr": "A multitouch table for exploring connections beween the spatial and temporal components of music",
     "topics": {"install": {"Other": ["Java", "Processing"]}, "vis": {}},
     "year": 2012
   }, {
@@ -549,14 +564,16 @@
   }, {
     "client": "Weiden+Kennedy", 
     "collaborators": ["Weiden+Kennedy"],
-    "content": [],
+    "content": [
+      {"type": "video", "src": "331447902"} 
+    ],
     "id": "wk12", 
     "keywords": ["wk12", "weiden+kennedy", "kinect", "images", "video", "3d", "opengl"],
     "location": "Portland, OR", 
     "platforms": ["Windows"],
     "published": true, 
     "title": "WK+12 Party App", 
-    "tldr": "Fun Kinect controlled 3D image gallery for WK12 party", 
+    "tldr": "Fun Kinect controlled 3D image gallery for WK12 graduation party", 
     "topics": {
       "install": {"C++": ["Cinder", "OpenGL", "Kinect"]}
     },
@@ -577,17 +594,18 @@
     "year": 2009
   }, {
     "client": "Textwise",
-    "content": [],
+    "content": [{"type": "video", "src": "331497209"}],
     "featured": true,
     "id": "query-parser",
     "keywords": ["visualization", "data", "natural", "language", "processing", "compiler", "parser", "query", "recursive", "descent"],
     "platforms": ["Web", "Linux"],
     "published": true,
-    "title": "Gist Search Syntax",
-    "tldr": "A domain specific langauge for patent document search",
+    "title": "Gist Query Language",
+    "tldr": "A domain specific query langauge for document searches over the IP.com patent corpus",
     "topics": {
-      "vis": {"JavaScript": ["D3", "Node"]}, 
-      "search": {"C++": ["stdlib"], "Other": ["Java"], "JavaScript": ["D3", "Node", "NPM"]}
+      "vis": {"JavaScript": ["D3"]}, 
+      "search": {"C++": ["stdlib"]},
+      "fs": {"C++": [], "JavaScript": ["Node", "NPM"]}
     },
     "year": 2017
   }, {
@@ -613,12 +631,13 @@
     "keywords": ["analytics", "metrics", "time", "series"],
     "platforms": ["WWW"], 
     "published": true,
-    "title": "Storycrafter Analytics", 
-    "tldr": "Anonymous user metics capture and data visualization for the Storycrafter platform", 
+    "title": "Storycrafter User Analytics", 
+    "tldr": "Metrics gathering API and customizable data visualization dashboard framework for the Storycrafter platform",
     "topics": {
       "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
       "vis": {"JavaScript": ["Node", "NPM", "D3"]}
     }, 
+    "url": "https://storycrafter.co/",
     "year": 2018
   }, {
     "client": "Textwise",
@@ -783,8 +802,8 @@
     "location": "San Francisco, California",
     "platforms": ["Windows"],
     "published": true,
-    "title": "Storyscreens",
-    "tldr": "Sixteen screens trying subtly to fit in at the art museum",
+    "title": "Story Screens",
+    "tldr": "A media curation platform enabling curators to craft and publish digital presentation to screen arrays within the museum",
     "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect"]}, "fs": {"Python": ["SocketIO", "Flask"]}
     },
     "year": 2016
@@ -798,7 +817,7 @@
     "location": "Berkeley Heights, NJ",
     "platforms": ["iOS"],
     "published": true,
-    "title": "Search Spheres",
+    "title": "Search Spheres Prototype",
     "tldr": "An experimental geometric search interface",
     "topics": {"vis": {}, "search": {"Other": ["Swift"], "Databases": ["MySQL"]}},
     "year": 2016
@@ -810,7 +829,7 @@
     "keywords": ["ai", "chatbot", "chat", "music", "sound", "ml", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
     "platforms": ["Web"],
     "published": true,
-    "title": "Patch the Synthbot",
+    "title": "Patch the Synthbot (Work in Progress)",
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
       "bots": {"Python": ["Rasa"]},
@@ -828,13 +847,14 @@
     "platforms": ["macOS", "Windows"],
     "published": true,
     "title": "Storycrafter Canvas",
-    "tldr": "Content publishing for public spaces, made easy",
+    "tldr": "A cross platform desktop application enabling Storycrafter users to publish content to interactive environments",
     "topics": {
       "fs": {
         "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
         "Databases": ["MongoDB"]
       }
     },
+    "url": "https://storycrafter.co/",
     "year": 2018
   }, {
     "client": "",
@@ -844,7 +864,7 @@
     "keywords": ["natural", "language", "processing", "recursive", "parse", "chatbots", "chat", "conversation"],
     "platforms": ["Web"],
     "published": true,
-    "title": "Metonym NLP Training Tool",
+    "title": "Metonym, an NLP Training Tool (Work in Progress)",
     "tldr": "A tool for generating NLP training data",
     "topics": {
       "nlp": {"Python": ["Flask", "Rasa", "Conda"]},
@@ -855,7 +875,7 @@
   "tech_ordering": ["JavaScript", "Python", "C++", "Databases", "Other"],
   "text": {
     "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
-    "project_sidebar": "This is effectively an archive of every software development project I've led. You can search through it using keywords. Hover over a project to learn more."
+    "project_sidebar": "This is effectively an archive of nearly every software development project I've led. You can search through it using keywords. Hover over a project to learn more."
   },
   "topics": [
     {"id": "ai", "palette": 0, "title": "Machine Intelligence"},
