@@ -96,7 +96,8 @@ export default {
   color:red;
 }
 
-.project:hover .media-link-container {
+.project:hover .media-link-container, 
+.project:active .media-link-container {
   opacity: 1;
   display: flex;
 }
@@ -134,7 +135,8 @@ export default {
   transition-delay: 0.1s;
 }
 
-.project:hover .project-inner {
+.project:hover .project-inner,
+.project:active .project-inner {
   transition-delay: 0s;
   transform: translate(3em, 0);
 }
@@ -149,11 +151,8 @@ export default {
   transform-origin: center;
 }
 
-.topic-swatch:hover {
-  color: red;
-}
-
-.project:hover .topic-swatch {
+.project:hover .topic-swatch, 
+.project:active .topic-swatch {
   opacity: 1;
   transform: translate(0, 0);
   transform: rotate(-1.57rad) scale(1.4);
