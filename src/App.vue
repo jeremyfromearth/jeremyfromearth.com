@@ -1,7 +1,7 @@
 <script>
 // Vendor imports
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import VueMaterial from 'vue-material'
 import {mapActions, mapGetters} from 'vuex'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
@@ -12,18 +12,7 @@ import Project from './components/Project'
 import TopicSwatch from './components/TopicSwatch'
 import VimeoPlayer from './components/VimeoPlayer'
 
-import {
-  MdApp, 
-  MdContent,
-  MdField,
-  MdLayout
-} from 'vue-material/dist/components'
-
-Vue.use(VueRouter)
-Vue.use(MdApp)
-Vue.use(MdContent)
-Vue.use(MdField)
-Vue.use(MdLayout)
+Vue.use(VueMaterial)
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
@@ -37,7 +26,7 @@ library.add(faCoffee)
 export default {
   name: 'JeremyFromEarth',
   computed: {
-    ...mapGetters(['gallery_id', 'video_id'])
+    ...mapGetters(['gallery_id', 'topics_palette', 'video_id'])
   },
   methods: {
     ...mapActions([
@@ -58,6 +47,10 @@ export default {
 
 <template>
   <div>
+    <div class='top-bar'>
+      <div v-for='(color, i) in topics_palette' :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
+      </div>
+    </div>
     <router-view></router-view>
     <Gallery v-if='gallery_id != null' class='gallery'/>
   </div>
@@ -69,5 +62,15 @@ export default {
     height: 100%;
     width: 100%;
     top: 0;
+  }
+
+  .top-bar {
+    display: flex;
+    height: 2px;
+  }
+
+  .top-bar-item {
+    flex-grow: 1;
+    height: 100%;
   }
 </style>

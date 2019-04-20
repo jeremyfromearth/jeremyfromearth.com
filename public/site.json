@@ -125,9 +125,7 @@
   }, {
     "client": "National Air & Space Museum",
     "collaborators": ["Terra Incognita"],
-    "content": [
-      {"type": "video", "src": "275439914"}
-    ],
+    "content": [{"type": "video", "src": "275439914"}],
     "featured": false,
     "location": "Washington, D.C.",
     "id": "navigate-the-seas",
@@ -207,7 +205,7 @@
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": {
-      "install": {"Other": ["Java", "Processing", "Arduino"]}, 
+      "install": {"Java": ["Processing", "SocketIO"]}, 
       "vis": {}
     },
     "year": 2015
@@ -223,14 +221,14 @@
       {"type": "image", "src": "nvdm-io-04.jpg"}
     ],
     "featured": true,
-    "id": "digital-organ-explorers",
+    "id": "nvdm-io",
     "keywords": ["augmented", "reality", "health", "science", "installation"],
     "location": "Reno, Nevada",
     "platforms": ["iOS"],
     "published": true,
     "title": "Inside Out Exhibit",
     "tldr": "Multiple touchscreen apps integrating augmented reality, face recognition and other physical sensors",
-    "topics": {"install": {"Other": ["Swift"]}},
+    "topics": {"install": {}},
     "year": 2015
   }, {
     "client": "Telstra",
@@ -300,7 +298,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "A multitouch table for exploring connections beween the spatial and temporal components of music",
-    "topics": {"install": {"Other": ["Java", "Processing"]}, "vis": {}},
+    "topics": {"install": {"Java": ["Processing", "TUIO", "OpenGL"]}, "vis": {}},
     "year": 2012
   }, {
     "client": "International Center for Photography",
@@ -680,7 +678,7 @@
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
       "search": {},
-      "fs": {"Other": ["Java", "Android"], "Databases": ["SQLite"]} 
+      "fs": {"Java": ["Android"], "Databases": ["SQLite"], "Python": []} 
     },
     "year": 2010
   }, {
@@ -769,7 +767,7 @@
     "published": true,
     "title": "Augmenting Human Fitness",
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"], "Other": ["Arduino"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL"], "Misc": ["Arduino"]}},
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -819,7 +817,7 @@
     "published": true,
     "title": "Search Spheres Prototype",
     "tldr": "An experimental geometric search interface",
-    "topics": {"vis": {}, "search": {"Other": ["Swift"], "Databases": ["MySQL"]}},
+    "topics": {"vis": {}, "search": {"Databases": ["MySQL"]}},
     "year": 2016
   }, {
     "client": "",
@@ -833,7 +831,7 @@
     "tldr": "A know it all synthesizer geek chatbot",
     "topics": {
       "bots": {"Python": ["Rasa"]},
-      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Other": ["Google Cloud"]},
+      "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Python": ["AppEngine"]},
       "nlp": {"Python": ["SpaCy"]}, 
       "ai": {"Python": ["Keras"]}
     },
@@ -850,6 +848,7 @@
     "tldr": "A cross platform desktop application enabling Storycrafter users to publish content to interactive environments",
     "topics": {
       "fs": {
+        "Python": ["AppEngine"],
         "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
         "Databases": ["MongoDB"]
       }
@@ -867,12 +866,12 @@
     "title": "Metonym, an NLP Training Tool (Work in Progress)",
     "tldr": "A tool for generating NLP training data",
     "topics": {
-      "nlp": {"Python": ["Flask", "Rasa", "Conda"]},
-      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Other": ["Google Cloud"]}
+      "nlp": {"Python": ["Flask", "Rasa"]},
+      "fs": {"Python": ["Flask"], "JavaScript": ["Vue"], "Python": ["AppEngine"]}
     },
     "year": 2019
   }],
-  "tech_ordering": ["JavaScript", "Python", "C++", "Databases", "Other"],
+  "tech_ordering": ["JavaScript", "Python", "C++", "Java", "Databases"],
   "text": {
     "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. You can search through it using keywords. Hover over a project to learn more."

@@ -53,21 +53,3 @@ ul > li:before {
   opacity: 1;
   transition: opacity 150ms;
 }
-
-@media only screen and (max-width: 512px) {
-  body {
-    font-size: 10px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  body {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  body {
-    font-size: 14px;
-  }
-}

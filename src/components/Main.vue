@@ -150,15 +150,17 @@ export default {
         <!-- Stacks -->
 
         <h3>Stacks</h3>
-        <div class='md-layout'>
-          <div v-for='k in tech_ordering' :key='k' class='md-layout-item'>
-            <h4>{{ k }} </h4> 
-            <ul class='md-layout-item'>
-              <li v-for='t in technologies[k]' 
-                class='tech-list-item' :key='t.label' 
-                :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null, 
-                  opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1}'>{{ t.label }}</li>
-            </ul>
+        <div class='stacks-lists'>
+          <div class='md-layout md-gutter'>
+            <div v-for='k in tech_ordering' :key='k' class='md-layout-item md-xsmall-size-33'>
+              <h4>{{ k }} </h4> 
+              <ul>
+                <li v-for='t in technologies[k]' 
+                  class='tech-list-item' :key='t.label' 
+                  :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null, 
+                    opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1}'>{{ t.label }}</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -200,7 +202,7 @@ export default {
                 ref='project_transition' 
                 :name='project_transition_name' tag='div'>
                 <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout'>
-                  <div class='md-layout-item-5' :key='"year-"+k'><h4>{{ k }}</h4></div>
+                  <div class='md-layout-item-1' :key='"year-"+k'><h4>{{ k }}</h4></div>
                   <div class='md-layout-item' :key='"project-"+k'>
                     <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='i * 8' :key='j'/>
                   </div>
@@ -548,6 +550,10 @@ export default {
 
   .search-container form {
     margin-left: 1em;
+  }
+
+  .stacks-lists {
+    margin: 0 2em 0 2em;
   }
 
   .tech-list {

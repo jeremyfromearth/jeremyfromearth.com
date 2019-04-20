@@ -108,8 +108,8 @@ export default {
 
 .project {
   display: flex;
-  margin-top: 2em;
   overflow: visible;
+  margin-top: 1em;
 }
 
 .project p {
