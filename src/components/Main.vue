@@ -60,7 +60,6 @@ export default {
     // Need to run this code at once
     // to set the height of the project_container
     setTimeout(()=> {
-      this.add_keywords('featured')
       this.on_project_transition()
     }, 1000)
 
@@ -121,7 +120,7 @@ export default {
 }
 </script>
 <template>
-  <md-app>
+  <md-app :class='gallery_id != null ? "no-scroll" : ""'>
     <md-app-content class='content'>
       <div class='container'>
         <!-- Header --> 
@@ -405,6 +404,10 @@ export default {
 
   .no-match-icon {
      animation: jump .8s infinite;
+  }
+
+  .no-scroll {
+    overflow: hidden;
   }
 
   .pagination-arrow {

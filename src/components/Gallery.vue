@@ -50,6 +50,7 @@ export default {
   },
   destroyed() {
     clearInterval(this.interval_id)
+    document.body.style.overflow = "scroll"
     window.removeEventListener('keydown', this.on_key_down_throttle)
     if(this.swipe) {
       this.swipe.off('swipeleft swiperight', this.on_swipe)
@@ -158,6 +159,7 @@ export default {
     }
   },
   mounted() {
+    document.body.style.overflow = "hidden"
     this.content_idx = 0
     const proj = this.project_lookup[this.gallery_id]
     this.content_paths = proj.content

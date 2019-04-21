@@ -639,13 +639,18 @@
   }, {
     "client": "Textwise",
     "content": [
+      {"type": "image", "src": "semantic-map-07.jpg"},
+      {"type": "image", "src": "semantic-map-08.jpg"},
+      {"type": "image", "src": "semantic-map-09.jpg"},
+      {"type": "image", "src": "semantic-map-10.jpg"},
+      {"type": "image", "src": "semantic-map-11.jpg"},
       {"type": "image", "src": "semantic-map-01.jpg"},
       {"type": "image", "src": "semantic-map-02.jpg"},
       {"type": "image", "src": "semantic-map-03.jpg"},
       {"type": "image", "src": "semantic-map-04.jpg"},
       {"type": "image", "src": "semantic-map-05.jpg"},
-      {"type": "image", "src": "semantic-map-06.jpg"},
-      {"type": "image", "src": "semantic-map-07.jpg"}
+      {"type": "image", "src": "semantic-map-06.jpg"}
+      
     ],
     "id": "semantic-map",
     "keywords": ["data", "visualization", "natural", "language", "processing", "featured"],
@@ -826,8 +831,8 @@
     "keywords": ["ai", "chatbot", "chat", "music", "sound", "ml", "virtual", "assistant", "nlp", "natural language processing", "ai", "machine", "learning", "neural", "networks"],
     "platforms": ["Web"],
     "published": true,
-    "title": "Patch the Synthbot (Work in Progress)",
-    "tldr": "A know it all synthesizer geek chatbot",
+    "title": "Patch the Chathbot (Work in Progress)",
+    "tldr": "A smart chat bot that can guide visitors through volumes of information using natural human language",
     "topics": {
       "bots": {"Python": ["Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Python": ["AppEngine"]},
