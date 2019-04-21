@@ -832,7 +832,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Patch the Chathbot (Work in Progress)",
-    "tldr": "A smart chat bot that can guide visitors through volumes of information using natural human language",
+    "tldr": "A smart chat bot that can guide users through volumes of information using natural human language",
     "topics": {
       "bots": {"Python": ["Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Python": ["AppEngine"]},
