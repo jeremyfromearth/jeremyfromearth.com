@@ -357,7 +357,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "In the Studio",
-    "tldr": "Interactive recording studio simulations",
+    "tldr": "Eight interactive experiences that guide museum visitors through the process of audio production",
     "topics": {
       "install": {} 
     },
@@ -721,7 +721,7 @@
     ],
     "featured": true,
     "id": "nike-sparq-data-visulization",
-    "keywords": ["sensor", "sports", "nike", "wearable", "data", "visualization"],
+    "keywords": ["sensor", "sports", "nike", "wearable", "data", "visualization", "featured"],
     "location": "Portland, OR",
     "platforms": ["macOS", "Windows"],
     "published": true,
@@ -742,7 +742,7 @@
     "platforms": ["macOS"],
     "published": true,
     "title": "World of AEP",
-    "tldr": "Twenty six screen multitouch media wall",
+    "tldr": "Twenty six screen multitouch media wall in the main lobby of AEP headquarters",
     "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
     "year": 2018
   }, {
@@ -805,7 +805,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Story Screens",
-    "tldr": "A media curation platform enabling curators to craft and publish digital presentation to screen arrays within the museum",
+    "tldr": "A media curation platform enabling museum staff to craft and publish digital presentations to screen arrays positioned throughout the space",
     "topics": {"install": {"C++": ["Cinder", "OpenGL"]}, "fs": {"Python": ["SocketIO", "Flask"]}
     },
     "year": 2016
