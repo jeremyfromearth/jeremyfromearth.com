@@ -166,9 +166,9 @@
     "published": true,
     "collaborators": ["Upswell"],
     "title": "Human Rights Now",
-    "tldr": "Thirty foot media wall of facts, figures and data visualization",
+    "tldr": "Thirty foot media wall of facts, figures and data visualization controlled by touchscreen stations",
     "topics": {
-      "install": {"C++":["Cinder", "OpenGL"]}, 
+      "install": {"C++":["Cinder", "OpenGL", "SocketIO"]}, 
       "vis": {"C++": ["Cinder", "OpenGL"]}
     },
     "year": 2014
@@ -242,7 +242,7 @@
     "published": true,
     "title": "Partnership Hub",
     "tldr": "Gesture controlled particle system and data visualizations",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect", "Box2D", "MQTT"], "Databases": ["Redis"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Box2D"], "Databases": ["Redis"]}},
     "year": 2015
   }, {
     "client": "Clemson University",
@@ -261,7 +261,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Clemson Family Portrait",
-    "topics": {"install": {"C++": ["Cinder", "Kinect", "OpenGL"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
     "tldr": "Three screen Kinect controlled interactive wall",
     "year": 2015
   }, {
@@ -524,7 +524,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Seggesser Hide Explorer",
-    "tldr": "Deep zoom image explorers with hotspots",
+    "tldr": "Deep zoom explorations of Native American hide paintings",
     "topics": {"install": {}},
     "year": 2009
   }, {
@@ -545,8 +545,7 @@
     "tldr": "Cool website for local recording studio",
     "topics": {"fs": {}},
     "year": 2009
-  },
-  {
+  }, {
     "client": "The Kansas City Royals Hall of Fame",
     "collaborators": ["Second Story"],
     "content": [{"type": "video", "src": "32350414"}],
@@ -573,7 +572,7 @@
     "title": "WK+12 Party App", 
     "tldr": "Fun Kinect controlled 3D image gallery for WK12 graduation party", 
     "topics": {
-      "install": {"C++": ["Cinder", "OpenGL", "Kinect"]}
+      "install": {"C++": ["Cinder", "OpenGL"]}
     },
     "year": 2012
   }, {
@@ -603,7 +602,7 @@
     "topics": {
       "vis": {"JavaScript": ["D3"]}, 
       "search": {"C++": ["stdlib"]},
-      "fs": {"C++": [], "JavaScript": ["Node", "NPM"]}
+      "fs": {"C++": [], "JavaScript": ["Node"]}
     },
     "year": 2017
   }, {
@@ -617,8 +616,8 @@
     "title": "Textwise Treemap Component", 
     "tldr": "A treemap for visualizing semantically clustered patent documents", 
     "topics": {
-      "vis": {"JavaScript": ["D3", "Node", "NPM"]}, 
-      "search": {"JavaScript": ["D3", "Node", "NPM"]}
+      "vis": {"JavaScript": ["D3", "Node"]}, 
+      "search": {"JavaScript": ["D3", "Node"]}
     }, 
     "year": 2019
   }, {
@@ -632,8 +631,8 @@
     "title": "Storycrafter User Analytics", 
     "tldr": "Metrics gathering API and customizable data visualization dashboard framework for the Storycrafter platform",
     "topics": {
-      "fs": {"JavaScript": ["Node", "NPM"], "Databases": ["MongoDB"]}, 
-      "vis": {"JavaScript": ["Node", "NPM", "D3"]}
+      "fs": {"JavaScript": ["Node"], "Databases": ["MongoDB"]}, 
+      "vis": {"JavaScript": ["Node", "D3"]}
     }, 
     "url": "https://storycrafter.co/",
     "year": 2018
@@ -655,8 +654,8 @@
     "title": "The Semantic Map",
     "tldr": "tSNE derived hexbin visualization of search over ten million patent documents",
     "topics": {
-      "search":{"JavaScript": ["D3", "Node", "NPM"]},
-      "vis": {"JavaScript": ["D3", "Node", "NPM"]},
+      "search":{"JavaScript": ["D3", "Node"]},
+      "vis": {"JavaScript": ["D3", "Node"]},
       "ai": {"C++": []}
     },
     "year": 2017
@@ -753,7 +752,7 @@
     "published": true,
     "title": "Children's Museum Storefront",
     "tldr": "Kinect + rigid body physics = boom klang",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect", "Box2D"]}},
+    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Box2D"]}},
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -763,7 +762,7 @@
     "id": "omsi-kinect-prototype",
     "keywords": ["kinect", "physics", "augmented", "reality", "installation"],
     "location": "Portland, Oregon",
-    "platforms": ["Windows", "Kinect"],
+    "platforms": ["Windows"],
     "published": true,
     "title": "Augmenting Human Fitness",
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
@@ -802,7 +801,7 @@
     "published": true,
     "title": "Story Screens",
     "tldr": "A media curation platform enabling curators to craft and publish digital presentation to screen arrays within the museum",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Kinect"]}, "fs": {"Python": ["SocketIO", "Flask"]}
+    "topics": {"install": {"C++": ["Cinder", "OpenGL"]}, "fs": {"Python": ["SocketIO", "Flask"]}
     },
     "year": 2016
   }, {
@@ -833,7 +832,7 @@
       "bots": {"Python": ["Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Python": ["AppEngine"]},
       "nlp": {"Python": ["SpaCy"]}, 
-      "ai": {"Python": ["Keras"]}
+      "ai": {"Python": []}
     },
     "year": 2019
   }, {
@@ -873,7 +872,7 @@
   }],
   "tech_ordering": ["JavaScript", "Python", "C++", "Java", "Databases"],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects that involve Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Portland, Oregon U.S.A. and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects integrating Machine Intelligence, Natural Langauge Processing and Data Visualization.", 
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. You can search through it using keywords. Hover over a project to learn more."
   },
   "topics": [

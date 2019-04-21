@@ -152,7 +152,7 @@ export default {
         <h3>Stacks</h3>
         <div class='stacks-lists'>
           <div class='md-layout md-gutter'>
-            <div v-for='k in tech_ordering' :key='k' class='md-layout-item md-xsmall-size-33'>
+            <div v-for='(k, i) in tech_ordering' :key='k' :class='i > 2 ? "md-layout-item md-small-hide" : "md-layout-item"'>
               <h4>{{ k }} </h4> 
               <ul>
                 <li v-for='t in technologies[k]' 
@@ -174,7 +174,7 @@ export default {
                 :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)' 
                   class="far fa-times-circle remove-keyword-icon"></i></div>
             </div>
-            <form novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
+            <form class='md-xsmall-hide' novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
               <md-field>
                 <label>Search</label> 
                 <md-input v-model='search_text'></md-input>
@@ -183,10 +183,10 @@ export default {
           </div>
         </div>
         <div v-if='projects_paged.length' class='project-container-outer'>
-          <div ref='project_container' class='project-container' :style='{height: project_container_height + "px"}'>
-            <div class='meta-container'>
-              <div ref='meta_description' class='meta-description'><p>{{text['project_sidebar']}}</p></div>
-              <div ref='topic_legend' class='topic-legend'>
+          <div ref='project_container' class='md-layout project-container' :style='{height: project_container_height + "px"}'>
+            <div class='md-layout-item meta-container'>
+              <div ref='meta_description' class='meta-description  md-xsmall-hide'><p>{{text['project_sidebar']}}</p></div>
+              <div ref='topic_legend' class='topic-legend md-xsmall-hide'>
                 <h4>Disciplines</h4>
                   <div class='topic-legend-item' v-for='t in topics' :key='t.id' @click='add_keywords(t.title); on_project_transition()'>
                     <div class='topic-legend-color-block' :style='{ backgroundColor: topics_palette[t.palette] }'/>
@@ -196,20 +196,20 @@ export default {
                   </div>
               </div>
             </div>
-            <div class='project-outer'>
+            <div class='md-layout-item projects-outer'>
               <transition-group 
                 v-on:afterEnter='on_project_transition' 
                 ref='project_transition' 
                 :name='project_transition_name' tag='div'>
-                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout'>
-                  <div class='md-layout-item-1' :key='"year-"+k'><h4>{{ k }}</h4></div>
-                  <div class='md-layout-item' :key='"project-"+k'>
+                <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout project-group'>
+                  <div class='md-layout-item project-year' :key='"year-"+k'><h4>{{ k }}</h4></div>
+                  <div class='md-layout-item project-list' :key='"project-"+k'>
                     <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='i * 8' :key='j'/>
                   </div>
                 </div>
               </transition-group>
             </div>
-            <div class='pagination-controller-container'>
+            <div class='md-layout-item pagination-controller-container'>
               <div class='pagination-controller' @click='dec()'>
                 <div class='pagination-arrow pagination-arrow-up'
                   :style="{opacity: pagination > 0 ? 1 : 0, 
@@ -242,7 +242,7 @@ export default {
 
         <div class='work-history'>
           <h3>Employment History</h3>
-          <div class='md-layout'>
+          <div class='md-layout margin'>
             <div v-for='(e, i) in employment' :key='i'> 
               <h4>{{e.title}}</h4>
               <h5>{{e.timespan}}</h5>
@@ -256,27 +256,29 @@ export default {
         <!-- Collaborators -->
 
         <h3>Collaborators</h3>
-        <div class='md-layout'>
-          <div class='md-layout-item'>
-            <p>Britelite Immersive</p>
-            <p>Cibo Design</p>
-            <p>C&amp;G Partners</p>
-            <p>The History Factory</p>
-            <p>Instrument</p>
-          </div>
-          <div class='md-layout-item'>
-            <p>Made Clear</p>
-            <p>The Makers</p>
-            <p>Northern Light</p>
-            <p>Potion Design</p>
-            <p>Renate</p>
-          </div>
-          <div class='md-layout-item'>
-            <p>Second Story</p>
-            <p>Textwise</p>
-            <p>Terra Incognita</p>
-            <p>Upswell</p>
-            <p>Wieden+Kennedy</p>
+        <div class='margin'>
+          <div class='md-layout collaborators-container'>
+            <div class='md-layout-item'>
+              <p>Britelite Immersive</p>
+              <p>Cibo Design</p>
+              <p>C&amp;G Partners</p>
+              <p>The History Factory</p>
+              <p>Instrument</p>
+            </div>
+            <div class='md-layout-item'>
+              <p>Made Clear</p>
+              <p>The Makers</p>
+              <p>Northern Light</p>
+              <p>Potion Design</p>
+              <p>Renate</p>
+            </div>
+            <div class='md-layout-item'>
+              <p>Second Story</p>
+              <p>Textwise</p>
+              <p>Terra Incognita</p>
+              <p>Upswell</p>
+              <p>Wieden+Kennedy</p>
+            </div>
           </div>
         </div>
 
@@ -296,6 +298,10 @@ export default {
 </template>
 
 <style scoped>
+  .margin {
+    margin: 0 4em 0 4em;
+  }
+
   .container {
     min-width: 360px;
     max-width: 1024px;
@@ -356,18 +362,9 @@ export default {
     font-size: inherit;
   }
 
-  .md-layout {
-    margin: 0 4em 0 4em;
-  }
-
-  .md-layout-item-5 {
-    padding-right: 2em;
-  } 
-
   .meta-container {
+    flex: 0 1 0;
     display: flex;
-    flex-grow: 0;
-    flex-shrink: 3;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -450,6 +447,7 @@ export default {
   .pagination-controller-container {
     display: flex;
     flex-direction: column;
+    flex-grow: 0;
   }
 
   .pagination-detail {
@@ -469,14 +467,21 @@ export default {
 
   .project-container {
     display: flex;
+    flex-wrap: nowrap;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 0 1.4em 0 1.4em;
     overflow: hidden;
     transition: height 0.8s;
   }
 
-  .project-outer {
+  .project-group {
+    margin: 0;
+    padding: 0 2em 0 2em;
+    width: 100%;
+  }
+
+  .projects-outer {
     flex-grow: 1;
     width: 100%;
   }
@@ -531,6 +536,10 @@ export default {
     transform: translate(0, 8px);
   }
 
+  .project-year {
+    flex-grow: 0;
+  }
+
   .remove-keyword-icon:hover {
     color: red; 
   }
@@ -566,7 +575,6 @@ export default {
   }
 
   .topic-legend {
-    align-self: flex-end;
     background-color: #f8f8f8;
     padding: 0 1em 1em;
     border-radius: 0.4em;

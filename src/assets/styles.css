@@ -43,6 +43,7 @@ ul {
   list-style-type: none;
   list-style-position: inside;
   text-indent: -1.25em;
+  padding-left: 4em;
 }
 
 ul > li:before {
@@ -52,4 +53,25 @@ ul > li:before {
 .visible {
   opacity: 1;
   transition: opacity 150ms;
+}
+
+/*
+@media only screen and (max-width: 512px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+*/
+
+@media only screen and (max-width: 720px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
 }

@@ -113,11 +113,15 @@ export default {
 }
 
 .project p {
-  margin: 0; 
+  margin: 0 0 1em 0; 
 }
 
 .project h5 {
-  white-space: nowrap;
+  margin-bottom: 1em;
+}
+
+.project h4 {
+  text-transform: uppercase;
 }
 
 .project h4, h5 {
@@ -126,8 +130,6 @@ export default {
 
 .project-heading {
   display: flex;
-  align-items: baseline;
-  whitespace: no-wrap;
 }
 
 .project-inner {
