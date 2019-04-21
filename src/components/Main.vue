@@ -60,8 +60,10 @@ export default {
     // Need to run this code at once
     // to set the height of the project_container
     setTimeout(()=> {
+      this.add_keywords('featured')
       this.on_project_transition()
     }, 1000)
+
   }, 
   methods: {
     ...mapActions([
