@@ -129,7 +129,7 @@
     "featured": false,
     "location": "Washington, D.C.",
     "id": "navigate-the-seas",
-    "keywords": ["smithsonian", "aviation", "installation"],
+    "keywords": ["smithsonian", "aviation", "installation", "touchscreen", "touch", "screen", "multitouch"],
     "platforms": ["Windows"],
     "published": true,
     "title": "Navigate the Seas",
@@ -142,7 +142,7 @@
     "content": [],
     "featured": false,
     "id": "lead-a-trail-drive",
-    "keywords": ["game", "simulation", "installation"],
+    "keywords": ["game", "simulation", "installation", "touchscreen", "touch", "screen", "multitouch"],
     "location": "Cuero, Texas",
     "platforms": ["Windows"],
     "published": false,
@@ -161,7 +161,7 @@
     "featured": true,
     "location": "Winnipeg, Manitoba",
     "id": "cmhr-human-rights-now",
-    "keywords": ["human", "rights", "projection", "data", "visualization", "installation"],
+    "keywords": ["human", "rights", "projection", "data", "visualization", "installation", "wall", "media"],
     "platforms": ["macOS"],
     "published": true,
     "collaborators": ["Upswell"],
@@ -227,7 +227,7 @@
     "platforms": ["iOS"],
     "published": true,
     "title": "Inside Out Exhibit",
-    "tldr": "Multiple touchscreen apps integrating augmented reality, face recognition and other physical sensors",
+    "tldr": "Multiple touchscreen apps integrating augmented reality, face recognition and various physical sensors",
     "topics": {"install": {}},
     "year": 2015
   }, {
@@ -737,7 +737,7 @@
     "platforms": ["macOS"],
     "published": true,
     "title": "World of AEP",
-    "tldr": "Twenty six screens of raw American Electric Power",
+    "tldr": "Twenty six screen multitouch media wall",
     "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
     "year": 2018
   }, {

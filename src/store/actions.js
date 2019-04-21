@@ -70,6 +70,10 @@ export default {
           // map each project to it's text id
           lookup[proj.id] = proj
 
+
+          // set some state vars
+          proj.expanded = false
+
           // a list of keywords
           let s = Array.from(tech).concat(Array.from(languages))
 

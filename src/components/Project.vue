@@ -1,5 +1,4 @@
 <script>
-
 import {
   mapActions,
   mapGetters, 
@@ -38,6 +37,19 @@ export default {
         })
       })
     }, 
+    on_mouse_enter() {
+      this.data.expanded = true
+      this.highlight(true)
+    },
+    on_mouse_leave() {
+      this.data.expanded = false
+      this.highlight(false)
+    },
+    on_project_click() {
+      if(this.$is_mobile) {
+        this.data.expanded = !this.data.expanded
+      }
+    },
     unhighlight() {
       //console.log('unhighlight()')
       Object.keys(this.data.topics).forEach(t => {
@@ -62,12 +74,12 @@ export default {
 </script>
 
 <template>
-  <div class='project' @mouseenter='highlight' @mouseleave='highlight(false)'>
-    <TopicSwatch :data='data.topics' class='topic-swatch' v-on:highlight='highlight(true)'/> 
-    <div class='project-inner'>
+  <div class='project' @mouseenter='on_mouse_enter' @mouseleave='on_mouse_leave' @click='on_project_click'>
+    <TopicSwatch :data='data.topics' :class='data.expanded ? "topic-swatch topic-swatch-expanded" : "topic-swatch"'/> 
+    <div :class='data.expanded ? "project-inner project-inner-expanded" : "project-inner"'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
-        <div class='media-link-container'>
+        <div :class='data.expanded ? "media-link-container media-link-container-expanded" : "media-link-container"'>
           <i v-if='data.content.length != 0' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i>
           <a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a>
         </div>
@@ -93,11 +105,10 @@ export default {
 }
 
 .media-link-container i:hover {
-  color:red;
+  color:#5bbcfb;
 }
 
-.project:hover .media-link-container, 
-.project:active .media-link-container {
+.media-link-container-expanded {
   opacity: 1;
   display: flex;
 }
@@ -137,11 +148,18 @@ export default {
   transition-delay: 0.1s;
 }
 
+.project-inner-expanded {
+  transition-delay: 0s;
+  transform: translate(3em, 0);
+}
+
+/*
 .project:hover .project-inner,
 .project:active .project-inner {
   transition-delay: 0s;
   transform: translate(3em, 0);
 }
+*/
 
 .topic-swatch {
   transform: translate(0, -2px);
@@ -153,6 +171,14 @@ export default {
   transform-origin: center;
 }
 
+.topic-swatch-expanded {
+  opacity: 1;
+  transform: translate(0, 0);
+  transform: rotate(-1.57rad) scale(1.4);
+  display: block;
+}
+
+/*
 .project:hover .topic-swatch, 
 .project:active .topic-swatch {
   opacity: 1;
@@ -160,4 +186,5 @@ export default {
   transform: rotate(-1.57rad) scale(1.4);
   display: block;
 }
+*/
 </style>

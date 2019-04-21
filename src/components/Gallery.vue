@@ -5,6 +5,7 @@ import {
 } from 'vuex'
 
 import _ from 'lodash'
+import Hammer from 'hammerjs'
 
 export default {
   name: 'Gallery',
@@ -50,6 +51,9 @@ export default {
   destroyed() {
     clearInterval(this.interval_id)
     window.removeEventListener('keydown', this.on_key_down_throttle)
+    if(this.swipe) {
+      this.swipe.off('swipeleft swiperight', this.on_swipe)
+    }
   },
   methods: {
     ...mapActions(['set_gallery_id']), 
@@ -84,7 +88,8 @@ export default {
       }
     },
     dec() {
-      this.content_idx = this.content_idx - 1 % this.content_paths.length
+      this.content_idx = this.content_idx - 1 < 0 ? this.content_paths.length - 1 : this.content_idx - 1
+      console.log(this.content_idx)
       this.load_next()
     },
     inc() {
@@ -139,6 +144,13 @@ export default {
       this.current_content.width = size[0]
       this.current_content.height = size[1]
       this.calc_content_size()
+      const swipe = new Hammer(this.$refs.video.$el)
+      swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
+      swipe.on('swipeleft swiperight', this.on_swipe)
+    },
+    on_swipe(e) {
+      if(e && e.type == 'swipeleft') this.inc()
+      if(e && e.type == 'swiperight') this.dec()
     },
     set_content_idx(i) {
       this.content_idx = i
@@ -150,31 +162,24 @@ export default {
     const proj = this.project_lookup[this.gallery_id]
     this.content_paths = proj.content
       
-      /*.map(c => {
-      
-    })
-      [].concat(proj.videos ? proj.videos : [])
-        .map(x => {
-          return {type: 'video', src: x}
-        })
-      .concat(proj.images ? proj.images.map(x => {
-          return {type: 'image', src: x} 
-        }) : [])
-    */
-  
-    /*
     this.interval_id = setInterval(()=> {
       this.radians += 0.0008
       this.$forceUpdate()
     }, 1/60)
-    */
 
     this.on_key_down_throttle = 
       _.throttle(this.on_key_down, 500), {leading: true}
     window.addEventListener('keydown', this.on_key_down_throttle)
     this.visible = true
     this.set_content_idx(0)
-  }, 
+    if(this.content_paths.length > 1) {
+      setTimeout(()=> {
+        this.swipe = new Hammer(this.$refs.content_container)
+        this.swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
+        this.swipe.on('swipeleft swiperight', this.on_swipe)
+      }, 500)
+    }
+  },
   watch: {
     window_size: function() {
       this.calc_content_size()
@@ -197,16 +202,17 @@ export default {
       </transition>
 
       <transition name='content-container'>
-        <div v-if='visible && current_content' class='content-container' 
+        <div v-if='visible && current_content' ref='content_container' class='content-container' 
           :style='{width: `${content_width}px`, height: `${content_height}px`}'>
           <div class='content'>
             <transition name='content'>
               <img v-if='current_content && current_content.type == "image"' 
                 class='md-image' :src='current_content.src' :key='current_content.src'>
-              <VimeoPlayer v-else-if='current_content && current_content.type == "video"' 
+              <VimeoPlayer ref='video' v-else-if='current_content && current_content.type == "video"' 
                 v-on:ready='on_vimeo_player_ready' :video_id='current_content.src' 
                 :key='current_content.src'/>
             </transition>
+            <div class='overlay'></div>
           </div>
         </div>
       </transition>
@@ -347,6 +353,14 @@ img {
   height: 100%;
   object-fit: cover;
   position: absolute;
+}
+
+.overlay {
+  background-color: rgba(255, 0, 0, 0.0);
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  width: 100%;
 }
 
 .spinner {

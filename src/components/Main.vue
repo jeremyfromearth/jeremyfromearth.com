@@ -31,7 +31,6 @@ export default {
             ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}` 
       }
     }, 
-    
   },
   data() {
     return {
@@ -414,7 +413,7 @@ export default {
     margin-top: 4em;
     user-select: none;
     justify-content: center;
-    transition: height 0.32s, margin-top 0.32s, opacity 0.16s;
+    transition: height 0.32s, margin-top 0.32s, opacity 0.16s, color 0.32s;;
   }
 
   .pagination-arrow-up {
@@ -423,8 +422,8 @@ export default {
   }
 
   .pagination-arrow-up:hover {
-    color: red;
-    border-bottom: 1px solid red;
+    color: #5bbcfb;
+    border-bottom: 1px solid #5bbcfb;
   }
 
   .pagination-arrow-down {
@@ -433,8 +432,8 @@ export default {
   }
   
   .pagination-arrow-down:hover {
-    color: red;
-    border-top: 1px solid red;
+    color: #5bbcfb;
+    border-top: 1px solid #5bbcfb;
   }
 
   .pagination-controller {
@@ -541,7 +540,7 @@ export default {
   }
 
   .remove-keyword-icon:hover {
-    color: red; 
+    color: #5bbcfb; 
   }
 
   .section-title {

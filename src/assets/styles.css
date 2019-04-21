@@ -14,18 +14,12 @@ a {
   transition: background-color 0.2s, color 0.2s;
 }
 
-a:hover {}
-
-a:visited {}
-
-a:active: {}
-
 .md-theme-default a:not(.md-button) {
-  color: #999;
+  color: #2b87c3;
 }
 
 .md-theme-default a:hover:not(.md-button) {
-  color: #777;
+  color: #5bbcfb;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -54,15 +48,6 @@ ul > li:before {
   opacity: 1;
   transition: opacity 150ms;
 }
-
-/*
-@media only screen and (max-width: 512px) {
-  body {
-    font-size: 8px;
-  }
-}
-
-*/
 
 @media only screen and (max-width: 720px) {
   body {

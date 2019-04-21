@@ -6,6 +6,7 @@ import {mapActions, mapGetters} from 'vuex'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import MobileDetect from 'mobile-detect'
 
 import Gallery from './components/Gallery'
 import Project from './components/Project'
@@ -22,6 +23,8 @@ Vue.component('TopicSwatch', TopicSwatch)
 Vue.component('VimeoPlayer', VimeoPlayer)
 
 library.add(faCoffee)
+
+Vue.prototype.$is_mobile = new MobileDetect(window.navigator.userAgent).mobile() ? true : false
 
 export default {
   name: 'JeremyFromEarth',
