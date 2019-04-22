@@ -81,6 +81,10 @@ export default {
     grid-template-rows: 50% 50%;
   }
 
+  .topic-swatch {
+    cursor: pointer;
+  }
+
   .topic-swatch-inner {
     height: 2em;
     width: 2em;

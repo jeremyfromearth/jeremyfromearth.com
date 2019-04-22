@@ -50,12 +50,15 @@ export default {
         this.data.expanded = !this.data.expanded
       }
     },
+    on_swatch_click() {
+      if(this.data.content.length) {
+        this.set_gallery_id(this.data.id) 
+      }
+    },
     unhighlight() {
-      //console.log('unhighlight()')
       Object.keys(this.data.topics).forEach(t => {
         if(this.topic_index[t]) {
           this.topic_index[t].highlight = false
-          //console.log(this.topic_index[t])    
         }
       })
     }
@@ -74,14 +77,15 @@ export default {
 </script>
 
 <template>
-  <div class='project' @mouseenter='on_mouse_enter' @mouseleave='on_mouse_leave' @click='on_project_click'>
-    <TopicSwatch :data='data.topics' :class='data.expanded ? "topic-swatch topic-swatch-expanded" : "topic-swatch"'/> 
+  <div class='project' @mouseenter='on_mouse_enter' @mouseleave='on_mouse_leave'>
+    <TopicSwatch class='topic-swatch' :data='data.topics' @click.native='on_swatch_click'
+      :class='data.expanded ? "topic-swatch topic-swatch-expanded" : "topic-swatch"'/> 
     <div :class='data.expanded ? "project-inner project-inner-expanded" : "project-inner"'>
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
         <div :class='data.expanded ? "media-link-container media-link-container-expanded" : "media-link-container"'>
-          <i v-if='data.content.length != 0' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i>
-          <a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a>
+          <h4><i v-if='data.content.length != 0' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i></h4>
+          <h4><a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a></h4>
         </div>
       </div>
       <h5 v-if='data.client'>{{ data.client }} </h5>
@@ -141,6 +145,11 @@ export default {
 
 .project-heading {
   display: flex;
+  align-items: center;
+}
+
+.project-heading i {
+  margin: 0 1.4em 0 0em;
 }
 
 .project-inner {
@@ -150,16 +159,12 @@ export default {
 
 .project-inner-expanded {
   transition-delay: 0s;
-  transform: translate(3em, 0);
+  transform: translate(4em, 0);
 }
 
-/*
-.project:hover .project-inner,
-.project:active .project-inner {
-  transition-delay: 0s;
-  transform: translate(3em, 0);
+.project-inner-expanded i {
+  transform: scale(1.4, 1.4)
 }
-*/
 
 .topic-swatch {
   transform: translate(0, -2px);
@@ -177,14 +182,4 @@ export default {
   transform: rotate(-1.57rad) scale(1.4);
   display: block;
 }
-
-/*
-.project:hover .topic-swatch, 
-.project:active .topic-swatch {
-  opacity: 1;
-  transform: translate(0, 0);
-  transform: rotate(-1.57rad) scale(1.4);
-  display: block;
-}
-*/
 </style>
