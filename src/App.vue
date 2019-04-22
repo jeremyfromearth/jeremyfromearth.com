@@ -1,5 +1,4 @@
 <script>
-// Vendor imports
 import Vue from 'vue'
 import VueMaterial from 'vue-material'
 import VueAnalytics from 'vue-analytics'
@@ -23,7 +22,6 @@ Vue.use(VueAnalytics, {
 
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
 Vue.component('Gallery', Gallery)
 Vue.component('Project', Project)
 Vue.component('TopicSwatch', TopicSwatch)
@@ -57,10 +55,16 @@ export default {
 
 <template>
   <div>
+    <!-- Router -->
     <router-view></router-view>
+
+    <!-- Gallery -->
     <Gallery v-if='gallery_id != null' class='gallery'/>
+
+    <!-- top color bar -->
     <div class='top-bar'>
-      <div v-for='(color, i) in topics_palette' :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
+      <div v-for='(color, i) in topics_palette' 
+        :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
       </div>
     </div>
   </div>

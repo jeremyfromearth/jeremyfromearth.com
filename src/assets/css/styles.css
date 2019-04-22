@@ -1,5 +1,5 @@
-@font-face {font-family: IBMPlexMonoRegular; src: url(./fonts/IBMPlexMono-Regular.ttf);}
-@font-face {font-family: IBMPlexMonoSemiBold; src: url(./fonts/IBMPlexMono-SemiBold.ttf);}
+@font-face {font-family: IBMPlexMonoRegular; src: url(../fonts/IBMPlexMono-Regular.ttf);}
+@font-face {font-family: IBMPlexMonoSemiBold; src: url(../fonts/IBMPlexMono-SemiBold.ttf);}
 
 * {
   font-weight: 100;
