@@ -84,7 +84,7 @@ export default {
       <div class='project-heading'>
         <h4>{{ data.title }}</h4>
         <div :class='data.expanded ? "media-link-container media-link-container-expanded" : "media-link-container"'>
-          <h4><i v-if='data.content.length != 0' class='fas fa-search-plus media-link' @click='set_gallery_id(data.id)'></i></h4>
+          <h4><i v-if='data.content.length != 0' class='far fa-images media-link' @click='set_gallery_id(data.id)'></i></h4>
           <h4><a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a></h4>
         </div>
       </div>
@@ -149,7 +149,8 @@ export default {
 }
 
 .project-heading i {
-  margin: 0 1.4em 0 0em;
+  cursor: pointer;
+  margin: 0 1.6em 0 0em;
 }
 
 .project-inner {
