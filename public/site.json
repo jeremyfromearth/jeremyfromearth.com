@@ -189,7 +189,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "Visualizing Breast Cancer Causation",
-    "tldr": "Complex network graph data visualization with vanilla JavaScript",
+    "tldr": "Network graph based interactive data visualization depicting the connectionivity of breast cancer causes",
     "topics": {"vis": {"JavaScript": []}, "fs": {"JavaScript": []}},
     "year": 2014
   }, {
@@ -297,7 +297,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Harmony Table",
-    "tldr": "A multitouch table for exploring connections beween the spatial and temporal components of music",
+    "tldr": "Multitouch table for exploring connections beween the spatial and temporal components of music",
     "topics": {"install": {"Java": ["Processing", "TUIO", "OpenGL"]}, "vis": {}},
     "year": 2012
   }, {
@@ -598,7 +598,7 @@
     "platforms": ["Web", "Linux"],
     "published": true,
     "title": "Gist Query Language",
-    "tldr": "A domain specific query langauge for document searches over the IP.com patent corpus",
+    "tldr": "Domain specific query langauge for document searches over the IP.com patent corpus",
     "topics": {
       "vis": {"JavaScript": ["D3"]}, 
       "search": {"C++": ["stdlib"]},
@@ -657,7 +657,7 @@
     "platforms": ["Web"],
     "published": true,
     "title": "The Semantic Map",
-    "tldr": "tSNE derived hexbin visualization of search over ten million patent documents",
+    "tldr": "tSNE derived interactive hexbin visualization and search tool for IP.com's InnovationQ platform",
     "topics": {
       "search":{"JavaScript": ["D3", "Node"]},
       "vis": {"JavaScript": ["D3", "Node"]},
@@ -726,7 +726,7 @@
     "platforms": ["macOS", "Windows"],
     "published": true,
     "title": "Sparq Data Visualizations",
-    "tldr": "Radar chart data visualizations for performance metrics gathered by in shoe sensor",
+    "tldr": "Radar chart data visualizations for performance metrics gathered by in shoe sensors",
     "topics": {
       "vis": {} 
     },
@@ -742,7 +742,7 @@
     "platforms": ["macOS"],
     "published": true,
     "title": "World of AEP",
-    "tldr": "Twenty six screen multitouch media wall in the main lobby of AEP headquarters",
+    "tldr": "Twenty six screen multitouch media wall in the main lobby of AEP headquarters for educating visitors and employees alike",
     "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
     "year": 2018
   }, {
@@ -805,7 +805,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Story Screens",
-    "tldr": "A media curation platform enabling museum staff to craft and publish digital presentations to screen arrays positioned throughout the space",
+    "tldr": "Media curation platform enabling museum staff to craft and publish custom digital presentations to screen arrays positioned throughout the art museum",
     "topics": {"install": {"C++": ["Cinder", "OpenGL"]}, "fs": {"Python": ["SocketIO", "Flask"]}
     },
     "year": 2016
