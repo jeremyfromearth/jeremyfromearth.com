@@ -82,7 +82,7 @@ export default {
       :class='data.expanded ? "topic-swatch topic-swatch-expanded" : "topic-swatch"'/> 
     <div :class='data.expanded ? "project-inner project-inner-expanded" : "project-inner"'>
       <div class='project-heading'>
-        <h4>{{ data.title }}</h4>
+        <h4 @click='data.expanded && data.content.length ? set_gallery_id(data.id) : null'>{{ data.title }}</h4>
         <div :class='data.expanded ? "media-link-container media-link-container-expanded" : "media-link-container"'>
           <h4><i v-if='data.content.length != 0' class='far fa-images media-link' @click='set_gallery_id(data.id)'></i></h4>
           <h4><a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a></h4>
@@ -109,7 +109,7 @@ export default {
 }
 
 .media-link-container i:hover {
-  color:#5bbcfb;
+  color: #5bbcfb;
 }
 
 .media-link-container-expanded {
@@ -136,7 +136,12 @@ export default {
 }
 
 .project h4 {
+  cursor: pointer;
   text-transform: uppercase;
+}
+
+.project h4:hover {
+  color: #5bbcfb;
 }
 
 .project h4, h5 {
