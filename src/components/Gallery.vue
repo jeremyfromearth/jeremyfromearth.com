@@ -127,6 +127,7 @@ export default {
       }
     }, 
     on_key_down(evt) {
+      if(this.content.length <= 1) return
       if(evt.key == 'ArrowRight') {
         this.set_content_idx(
           this.content_idx + 1 > this.content_paths.length - 1 ? 
