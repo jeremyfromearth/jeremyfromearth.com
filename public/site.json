@@ -13,6 +13,23 @@
     "title": "Google Cloud Storage File Upload with Flask & JavaScript",
     "url": "https://medium.com/@jeremy.from.earth/google-cloud-storage-file-upload-with-flask-javascript-64ec5bc5c42d"
   }], 
+  "education": [
+    {
+      "date": "Oct 2018",
+      "title": "Deep Learning Specialization", 
+      "school": "DeepLearning.ai & Coursera",
+      "url_text": "View Certificate",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/2NFCQY9RGTSR",
+      "description": "Five 6-8 week online courses in modern deep learning systems including Convolutional Neural Networkss, Recurrent Neworks, and Long Short Term Memory Networks. Projects included object recognition, continuous value prediction, A.I. based music generation and Natural Language Generation. All assignments were completed using the Python programming language with Keras and Tensorflow."
+    }, {
+      "date": "Feb 2017",
+      "title": "Machine Learning Specialization", 
+      "school": "University of Washington & Coursera", 
+      "url_text": "View Certificate",
+      "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/D34LELC6UBDN",
+      "description": "Four 6-8 week courses in the fundamentals of common machine learning algorithms in three categories: Regression, Classification and Clustering and Retreival. All assignments were completed using the Python programming language."
+    }
+  ],
   "employment": [{
     "descriptions": [
       "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada", 

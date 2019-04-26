@@ -82,7 +82,8 @@ export default {
       :class='data.expanded ? "topic-swatch topic-swatch-expanded" : "topic-swatch"'/> 
     <div :class='data.expanded ? "project-inner project-inner-expanded" : "project-inner"'>
       <div class='project-heading'>
-        <h4 @click='data.expanded && data.content.length ? set_gallery_id(data.id) : null'>{{ data.title }}</h4>
+        <h4 
+          @click='data.expanded && data.content.length ? set_gallery_id(data.id) : null'>{{ data.title }}</h4>
         <div :class='data.expanded ? "media-link-container media-link-container-expanded" : "media-link-container"'>
           <h4><i v-if='data.content.length != 0' class='far fa-images media-link' @click='set_gallery_id(data.id)'></i></h4>
           <h4><a v-if='data.url' :href='data.url' target='new'><i  class='fa fa-link media-link'></i></a></h4>

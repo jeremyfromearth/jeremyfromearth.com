@@ -2,6 +2,7 @@ import * as _ from 'lodash'
 
 export default {
   blog_posts: state => state.blog_posts,
+  education: state => state.education,
   employment: state => state.employment,
   gallery_id: state => state.gallery_id,
   keywords: state => state.keywords,

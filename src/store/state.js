@@ -1,5 +1,6 @@
 export default {
   blog_posts: [],
+  education: [],
   employment: [],
   index: {},
   gallery_id: null,

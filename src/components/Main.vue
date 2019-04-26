@@ -10,7 +10,7 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'blog_posts', 'employment', 'gallery_id', 'keywords', 
+      'blog_posts', 'education', 'employment', 'gallery_id', 'keywords', 
       'links', 'pagination', 'projects_paged',
       'project_search_results', 'project_sort_keys', 
       'projects_per_page', 'tech_ordering', 'technologies', 
@@ -125,7 +125,7 @@ export default {
       <div class='container'>
         <!-- Header --> 
         <div class='header-container'>
-          <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.0</h4></span></div>
+          <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.1</h4></span></div>
           <div class='header-links'>
             <a v-for='link in links' 
                class='header-link' :title='link.title' 
@@ -278,6 +278,18 @@ export default {
               <p>Terra Incognita</p>
               <p>Upswell</p>
               <p>Wieden+Kennedy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class='education'>
+          <h3>Recent Education</h3>
+          <div class='md-layout margin'>
+            <div v-for='(e, i) in education' :key='i'> 
+              <h4>{{e.title}} &mdash; {{e.school}}</h4>
+              <h5>{{e.date}}</h5>
+              <p>{{e.description ? e.description : "No description"}}</p>
+              <a :href='e.url'>{{e.url_text}}</a>
             </div>
           </div>
         </div>
