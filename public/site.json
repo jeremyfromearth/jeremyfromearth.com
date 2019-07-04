@@ -1,5 +1,10 @@
 {
  "blog": [{
+    "keywords": ["vim", "terminal", "code", "programming"],
+    "title": "Navigating in Vim",
+    "topcis": ["Software Engineering"],
+    "url": "https://medium.com/@jeremy.from.earth/navigating-in-vim-41512418673e"
+  }, {
     "keywords": ["jupyter", "data", "conda", "python", "science", "notebooks"],
     "title": "Multiple Python kernels for Jupyter Lab with Conda",
     "topics": ["Natural Language Processing"],
@@ -12,19 +17,19 @@
     "keywords": ["google", "cloud", "platform", "javascript", "upload"],
     "title": "Google Cloud Storage File Upload with Flask & JavaScript",
     "url": "https://medium.com/@jeremy.from.earth/google-cloud-storage-file-upload-with-flask-javascript-64ec5bc5c42d"
-  }], 
+  }],
   "education": [
     {
       "date": "Oct 2018",
-      "title": "Deep Learning Specialization", 
+      "title": "Deep Learning Specialization",
       "school": "DeepLearning.ai & Coursera",
       "url_text": "View Certificate",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/2NFCQY9RGTSR",
       "description": "Five 6-8 week online courses in modern deep learning systems including Convolutional Neural Networkss, Recurrent Neworks, and Long Short Term Memory Networks. Projects included object recognition, continuous value prediction, A.I. based music generation and Natural Language Generation. All assignments were completed using the Python programming language with Keras and Tensorflow."
     }, {
       "date": "Feb 2017",
-      "title": "Machine Learning Specialization", 
-      "school": "University of Washington & Coursera", 
+      "title": "Machine Learning Specialization",
+      "school": "University of Washington & Coursera",
       "url_text": "View Certificate",
       "url": "https://www.coursera.org/account/accomplishments/specialization/certificate/D34LELC6UBDN",
       "description": "Four 6-8 week courses in the fundamentals of common machine learning algorithms in three categories: Regression, Classification and Clustering and Retrieval. All assignments were completed using the Python programming language."
@@ -32,9 +37,9 @@
   ],
   "employment": [{
     "descriptions": [
-      "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada", 
-      "Generating project roadmaps, estimates of cost, software schematics and end user documentation", 
-      "Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process", 
+      "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada",
+      "Generating project roadmaps, estimates of cost, software schematics and end user documentation",
+      "Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process",
       "Studying fields of interest, including machine intelligence and natural language processing, with end goal of attaining work in new fields"
     ],
     "timespan": "January 2010 - Present",
@@ -44,7 +49,7 @@
       "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript & D3",
       "Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
     ],
-    "timespan": "August 2016 - September 2017", 
+    "timespan": "August 2016 - September 2017",
     "title": "Software Engineer, Textwise"
   }, {
     "descriptions": [
@@ -171,7 +176,7 @@
     "client": "Canadian Museum for Human Rights",
     "content": [
       {"type": "image", "src": "cmhr_hrnow_01.jpg"},
-      {"type": "image", "src": "cmhr_hrnow_06.jpg"}, 
+      {"type": "image", "src": "cmhr_hrnow_06.jpg"},
       {"type": "image", "src": "cmhr-interior-02.jpg"},
       {"type": "video", "src": "251536677"}
     ],
@@ -185,7 +190,7 @@
     "title": "Human Rights Now",
     "tldr": "Thirty foot media wall of facts, figures and data visualization controlled by touchscreen stations",
     "topics": {
-      "install": {"C++":["Cinder", "OpenGL", "SocketIO"]}, 
+      "install": {"C++":["Cinder", "OpenGL", "SocketIO"]},
       "vis": {"C++": ["Cinder", "OpenGL"]}
     },
     "year": 2014
@@ -222,7 +227,7 @@
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": {
-      "install": {"Java": ["Processing", "SocketIO"]}, 
+      "install": {"Java": ["Processing", "SocketIO"]},
       "vis": {}
     },
     "year": 2015
@@ -250,7 +255,7 @@
   }, {
     "client": "Telstra",
     "collaborators": ["Wild"],
-    "content": [{"type": "video", "src": "275516553"}], 
+    "content": [{"type": "video", "src": "275516553"}],
     "featured": false,
     "id": "telstra-partnership-hub",
     "keywords": ["telstra", "wild", "physics", "kinect", "installation"],
@@ -376,7 +381,7 @@
     "title": "In the Studio",
     "tldr": "Eight interactive experiences that guide museum visitors through the process of audio production",
     "topics": {
-      "install": {} 
+      "install": {}
     },
     "year": 2008
   }, {
@@ -401,10 +406,10 @@
     "collaborators": ["Second Story"],
     "categories": "data-visualization, events, info-screens",
     "content": [
-      {"type": "image", "src": "loc_orientation_01.jpg"}, 
-      {"type": "image", "src": "loc_orientation_13.jpg"}, 
-      {"type": "image", "src": "loc_orientation_02.jpg"}, 
-      {"type": "image", "src": "loc_orientation_03.jpg"}, 
+      {"type": "image", "src": "loc_orientation_01.jpg"},
+      {"type": "image", "src": "loc_orientation_13.jpg"},
+      {"type": "image", "src": "loc_orientation_02.jpg"},
+      {"type": "image", "src": "loc_orientation_03.jpg"},
       {"type": "image", "src": "loc_orientation_04.jpg"}
     ],
     "featured": false,
@@ -421,7 +426,7 @@
     "client": "National Library of Medicine",
     "collaborators": ["Second Story"],
     "content": [
-      {"type": "video", "src": "32282236"} 
+      {"type": "video", "src": "32282236"}
     ],
     "featured": false,
     "id": "global-health",
@@ -437,7 +442,7 @@
     "client": "National Library of Medicine",
     "collaborators": ["Second Story"],
     "content": [
-      {"type": "image", "src": "nlm_names_quilt_01.jpg"},   
+      {"type": "image", "src": "nlm_names_quilt_01.jpg"},
       {"type": "video", "src": "32282222"}
     ],
     "featured": false,
@@ -576,18 +581,18 @@
     "topics": {"install":{}},
     "year": 2009
   }, {
-    "client": "Weiden+Kennedy", 
+    "client": "Weiden+Kennedy",
     "collaborators": ["Weiden+Kennedy"],
     "content": [
-      {"type": "video", "src": "331447902"} 
+      {"type": "video", "src": "331447902"}
     ],
-    "id": "wk12", 
+    "id": "wk12",
     "keywords": ["wk12", "weiden+kennedy", "kinect", "images", "video", "3d", "opengl"],
-    "location": "Portland, OR", 
+    "location": "Portland, OR",
     "platforms": ["Windows"],
-    "published": true, 
-    "title": "WK+12 Party App", 
-    "tldr": "Fun Kinect controlled 3D image gallery for WK12 graduation party", 
+    "published": true,
+    "title": "WK+12 Party App",
+    "tldr": "Fun Kinect controlled 3D image gallery for WK12 graduation party",
     "topics": {
       "install": {"C++": ["Cinder", "OpenGL"]}
     },
@@ -617,40 +622,40 @@
     "title": "Gist Query Language",
     "tldr": "Domain specific query langauge for document searches over the IP.com patent corpus",
     "topics": {
-      "vis": {"JavaScript": ["D3"]}, 
+      "vis": {"JavaScript": ["D3"]},
       "search": {"C++": ["stdlib"]},
       "fs": {"C++": [], "JavaScript": ["Node"]}
     },
     "year": 2017
   }, {
-    "client": "Textwise", 
+    "client": "Textwise",
     "content": [],
     "featured": true,
-    "id": "textwise-treemap", 
-    "keywords": ["textwise", "treemap", "nlp", "data", "visualization", "wordclouds", "d3", "clustering", "search"], 
+    "id": "textwise-treemap",
+    "keywords": ["textwise", "treemap", "nlp", "data", "visualization", "wordclouds", "d3", "clustering", "search"],
     "platforms": ["web"],
-    "published": false, 
-    "title": "Textwise Treemap Component", 
-    "tldr": "A treemap for visualizing semantically clustered patent documents", 
+    "published": false,
+    "title": "Textwise Treemap Component",
+    "tldr": "A treemap for visualizing semantically clustered patent documents",
     "topics": {
-      "vis": {"JavaScript": ["D3", "Node"]}, 
+      "vis": {"JavaScript": ["D3", "Node"]},
       "search": {"JavaScript": ["D3", "Node"]}
-    }, 
+    },
     "year": 2019
   }, {
-    "client": "Terra Incognita", 
+    "client": "Terra Incognita",
     "content": [{"type": "video", "src": "310668666"}],
     "featured": true,
-    "id": "storycrafter-analytics", 
+    "id": "storycrafter-analytics",
     "keywords": ["analytics", "metrics", "time", "series"],
-    "platforms": ["WWW"], 
+    "platforms": ["WWW"],
     "published": true,
-    "title": "Storycrafter User Analytics", 
+    "title": "Storycrafter User Analytics",
     "tldr": "Metrics gathering API and customizable data visualization dashboard framework for the Storycrafter platform",
     "topics": {
-      "fs": {"JavaScript": ["Node"], "Databases": ["MongoDB"]}, 
+      "fs": {"JavaScript": ["Node"], "Databases": ["MongoDB"]},
       "vis": {"JavaScript": ["Node", "D3"]}
-    }, 
+    },
     "url": "https://storycrafter.co/",
     "year": 2018
   }, {
@@ -667,7 +672,7 @@
       {"type": "image", "src": "semantic-map-04.jpg"},
       {"type": "image", "src": "semantic-map-05.jpg"},
       {"type": "image", "src": "semantic-map-06.jpg"}
-      
+
     ],
     "id": "semantic-map",
     "keywords": ["data", "visualization", "natural", "language", "processing", "featured"],
@@ -699,7 +704,7 @@
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
       "search": {},
-      "fs": {"Java": ["Android"], "Databases": ["SQLite"], "Python": []} 
+      "fs": {"Java": ["Android"], "Databases": ["SQLite"], "Python": []}
     },
     "year": 2010
   }, {
@@ -731,8 +736,8 @@
     "client": "Nike",
     "collaborators": ["The Makers"],
     "content": [
-      {"type": "image", "src": "nike_sparq_radar_chart_01.jpg"}, 
-      {"type": "image", "src": "nike_sparq_radar_chart_02.jpg"}, 
+      {"type": "image", "src": "nike_sparq_radar_chart_01.jpg"},
+      {"type": "image", "src": "nike_sparq_radar_chart_02.jpg"},
       {"type": "image", "src": "nike_sparq_radar_chart_03.jpg"},
       {"type": "video", "src": "165072709"}
     ],
@@ -745,7 +750,7 @@
     "title": "Sparq Data Visualizations",
     "tldr": "Radar chart data visualizations for performance metrics gathered by in shoe sensors",
     "topics": {
-      "vis": {} 
+      "vis": {}
     },
     "year": 2010
   }, {
@@ -809,11 +814,11 @@
     "collaborators": ["Britelite Immersive"],
     "content": [
       {"type": "image", "src": "sfmoma-exterior-01.jpg"},
-      {"type": "image", "src": "sfmoma-interior-01.jpg"}, 
-      {"type": "image", "src": "sfmoma-interior-02.jpg"}, 
-      {"type": "image", "src": "sfmoma-interior-03.jpg"}, 
-      {"type": "image", "src": "sfmoma-interior-04.jpg"}, 
-      {"type": "image", "src": "sfmoma-interior-05.jpg"}, 
+      {"type": "image", "src": "sfmoma-interior-01.jpg"},
+      {"type": "image", "src": "sfmoma-interior-02.jpg"},
+      {"type": "image", "src": "sfmoma-interior-03.jpg"},
+      {"type": "image", "src": "sfmoma-interior-04.jpg"},
+      {"type": "image", "src": "sfmoma-interior-05.jpg"},
       {"type": "image", "src": "sfmoma-interior-06.jpg"}
     ],
     "id": "sfmoma-storyscreens",
@@ -853,7 +858,7 @@
     "topics": {
       "bots": {"Python": ["Rasa"]},
       "fs": {"JavaScript": ["Vue"], "Databases": ["Firestore"], "Python": ["AppEngine"]},
-      "nlp": {"Python": ["SpaCy"]}, 
+      "nlp": {"Python": ["SpaCy"]},
       "ai": {"Python": []}
     },
     "year": 2019
@@ -907,3 +912,4 @@
     {"id": "fs", "palette": 6, "title": "Fullstack Development"}
   ]
 }
+
