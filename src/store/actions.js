@@ -4,7 +4,7 @@ import * as stemmer from 'stemmer'
 
 export default {
   add_keywords({commit}, keywords) {
-    let kws = 
+    let kws =
       keywords
         .replace(/,/g, ' ')
         .split(' ')
@@ -13,13 +13,13 @@ export default {
           return {original: s.trim(), term: stemmer(s.trim().toLowerCase())}
         })
 
-    commit('add_keywords', kws) 
+    commit('add_keywords', kws)
   },
   clear_project_filters({commit}) {
-    commit('clear_project_filters') 
+    commit('clear_project_filters')
   },
   dec_pagination({commit}) {
-    commit('dec_pagination') 
+    commit('dec_pagination')
   },
   async get_data({commit, dispatch}) {
 		let promises = [
@@ -44,7 +44,7 @@ export default {
 
         const index = {}
         const lookup = {}
-        const projects = 
+        const projects =
           res[0].data['projects'].filter(p => p.published)
         const stopwords = res[1].data
         const technologies = {}
@@ -59,7 +59,7 @@ export default {
           t.selected = false
           topic_idx[t.id] = t
         })
-        
+
         // map each project to a list of keywords derived from various fields
         projects.forEach(proj => {
 
@@ -69,7 +69,6 @@ export default {
 
           // map each project to it's text id
           lookup[proj.id] = proj
-
 
           // set some state vars
           proj.expanded = false
@@ -82,8 +81,12 @@ export default {
               const topic_kw = topic_idx[topic].title.toLowerCase().split(' ')
               s = s.concat(topic_kw)
               _.forIn(proj.topics[topic], (lang, key) => {
+                s.push(topic)
+                s.push(key)
+                s = s.concat(lang)
                 if(!technologies[key]) technologies[key] = new Set()
                 lang.forEach(x => {
+                  s.push(x)
                   tech.add(x)
                   technologies[key].add(x)
                 })
@@ -106,6 +109,8 @@ export default {
 
           // remove words in stop words
           s = s.filter(y => !stopwords.includes(y) && y.length >= 2)
+
+          // console.log(proj['id'], s)
 
           // stem each term and map it to a set of documents
           s.forEach(z => {
@@ -140,7 +145,7 @@ export default {
         // Blog
         //
         // --------------------------------------------------------
-      
+
         const blog = res[0].data['blog']
         commit('set_blog_posts', blog)
 
@@ -149,7 +154,7 @@ export default {
         // Employment
         //
         // --------------------------------------------------------
-      
+
         const employment = res[0].data['employment']
         commit('set_employment', employment)
 
@@ -158,7 +163,7 @@ export default {
         // Education
         //
         // --------------------------------------------------------
-      
+
         const education = res[0].data['education']
         commit('set_education', education)
 
@@ -171,10 +176,10 @@ export default {
       })
   },
   inc_pagination({commit}) {
-    commit('inc_pagination') 
+    commit('inc_pagination')
   },
   remove_keyword({commit}, kw) {
-    commit('remove_keyword', kw) 
+    commit('remove_keyword', kw)
   },
   set_gallery_id({commit}, id) {
     commit('set_gallery_id', id)
