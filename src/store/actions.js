@@ -21,7 +21,7 @@ export default {
   dec_pagination({commit}) {
     commit('dec_pagination')
   },
-  async get_data({commit, dispatch}) {
+  async get_data({commit}) {
 		let promises = [
       axios.get('/site.json'),
       axios.get('/stop.json')
@@ -172,7 +172,7 @@ export default {
         // Initialize display of only featured projects
         //
         // --------------------------------------------------------
-        dispatch('add_keywords', 'featured')
+        // dispatch('add_keywords', 'featured')
       })
   },
   inc_pagination({commit}) {
