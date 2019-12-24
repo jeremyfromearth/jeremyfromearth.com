@@ -13,10 +13,10 @@ export default {
     ...mapGetters([
       'gallery_id',
       'project_lookup',
-      'topic_index', 
-      'topics_palette', 
+      'topic_index',
+      'topics_palette',
       'window_size'
-    ]), 
+    ]),
     gradient: function() {
       const p = this.project_lookup[this.gallery_id]
       if(p) {
@@ -38,7 +38,7 @@ export default {
       content: [],
       content_idx: 0,
       content_paths: [],
-      content_width: null, 
+      content_width: null,
       content_height: null,
       interval_id: 0,
       loading: true,
@@ -57,7 +57,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['set_gallery_id']), 
+    ...mapActions(['set_gallery_id']),
     close() {
       this.set_gallery_id(null)
     },
@@ -65,7 +65,7 @@ export default {
       let r = 1
       const w = this.window_size[0]
       const h = this.window_size[1] -
-        this.$refs.controls.clientHeight - 
+        this.$refs.controls.clientHeight -
           this.$refs.close_button.clientHeight
 
       if(this.current_content.width >= this.current_content.height) {
@@ -90,7 +90,6 @@ export default {
     },
     dec() {
       this.content_idx = this.content_idx - 1 < 0 ? this.content_paths.length - 1 : this.content_idx - 1
-      console.log(this.content_idx)
       this.load_next()
     },
     inc() {
@@ -101,7 +100,7 @@ export default {
       this.loading = true
       const current = this.content_paths[this.content_idx]
 
-      switch(current.type) { 
+      switch(current.type) {
         case 'image':
           if(!this.content[this.content_idx]) {
             const image_path = `/images/projects/${current.src}`
@@ -110,7 +109,7 @@ export default {
             img.addEventListener('load', ()=> {
               this.current_content = this.content[this.content_idx] = img
               this.current_content.type = 'image'
-              this.calc_content_size() 
+              this.calc_content_size()
               this.loading = false
             })
           } else {
@@ -125,19 +124,19 @@ export default {
           this.current_content = {src: current.src, type: 'video'}
           break
       }
-    }, 
+    },
     on_key_down(evt) {
       if(this.content.length <= 1) return
       if(evt.key == 'ArrowRight') {
         this.set_content_idx(
-          this.content_idx + 1 > this.content_paths.length - 1 ? 
+          this.content_idx + 1 > this.content_paths.length - 1 ?
             0 : this.content_idx + 1)
       }
 
       if(evt.key == 'ArrowLeft') {
         this.set_content_idx(
-          this.content_idx - 1 < 0 ? 
-            this.content_paths.length - 1 : 
+          this.content_idx - 1 < 0 ?
+            this.content_paths.length - 1 :
               this.content_idx - 1)
       }
     },
@@ -146,9 +145,11 @@ export default {
       this.current_content.width = size[0]
       this.current_content.height = size[1]
       this.calc_content_size()
-      const swipe = new Hammer(this.$refs.video.$el)
-      swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
-      swipe.on('swipeleft swiperight', this.on_swipe)
+      setTimeout(() => {
+        const swipe = new Hammer(this.$refs.video.$el)
+        swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
+        swipe.on('swipeleft swiperight', this.on_swipe)
+      }, 500)
     },
     on_swipe(e) {
       if(e && e.type == 'swipeleft') this.inc()
@@ -164,13 +165,13 @@ export default {
     this.content_idx = 0
     const proj = this.project_lookup[this.gallery_id]
     this.content_paths = proj.content
-      
+
     this.interval_id = setInterval(()=> {
       this.radians += 0.0008
       this.$forceUpdate()
     }, 1/60)
 
-    this.on_key_down_throttle = 
+    this.on_key_down_throttle =
       _.throttle(this.on_key_down, 500), {leading: true}
     window.addEventListener('keydown', this.on_key_down_throttle)
     this.visible = true
@@ -205,14 +206,14 @@ export default {
       </transition>
 
       <transition name='content-container'>
-        <div v-if='visible && current_content' ref='content_container' class='content-container' 
+        <div v-if='visible && current_content' ref='content_container' class='content-container'
           :style='{width: `${content_width}px`, height: `${content_height}px`}'>
           <div class='content'>
             <transition name='content'>
-              <img v-if='current_content && current_content.type == "image"' 
+              <img v-if='current_content && current_content.type == "image"'
                 class='md-image' :src='current_content.src' :key='current_content.src'>
-              <VimeoPlayer ref='video' v-else-if='current_content && current_content.type == "video"' 
-                v-on:ready='on_vimeo_player_ready' :video_id='current_content.src' 
+              <VimeoPlayer ref='video' v-else-if='current_content && current_content.type == "video"'
+                v-on:ready='on_vimeo_player_ready' :video_id='current_content.src'
                 :key='current_content.src'/>
             </transition>
             <div class='overlay'></div>
@@ -221,8 +222,8 @@ export default {
       </transition>
 
       <transition name='controls' appear>
-        <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'> 
-          <div class='button' v-for='(img, i) in content_paths' 
+        <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'>
+          <div class='button' v-for='(img, i) in content_paths'
                :key='i' @click='set_content_idx(i)'>
             <i v-if='i == content_idx' class="fas fa-circle"></i>
             <i v-else class="far fa-circle"></i>
@@ -247,10 +248,10 @@ export default {
   z-index: -1;
 }
 
-.background-enter, 
+.background-enter,
 .background-leave-to { opacity: 0; }
 
-.background-enter-active, 
+.background-enter-active,
 .background-leave-active { transition: opacity 0.4s; }
 
 .close-button {
@@ -275,7 +276,7 @@ export default {
   transform: rotate(90deg);
 }
 
-.close-button-enter-active, 
+.close-button-enter-active,
 .close-button-leave-active { transition: all 0.4s; }
 
 .controls {
@@ -292,20 +293,20 @@ export default {
 }
 
 .controls .button {
-  padding: 0 0.2em; 
+  padding: 0 0.2em;
   transition: all 0.2s;
 }
 
 .controls .button:hover {
-  color: #eee; 
+  color: #eee;
   cursor: pointer;
 }
 
 .controls-enter { opacity: 0; }
 
-.controls-enter-active, 
-.controls-leave-active { 
-  transition: all 0.4s; 
+.controls-enter-active,
+.controls-leave-active {
+  transition: all 0.4s;
   transition-delay: 0.8s;
 }
 
@@ -317,7 +318,7 @@ export default {
 
 .content-enter { opacity: 0; }
 
-.content-enter-active, 
+.content-enter-active,
 .content-leave-active { transition: all 0.4s; }
 
 .content-container {
@@ -391,7 +392,7 @@ img {
 
 @keyframes spinner-rotation {
   from {
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
   }
 
   to {
