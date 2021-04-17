@@ -37,18 +37,29 @@
   ],
   "employment": [{
     "descriptions": [
+      "Leading the development of end user applications for an early stage startup",
+      "Developing user interfaces that allow end users to assemble machine learning pipelines",
+      "Designing and developing data visualizations that elucidate the inner workings of AI & NLP algorithms"
+    ],
+    "location": "Wien, Österreich",
+    "timespan": "November 2019 - Present",
+    "title": "Software Engineer, Cortical.io"
+  }, {
+    "descriptions": [
       "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada",
       "Generating project roadmaps, estimates of cost, software schematics and end user documentation",
       "Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process",
       "Studying fields of interest, including machine intelligence and natural language processing, with end goal of attaining work in new fields"
     ],
-    "timespan": "January 2010 - Present",
+    "location": "Earth",
+    "timespan": "January 2010 - 2019",
     "title": "Software Engineer (Contract)"
   }, {
     "descriptions": [
       "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript & D3",
       "Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
     ],
+    "location": "Portland, OR – United States",
     "timespan": "August 2016 - September 2017",
     "title": "Software Engineer, Textwise"
   }, {
@@ -58,6 +69,7 @@
       "Developing Microsoft Kinect controlled interactive experience for Clemson University using Cinder",
       "Developing multiple interactive touch screen applications with Swift, iOS and macOS Desktop for The Nevada Discovery Museum"
     ],
+    "location": "Portland, OR – United States",
     "timespan": "Jan 2014 - Jan 2015",
     "title": "Creative Technologist, Upswell"
   }, {
@@ -65,6 +77,7 @@
       "Developing interactive network graph data visualization of breast cancer causation for University of California, San Francisco",
       "Developing front end admin tools for Twitter Reverb"
     ],
+    "location": "Portland, OR – United States",
     "timespan": "January 2013 to June 2013",
     "title": "Data Visualization Developer, Periscopic"
   }, {
@@ -74,6 +87,7 @@
       "Designed performance tests for simulating user input over extended periods for analysis and optimization of CPU/GPU performance and memory consumption",
       "Leading research and feasibility studies of new technologies for potential company-wide adoption"
     ],
+    "location": "Portland, OR – United States",
     "timespan": "July 2007 - Jan 2010",
     "title": "Interactive Developer, Second Story Interactive"
   }],

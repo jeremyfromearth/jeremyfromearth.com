@@ -10,10 +10,10 @@ export default {
   name: 'LiveDoc',
   computed: {
     ...mapGetters([
-      'blog_posts', 'education', 'employment', 'gallery_id', 'keywords', 
+      'blog_posts', 'education', 'employment', 'gallery_id', 'keywords',
       'links', 'pagination', 'projects_paged',
-      'project_search_results', 'project_sort_keys', 
-      'projects_per_page', 'tech_ordering', 'technologies', 
+      'project_search_results', 'project_sort_keys',
+      'projects_per_page', 'tech_ordering', 'technologies',
       'text', 'topics', 'topics_palette', 'window_size'
     ]),
     down_pagination_arrow_is_visibile() {
@@ -27,10 +27,10 @@ export default {
         case this.pagination + 1:
           return 'Last one!'
         default:
-          return `${this.pagination + 1} - 
-            ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}` 
+          return `${this.pagination + 1} -
+            ${Math.min(this.pagination + this.projects_per_page, result_count)} / ${result_count}`
       }
-    }, 
+    },
   },
   data() {
     return {
@@ -47,11 +47,11 @@ export default {
       'fas fa-globe-europe', 'fas fa-globe-africa',
       'fas fa-globe-asia', 'fas fa-globe-americas'
     ]
-    
+
     setInterval(()=> {
       this.globe_icon_class = globe.shift()
       globe.push(this.globe_icon_class)
-      this.globe_index++ 
+      this.globe_index++
     }, 500)
 
     await this.get_data()
@@ -63,20 +63,20 @@ export default {
       this.on_project_transition()
     }, 1000)
 
-  }, 
+  },
   methods: {
     ...mapActions([
       'add_keywords',
-      'clear_project_filters', 
-      'dec_pagination', 
-      'inc_pagination', 
+      'clear_project_filters',
+      'dec_pagination',
+      'inc_pagination',
       'get_data',
       'remove_keyword'
     ]),
     dec() {
       this.project_transition_name = 'project-group-inner-up'
       this.dec_pagination()
-    }, 
+    },
     inc() {
       this.project_transition_name = 'project-group-inner-down'
       this.inc_pagination()
@@ -96,7 +96,7 @@ export default {
     },
     projects_with_key(k) {
       return _.filter(this.projects_paged, {year: k})
-    }, 
+    },
     stack_is_highlighted() {
       let highlight = false
       Object.keys(this.technologies).forEach(lang => {
@@ -111,7 +111,7 @@ export default {
     topic_color(i) {
       return this.topics_palette[i % this.topics_palette.length]
     }
-  }, 
+  },
   watch: {
     window_size: function() {
       this.on_project_transition()
@@ -123,12 +123,12 @@ export default {
   <md-app :class='gallery_id != null ? "no-scroll" : ""'>
     <md-app-content class='content'>
       <div class='container'>
-        <!-- Header --> 
+        <!-- Header -->
         <div class='header-container'>
           <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.1</h4></span></div>
           <div class='header-links'>
-            <a v-for='link in links' 
-               class='header-link' :title='link.title' 
+            <a v-for='link in links'
+               class='header-link' :title='link.title'
                :href='link.url' :key='link.url'><i :class='link.icon'></i></a>
           </div>
         </div>
@@ -153,11 +153,11 @@ export default {
         <div class='stacks-lists'>
           <div class='md-layout md-gutter'>
             <div v-for='(k, i) in tech_ordering' :key='k' :class='i > 2 ? "md-layout-item md-small-hide" : "md-layout-item"'>
-              <h4>{{ k }} </h4> 
+              <h4>{{ k }} </h4>
               <ul>
-                <li v-for='t in technologies[k]' 
-                  class='tech-list-item' :key='t.label' 
-                  :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null, 
+                <li v-for='t in technologies[k]'
+                  class='tech-list-item' :key='t.label'
+                  :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null,
                     opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1}'>{{ t.label }}</li>
               </ul>
             </div>
@@ -170,13 +170,13 @@ export default {
           <h3>Projects</h3>
           <div class='search-container'>
             <div class='keyword-container'>
-              <div v-for='kw in keywords' 
-                :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)' 
+              <div v-for='kw in keywords'
+                :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)'
                   class="far fa-times-circle remove-keyword-icon"></i></div>
             </div>
             <form class='md-xsmall-hide' novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
               <md-field>
-                <label>Search</label> 
+                <label>Search</label>
                 <md-input v-model='search_text'></md-input>
               </md-field>
             </form>
@@ -197,9 +197,9 @@ export default {
               </div>
             </div>
             <div class='md-layout-item projects-outer'>
-              <transition-group 
-                v-on:afterEnter='on_project_transition' 
-                ref='project_transition' 
+              <transition-group
+                v-on:afterEnter='on_project_transition'
+                ref='project_transition'
                 :name='project_transition_name' tag='div'>
                 <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout project-group'>
                   <div class='md-layout-item project-year' :key='"year-"+k'><h4>{{ k }}</h4></div>
@@ -212,7 +212,7 @@ export default {
             <div class='md-layout-item pagination-controller-container'>
               <div class='pagination-controller' @click='dec()'>
                 <div class='pagination-arrow pagination-arrow-up'
-                  :style="{opacity: pagination > 0 ? 1 : 0, 
+                  :style="{opacity: pagination > 0 ? 1 : 0,
                            marginTop: pagination > 0 ? '4em': '4em',
                            height: pagination > 0 ? '4em' : '2em'}" >
                 <h3><i class="fas fa-angle-double-up"></i></h3></div>
@@ -220,7 +220,7 @@ export default {
               <div class='pagination-controller' @click='inc()'>
                 <div class='pagination-arrow pagination-arrow-down'
                 :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                          marginTop: pagination == 0 ? '2em' : 
+                          marginTop: pagination == 0 ? '2em' :
                           down_pagination_arrow_is_visibile ? '4em' : '6em',
                           height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
                   <h3><i class="fas fa-angle-double-down"></i></h3>
@@ -243,9 +243,10 @@ export default {
         <div class='work-history'>
           <h3>Employment History</h3>
           <div class='md-layout margin'>
-            <div v-for='(e, i) in employment' :key='i'> 
+            <div v-for='(e, i) in employment' :key='i'>
               <h4>{{e.title}}</h4>
               <h5>{{e.timespan}}</h5>
+              <div class='overline'>{{e.location}}</div>
               <ul>
                 <li v-for='(d, j) in e.descriptions' :key='j'>{{d}}</li>
               </ul>
@@ -285,7 +286,7 @@ export default {
         <div class='education'>
           <h3>Recent Education</h3>
           <div class='md-layout margin'>
-            <div v-for='(e, i) in education' :key='i'> 
+            <div v-for='(e, i) in education' :key='i'>
               <h4>{{e.title}} &mdash; {{e.school}}</h4>
               <h5>{{e.date}}</h5>
               <p>{{e.description ? e.description : "No description"}}</p>
@@ -338,11 +339,11 @@ export default {
   }
 
   .header-container a {
-    padding: 0.25em; 
+    padding: 0.25em;
   }
 
   .header-links i {
-    margin-left: 1.2em; 
+    margin-left: 1.2em;
   }
 
   .header-title {
@@ -422,6 +423,15 @@ export default {
     overflow: hidden;
   }
 
+  .overline {
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 0;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
   .pagination-arrow {
     cursor: pointer;
     display: flex;
@@ -447,7 +457,7 @@ export default {
     border-top: 1px solid lightgrey;
     padding: 0px 1.5em 0 1.5em;
   }
-  
+
   .pagination-arrow-down:hover {
     color: #5bbcfb;
     border-top: 1px solid #5bbcfb;
@@ -512,7 +522,7 @@ export default {
   .project-group-inner-up-enter {
     display: none;
   }
-  
+
   .project-group-inner-down-enter,
   .project-group-inner-down-leave-to,
   .project-group-inner-up-enter,
@@ -528,18 +538,18 @@ export default {
     transform: translate(0, -8px);
   }
 
-  .project-group-inner-down-enter-to, 
+  .project-group-inner-down-enter-to,
   .project-group-inner-up-enter-to {
     opacity: 1;
   }
 
-  .project-group-inner-down-enter-active, .project-group-inner-down-leave-active, 
+  .project-group-inner-down-enter-active, .project-group-inner-down-leave-active,
   .project-group-inner-up-enter-active, .project-group-inner-up-leave-active {
     transition: all .2s;
     display: flex;
   }
 
-  .project-group-inner-down-enter-active, 
+  .project-group-inner-down-enter-active,
   .project-group-inner-up-enter-active {
     transition-delay: .2s;
   }
@@ -557,7 +567,7 @@ export default {
   }
 
   .remove-keyword-icon:hover {
-    color: #5bbcfb; 
+    color: #5bbcfb;
   }
 
   .section-title {
@@ -614,7 +624,7 @@ export default {
   }
 
   .topic-legend-item:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
   }
 
   .topic-legend-item-text {
