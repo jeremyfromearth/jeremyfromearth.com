@@ -1,13 +1,24 @@
-pages: # the job must be named pages
-  image: node:latest
+image: node:16.13.2
+
+deploy-prod:
   stage: deploy
-  script:
-    - npm ci
-    - npm run build
-    - mv public public-vue # GitLab Pages hooks on the public folder
-    - mv dist public # rename the dist folder (result of npm run build)
-  artifacts:
-    paths:
-      - public # artifact path must be /public for GitLab Pages to pick it up
+  variables:
+    VUE_APP_CANDELA_SERVER_BASE_URL: https://jeremyfromearth.appspot.com
+    VUE_APP_FB_API_KEY: AIzaSyC8cCOeu1IfIFIbnNPxtGHTK9HeIeLrOLU
+    VUE_APP_FB_AUTH_DOMAIN: jeremyfromearth.firebaseapp.com
+    VUE_APP_FB_PROJECT_ID: jeremyfromearth
+    VUE_APP_FB_STORAGE_BUCKET: jeremyfromearth.appspot.com
+    VUE_APP_FB_MESSAGING_SENDER_ID: 657441651996
+    VUE_APP_FB_APP_ID: 1:657441651996:web:388dec49f398508f5eced9
+    VUE_APP_FB_MEASUREMENT_ID: G-81KPW9XCF8
+
   only:
     - master
+
+  script:
+    - npm install -g firebase-tools
+    - npm install
+    - npm run build
+    - firebase use --clear
+    - firebase use jeremyfromearth
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
