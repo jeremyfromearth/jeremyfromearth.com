@@ -130,6 +130,23 @@
     }
   ],
   "projects": [{
+    "client": "Gooogle & O'Reilly Media",
+    "coloraborators": ["Instrument"],
+    "content": [{"type": "video", "src": "690261248"}],
+    "description": "Lorem Ipsum",
+    "featured": false,
+    "id": "startographer",
+    "published": true,
+    "title": "Startographer",
+    "tldr": "Fine tuned XLNet neural network models power this interactive word game installation for Google and O'Reilly Media's traveling TensorWorld exhibit",
+    "topics": {
+      "install": {"JavaScript": ["Electron", "Node", "SocketIO", "Vue"]},
+      "ai": {"Python": ["TensorFlow"]},
+      "fs": {"Python": ["Flask"]},
+      "nlp": {"Python": ["TensorFlow"]}
+    },
+    "year": 2019
+  }, {
     "client": "Oregon Museum of Sciecne and Industry",
     "collaborators": ["Made Clear"],
     "content": [],
@@ -881,7 +898,7 @@
   }],
   "tech_ordering": ["JavaScript", "Python", "C++", "Java", "Databases"],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects integrating Machine Intelligence, Natural Language Processing and Data Visualization.",
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I build full stack machine intelligence software. My favorite areas of AI are Natural Language Processing and Time Series Forecasting",
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. Hover over a project to learn more about it. Additionally, you can use the keyword search to navigate through the entire archive."
   },
   "topics": [
@@ -894,4 +911,3 @@
     {"id": "fs", "palette": 6, "title": "Fullstack Development"}
   ]
 }
-
