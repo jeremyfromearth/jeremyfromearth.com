@@ -1,5 +1,6 @@
 <script>
 import * as _ from 'lodash'
+import {init_firebase} from '@/utils/firebase'
 
 import {
   mapActions,
@@ -54,6 +55,7 @@ export default {
       this.globe_index++
     }, 500)
 
+    init_firebase()
     await this.get_data()
     this.clear_project_filters()
 
