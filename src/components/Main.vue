@@ -127,7 +127,7 @@ export default {
       <div class='container'>
         <!-- Header -->
         <div class='header-container'>
-          <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.1</h4></span></div>
+          <div class='header-title'><h1>J from <i id='globe' :class='globe_icon_class'></i></h1><span><h4>v2.0.2</h4></span></div>
           <div class='header-links'>
             <a v-for='link in links'
                class='header-link' :title='link.title'
