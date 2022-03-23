@@ -23,7 +23,6 @@
     "mobile-detect": "^1.4.5",
     "stemmer": "^1.0.5",
     "vue": "^2.6.14",
-    "vue-material": "^1.0.0-beta-15",
     "vue-router": "^3.5.3",
     "vuex": "^3.6.2"
   },
