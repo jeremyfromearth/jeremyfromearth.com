@@ -1,13 +1,11 @@
 <script>
 import Vue from 'vue'
 import VueMaterial from 'vue-material'
-import VueAnalytics from 'vue-analytics'
 import {mapActions, mapGetters} from 'vuex'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import MobileDetect from 'mobile-detect'
-import router from './router'
 
 import Gallery from './components/Gallery'
 import Project from './components/Project'
@@ -15,10 +13,6 @@ import TopicSwatch from './components/TopicSwatch'
 import VimeoPlayer from './components/VimeoPlayer'
 
 Vue.use(VueMaterial)
-Vue.use(VueAnalytics, {
-  id: 'UA-65964466-1',
-  router
-})
 
 Vue.config.productionTip = false;
 Vue.component('font-awesome-icon', FontAwesomeIcon)
@@ -42,7 +36,7 @@ export default {
       ]),
     on_resize() {
       let h = document.documentElement.clientHeight
-      let w = document.documentElement.clientWidth     
+      let w = document.documentElement.clientWidth
       this.set_window_size([w, h])
     }
   },
@@ -63,7 +57,7 @@ export default {
 
     <!-- top color bar -->
     <div class='top-bar'>
-      <div v-for='(color, i) in topics_palette' 
+      <div v-for='(color, i) in topics_palette'
         :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
       </div>
     </div>
