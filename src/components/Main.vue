@@ -122,8 +122,8 @@ export default {
 }
 </script>
 <template>
-  <md-app :class='gallery_id != null ? "no-scroll" : ""'>
-    <md-app-content class='content'>
+  <v-main :class='gallery_id != null ? "no-scroll" : ""'>
+    <div class='content'>
       <div class='container'>
         <!-- Header -->
         <div class='header-container'>
@@ -177,10 +177,10 @@ export default {
                   class="far fa-times-circle remove-keyword-icon"></i></div>
             </div>
             <form class='md-xsmall-hide' novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
-              <md-field>
-                <label>Search</label>
-                <md-input v-model='search_text'></md-input>
-              </md-field>
+              <v-text-field
+                label='Search'
+                v-model='search_text'>
+              </v-text-field>
             </form>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default {
                   </div>
               </div>
             </div>
-            <div class='md-layout-item projects-outer'>
+            <div class='d-flex projects-outer'>
               <transition-group
                 v-on:afterEnter='on_project_transition'
                 ref='project_transition'
@@ -308,8 +308,8 @@ export default {
           <li>The terrain between simplicity and complexity is smooth and continuous.</li>
         </ul>
       </div>
-    </md-app-content>
-  </md-app>
+    </div>
+  </v-main>
 </template>
 
 <style scoped>

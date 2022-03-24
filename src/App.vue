@@ -24,20 +24,20 @@ export default {
 </script>
 
 <template>
-  <div>
-    <!-- Router -->
-    <router-view></router-view>
+<v-app>
+  <!-- Router -->
+  <router-view></router-view>
 
-    <!-- Gallery -->
-    <Gallery v-if='gallery_id != null' class='gallery'/>
+  <!-- Gallery -->
+  <Gallery v-if='gallery_id != null' class='gallery'/>
 
-    <!-- top color bar -->
-    <div class='top-bar'>
-      <div v-for='(color, i) in topics_palette'
-        :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
-      </div>
+  <!-- top color bar -->
+  <div class='top-bar'>
+    <div v-for='(color, i) in topics_palette'
+      :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
     </div>
   </div>
+</v-app>
 </template>
 
 <style scoped>

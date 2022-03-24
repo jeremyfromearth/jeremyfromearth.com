@@ -15,6 +15,7 @@ import VimeoPlayer from './components/VimeoPlayer'
 
 import './assets/css/font-awesome.css'
 import './assets/css/styles.css'
+import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false;
 Vue.prototype.$is_mobile = new MobileDetect(window.navigator.userAgent).mobile() ? true : false
@@ -29,6 +30,7 @@ Vue.component('VimeoPlayer', VimeoPlayer)
 
 new Vue({
   router,
-	store,
-  render: h => h(App),
+  store,
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')
