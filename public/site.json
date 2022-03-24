@@ -898,7 +898,7 @@
   }],
   "tech_ordering": ["JavaScript", "Python", "C++", "Java", "Databases"],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I build full stack machine intelligence software. My favorite areas of AI are Natural Language Processing and Time Series Forecasting",
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Vienna, Austria and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects integrating Machine Intelligence, Natural Language Processing and Data Visualization.",
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. Hover over a project to learn more about it. Additionally, you can use the keyword search to navigate through the entire archive."
   },
   "topics": [
