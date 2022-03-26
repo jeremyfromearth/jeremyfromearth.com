@@ -12,14 +12,6 @@ a {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.md-theme-default a:not(.md-button) {
-  color: #2b87c3;
-}
-
-.md-theme-default a:hover:not(.md-button) {
-  color: #5bbcfb;
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: IBMPlexMonoSemiBold, monospace;
   line-height: 1.0;

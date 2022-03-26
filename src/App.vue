@@ -1,8 +1,12 @@
 <script>
 import {mapActions, mapGetters} from 'vuex'
 
+import Header from './components/Header'
+
 export default {
-  name: 'JeremyFromEarth',
+  components: {
+    Header
+  },
   computed: {
     ...mapGetters(['gallery_id', 'topics_palette', 'video_id'])
   },
@@ -19,24 +23,24 @@ export default {
   mounted() {
     this.on_resize()
     window.addEventListener('resize', this.on_resize)
-  }
+  },
+  name: 'app'
 }
 </script>
 
 <template>
 <v-app>
-  <!-- Router -->
-  <router-view></router-view>
+  <Header/>
 
-  <!-- Gallery -->
+  <v-main>
+    <router-view/>
+  </v-main>
+
+  <!--
   <Gallery v-if='gallery_id != null' class='gallery'/>
 
-  <!-- top color bar -->
-  <div class='top-bar'>
-    <div v-for='(color, i) in topics_palette'
-      :key='i'  class='top-bar-item' :style='{backgroundColor: color}'>
-    </div>
-  </div>
+
+  -->
 </v-app>
 </template>
 
@@ -46,18 +50,5 @@ export default {
     height: 100%;
     width: 100%;
     top: 0;
-  }
-
-  .top-bar {
-    top: 0;
-    width: 100%;
-    position: fixed;
-    display: flex;
-    height: 4px;
-  }
-
-  .top-bar-item {
-    flex-grow: 1;
-    height: 100%;
   }
 </style>
