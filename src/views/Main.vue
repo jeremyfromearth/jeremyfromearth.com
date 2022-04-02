@@ -47,8 +47,6 @@ export default {
   },
   data() {
     return {
-      globe_icon_class: 'fas fa-globe-europe',
-      globe_index: 0,
       no_match_class: 'fa fa-ghost no-match-icon',
       project_container_height: null,
       project_transition_name: 'project-group-inner-down',
@@ -87,7 +85,9 @@ export default {
       this.inc_pagination()
     },
     on_keyword_enter() {
-      this.no_match_class = Math.random() > 0.5 ? 'fa fa-ghost no-match-icon' : 'fa fa-child no-match-icon'
+      this.no_match_class =
+        Math.random() > 0.5 ?
+          'fa-solid fa-ghost' : 'fa-solid fa-child-reaching'
       this.add_keywords(this.search_text)
       this.search_text = ''
     },
@@ -129,183 +129,317 @@ export default {
   class='main-container'>
 
   <!-- Intro -->
-  <v-row>
+  <v-row
+    class='mt-4'>
     <v-col
       cols='12'>
-      <div
-        class='body-1'>
+      <div>
         {{text['intro']}}
       </div>
     </v-col>
   </v-row>
 
   <!-- Blog -->
-  <div class='section-title'><h3>Blog</h3><a href='http://medium.com/@jeremy.from.earth'><i class='fa fa-link'></i></a></div>
-  <p>Recent Articles</p>
-  <div>
-    <ul>
-      <li v-for='(x, i) in blog_posts' :key='i'><a :href='x.url'>{{ x.title }}</a></li>
-    </ul>
-  </div>
-
-  <!-- Stacks -->
-
-  <h3>Stacks</h3>
-  <div class='stacks-lists'>
-    <div class='md-layout md-gutter'>
-      <div v-for='(k, i) in tech_ordering' :key='k' :class='i > 2 ? "md-layout-item md-small-hide" : "md-layout-item"'>
-        <h4>{{ k }} </h4>
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Blog
+      </div>
+      <div
+        class='subtitle'>
+        Recent Articles
+      </div>
+      <div>
         <ul>
-          <li v-for='t in technologies[k]'
-            class='tech-list-item' :key='t.label'
-            :style='{textShadow: t.highlight ? `0 0 4px ${t.color}`: null,
-              opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1}'>{{ t.label }}</li>
+          <li
+            v-for='(x, i) in blog_posts'
+            :key='i'>
+            <a :href='x.url'>{{ x.title }}</a>
+          </li>
         </ul>
       </div>
-    </div>
-  </div>
+    </v-col>
+  </v-row>
 
   <!-- Projects -->
-
-  <div class='projects-toolbar'>
-    <h3>Projects</h3>
-    <div class='search-container'>
-      <div class='keyword-container'>
-        <div v-for='kw in keywords'
-          :key='kw.term' class='keyword'>{{ kw.original }} <i @click='remove_keyword(kw.term)'
-            class="far fa-times-circle remove-keyword-icon"></i></div>
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Projects
       </div>
-      <form class='md-xsmall-hide' novalidate id='search' v-on:submit.prevent='on_keyword_enter'>
+    </v-col>
+    <v-col
+      class='d-flex align-center justify-end'
+      cols='6'>
+      <v-chip
+        v-for='kw in keywords'
+        :key='kw.term'
+        @click:close='remove_keyword(kw.term)'
+        class='mr-1'
+        close
+        outlined>
+        {{kw.original}}
+      </v-chip>
+    </v-col>
+    <v-col
+      cols='3'>
+      <v-form
+        id='search'
+        v-on:submit.prevent='on_keyword_enter'
+        >
         <v-text-field
           label='Search'
-          v-model='search_text'>
-        </v-text-field>
-      </form>
-    </div>
-  </div>
-  <div v-if='projects_paged.length' class='project-container-outer'>
-    <div ref='project_container' class='md-layout project-container' :style='{height: project_container_height + "px"}'>
-      <div class='md-layout-item meta-container'>
-        <div ref='meta_description' class='meta-description  md-xsmall-hide'><p>{{text['project_sidebar']}}</p></div>
-        <div ref='topic_legend' class='topic-legend md-xsmall-hide'>
-          <h4>Disciplines</h4>
-            <div class='topic-legend-item' v-for='t in topics' :key='t.id' @click='add_keywords(t.title); on_project_transition()'>
-              <div class='topic-legend-color-block' :style='{ backgroundColor: topics_palette[t.palette] }'/>
-                <div class='topic-legend-item-text' :style='{
+          v-model='search_text'
+          dense
+          hide-details
+          outlined/>
+      </v-form>
+    </v-col>
+  </v-row>
+
+  <div
+    v-if='projects_paged.length'
+    class='d-flex flex-column align-center'>
+    <div
+      :style='{
+        height: project_container_height + `px`
+      }'
+      class='project-container d-flex justify-space-around flex-nowrap px-6'>
+      <div
+        class='meta-container d-flex flex-grow-0 flex-column justify-space-between'>
+        <i
+          ref='meta_description'
+          class='meta-description px-2'>
+          {{text['project_sidebar']}}
+        </i>
+        <div ref='topic_legend'
+          class='topic-legend pa-4'>
+          <div
+            v-for='t in topics'
+            :key='t.id'
+            @click='add_keywords(t.title); on_project_transition()'
+            class='topic-legend-item d-flex align-center overline'>
+            <div
+              :style='{backgroundColor: topics_palette[t.palette]}'
+              class='topic-legend-color-block'/>
+              <div
+                :style='{
                   textShadow: t.highlight ? `0 0 4px ${topics_palette[t.palette]}` : null
-                }'>{{t.title}}</div>
-            </div>
+                }'
+                class='topic-legend-item-text' >
+                {{t.title}}
+              </div>
+          </div>
         </div>
       </div>
-      <div class='md-layout-item projects-outer'>
+      <div
+        class='flex-grow-1'>
         <transition-group
-          v-on:afterEnter='on_project_transition'
           ref='project_transition'
-          :name='project_transition_name' tag='div'>
-          <div v-for='(k, i) in project_sort_keys' :key='k + "-" + i + "-" + pagination' class='md-layout project-group'>
-            <div class='md-layout-item project-year' :key='"year-"+k'><h4>{{ k }}</h4></div>
-            <div class='md-layout-item project-list' :key='"project-"+k'>
-              <Project v-for='(p, j) in projects_with_key(k)' :data='p' :show_delay='i * 8' :key='j'/>
+          v-on:afterEnter='on_project_transition'
+          :name='project_transition_name'
+          tag='div'>
+          <div
+            v-for='(k, i) in project_sort_keys'
+            :key='k + "-" + i + "-" + pagination'
+            class='d-flex ma-0 px-2'>
+            <div
+              class='font-weight-bold'>
+              {{k}}
+            </div>
+            <div>
+              <Project
+                v-for='(p, j) in projects_with_key(k)'
+                :key='j'
+                :data='p'
+                :show_delay='i * 8'/>
             </div>
           </div>
         </transition-group>
       </div>
-      <div class='md-layout-item pagination-controller-container'>
-        <div class='pagination-controller' @click='dec()'>
-          <div class='pagination-arrow pagination-arrow-up'
-            :style="{opacity: pagination > 0 ? 1 : 0,
-                     marginTop: pagination > 0 ? '4em': '4em',
-                     height: pagination > 0 ? '4em' : '2em'}" >
-          <h3><i class="fas fa-angle-double-up"></i></h3></div>
+      <div
+        class='d-flex flex-column flex-grow-0'>
+        <div
+          @click='dec()'
+          class='pagination-controller'>
+          <div
+            class='pagination-arrow pagination-arrow-up d-flex flex-column justify-center mt-8'
+            :style='{
+                opacity: pagination > 0 ? 1 : 0,
+                marginTop: pagination > 0 ? `4em`: `4em`,
+                height: pagination > 0 ? `4em` : `2em`
+              }'>
+            <font-awesome-icon
+              icon='fa-solid fa-angles-up'/>
+          </div>
         </div>
-        <div class='pagination-controller' @click='inc()'>
-          <div class='pagination-arrow pagination-arrow-down'
-          :style="{ opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
-                    marginTop: pagination == 0 ? '2em' :
-                    down_pagination_arrow_is_visibile ? '4em' : '6em',
-                    height: down_pagination_arrow_is_visibile ? '4em' : '2em'}">
-            <h3><i class="fas fa-angle-double-down"></i></h3>
+        <div
+          @click='inc()'
+          class='pagination-controller'>
+          <div
+            class='pagination-arrow pagination-arrow-down d-flex flex-column justify-center mb-8'
+            :style='{
+              opacity: down_pagination_arrow_is_visibile > 0 ? 1 : 0,
+              marginTop: pagination == 0 ? `2em` :
+              down_pagination_arrow_is_visibile ? `4em` : `6em`,
+              height: down_pagination_arrow_is_visibile ? `4em` : `2em`
+            }'>
+            <font-awesome-icon
+              icon='fa-solid fa-angles-down'/>
           </div>
         </div>
       </div>
     </div>
-    <div class='pagination-detail'>{{ pagination_text }}</div>
+    <div
+      class='pagination-detail mt-12 mb-4'>
+      {{pagination_text}}
+    </div>
   </div>
 
   <!-- No Matching Projects -->
-
-  <div v-else class='no-matching-projects-message'>
-    <i :class='no_match_class'></i>
+  <div
+    v-else
+    class='
+      d-flex flex-grow-1 flex-column align-center
+      justify-center no-matching-projects-message'>
+    <font-awesome-icon
+      :icon='no_match_class'
+      class='no-match-icon'/>
     <p>No projects matched the keywords provided</p>
   </div>
 
-  <!-- Employment History -->
+  <!-- Stacks -->
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Stacks
+      </div>
+    </v-col>
+  </v-row>
 
-  <div class='work-history'>
-    <h3>Employment History</h3>
-    <div class='md-layout margin'>
-      <div v-for='(e, i) in employment' :key='i'>
-        <h4>{{e.title}}</h4>
-        <h5>{{e.timespan}}</h5>
-        <div class='overline'>{{e.location}}</div>
+  <v-row>
+    <v-col
+      v-for='k in tech_ordering'
+      :key='k'>
+      <div
+        class='d-flex flex-column'>
+        <div
+          class='subtitle font-weight-bold'>
+          {{k}}
+        </div>
         <ul>
-          <li v-for='(d, j) in e.descriptions' :key='j'>{{d}}</li>
+          <li
+            v-for='t in technologies[k]'
+            class='tech-list-item'
+            :key='t.label'
+            :style='{
+              textShadow: t.highlight ? `0 0 4px ${t.color}`: null,
+              opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1
+            }'>
+            {{ t.label }}
+          </li>
         </ul>
       </div>
-    </div>
-  </div>
+    </v-col>
+  </v-row>
 
-  <!-- Collaborators -->
-
-  <h3>Collaborators</h3>
-  <div class='margin'>
-    <div class='md-layout collaborators-container'>
-      <div class='md-layout-item'>
-        <p>Britelite Immersive</p>
-        <p>Cibo Design</p>
-        <p>C&amp;G Partners</p>
-        <p>The History Factory</p>
-        <p>Instrument</p>
+  <!-- Employment -->
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Employment History
       </div>
-      <div class='md-layout-item'>
-        <p>Made Clear</p>
-        <p>The Makers</p>
-        <p>Northern Light</p>
-        <p>Potion Design</p>
-        <p>Renate</p>
-      </div>
-      <div class='md-layout-item'>
-        <p>Second Story</p>
-        <p>Textwise</p>
-        <p>Terra Incognita</p>
-        <p>Upswell</p>
-        <p>Wieden+Kennedy</p>
-      </div>
-    </div>
-  </div>
+    </v-col>
+  </v-row>
 
-  <div class='education'>
-    <h3>Recent Education</h3>
-    <div class='md-layout margin'>
-      <div v-for='(e, i) in education' :key='i'>
-        <h4>{{e.title}} &mdash; {{e.school}}</h4>
-        <h5>{{e.date}}</h5>
-        <p>{{e.description ? e.description : "No description"}}</p>
-        <a :href='e.url'>{{e.url_text}}</a>
+  <v-row
+    v-for='(e, i) in employment'
+    :key='i'
+    class='mb-8'>
+    <v-col>
+      <h4>{{e.title}}</h4>
+      <h5>{{e.timespan}}</h5>
+      <div class='overline'>{{e.location}}</div>
+      <ul>
+        <li v-for='(d, j) in e.descriptions' :key='j'>{{d}}</li>
+      </ul>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Collaborators
       </div>
-    </div>
-  </div>
+    </v-col>
+  </v-row>
 
-  <!-- Ethos -->
+  <v-row>
+    <v-col>
+      <p>Britelite Immersive</p>
+      <p>Cibo Design</p>
+      <p>C&amp;G Partners</p>
+      <p>The History Factory</p>
+      <p>Instrument</p>
+    </v-col>
+    <v-col>
+      <p>Made Clear</p>
+      <p>The Makers</p>
+      <p>Northern Light</p>
+      <p>Potion Design</p>
+      <p>Renate</p>
+    </v-col>
+    <v-col>
+      <p>Second Story</p>
+      <p>Textwise</p>
+      <p>Terra Incognita</p>
+      <p>Upswell</p>
+      <p>Wieden+Kennedy</p>
+    </v-col>
+  </v-row>
 
-  <h3>Ethos</h3>
-  <ul>
-    <li>Agile FTW.</li>
-    <li>Modules over monoliths.</li>
-    <li>People, animals and the planet first, then software.</li>
-    <li>Rolling your own is fun. Rolling for others requires empathy.</li>
-    <li>The terrain between simplicity and complexity is smooth and continuous.</li>
-  </ul>
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Education
+      </div>
+    </v-col>
+  </v-row>
+
+  <v-row
+    v-for='(e, i) in education'
+    :key='`education-${i}`'>
+    <v-col>
+      <h4>{{e.title}} &mdash; {{e.school}}</h4>
+      <h5>{{e.date}}</h5>
+      <p>{{e.description ? e.description : "No description"}}</p>
+      <a :href='e.url'>{{e.url_text}}</a>
+    </v-col>
+  </v-row>
+
+  <v-row>
+    <v-col>
+      <div
+        class='title font-weight-bold'>
+        Ethos
+      </div>
+    </v-col>
+  </v-row>
+  <v-row>
+    <v-col>
+      <ul>
+        <li>Agile FTW</li>
+        <li>Modules over monoliths</li>
+        <li>People, animals and the planet first, then software</li>
+      </ul>
+    </v-col>
+  </v-row>
 </v-container>
 </template>
 
@@ -313,313 +447,126 @@ export default {
 .main-container
   max-width: 1024px
 
-  .row
-    .col
-      padding: 0
-</style>
+.meta-container
+  flex: 0 1 0
 
-<style scoped>
-  .margin {
-    margin: 0 4em 0 4em;
-  }
+.meta-description
+  border-left: 1px solid #ccc
 
-  .header-container {
-    align-items: baseline;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+.no-match-icon
+  animation: jump .8s infinite
+  transform-origin: bottom
 
-  .header-container a {
-    padding: 0.25em;
-  }
+.no-matching-projects-message
+  height: 32em
 
-  .header-links i {
-    margin-left: 1.2em;
-  }
+.pagination-arrow
+  cursor: pointer
+  padding: 0.0em 1.0em 0.0em 1.0em
+  user-select: none
+  transition: height 0.32s, margin-top 0.32s, opacity 0.16s, color 0.32s
 
-  .header-title {
-    display: flex;
-    align-items: baseline;
-  }
+.pagination-arrow-up
+  border-bottom: 1px solid lightgrey
+  padding: 0px 1.5em 0 1.5em
 
-  .header-title h4 {
-    margin-left: 0.4em;
-  }
+  &:hover
+    border-bottom: 1px solid #5bbcfb
+    color: #5bbcfb
 
-  .keyword {
-    border: 1px solid lightgrey;
-    border-radius: 0.5em;
-    margin-bottom: 0.25em;
-    margin-right: 0.25em;
-    padding: 0.32em;
-    user-select: none;
-    white-space: nowrap;
-  }
+.pagination-arrow-down
+  border-top: 1px solid lightgrey
+  padding: 0px 1.5em 0 1.5em
 
-  .keyword-container {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-  }
+  &:hover
+    border-top: 1px solid #5bbcfb
+    color: #5bbcfb
 
-  .md-field label {
-    font-size: inherit;
-  }
+.pagination-controller
+  transition: opacity 0.16s, height 0.32s
 
-  .meta-container {
-    flex: 0 1 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
+.pagination-detail
+  border-top: 1px solid lightgrey
+  font-size: 0.8em
+  font-weight: 800
+  padding: 1.0em 6em
+  user-select: none
 
-  .meta-description {
-    font-size: 0.8em;
-    font-style: italic;
-    flex-grow: 0;
-    padding:  0 1em;
-    border-left: 1px solid #ccc;
-  }
+.project-container
+  overflow: hidden
+  transition: height 0.4s
 
-  .no-matching-projects-message {
-    height: 32em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.project-group-inner-down-enter, .project-group-inner-up-enter
+  display: none
 
-  .no-matching-projects-message i {
-    font-size: 2.5em;
-  }
+.project-group-inner-down-enter,
+.project-group-inner-down-leave-to,
+.project-group-inner-up-enter,
+.project-group-inner-up-leave-to
+  opacity: 0
 
-  @keyframes jump {
-    0% {
-      transform: translate(0, 0);
-    }
-    30% {
-      transform: translate(0, -10px);
-    }
-    100% {
-      transform: translate(0, 0px);
-    }
-  }
+.project-group-inner-down-enter
+  transform: translate(0, 4px)
 
-  .no-match-icon {
-     animation: jump .8s infinite;
-  }
+.project-group-inner-down-leave-to
+  transform: translate(0, -8px)
 
-  .no-scroll {
-    overflow: hidden;
-  }
+.project-group-inner-down-enter-to,
+.project-group-inner-up-enter-to
+  opacity: 1
 
-  .pagination-arrow {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    padding: 0.0em 1.0em 0.0em 1.0em;
-    margin-top: 4em;
-    user-select: none;
-    justify-content: center;
-    transition: height 0.32s, margin-top 0.32s, opacity 0.16s, color 0.32s;;
-  }
+.project-group-inner-down-enter-active,
+.project-group-inner-down-leave-active,
+.project-group-inner-up-enter-active,
+.project-group-inner-up-leave-active
+  transition: all .2s
+  display: flex
 
-  .pagination-arrow-up {
-    border-bottom: 1px solid lightgrey;
-    padding: 0px 1.5em 0 1.5em;
-  }
+.project-group-inner-down-enter-active,
+.project-group-inner-up-enter-active
+  transition-delay: .2s
 
-  .pagination-arrow-up:hover {
-    color: #5bbcfb;
-    border-bottom: 1px solid #5bbcfb;
-  }
+.project-group-inner-up-enter
+  transform: translate(0, -4px)
 
-  .pagination-arrow-down {
-    border-top: 1px solid lightgrey;
-    padding: 0px 1.5em 0 1.5em;
-  }
+.project-group-inner-up-leave-to
+  transform: translate(0, 8px)
 
-  .pagination-arrow-down:hover {
-    color: #5bbcfb;
-    border-top: 1px solid #5bbcfb;
-  }
+.remove-keyword-icon
+  &:hover
+    color: #5bbcfb
 
-  .pagination-controller {
-    height: 8em;
-    display: flex;
-    flex-direction: column;
-    transition: opacity 0.16s, height 0.32s;
-  }
+.tech-list-item
+  transition: text-shadow 1.0s, opacity 0.8s ease-in
+  white-space: nowrap
 
-  .pagination-controller-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-  }
+.topic-legend-color-block
+  background-color: #ffcc00
+  border-radius: 0.2em
+  height: 1em
+  margin-right: 0.8em
+  width: 1.46em
 
-  .pagination-detail {
-    border-top: 1px solid lightgrey;
-    font-size: 0.8em;
-    font-weight: 800;
-    margin: 4em 0 0 0;
-    padding: 1.0em 6em;;
-    user-select: none;
-  }
+.topic-legend-item
+  cursor: pointer
+  font-size: 0.75em !important
+  letter-spacing: 0.1em !important
+  line-height: 1.7em
+  list-style-type: none
+  white-space: nowrap
 
-  .projects-toolbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+  &:hover
+    text-decoration: underline
 
-  .project-container {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: space-around;
-    padding: 0 1.4em 0 1.4em;
-    overflow: hidden;
-    transition: height 0.8s;
-  }
+.topic-legend-item-text
+  text-shadow: 0
+  transition: text-shadow .4s
 
-  .project-group {
-    margin: 0;
-    padding: 0 2em 0 2em;
-    width: 100%;
-  }
-
-  .projects-outer {
-    flex-grow: 1;
-    width: 100%;
-  }
-
-  .project-container-outer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-group-inner-down-enter,
-  .project-group-inner-up-enter {
-    display: none;
-  }
-
-  .project-group-inner-down-enter,
-  .project-group-inner-down-leave-to,
-  .project-group-inner-up-enter,
-  .project-group-inner-up-leave-to {
-    opacity: 0;
-  }
-
-  .project-group-inner-down-enter {
-    transform: translate(0, 4px);
-  }
-
-  .project-group-inner-down-leave-to {
-    transform: translate(0, -8px);
-  }
-
-  .project-group-inner-down-enter-to,
-  .project-group-inner-up-enter-to {
-    opacity: 1;
-  }
-
-  .project-group-inner-down-enter-active, .project-group-inner-down-leave-active,
-  .project-group-inner-up-enter-active, .project-group-inner-up-leave-active {
-    transition: all .2s;
-    display: flex;
-  }
-
-  .project-group-inner-down-enter-active,
-  .project-group-inner-up-enter-active {
-    transition-delay: .2s;
-  }
-
-  .project-group-inner-up-enter {
-    transform: translate(0, -4px);
-  }
-
-  .project-group-inner-up-leave-to {
-    transform: translate(0, 8px);
-  }
-
-  .project-year {
-    flex-grow: 0;
-  }
-
-  .remove-keyword-icon:hover {
-    color: #5bbcfb;
-  }
-
-  .section-title {
-    display: flex;
-    align-items: baseline;
-  }
-
-  .section-title i {
-    margin-left: 0.8em;
-  }
-
-  .search-container {
-    display: flex;
-  }
-
-  .search-container form {
-    margin-left: 1em;
-  }
-
-  .stacks-lists {
-    margin: 0 2em 0 2em;
-  }
-
-  .tech-list {
-    list-style-type: none;
-  }
-
-  .tech-list-item {
-    white-space: nowrap;
-    transition: text-shadow 1.0s, opacity 0.8s ease-in;
-  }
-
-  .topic-legend {
-    background-color: #f8f8f8;
-    padding: 0 1em 1em;
-    border-radius: 0.4em;
-  }
-
-  .topic-legend-color-block {
-    background-color: #ffcc00;
-    height: .9em;
-    width: 1.46em;
-    margin-right: 0.8em;
-    border-radius: 0.2em;
-  }
-
-  .topic-legend-item {
-    align-items: center;
-    cursor: pointer;
-    display: flex;
-    font-size: 0.80em;
-    list-style-type: none;
-    white-space: nowrap;
-  }
-
-  .topic-legend-item:hover {
-    text-decoration: underline;
-  }
-
-  .topic-legend-item-text {
-    transition: text-shadow .4s;
-    text-shadow: 0;
-  }
-
-  .work-history h4, h5 {
-    line-height: 0em;
-  }
-
-  .work-history h4 {
-    margin-top: 2.8em;
-  }
+@keyframes jump
+  0%
+    transform: translate(0, 0)
+  30%
+    transform: translate(0, -10px) scale(1.2)
+  100%
+    transform: translate(0, 0px)
 </style>

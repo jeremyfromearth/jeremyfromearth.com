@@ -66,32 +66,35 @@ export default {
   </div>
   <v-container
     class='header-container'>
-    <v-row
-      class='align-baseline'>
-      <div class='d-flex align-center'>
-        <h1>J from </h1>
-        <font-awesome-icon
-          :icon='globe_icon'
-          :style='{
-            color: globe_colors[globe_color_idx]
-          }'
-          class='globe ml-4 mr-2'
-          size='2x'/>
-        <h4>v3.0.0</h4>
-      </div>
-      <v-spacer/>
-      <div>
-        <a
-          v-for='(link, i) in links'
-          :key='i'
-          :href='link.url'
-          target='blank'>
+    <v-row>
+      <v-col
+        class='d-flex align-center'
+        cols='12'>
+        <div class='d-flex align-center'>
+          <h1>J from </h1>
           <font-awesome-icon
-            :icon='link.icon'
-            class='external-header-link ml-4'
-            size='1x'/>
-        </a>
-      </div>
+            :icon='globe_icon'
+            :style='{
+              color: globe_colors[globe_color_idx]
+            }'
+            class='globe ml-4 mr-2'
+            size='2x'/>
+          <h4>v3.0.0</h4>
+        </div>
+        <v-spacer/>
+        <div>
+          <a
+            v-for='(link, i) in links'
+            :key='i'
+            :href='link.url'
+            target='blank'>
+            <font-awesome-icon
+              :icon='link.icon'
+              class='external-header-link ml-4'
+              size='1x'/>
+          </a>
+        </div>
+      </v-col>
     </v-row>
   </v-container>
 </v-app-bar>
