@@ -3,7 +3,7 @@ import _ from 'lodash'
 const search = state => {
   if(state.keywords.length) {
     let terms = state.keywords.reduce((acc, obj) => {
-      acc.push(obj.term); 
+      acc.push(obj.term);
       return acc
     }, [])
     let results = _.values(_.pick(state.index, terms))
@@ -18,7 +18,7 @@ const search = state => {
 export default {
   add_keywords(state, value) {
     state.pagination = 0
-    state.keywords = _.uniqBy(state.keywords.concat(value), 'term')    
+    state.keywords = _.uniqBy(state.keywords.concat(value), 'term')
     state.project_search_results = search(state)
   },
   clear_project_filters(state) {
@@ -53,6 +53,35 @@ export default {
   set_gallery_id(state, value) {
     state.gallery_id = value
   },
+  set_highlights(state, {project_id, do_highlight}) {
+    const project = state.project_lookup[project_id]
+    state.topics.forEach(t => {
+      if(do_highlight && project && project.topics[t.id]) {
+        t.highlight = do_highlight
+      } else {
+        t.highlight = false
+      }
+    })
+
+    state.highlighting = do_highlight && project !== null
+    Object.values(state.technologies).forEach(t => {
+      t.highlight = false
+    })
+
+    if(project && do_highlight) {
+      Object.entries(project.topics).forEach(([k, v]) => {
+        const topic = state.topic_index[k]
+        const color = state.topics_palette[topic.palette]
+        v.forEach(tech_name => {
+          const tech = state.technologies[tech_name]
+          if(tech) {
+            tech.highlight = true
+            tech.color = color
+          }
+        })
+      })
+    }
+  },
   set_links(state, value) {
     state.links = value
   },
@@ -65,9 +94,6 @@ export default {
   },
   set_project_lookup(state, value) {
     state.project_lookup = value
-  },
-  set_tech_ordering(state, value) {
-    state.tech_ordering = value
   },
   set_technologies(state, value) {
     state.technologies = value
@@ -86,5 +112,5 @@ export default {
   },
   set_window_size(state, value) {
     state.window_size = value
-  }, 
+  },
 }

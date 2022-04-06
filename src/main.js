@@ -2,14 +2,37 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store/store'
+import vuetify from './plugins/vuetify'
 
-import 'vue-material/dist/theme/default.css'
-import 'vue-material/dist/vue-material.min.css'
-import './assets/css/font-awesome.css'
-import './assets/css/styles.css'
+import MobileDetect from 'mobile-detect'
+
+import Gallery from './components/Gallery'
+import Project from './components/Project'
+import TopicSwatch from './components/TopicSwatch'
+import VimeoPlayer from './components/VimeoPlayer'
+
+import {fas} from '@fortawesome/free-solid-svg-icons'
+import {far} from '@fortawesome/free-regular-svg-icons'
+import {fab} from '@fortawesome/free-brands-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
+import {library} from '@fortawesome/fontawesome-svg-core'
+
+import '@/styles/main.sass'
+
+Vue.config.productionTip = false;
+Vue.prototype.$is_mobile = new MobileDetect(window.navigator.userAgent).mobile() ? true : false
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+library.add(fas, far, fab)
+
+Vue.component('Gallery', Gallery)
+Vue.component('Project', Project)
+Vue.component('TopicSwatch', TopicSwatch)
+Vue.component('VimeoPlayer', VimeoPlayer)
 
 new Vue({
   router,
-	store,
-  render: h => h(App),
+  store,
+  vuetify,
+  render: h => h(App)
 }).$mount('#app')

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import _ from 'lodash'
+// import _ from 'lodash'
 import * as stemmer from 'stemmer'
 
 export default {
@@ -27,7 +27,7 @@ export default {
       axios.get('/stop.json')
     ]
 
-    Promise.all(promises)
+    return Promise.all(promises)
       .then(res => {
         // --------------------------------------------------------
         //
@@ -50,7 +50,7 @@ export default {
         const technologies = {}
         const text = res[0].data['text']
 
-        // map topics to their ids and init  props
+        // map topics to their ids and init props
         const topic_idx = {}
         const topics = res[0].data['topics']
 
@@ -63,10 +63,6 @@ export default {
         // map each project to a list of keywords derived from various fields
         projects.forEach(proj => {
 
-          // gather up the tech lists
-          let tech = new Set()
-          let languages = new Set()
-
           // map each project to it's text id
           lookup[proj.id] = proj
 
@@ -74,58 +70,39 @@ export default {
           proj.expanded = false
 
           // a list of keywords
-          let s = Array.from(tech).concat(Array.from(languages))
-
+          let kws = []
           if(proj.topics) {
-            Object.keys(proj.topics).forEach(topic => {
+            Object.entries(proj.topics).forEach(([topic, techs]) => {
               const topic_kw = topic_idx[topic].title.toLowerCase().split(' ')
-              s = s.concat(topic_kw)
-              _.forIn(proj.topics[topic], (lang, key) => {
-                s.push(topic)
-                s.push(key)
-                s = s.concat(lang)
-                if(!technologies[key]) technologies[key] = new Set()
-                lang.forEach(x => {
-                  s.push(x)
-                  tech.add(x)
-                  technologies[key].add(x)
-                })
+              kws = kws.concat(topic_kw)
+              kws = kws.concat(techs)
+              techs.forEach(t => {
+                technologies[t] = {label: t, highlight: false, color: null}
               })
             })
           }
 
-          if(proj.client) s = s.concat(proj.client.split(' '))
-          if(proj.collaborators) s = s.concat(proj.collaborators.join(' ').split(' '))
-          if(proj.description) s = s.concat(proj.description.split(' '))
-          if(proj.title) s = s.concat(proj.title.split(' '))
-          if(proj.tldr) s = s.concat(proj.tldr.split(' '))
-          if(proj.keywords) s = s.concat(proj.keywords.join(' ').split(' '))
-          if(proj.location) s = s.concat(proj.location.split(' '))
-          if(proj.title) s = s.concat(proj.title.split(' '))
-          if(proj.year) s.push(''+ proj.year)
+          if(proj.client) kws = kws.concat(proj.client.split(' '))
+          if(proj.collaborators) kws = kws.concat(proj.collaborators.join(' ').split(' '))
+          if(proj.description) kws = kws.concat(proj.description.split(' '))
+          if(proj.title) kws = kws.concat(proj.title.split(' '))
+          if(proj.tldr) kws = kws.concat(proj.tldr.split(' '))
+          if(proj.keywords) kws = kws.concat(proj.keywords.join(' ').split(' '))
+          if(proj.location) kws = kws.concat(proj.location.split(' '))
+          if(proj.title) kws = kws.concat(proj.title.split(' '))
+          if(proj.year) kws.push(''+ proj.year)
 
           // remove puncuation
-          s = s.map(y => y.replace(/[^A-Za-z0-9+\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
+          kws = kws.map(y => y.replace(/[^A-Za-z0-9+\s]/g,'').replace(/\s{2,}/g, ' ').toLowerCase())
 
           // remove words in stop words
-          s = s.filter(y => !stopwords.includes(y) && y.length >= 2)
-
-          // console.log(proj['id'], s)
+          kws = kws.filter(y => !stopwords.includes(y) && y.length >= 2)
 
           // stem each term and map it to a set of documents
-          s.forEach(z => {
+          kws.forEach(z => {
             let stemmed = stemmer(z.trim())
             if(!index[stemmed]) index[stemmed] = new Set()
             index[stemmed].add(proj['id'])
-          })
-        })
-
-        // Convert technology sets to sorted arrays
-        Object.keys(technologies).forEach(k => {
-          technologies[k] = Array.from(technologies[k]).map(x => {
-            return {label: x, highlight: false, color: null}
-          }).sort((a, b)=> {
-            return a.label < b.label ? -1 : 1
           })
         })
 
@@ -134,7 +111,6 @@ export default {
         commit('set_new_data', projects)
         commit('set_project_index', index)
         commit('set_project_lookup', lookup)
-        commit('set_tech_ordering', res[0].data['tech_ordering'])
         commit('set_technologies', technologies)
         commit('set_text', text)
         commit('set_topics', topics)
@@ -183,6 +159,9 @@ export default {
   },
   set_gallery_id({commit}, id) {
     commit('set_gallery_id', id)
+  },
+  set_highlights({commit}, {project_id, do_highlight}) {
+    commit('set_highlights', {project_id, do_highlight})
   },
   set_video_id({commit}, id) {
     commit('set_video_id', id)
