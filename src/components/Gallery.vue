@@ -41,7 +41,7 @@ export default {
       content_width: null,
       content_height: null,
       interval_id: 0,
-      loading: true,
+      loading: false,
       open: true,
       video: null,
       radians: -0.8,
@@ -50,7 +50,6 @@ export default {
   },
   destroyed() {
     clearInterval(this.interval_id)
-    document.body.style.overflow = "scroll"
     window.removeEventListener('keydown', this.on_key_down_throttle)
     if(this.swipe) {
       this.swipe.off('swipeleft swiperight', this.on_swipe)
@@ -89,11 +88,15 @@ export default {
       }
     },
     dec() {
-      this.content_idx = this.content_idx - 1 < 0 ? this.content_paths.length - 1 : this.content_idx - 1
+      this.content_idx--
+      this.content_idx =
+        Math.abs(this.content_paths.length + this.content_idx) %
+          this.content_paths.length
       this.load_next()
     },
     inc() {
-      this.content_idx = (this.content_idx + 1) % this.content_paths.length
+      this.content_idx++
+      this.content_idx %= this.content_paths.length
       this.load_next()
     },
     load_next() {
@@ -126,25 +129,16 @@ export default {
       }
     },
     on_key_down(evt) {
-      if(this.content.length <= 1) return
-      if(evt.key == 'ArrowRight') {
-        this.set_content_idx(
-          this.content_idx + 1 > this.content_paths.length - 1 ?
-            0 : this.content_idx + 1)
-      }
-
-      if(evt.key == 'ArrowLeft') {
-        this.set_content_idx(
-          this.content_idx - 1 < 0 ?
-            this.content_paths.length - 1 :
-              this.content_idx - 1)
-      }
+      if(this.content_paths.length <= 1) return
+      if(evt.key == 'ArrowRight') this.inc()
+      if(evt.key == 'ArrowLeft') this.dec()
     },
     on_vimeo_player_ready(size) {
       this.loading = false
       this.current_content.width = size[0]
       this.current_content.height = size[1]
       this.calc_content_size()
+
       setTimeout(() => {
         const swipe = new Hammer(this.$refs.video.$el)
         swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
@@ -161,7 +155,7 @@ export default {
     }
   },
   mounted() {
-    document.body.style.overflow = "hidden"
+    this.loading = true
     this.content_idx = 0
     const proj = this.project_lookup[this.gallery_id]
     this.content_paths = proj.content
@@ -175,7 +169,8 @@ export default {
       _.throttle(this.on_key_down, 500), {leading: true}
     window.addEventListener('keydown', this.on_key_down_throttle)
     this.visible = true
-    this.set_content_idx(0)
+    this.content_idx = 0
+
     if(this.content_paths.length > 1) {
       setTimeout(()=> {
         this.swipe = new Hammer(this.$refs.content_container)
@@ -183,6 +178,8 @@ export default {
         this.swipe.on('swipeleft swiperight', this.on_swipe)
       }, 500)
     }
+
+    this.load_next()
   },
   watch: {
     window_size: function() {
@@ -193,210 +190,172 @@ export default {
 </script>
 
 <template>
-  <div v-if='open'>
-    <transition name='background' v-on:after-leave="close" @click='visible=false'>
-      <div v-if='visible' class='background' :style='{backgroundImage: gradient}' @click='visible=false'/>
+<div
+  v-if='open'>
+  <transition
+    name='background'
+    v-on:after-leave='close'>
+
+    <div
+      v-if='visible'
+      @click='visible=false'
+      :style='{
+        backgroundImage: gradient
+      }'
+      class='background pos-abs'
+      />
+  </transition>
+
+  <div
+    class='content-container-outer d-flex flex-column justify-space-between'>
+    <v-btn
+      ref='close_button'
+      @click='visible=false'
+      class='ma-4 align-self-end'
+      color='white'
+      large
+      icon>
+      <font-awesome-icon
+        icon='fa-regular fa-circle-xmark'
+        size='3x'/>
+    </v-btn>
+
+    <transition
+      name='content-container'>
+      <div
+        v-if='visible && current_content'
+        ref='content_container'
+        class='content-container align-self-center justify-self-ccenter pa-4'
+        :style='{
+          width: `${content_width}px`, height: `${content_height}px`
+        }'>
+        <div
+          class='content'>
+          <transition
+            name='content'>
+            <img
+              v-if='current_content && current_content.type == `image`'
+              :key='current_content.src'
+              :src='current_content.src'
+              :style='{
+                objectFit: content_paths[content_idx].fit || `cover`
+              }'>
+            <VimeoPlayer
+              v-else-if='current_content && current_content.type == `video`'
+              :key='current_content.src'
+              ref='video'
+              @ready='on_vimeo_player_ready'
+              :video_id='current_content.src'/>
+          </transition>
+          <div class='overlay'></div>
+        </div>
+      </div>
     </transition>
 
-    <div class='content-container-outer'>
-      <transition name='close-button'>
-        <div ref='close_button' v-if='visible' class='close-button'  @click='visible=false'>
-          <i class="far fa-times-circle"></i>
-        </div>
-      </transition>
-
-      <transition name='content-container'>
-        <div v-if='visible && current_content' ref='content_container' class='content-container'
-          :style='{width: `${content_width}px`, height: `${content_height}px`}'>
-          <div class='content'>
-            <transition name='content'>
-              <img v-if='current_content && current_content.type == "image"'
-                class='md-image' :src='current_content.src' :key='current_content.src'>
-              <VimeoPlayer ref='video' v-else-if='current_content && current_content.type == "video"'
-                v-on:ready='on_vimeo_player_ready' :video_id='current_content.src'
-                :key='current_content.src'/>
-            </transition>
-            <div class='overlay'></div>
-          </div>
-        </div>
-      </transition>
-
-      <transition name='controls' appear>
-        <div :style='{visibility: content_paths.length > 1 ? "visible" : "hidden"}' ref='controls' class='controls'>
-          <div class='button' v-for='(img, i) in content_paths'
-               :key='i' @click='set_content_idx(i)'>
-            <i v-if='i == content_idx' class="fas fa-circle"></i>
-            <i v-else class="far fa-circle"></i>
-          </div>
-        </div>
-      </transition>
-    </div>
-    <transition name='spinner'>
-      <div v-if='loading' class='spinner'>
-        <i class="fas fa-spinner"></i>
+    <transition
+      name='controls'
+      appear>
+      <div
+        ref='controls'
+        :style='{
+          visibility: content_paths.length > 1 ? "visible" : "hidden"
+        }'
+        class='
+          controls d-flex flex-shrink-0 align-self-center
+          justify-space-between mt-8 mb-12 pa-2'>
+        <v-btn
+          v-for='(img, i) in content_paths'
+          :key='i'
+          @click='set_content_idx(i)'
+          color='white'
+          icon
+          small>
+          <font-awesome-icon
+            :icon='i === content_idx ?
+              `fa-solid fa-circle` : `fa-regular fa-circle`'/>
+        </v-btn>
       </div>
     </transition>
   </div>
+
+  <transition name='spinner'>
+    <div
+      v-if='loading'
+      class='loader-container pos-abs d-flex align-center justify-center'>
+      <v-progress-linear
+        :style='{width: `256px`}'
+        color='white'
+        indeterminate/>
+    </div>
+  </transition>
+</div>
 </template>
 
-<style scoped>
-.background {
-  opacity: 0.8;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
+<style lang='sass' scoped>
+.background
+  height: 100%
+  opacity: 0.8
+  width: 100%
+  z-index: -1
 
 .background-enter,
-.background-leave-to { opacity: 0; }
+.background-leave-to
+  opacity: 0
 
 .background-enter-active,
-.background-leave-active { transition: opacity 0.4s; }
+.background-leave-active
+  transition: opacity 0.4s
 
-.close-button {
-  padding: 0.5em;
-  align-self: flex-end;
-  color: white;
-  font-size: 3em;
-  opacity: 0.8;
-  transition: all 0.8s;;
-  z-index: 1;
-}
+.controls
+  background-color: rgba(255, 255, 255, 0.5)
+  border-radius: 0.2em
 
-.close-button:hover {
-  color: white;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.close-button-enter, .close-button-leave-to {
-  color: #ccc;
-  opacity: 0;
-  transform: rotate(90deg);
-}
-
-.close-button-enter-active,
-.close-button-leave-active { transition: all 0.4s; }
-
-.controls {
-  align-self: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.2em;
-  color: white;
-  display: flex;
-  flex-shrink: 0;
-  justify-content: space-between;
-  pointer-events: all;
-  margin: 2em 0 4em 0;
-  padding: 0.4em;
-}
-
-.controls .button {
-  padding: 0 0.2em;
-  transition: all 0.2s;
-}
-
-.controls .button:hover {
-  color: #eee;
-  cursor: pointer;
-}
-
-.controls-enter { opacity: 0; }
+.controls-enter
+  opacity: 0
 
 .controls-enter-active,
-.controls-leave-active {
-  transition: all 0.4s;
-  transition-delay: 0.8s;
-}
+.controls-leave-active
+  transition: all 0.4s
+  transition-delay: 0.8s
 
-.content {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
+.content
+  width: 100%
+  height: 100%
+  position: relative
 
-.content-enter { opacity: 0; }
+.content-enter
+  opacity: 0
 
 .content-enter-active,
-.content-leave-active { transition: all 0.4s; }
+.content-leave-active
+  transition: all 0.4s
 
-.content-container {
-  align-self: center;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-radius: 0.2em;
-  flex-shrink: 1;
-  height: 80%;
-  justify-self: center;
-  padding: 1em;
-  pointer-events: all;
-  transition: all .4s;
-  width: 80%;
-}
+.content-container
+  background-color: rgba(0, 0, 0, 0.4)
+  border-radius: 0.2em
+  height: 80%
+  transition: all .4s
+  width: 80%
 
-.content-container-enter, .content-container-leave {
-  opacity: 0;
-  transform: translate(0, 30px);
-}
+.content-container-enter, .content-container-leave
+  opacity: 0
+  transform: translate(0, 30px)
 
-.content-container-enter-active { transition-delay: 0.4s; }
+.content-container-enter-active
+  transition-delay: 0.4s
 
-.content-container-outer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  pointer-events: none;
-  z-index: 1;
-}
+.content-container-outer
+  position: absolute
+  width: 100%
+  height: 100%
+  z-index: 1
 
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-}
+img
+  width: 100%
+  height: 100%
+  position: absolute
 
-.overlay {
-  background-color: rgba(255, 0, 0, 0.0);
-  height: 80%;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-}
-
-.spinner {
-  animation: spinner-rotation 1s linear infinite;
-  color: white;
-  font-size: 3em;
-  left: 48%;
-  position: absolute;
-  top: 45%;
-  transform-origin: center;
-  z-index: 1;
-}
-
-.spinner-enter {
-  opacity: 0;
-}
-
-.spinner-leave-to {
-  opacity: 0;
-}
-
-.spinner-enter-active, .spinner-leave-active {
-  transition: opacity 0.2s;
-}
-
-@keyframes spinner-rotation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
+.loader-container
+  width: 100%
+  height: 100%
 </style>

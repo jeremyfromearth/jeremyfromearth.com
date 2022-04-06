@@ -24,7 +24,7 @@ export default {
     this.on_resize()
     window.addEventListener('resize', this.on_resize)
   },
-  name: 'app'
+  name: 'App'
 }
 </script>
 
@@ -36,11 +36,7 @@ export default {
     <router-view/>
   </v-main>
 
-  <!--
   <Gallery v-if='gallery_id != null' class='gallery'/>
-
-
-  -->
 </v-app>
 </template>
 

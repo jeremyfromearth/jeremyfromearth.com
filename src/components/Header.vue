@@ -4,6 +4,7 @@ import {mapGetters} from 'vuex'
 export default {
   computed: {
     ...mapGetters([
+      'gallery_id',
       'links',
       'topics_palette'
     ]),
@@ -50,6 +51,11 @@ export default {
 
 <template>
 <v-app-bar
+  :style='{
+    transform: `translateY(${gallery_id ? "-64px" : 0})`,
+    transition: `transform 0.4s`,
+    transitionDelay: `0.4s`
+  }'
   color='white'
   class='px-0'
   elevation='1'
@@ -79,7 +85,7 @@ export default {
             }'
             class='globe ml-4 mr-2'
             size='2x'/>
-          <h4>v3.0.0</h4>
+          <h4>v3.1.0</h4>
         </div>
         <v-spacer/>
         <div>

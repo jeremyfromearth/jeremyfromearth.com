@@ -142,7 +142,7 @@
     "published": false,
     "title": "Power Up Portland",
     "tldr": "Big buttons, bright colors, rotary phone wired to an Arduino",
-    "topics": {"install": {"Other": ["Arduino"]}},
+    "topics": {"install": []},
     "year": 2013
   }, {
     "client": "United States Holocaust Memorial Museum",
@@ -156,7 +156,7 @@
     "published": true,
     "title": "Reflections",
     "tldr": "Crowd sourced impressions of the Holocaust",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2013
   }, {
     "client": "National Air & Space Museum",
@@ -170,7 +170,7 @@
     "published": true,
     "title": "Navigate the Seas",
     "tldr": "One of three touch screen games for the Air & Space Museum",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2013
   }, {
     "client": "Chisholm Trail Heritage Museum",
@@ -184,7 +184,7 @@
     "published": false,
     "title": "Lead a Trail Drive",
     "tldr": "All you need to know about russling cattle",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2013
   }, {
     "client": "Canadian Museum for Human Rights",
@@ -204,8 +204,8 @@
     "title": "Human Rights Now",
     "tldr": "Thirty foot media wall of facts, figures and data visualization controlled by touchscreen stations",
     "topics": {
-      "install": {"C++":["Cinder", "OpenGL", "SocketIO"]},
-      "vis": {"C++": ["Cinder", "OpenGL"]}
+      "install": ["C++", "SocketIO"],
+      "vis": ["Cinder", "OpenGL"]
     },
     "year": 2014
   }, {
@@ -226,7 +226,7 @@
     "published": true,
     "title": "Visualizing Breast Cancer Causation",
     "tldr": "Network graph based interactive data visualization depicting the connectionivity of breast cancer causes",
-    "topics": {"vis": {"JavaScript": []}, "fs": {"JavaScript": []}},
+    "topics": {"vis": ["JavaScript"]},
     "year": 2014
   }, {
     "client": "Clemson University",
@@ -241,8 +241,8 @@
     "title": "Data Ribbon",
     "tldr": "12x144 LED array displays event data and realtime alerts",
     "topics": {
-      "install": {"Java": ["Processing", "SocketIO"]},
-      "vis": {}
+      "install": ["Java",  "SocketIO"],
+      "vis": ["Processing"]
     },
     "year": 2015
   }, {
@@ -264,7 +264,7 @@
     "published": true,
     "title": "Inside Out Exhibit",
     "tldr": "Multiple touchscreen apps integrating augmented reality, face recognition and various physical sensors",
-    "topics": {"install": {}},
+    "topics": { "install": ["iOS", "macOS", "Swift"]},
     "year": 2015
   }, {
     "client": "Telstra",
@@ -278,7 +278,7 @@
     "published": true,
     "title": "Partnership Hub",
     "tldr": "Gesture controlled particle system and data visualizations",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Box2D"], "Databases": ["Redis"]}},
+    "topics": {"install": ["C++", "Cinder", "OpenGL", "Box2D", "Redis"]},
     "year": 2015
   }, {
     "client": "Clemson University",
@@ -297,7 +297,7 @@
     "platforms": ["Windows"],
     "published": true,
     "title": "Clemson Family Portrait",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
+    "topics": {"install": ["C++", "Cinder", "OpenGL"]},
     "tldr": "Three screen Kinect controlled interactive wall",
     "year": 2015
   }, {
@@ -312,7 +312,7 @@
     "published": true,
     "title": "Missoula Floods Navigator",
     "tldr": "Map based explorer apps tell the story of the Missoula Floods ",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2012
   }, {
     "client": "Mobius Science Center",
@@ -334,7 +334,7 @@
     "published": true,
     "title": "Harmony Table",
     "tldr": "Multitouch table for exploring connections beween the spatial and temporal components of music",
-    "topics": {"install": {"Java": ["Processing", "TUIO", "OpenGL"]}, "vis": {}},
+    "topics": {"install": ["Java", "Processing", "TUIO", "OpenGL"]},
     "year": 2012
   }, {
     "client": "International Center for Photography",
@@ -355,7 +355,7 @@
     "published": true,
     "title": "Weegee - Murder is My Business",
     "tldr": "A raw look at the progenitor of crime scene photography",
-    "topics": {"install":{}},
+    "topics": {"install": []},
     "year": 2012
   }, {
     "client": "Sam Rayburn Library & Museum",
@@ -369,7 +369,7 @@
     "published": true,
     "title": "Sam Rayburn Archive Explorer",
     "tldr": "Document explorer touch wall with fluid user interface",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2012
   }, {
     "client": "The Grammy Museum",
@@ -395,7 +395,7 @@
     "title": "In the Studio",
     "tldr": "Eight interactive experiences that guide museum visitors through the process of audio production",
     "topics": {
-      "install": {}
+      "install": []
     },
     "year": 2008
   }, {
@@ -411,8 +411,8 @@
     "title": "Faces of Gettysburg",
     "tldr": "Image and relational search tools for soldier database",
     "topics": {
-      "search": {},
-      "install": {}
+      "search": [],
+      "install": []
     },
     "year": 2008
   }, {
@@ -434,7 +434,7 @@
     "published": true,
     "title": "Orientation Screens",
     "tldr": "Event info and media presentation screens",
-    "topics": {"install":{}},
+    "topics": {"install": []},
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -450,7 +450,7 @@
     "published": true,
     "title": "Global Health Kiosks",
     "tldr": "Interviews and footage from global health initiatives",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2008
   }, {
     "client": "National Library of Medicine",
@@ -465,7 +465,7 @@
     "keywords": ["table", "touchscreen", "aids", "quilts", "installation"],
     "title": "Names Quilt Touch Table",
     "tldr": "A contemplative view on an importmant moment of shared sadness and hope",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "platforms": ["Windows"],
     "published": true,
     "year": 2007
@@ -485,7 +485,7 @@
     "id": "woodstock-tryptich",
     "keywords": ["woodstock", "music", "installation"],
     "title": "Woodstock Tryptich Kiosks",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "tldr": "Groovy touchscreen flashback to the 50's, 60's and 70's",
     "platforms": ["Windows"],
     "published": true,
@@ -501,7 +501,7 @@
     "published": true,
     "title": "AIDS Activism",
     "tldr": "Video interviews with advocates and activsts",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2007
   }, {
     "client": "John D. and Catherine T. MacArthur Foundation",
@@ -525,7 +525,7 @@
     "published": true,
     "title": "Foundation Kiosk",
     "tldr": "One of my favorite projects from my time at Second Story",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2007
   }, {
     "client": "The Speed Art Museum",
@@ -546,7 +546,7 @@
     "published": true,
     "title": "Book of Hours",
     "tldr": "Illuminated manuscripts for the digital era",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2009
   },
   {
@@ -561,7 +561,7 @@
     "published": true,
     "title": "Seggesser Hide Explorer",
     "tldr": "Deep zoom explorations of Native American hide paintings",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2009
   }, {
     "client": "Old Standard Sound",
@@ -579,7 +579,7 @@
     "published": true,
     "title": "Old Standard Sound Website",
     "tldr": "Cool website for local recording studio",
-    "topics": {"fs": {}},
+    "topics": {"fs": []},
     "year": 2009
   }, {
     "client": "The Kansas City Royals Hall of Fame",
@@ -592,7 +592,7 @@
     "published": false,
     "title": "Sports Broadcasting",
     "tldr": "Something about sports...",
-    "topics": {"install":{}},
+    "topics": {"install": []},
     "year": 2009
   }, {
     "client": "Weiden+Kennedy",
@@ -608,7 +608,7 @@
     "title": "WK+12 Party App",
     "tldr": "Fun Kinect controlled 3D image gallery for WK12 graduation party",
     "topics": {
-      "install": {"C++": ["Cinder", "OpenGL"]}
+      "install": ["C++", "Cinder", "OpenGL"]
     },
     "year": 2012
   }, {
@@ -623,7 +623,7 @@
     "published": true,
     "title": "Treaty of Guadalupe Hidalgo",
     "tldr": "Magic document translators",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2009
   }, {
     "client": "Textwise",
@@ -636,9 +636,9 @@
     "title": "Gist Query Language",
     "tldr": "Domain specific query langauge for document searches over the IP.com patent corpus",
     "topics": {
-      "vis": {"JavaScript": ["D3"]},
-      "search": {"C++": ["stdlib"]},
-      "fs": {"C++": [], "JavaScript": ["Node"]}
+      "vis": ["JavaScript", "D3"],
+      "search": ["C++"],
+      "fs": ["JavaScript", "Node"]
     },
     "year": 2017
   }, {
@@ -652,8 +652,8 @@
     "title": "Textwise Treemap Component",
     "tldr": "A treemap for visualizing semantically clustered patent documents",
     "topics": {
-      "vis": {"JavaScript": ["D3", "Node"]},
-      "search": {"JavaScript": ["D3", "Node"]}
+      "vis": ["JavaScript", "D3", "Node"],
+      "search": ["JavaScript", "D3", "Node"]
     },
     "year": 2019
   }, {
@@ -667,8 +667,8 @@
     "title": "Storycrafter User Analytics",
     "tldr": "Metrics gathering API and customizable data visualization dashboard framework for the Storycrafter platform",
     "topics": {
-      "fs": {"JavaScript": ["Node"], "Databases": ["MongoDB"]},
-      "vis": {"JavaScript": ["Node", "D3"]}
+      "fs": ["JavaScript", "Node", "MongoDB"],
+      "vis": ["Node", "D3"]
     },
     "url": "https://storycrafter.co/",
     "year": 2018
@@ -695,9 +695,7 @@
     "title": "The Semantic Map",
     "tldr": "tSNE derived interactive hexbin visualization and search tool for IP.com's InnovationQ platform",
     "topics": {
-      "search":{"JavaScript": ["D3", "Node"]},
-      "vis": {"JavaScript": ["D3", "Node"]},
-      "ai": {"C++": []}
+      "vis": ["JavaScript", "D3", "Node"]
     },
     "year": 2017
   },
@@ -717,8 +715,7 @@
     "title": "Kronos Archaeology Discovery",
     "tldr": "Android app for recording finds at Mt. Lykaion in Greece",
     "topics": {
-      "search": {},
-      "fs": {"Java": ["Android"], "Databases": ["SQLite"], "Python": []}
+      "fs": ["Java", "Android", "SQLite", "Python"]
     },
     "year": 2010
   }, {
@@ -729,11 +726,11 @@
       {"type": "image", "src": "nmai-interior-01.jpg"},
       {"type": "image", "src": "nmai-interior-02.jpg"},
       {"type": "image", "src": "nmai-interior-03.jpg"},
-      {"type": "image", "src": "nmai_infinity_01.jpg"},
-      {"type": "image", "src": "nmai_infinity_02.jpg"},
-      {"type": "image", "src": "nmai_infinity_03.jpg"},
-      {"type": "image", "src": "nmai_infinity_04.jpg"},
-      {"type": "image", "src": "nmai_infinity_05.jpg"},
+      {"type": "image", "src": "nmai_infinity_01.jpg", "fit": "contain"},
+      {"type": "image", "src": "nmai_infinity_02.jpg", "fit": "contain"},
+      {"type": "image", "src": "nmai_infinity_03.jpg", "fit": "contain"},
+      {"type": "image", "src": "nmai_infinity_04.jpg", "fit": "contain"},
+      {"type": "image", "src": "nmai_infinity_05.jpg", "fit": "contain"},
       {"type": "video", "src": "164945996"}
     ],
     "featured": true,
@@ -744,7 +741,7 @@
     "published": true,
     "title": "Infinity of Nations",
     "tldr": "On the road, under the weather, 30 days in October",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2010
   }, {
     "client": "Nike",
@@ -764,7 +761,7 @@
     "title": "Sparq Data Visualizations",
     "tldr": "Radar chart data visualizations for performance metrics gathered by in shoe sensors",
     "topics": {
-      "vis": {}
+      "vis": []
     },
     "year": 2010
   }, {
@@ -779,7 +776,7 @@
     "published": true,
     "title": "World of AEP",
     "tldr": "Twenty six screen multitouch media wall in the main lobby of AEP headquarters for educating visitors and employees alike",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"]}},
+    "topics": {"install": ["C++", "Cinder", "OpenGL"]},
     "year": 2018
   }, {
     "client": "Portland's Children Museum",
@@ -793,7 +790,7 @@
     "published": true,
     "title": "Children's Museum Storefront",
     "tldr": "Kinect + rigid body physics = boom klang",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL", "Box2D"]}},
+    "topics": {"install": ["C++", "Cinder", "OpenGL", "Box2D"]},
     "year": 2011
   }, {
     "client": "Oregon Museum of Sciecne and Industry",
@@ -807,7 +804,7 @@
     "published": true,
     "title": "Augmenting Human Fitness",
     "tldr": "A Kinect powered prototype for my favorite childhood museum",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"], "Misc": ["Arduino"]}},
+    "topics": {"install": ["C++", "Cinder", "OpenGL", "Kinect"]},
     "year": 2011
   }, {
     "client": "Old Woman Creek Estuary & Visitors Center",
@@ -820,7 +817,7 @@
     "published": true,
     "title": "Estuary Awareness",
     "tldr": "A fun interactive game in small visitors center in Ohio",
-    "topics": {"install": {}},
+    "topics": {"install": []},
     "year": 2011
   }, {
     "client": "San Franscisco Museum of Modern Art",
@@ -842,7 +839,9 @@
     "published": true,
     "title": "Story Screens",
     "tldr": "Media curation platform enabling museum staff to craft and publish custom digital presentations to screen arrays positioned throughout the art museum",
-    "topics": {"install": {"C++": ["Cinder", "OpenGL"]}, "fs": {"Python": ["SocketIO", "Flask"]}
+    "topics": {
+      "install": ["C++", "Cinder", "OpenGL"],
+      "fs": ["Python", "SocketIO", "Flask"]
     },
     "year": 2016
   }, {
@@ -857,7 +856,7 @@
     "published": true,
     "title": "Search Spheres Prototype",
     "tldr": "An experimental geometric search interface",
-    "topics": {"vis": {}, "search": {"Databases": ["MySQL"]}},
+    "topics": {"vis": ["iOS", "Swift"], "search": ["MySQL"]},
     "year": 2016
   }, {
     "client": "Terra Incognita",
@@ -867,17 +866,31 @@
     "keywords": ["storycrafter", "content", "realtime", "real", "time", "web", "sockets", "analytics", "installation"],
     "platforms": ["macOS", "Windows"],
     "published": true,
-    "title": "Storycrafter Canvas",
+    "title": "Storycrafter",
     "tldr": "A cross platform desktop application enabling Storycrafter users to publish content to interactive environments",
     "topics": {
-      "fs": {
-        "Python": ["AppEngine"],
-        "JavaScript": ["Vue", "Node", "Electron", "SocketIO"],
-        "Databases": ["MongoDB"]
-      }
+      "fs": ["JavaScript", "Vue", "Node", "Electron", "SocketIO", "MongoDB"]
     },
     "url": "https://storycrafter.co/",
     "year": 2018
+  }, {
+    "client": "Cortical.io – Vienna, Austria",
+    "coloraborators": [],
+    "content": [],
+    "description": "Lorem Ipsum",
+    "featured": false,
+    "id": "cortical",
+    "published": true,
+    "title": "Software Engineer",
+    "tldr": "I'm currently employed full time at Cortical.io, where I lead development of the frontend for a business intelligence software that enables customers to assemble automated message processing pipelines",
+    "topics": {
+      "ai": [],
+      "fs": ["Python", "Flask", "JavaScript", "Vue", "Node"],
+      "nlp": ["Python", "Scikit Learn", "SpaCy"],
+      "vis": ["D3"]
+    },
+    "url": "https://www.cortical.io/solutions/message-intelligence/",
+    "year": 2022
   }, {
     "client": "Gooogle & O'Reilly Media",
     "coloraborators": ["Instrument"],
@@ -889,16 +902,16 @@
     "title": "Startographer",
     "tldr": "Fine tuned XLNet neural network models power this interactive word game installation for Google and O'Reilly Media's traveling TensorWorld exhibit",
     "topics": {
-      "install": {"JavaScript": ["Electron", "Node", "SocketIO", "Vue"]},
-      "ai": {"Python": ["TensorFlow"]},
-      "fs": {"Python": ["Flask"]},
-      "nlp": {"Python": ["TensorFlow"]}
+      "install": ["JavaScript", "Electron", "Node", "SocketIO", "Vue"],
+      "ai": ["TensorFlow", "Keras"],
+      "fs": ["Python", "Flask"],
+      "nlp": ["SpaCy", "Scikit Learn"]
     },
     "year": 2019
   }],
-  "tech_ordering": ["JavaScript", "Python", "C++", "Java", "Databases"],
+  "tech_ordering": ["JavaScript", "Python", "C++", "Java"],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living in Vienna, Austria and working remotely with collaborators from around the globe. I work on a variety of software projects including data visualizations tools, chatbots and interactive experiences in immersive spaces. I'm currently most interested in working on projects integrating Machine Intelligence, Natural Language Processing and Data Visualization.",
+    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I've worked on a pretty wide variety of software projects throughout my career. These days I'm most interested in working on projects that integrate Machine Intelligence, Natural Language Processing and Data Visualization.",
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. Hover over a project to learn more about it. Additionally, you can use the keyword search to navigate through the entire archive."
   },
   "topics": [

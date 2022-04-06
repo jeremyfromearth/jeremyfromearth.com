@@ -10,7 +10,7 @@ export default {
     }
   },
   mounted() {
-    this.player = 
+    this.player =
       new Player(`player-${this.video_id}`, {
         autoplay: true,
         byline: false,
@@ -28,13 +28,13 @@ export default {
       this.$emit('ready', result)
       this.$refs.player.firstChild.style.position = 'unset'
     })
-  }, 
+  },
   props: {
     video_id: {
-      type: String, 
+      type: String,
       default: ()=> ''
     }
-  }, 
+  },
   destroyed() {
     if(this.player) this.player.destroy()
   }
@@ -42,7 +42,7 @@ export default {
 </script>
 
 <template>
-  <div ref='player' :id='`player-${video_id}`' 
+  <div ref='player' :id='`player-${video_id}`'
     class='player' :style='{opacity: ready ? 1 : 0}'></div>
 </template>
 

@@ -3,22 +3,17 @@ import Vuetify from 'vuetify/lib/framework';
 
 Vue.use(Vuetify);
 
+// https://learnui.design/tools/data-color-picker.html#palette
+export const topics_palette = [
+  '#003f5c', '#2f4b7c', '#665191', '#a05195',
+  '#d45087', '#f95d6a', '#ff7c43', '#ffa600'
+]
+
 export default new Vuetify({
   theme: {
-      options: {
-        customProperties: true,
-      },
-    themes: {
-      light: {
-        primary: '#007BFF',
-        secondary: '#424242',
-        accent: '#82B1FF',
-        error: '#FF5252',
-        info: '#2196F3',
-        success: '#4CAF50',
-        warning: '#FFC107'
-      },
-    },
+    options: {
+      customProperties: true,
+    }
   },
   icons: {
     iconfont: 'faSvg'

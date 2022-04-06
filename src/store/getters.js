@@ -5,17 +5,20 @@ export default {
   education: state => state.education,
   employment: state => state.employment,
   gallery_id: state => state.gallery_id,
+  highlighting: state => state.highlighting,
   keywords: state => state.keywords,
   links: state => state.links,
   pagination: state => state.pagination,
   project_lookup: (state) => state.project_lookup,
   project_sort_keys: (state, getters) =>  _.uniq(_.map(getters.projects_paged, 'year')),
-  projects_paged: state => 
+  projects_paged: state =>
     state.project_search_results.slice(
       state.pagination, state.pagination + state.projects_per_page),
   projects_per_page: state => state.projects_per_page,
   project_search_results: state => state.project_search_results,
-  tech_ordering: state => state.tech_ordering,
+  tech_merged_sorted: state =>
+    Object.values(state.technologies)
+      .sort((a, b) => a.label.localeCompare(b.label)),
   technologies: state => state.technologies,
   text: state => state.text,
   topics: state => state.topics,

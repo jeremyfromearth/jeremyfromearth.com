@@ -8,13 +8,14 @@ import {
 } from 'vuex'
 
 export default {
-  name: 'LiveDoc',
+  name: 'Main',
   computed: {
     ...mapGetters([
       'blog_posts',
       'education',
       'employment',
       'gallery_id',
+      'highlighting',
       'keywords',
       'links',
       'pagination',
@@ -22,7 +23,7 @@ export default {
       'project_search_results',
       'project_sort_keys',
       'projects_per_page',
-      'tech_ordering',
+      'tech_merged_sorted',
       'technologies',
       'text',
       'topics',
@@ -54,9 +55,8 @@ export default {
     }
   },
   async mounted() {
-
-
     init_firebase()
+
     await this.get_data()
     this.clear_project_filters()
 
@@ -65,7 +65,6 @@ export default {
     setTimeout(()=> {
       this.on_project_transition()
     }, 1000)
-
   },
   methods: {
     ...mapActions([
@@ -94,24 +93,14 @@ export default {
     on_project_transition() {
       if(this.$refs.project_transition) {
         const h1 = this.$refs.project_transition.$el.clientHeight
-        const h2 = this.$refs.topic_legend.clientHeight + this.$refs.meta_description.clientHeight
+        const h2 = this.$refs.topic_legend.clientHeight +
+          this.$refs.tech_tags.clientHeight
         const h = Math.max(h1, h2)
         this.project_container_height = h
       }
     },
     projects_with_key(k) {
       return _.filter(this.projects_paged, {year: k})
-    },
-    stack_is_highlighted() {
-      let highlight = false
-      Object.keys(this.technologies).forEach(lang => {
-        const tech = this.technologies[lang]
-        tech.forEach(tech => {
-          if(tech.highlight) highlight = true
-        })
-      })
-
-      return highlight
     },
     topic_color(i) {
       return this.topics_palette[i % this.topics_palette.length]
@@ -130,7 +119,7 @@ export default {
 
   <!-- Intro -->
   <v-row
-    class='mt-4'>
+    class='mt-0'>
     <v-col
       cols='12'>
       <div>
@@ -139,39 +128,16 @@ export default {
     </v-col>
   </v-row>
 
-  <!-- Blog -->
+  <!-- Work -->
   <v-row>
     <v-col>
       <div
         class='title font-weight-bold'>
-        Blog
-      </div>
-      <div
-        class='subtitle'>
-        Recent Articles
-      </div>
-      <div>
-        <ul>
-          <li
-            v-for='(x, i) in blog_posts'
-            :key='i'>
-            <a :href='x.url'>{{ x.title }}</a>
-          </li>
-        </ul>
-      </div>
-    </v-col>
-  </v-row>
-
-  <!-- Projects -->
-  <v-row>
-    <v-col>
-      <div
-        class='title font-weight-bold'>
-        Projects
+        Work Archive
       </div>
     </v-col>
     <v-col
-      class='d-flex align-center justify-end'
+      class='d-flex flex-wrap align-center justify-end'
       cols='6'>
       <v-chip
         v-for='kw in keywords'
@@ -206,16 +172,11 @@ export default {
       :style='{
         height: project_container_height + `px`
       }'
-      class='project-container d-flex justify-space-around flex-nowrap px-6'>
+      class='project-container d-flex justify-space-around flex-nowrap'>
       <div
         class='meta-container d-flex flex-grow-0 flex-column justify-space-between'>
-        <i
-          ref='meta_description'
-          class='meta-description px-2'>
-          {{text['project_sidebar']}}
-        </i>
         <div ref='topic_legend'
-          class='topic-legend pa-4'>
+          class='topic-legend pr-4 py-4'>
           <div
             v-for='t in topics'
             :key='t.id'
@@ -233,6 +194,25 @@ export default {
               </div>
           </div>
         </div>
+        <div
+          ref='tech_tags'
+          class='d-flex flex-wrap'>
+          <v-chip
+            v-for='(t, i) in tech_merged_sorted'
+            @click='add_keywords(t.label); on_project_transition()'
+            :key='t.label + i'
+            :color='t.highlight ? t.color : `transparent`'
+            :style='{
+              opacity: highlighting ? t.highlight ? 1 : 0.2 : 1,
+              backgroundColor: t.highlight ? t.color : `transparent`,
+              border: `1px solid ${t.highlight ? t.color : `lightgrey`} !important`
+            }'
+            :text-color='t.highlight ? `white` : `black`'
+            class='my-1 mr-1'
+            small>
+            {{ t.label }}
+          </v-chip>
+        </div>
       </div>
       <div
         class='flex-grow-1'>
@@ -244,7 +224,7 @@ export default {
           <div
             v-for='(k, i) in project_sort_keys'
             :key='k + "-" + i + "-" + pagination'
-            class='d-flex ma-0 px-2'>
+            class='d-flex ma-0 pl-2 pr-12'>
             <div
               class='font-weight-bold'>
               {{k}}
@@ -260,17 +240,19 @@ export default {
         </transition-group>
       </div>
       <div
-        class='d-flex flex-column flex-grow-0'>
+        class='d-flex flex-column flex-grow-0'
+        style='z-index: 0'>
         <div
           @click='dec()'
           class='pagination-controller'>
           <div
+            v-show='!highlighting'
             class='pagination-arrow pagination-arrow-up d-flex flex-column justify-center mt-8'
             :style='{
-                opacity: pagination > 0 ? 1 : 0,
-                marginTop: pagination > 0 ? `4em`: `4em`,
-                height: pagination > 0 ? `4em` : `2em`
-              }'>
+              opacity: pagination > 0 ? 1 : 0,
+              marginTop: pagination > 0 ? `4em`: `4em`,
+              height: pagination > 0 ? `4em` : `2em`
+            }'>
             <font-awesome-icon
               icon='fa-solid fa-angles-up'/>
           </div>
@@ -310,36 +292,28 @@ export default {
     <p>No projects matched the keywords provided</p>
   </div>
 
-  <!-- Stacks -->
+  <!-- Blog -->
   <v-row>
     <v-col>
       <div
         class='title font-weight-bold'>
-        Stacks
+        Blog
       </div>
     </v-col>
   </v-row>
 
   <v-row>
-    <v-col
-      v-for='k in tech_ordering'
-      :key='k'>
+    <v-col>
       <div
-        class='d-flex flex-column'>
-        <div
-          class='subtitle font-weight-bold'>
-          {{k}}
-        </div>
+        class='subtitle'>
+        Recent Articles
+      </div>
+      <div>
         <ul>
           <li
-            v-for='t in technologies[k]'
-            class='tech-list-item'
-            :key='t.label'
-            :style='{
-              textShadow: t.highlight ? `0 0 4px ${t.color}`: null,
-              opacity: stack_is_highlighted() ? t.highlight ? 1 : 0.2 : 1
-            }'>
-            {{ t.label }}
+            v-for='(x, i) in blog_posts'
+            :key='i'>
+            <a :href='x.url'>{{ x.title }}</a>
           </li>
         </ul>
       </div>
@@ -359,7 +333,7 @@ export default {
   <v-row
     v-for='(e, i) in employment'
     :key='i'
-    class='mb-8'>
+    class='mb-2'>
     <v-col>
       <h4>{{e.title}}</h4>
       <h5>{{e.timespan}}</h5>
@@ -561,6 +535,12 @@ export default {
 .topic-legend-item-text
   text-shadow: 0
   transition: text-shadow .4s
+
+.v-chip
+  transition: all 0.5s
+
+.v-chip__content
+  transition: all 0.5s
 
 @keyframes jump
   0%
