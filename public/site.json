@@ -911,7 +911,7 @@
   }],
   "tech_ordering": ["JavaScript", "Python", "C++", "Java"],
   "text": {
-    "intro": "Hello, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I've worked on a pretty wide variety of software projects throughout my career. These days I'm most interested in working on projects that integrate Machine Intelligence, Natural Language Processing and Data Visualization.",
+    "intro": "<span class='font-weight-bold'>Hello</span>, my name is Jeremy Brown. I am a Software Engineer living and working in Vienna, Austria. I've worked on a pretty wide variety of software projects throughout my career. These days I'm most interested in working on projects that integrate Machine Intelligence, Natural Language Processing and Data Visualization.",
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. Hover over a project to learn more about it. Additionally, you can use the keyword search to navigate through the entire archive."
   },
   "topics": [

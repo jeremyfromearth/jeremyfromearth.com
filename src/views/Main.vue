@@ -119,12 +119,10 @@ export default {
 
   <!-- Intro -->
   <v-row
-    class='mt-0'>
+    class='my-6'>
     <v-col
       cols='12'>
-      <div>
-        {{text['intro']}}
-      </div>
+      <div v-html='text[`intro`]'/>
     </v-col>
   </v-row>
 
