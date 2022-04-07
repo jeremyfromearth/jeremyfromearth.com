@@ -702,7 +702,7 @@
   {
     "client": "University of Pennsylvania",
     "content": [
-      {"type": "image", "src": "kronos_01.jpg"},
+      {"type": "image", "src": "kronos_01.jpg", "fit": "contain"},
       {"type": "image", "src": "kronos_02.jpg"},
       {"type": "image", "src": "kronos_03.jpg"}
     ],
@@ -915,9 +915,8 @@
     "project_sidebar": "This is effectively an archive of nearly every software development project I've led. Hover over a project to learn more about it. Additionally, you can use the keyword search to navigate through the entire archive."
   },
   "topics": [
-    {"id": "ai", "palette": 0, "title": "Machine Intelligence"},
-    {"id": "nlp", "palette": 1, "title": "Natural Language Processing"},
-    {"id": "bots", "palette": 2, "title": "Chatbots"},
+    {"id": "ai", "palette": 1, "title": "Machine Intelligence"},
+    {"id": "nlp", "palette": 2, "title": "Natural Language Processing"},
     {"id": "search", "palette": 3, "title": "Search Tools"},
     {"id": "vis", "palette": 4, "title": "Data Visualization"},
     {"id": "install", "palette": 5, "title": "Interactive Installation"},

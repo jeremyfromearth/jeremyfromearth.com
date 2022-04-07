@@ -144,8 +144,10 @@ export default {
         :key='kw.term'
         @click:close='remove_keyword(kw.term)'
         class='mr-1'
+        color='#003f5c'
         close
-        outlined>
+        dark
+        small>
         {{kw.original}}
       </v-chip>
     </v-col>
@@ -203,6 +205,7 @@ export default {
             :key='t.label + i'
             :color='t.highlight ? t.color : `transparent`'
             :style='{
+              color: highlighting ? `white` : null,
               opacity: highlighting ? t.highlight ? 1 : 0.2 : 1,
               backgroundColor: t.highlight ? t.color : `transparent`,
               border: `1px solid ${t.highlight ? t.color : `lightgrey`} !important`
