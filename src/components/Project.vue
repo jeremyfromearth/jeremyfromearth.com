@@ -73,14 +73,29 @@ export default {
     <div
       class='d-flex align-center'>
       <div
-        class='pl-0 body-1 font-weight-bold'>
-        {{data.title}}
+        class='d-flex flex-column'>
+        <div
+          class='pl-0 body-1 font-weight-bold'>
+          {{data.title}}
+        </div>
+        <div
+          v-if='data.client'
+          class='body-2 mb-2'>
+          {{ data.client }}
+        </div>
       </div>
-    </div>
-    <div
-      v-if='data.client'
-      class='body-2 mb-2'>
-      {{ data.client }}
+      <div
+        v-if='data.expanded'
+        class='ml-8'>
+        <v-btn
+          color='#44ABD8'
+          icon
+          large>
+          <font-awesome-icon
+            icon='fa-solid fa-angles-right'
+            size='lg'/>
+        </v-btn>
+      </div>
     </div>
     <div>
       {{ data.tldr }}
@@ -98,7 +113,7 @@ export default {
     cursor: pointer
 
 .expanded
-  color: var(--v-primary-base)
+  color: #44ABD8
 
 .project-inner
   transition: transform 0.2s ease-in-out
