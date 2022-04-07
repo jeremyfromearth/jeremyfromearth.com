@@ -900,7 +900,7 @@
     "id": "startographer",
     "published": true,
     "title": "Startographer",
-    "tldr": "Fine tuned XLNet neural network models power this interactive word game installation for Google and O'Reilly Media's traveling TensorWorld exhibit",
+    "tldr": "Fine tuned XLNet neural network models power this interactive word game installation for Google and O'Reilly Media's traveling TensorFlow World exhibit",
     "topics": {
       "install": ["JavaScript", "Electron", "Node", "SocketIO", "Vue"],
       "ai": ["TensorFlow", "Keras"],
