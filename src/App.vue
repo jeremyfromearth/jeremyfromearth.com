@@ -31,12 +31,8 @@ export default {
 <template>
 <v-app>
   <Header/>
-
-  <v-main>
-    <router-view/>
-  </v-main>
-
-  <Gallery v-if='gallery_id != null' class='gallery'/>
+  <router-view/>
+  <!--<Gallery v-if='gallery_id != null' class='gallery'/>-->
 </v-app>
 </template>
 

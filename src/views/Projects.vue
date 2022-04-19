@@ -11,14 +11,13 @@ export default {
   name: 'Gallery',
   computed: {
     ...mapGetters([
-      'gallery_id',
       'project_lookup',
       'topic_index',
       'topics_palette',
       'window_size'
     ]),
     gradient: function() {
-      const p = this.project_lookup[this.gallery_id]
+      const p = this.project_lookup[this.project_id]
       if(p) {
         const topics = Object.values(
           _.pick(this.topic_index, Object.keys(p.topics)))
@@ -30,6 +29,9 @@ export default {
         return `linear-gradient(${this.radians}rad, ${c.join(',')})`
       }
       return '#ffffff'
+    },
+    project() {
+      return this.project_lookup[this.project_id]
     }
   },
   data() {
@@ -42,7 +44,6 @@ export default {
       content_height: null,
       interval_id: 0,
       loading: false,
-      open: true,
       video: null,
       radians: -0.8,
       visible: false
@@ -56,9 +57,9 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['set_gallery_id']),
+    ...mapActions(['set_project_id']),
     close() {
-      this.set_gallery_id(null)
+      this.$router.push({name: 'main'})
     },
     calc_content_size() {
       let r = 1
@@ -133,6 +134,36 @@ export default {
       if(evt.key == 'ArrowRight') this.inc()
       if(evt.key == 'ArrowLeft') this.dec()
     },
+    on_project_change() {
+      if(!this.project) return
+
+      this.loading = true
+      this.content_idx = 0
+
+      const proj = this.project_lookup[this.project_id]
+      this.content_paths = proj.content
+
+      this.interval_id = setInterval(()=> {
+        this.radians += 0.0008
+        this.$forceUpdate()
+      }, 1/60)
+
+      this.on_key_down_throttle =
+        _.throttle(this.on_key_down, 500), {leading: true}
+      window.addEventListener('keydown', this.on_key_down_throttle)
+      this.content_idx = 0
+
+      if(this.content_paths.length > 1) {
+        setTimeout(()=> {
+          this.swipe = new Hammer(this.$refs.content_container)
+          this.swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
+          this.swipe.on('swipeleft swiperight', this.on_swipe)
+        }, 500)
+      }
+
+      this.visible = true
+      this.load_next()
+    },
     on_vimeo_player_ready(size) {
       this.loading = false
       this.current_content.width = size[0]
@@ -155,33 +186,15 @@ export default {
     }
   },
   mounted() {
-    this.loading = true
-    this.content_idx = 0
-    const proj = this.project_lookup[this.gallery_id]
-    this.content_paths = proj.content
-
-    this.interval_id = setInterval(()=> {
-      this.radians += 0.0008
-      this.$forceUpdate()
-    }, 1/60)
-
-    this.on_key_down_throttle =
-      _.throttle(this.on_key_down, 500), {leading: true}
-    window.addEventListener('keydown', this.on_key_down_throttle)
-    this.visible = true
-    this.content_idx = 0
-
-    if(this.content_paths.length > 1) {
-      setTimeout(()=> {
-        this.swipe = new Hammer(this.$refs.content_container)
-        this.swipe.get('swipe').set({direction: Hammer.DIRECTION_ALL})
-        this.swipe.on('swipeleft swiperight', this.on_swipe)
-      }, 500)
-    }
-
-    this.load_next()
+    this.on_project_change()
+  },
+  props: {
+    project_id: {type: String, default: () => null}
   },
   watch: {
+    project() {
+      this.on_project_change()
+    },
     window_size: function() {
       this.calc_content_size()
     }
@@ -191,14 +204,17 @@ export default {
 
 <template>
 <div
-  v-if='open'>
+  v-if='project'
+  class='project'>
+
   <transition
+    v-if='visible'
     name='background'
-    v-on:after-leave='close'>
+    v-on:after-leave='close'
+    appear>
 
     <div
       v-if='visible'
-      @click='visible=false'
       :style='{
         backgroundImage: gradient
       }'
@@ -278,24 +294,28 @@ export default {
     </transition>
   </div>
 
-  <transition name='spinner'>
-    <div
-      v-if='loading'
-      class='loader-container pos-abs d-flex align-center justify-center'>
-      <v-progress-linear
-        :style='{width: `256px`}'
-        color='white'
-        indeterminate/>
-    </div>
-  </transition>
+  <div
+    v-if='loading'
+    class='loader-container pos-abs d-flex align-center justify-center'>
+    <v-progress-linear
+      :style='{width: `256px`}'
+      color='white'
+      indeterminate/>
+  </div>
 </div>
 </template>
 
 <style lang='sass' scoped>
+.project
+  height: 100vh
+  position: absolute
+  width: 100vw
+  z-index: 1
+
 .background
-  height: 100%
+  height: 100vh
   opacity: 0.8
-  width: 100%
+  width: 100vw
   z-index: -1
 
 .background-enter,

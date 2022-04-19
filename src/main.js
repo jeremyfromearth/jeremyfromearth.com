@@ -6,7 +6,6 @@ import vuetify from './plugins/vuetify'
 
 import MobileDetect from 'mobile-detect'
 
-import Gallery from './components/Gallery'
 import Project from './components/Project'
 import TopicSwatch from './components/TopicSwatch'
 import VimeoPlayer from './components/VimeoPlayer'
@@ -25,7 +24,6 @@ Vue.prototype.$is_mobile = new MobileDetect(window.navigator.userAgent).mobile()
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 library.add(fas, far, fab)
 
-Vue.component('Gallery', Gallery)
 Vue.component('Project', Project)
 Vue.component('TopicSwatch', TopicSwatch)
 Vue.component('VimeoPlayer', VimeoPlayer)
