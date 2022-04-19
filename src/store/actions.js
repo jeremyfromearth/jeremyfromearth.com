@@ -157,9 +157,6 @@ export default {
   remove_keyword({commit}, kw) {
     commit('remove_keyword', kw)
   },
-  set_gallery_id({commit}, id) {
-    commit('set_gallery_id', id)
-  },
   set_highlights({commit}, {project_id, do_highlight}) {
     commit('set_highlights', {project_id, do_highlight})
   },

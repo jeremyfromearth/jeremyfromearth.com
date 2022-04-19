@@ -3,7 +3,6 @@ export default {
   education: [],
   employment: [],
   index: {},
-  gallery_id: null,
   highlighting: false,
   keywords: [],
   links: [],

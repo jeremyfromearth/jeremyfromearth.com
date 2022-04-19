@@ -4,7 +4,6 @@ import {mapGetters} from 'vuex'
 export default {
   computed: {
     ...mapGetters([
-      'gallery_id',
       'links',
       'topics_palette'
     ]),
@@ -19,13 +18,16 @@ export default {
       globe_icon: 'fas fa-globe-europe',
       globe_idx: 0,
       globe_color_idx: 0,
+      hidden: false
     }
   },
   destroy() {
 
   },
   methods: {
-
+    on_route_change() {
+      this.hidden = this.$route.name === 'projects'
+    }
   },
   mounted() {
     const globe = [
@@ -42,9 +44,14 @@ export default {
       this.globe_idx = this.frame_count % globe.length
       this.globe_color_idx = this.frame_count % this.globe_colors.length
     }, 1000)
+
+    this.on_route_change()
   },
   name: null,
   watch: {
+    $route() {
+      this.on_route_change()
+    }
   }
 }
 </script>
@@ -52,7 +59,7 @@ export default {
 <template>
 <v-app-bar
   :style='{
-    transform: `translateY(${gallery_id ? "-64px" : 0})`,
+    transform: `translateY(${hidden ? "-64px" : 0})`,
     transition: `transform 0.4s`,
     transitionDelay: `0.4s`
   }'

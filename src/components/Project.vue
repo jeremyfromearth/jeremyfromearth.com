@@ -8,15 +8,22 @@ export default {
   name: 'Project',
   computed: {
     ...mapGetters([
-        'technologies',
-        'topic_index',
-        'topics_palette',
-        'topics',
-      ])
+      'technologies',
+      'topic_index',
+      'topics_palette',
+      'topics',
+    ]),
+    link() {
+      if(this.data.content.length) {
+        return `projects/${this.data.id}`
+      } else if(this.data.url) {
+        return {name: 'external', params: {url: this.data.url}}
+      }
+      return {name: 'main'}
+    }
   },
   methods: {
     ...mapActions([
-      'set_gallery_id',
       'set_highlights',
       'set_video_id'
     ]),
@@ -30,14 +37,6 @@ export default {
     on_mouse_leave() {
       this.data.expanded = false
       this.set_highlights({do_highlight: false})
-    },
-    on_click() {
-      this.data.expanded = !this.data.expanded
-      if(this.data.content.length) {
-        this.set_gallery_id(this.data.id)
-      } else if(this.data.url) {
-        window.open(this.data.url, '_blank').focus()
-      }
     }
   },
   props: {
@@ -54,8 +53,10 @@ export default {
 </script>
 
 <template>
+<router-link
+  :to='link'
+  class='project-link'>
 <div
-  @click='on_click'
   @mouseenter='on_mouse_enter'
   @mouseleave='on_mouse_leave'
   :class='data.expanded ? `expanded` : null'
@@ -102,6 +103,7 @@ export default {
     </div>
   </div>
 </div>
+</router-link>
 </template>
 
 <style lang='sass' scoped>
@@ -109,8 +111,15 @@ export default {
   margin-bottom: 2em
 
 .project
+    &:hover
+      cursor: pointer
+
+.project-link
+  color: #003f5c !important
+  text-decoration: none
+
   &:hover
-    cursor: pointer
+    color: #44ABD8 !important
 
 .expanded
   color: #44ABD8
