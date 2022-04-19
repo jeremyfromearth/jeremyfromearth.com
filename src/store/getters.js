@@ -4,7 +4,6 @@ export default {
   blog_posts: state => state.blog_posts,
   education: state => state.education,
   employment: state => state.employment,
-  gallery_id: state => state.gallery_id,
   highlighting: state => state.highlighting,
   keywords: state => state.keywords,
   links: state => state.links,

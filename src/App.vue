@@ -1,14 +1,11 @@
 <script>
-import {mapActions, mapGetters} from 'vuex'
+import {mapActions} from 'vuex'
 
 import Header from './components/Header'
 
 export default {
   components: {
     Header
-  },
-  computed: {
-    ...mapGetters(['gallery_id', 'topics_palette', 'video_id'])
   },
   methods: {
     ...mapActions([
@@ -32,7 +29,6 @@ export default {
 <v-app>
   <Header/>
   <router-view/>
-  <!--<Gallery v-if='gallery_id != null' class='gallery'/>-->
 </v-app>
 </template>
 

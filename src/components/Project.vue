@@ -24,7 +24,6 @@ export default {
   },
   methods: {
     ...mapActions([
-      'set_gallery_id',
       'set_highlights',
       'set_video_id'
     ]),

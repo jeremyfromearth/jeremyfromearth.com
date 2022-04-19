@@ -50,9 +50,6 @@ export default {
   set_employment(state, value) {
    state.employment = value
   },
-  set_gallery_id(state, value) {
-    state.gallery_id = value
-  },
   set_highlights(state, {project_id, do_highlight}) {
     const project = state.project_lookup[project_id]
     state.topics.forEach(t => {

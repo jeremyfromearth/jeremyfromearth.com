@@ -14,7 +14,6 @@ export default {
       'blog_posts',
       'education',
       'employment',
-      'gallery_id',
       'highlighting',
       'keywords',
       'links',
