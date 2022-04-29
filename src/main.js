@@ -18,8 +18,10 @@ import {library} from '@fortawesome/fontawesome-svg-core'
 
 import '@/styles/main.sass'
 
+const mobile_detect = new MobileDetect(window.navigator.userAgent)
+Vue.prototype.$mobile_detect = mobile_detect
+Vue.prototype.$is_mobile = mobile_detect.mobile() ? true : false
 Vue.config.productionTip = false;
-Vue.prototype.$is_mobile = new MobileDetect(window.navigator.userAgent).mobile() ? true : false
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 library.add(fas, far, fab)

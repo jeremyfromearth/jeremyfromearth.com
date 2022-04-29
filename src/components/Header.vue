@@ -84,15 +84,15 @@ export default {
         class='d-flex align-center'
         cols='12'>
         <div class='d-flex align-center'>
-          <h1>J from </h1>
+          <h1>J from</h1>
           <font-awesome-icon
             :icon='globe_icon'
             :style='{
               color: globe_colors[globe_color_idx]
             }'
-            class='globe ml-4 mr-2'
+            class='globe ml-2 mr-2'
             size='2x'/>
-          <h4>v3.0.0</h4>
+          <h4>v3.0.1</h4>
         </div>
         <v-spacer/>
         <div>

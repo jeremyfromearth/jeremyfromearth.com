@@ -15,6 +15,7 @@ export default {
       state.pagination, state.pagination + state.projects_per_page),
   projects_per_page: state => state.projects_per_page,
   project_search_results: state => state.project_search_results,
+  screen_is_small: state => state.window_size[0] < 768,
   tech_merged_sorted: state =>
     Object.values(state.technologies)
       .sort((a, b) => a.label.localeCompare(b.label)),
