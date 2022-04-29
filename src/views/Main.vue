@@ -22,6 +22,7 @@ export default {
       'project_search_results',
       'project_sort_keys',
       'projects_per_page',
+      'screen_is_small',
       'tech_merged_sorted',
       'technologies',
       'text',
@@ -90,12 +91,16 @@ export default {
       this.search_text = ''
     },
     on_project_transition() {
-      if(this.$refs.project_transition) {
-        const h1 = this.$refs.project_transition.$el.clientHeight
-        const h2 = this.$refs.topic_legend.clientHeight +
-          this.$refs.tech_tags.clientHeight
-        const h = Math.max(h1, h2)
-        this.project_container_height = h
+      if(this.screen_is_small) {
+        this.project_container_height = this.$refs.project_transition.$el.clientHeight
+      } else {
+        if(this.$refs.project_transition) {
+          const h1 = this.$refs.project_transition.$el.clientHeight
+          const h2 = this.$refs.topic_legend.clientHeight +
+            this.$refs.tech_tags.clientHeight
+          const h = Math.max(h1, h2)
+          this.project_container_height = h
+        }
       }
     },
     projects_with_key(k) {
@@ -131,11 +136,15 @@ export default {
     <v-row>
       <v-col>
         <div
-          class='title font-weight-bold'>
+          :class='[
+            `title font-weight-bold`,
+            screen_is_small ? `mb-4` : null
+          ]'>
           Work Archive
         </div>
       </v-col>
       <v-col
+        v-if='!screen_is_small'
         class='d-flex flex-wrap align-center justify-end'
         cols='6'>
         <v-chip
@@ -151,6 +160,7 @@ export default {
         </v-chip>
       </v-col>
       <v-col
+        v-if='!screen_is_small'
         cols='3'>
         <v-form
           id='search'
@@ -175,6 +185,7 @@ export default {
         }'
         class='project-container d-flex justify-space-around flex-nowrap'>
         <div
+          v-if='!screen_is_small'
           class='meta-container d-flex flex-grow-0 flex-column justify-space-between'>
           <div ref='topic_legend'
             class='topic-legend pr-4 py-4'>
@@ -196,6 +207,7 @@ export default {
             </div>
           </div>
           <div
+            v-if='!screen_is_small'
             ref='tech_tags'
             class='d-flex flex-wrap'>
             <v-chip
@@ -226,7 +238,7 @@ export default {
             <div
               v-for='(k, i) in project_sort_keys'
               :key='k + "-" + i + "-" + pagination'
-              class='d-flex ma-0 pl-2 pr-12'>
+              :class='[`d-flex ma-0 pr-12`, !screen_is_small ? `pl-2` : null]'>
               <div
                 class='font-weight-bold'>
                 {{k}}
