@@ -1,4 +1,5 @@
 <script>
+import Vue from 'vue'
 import * as _ from 'lodash'
 import {init_firebase} from '@/utils/firebase'
 
@@ -95,11 +96,13 @@ export default {
         this.project_container_height = this.$refs.project_transition.$el.clientHeight
       } else {
         if(this.$refs.project_transition) {
-          const h1 = this.$refs.project_transition.$el.clientHeight
-          const h2 = this.$refs.topic_legend.clientHeight +
-            this.$refs.tech_tags.clientHeight
-          const h = Math.max(h1, h2)
-          this.project_container_height = h
+          Vue.nextTick(() => {
+            const h1 = this.$refs.project_transition.$el.clientHeight
+            const h2 = this.$refs.topic_legend.clientHeight +
+              this.$refs.tech_tags.clientHeight
+            const h = Math.max(h1, h2)
+            this.project_container_height = h
+          })
         }
       }
     },
@@ -140,7 +143,7 @@ export default {
             `title font-weight-bold`,
             screen_is_small ? `mb-4` : null
           ]'>
-          Work Archive
+          Project Archive
         </div>
       </v-col>
       <v-col

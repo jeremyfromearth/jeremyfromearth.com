@@ -68,7 +68,7 @@ export default {
         this.$refs.controls.clientHeight -
           this.$refs.close_button.clientHeight
 
-      if(this.current_content.width >= this.current_content.height) {
+      if(this.current_content.width > this.current_content.height) {
         r = this.current_content.height / this.current_content.width
         this.content_width = w * 0.8
         this.content_height = this.content_width * r
@@ -241,7 +241,7 @@ export default {
       <div
         v-if='visible && current_content'
         ref='content_container'
-        class='content-container align-self-center justify-self-ccenter pa-4'
+        class='content-container align-self-center justify-self-center pa-4'
         :style='{
           width: `${content_width}px`, height: `${content_height}px`
         }'>
