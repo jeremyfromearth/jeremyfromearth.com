@@ -81,7 +81,7 @@ export default {
         </div>
         <div
           v-if='data.client'
-          class='body-2 mb-2'>
+          class='body-2 mb-2 font-weight-bold font-italic'>
           {{ data.client }}
         </div>
       </div>
@@ -98,7 +98,7 @@ export default {
         </v-btn>
       </div>
     </div>
-    <div>
+    <div class='font-weight-light'>
       {{ data.tldr }}
     </div>
   </div>
