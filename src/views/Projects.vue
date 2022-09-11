@@ -308,7 +308,7 @@ export default {
 <style lang='sass' scoped>
 .project
   height: 100vh
-  position: absolute
+  position: fixed
   width: 100vw
   z-index: 1
 
