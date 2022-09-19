@@ -922,7 +922,7 @@
     "id": "sonic-fauna-phyla-1",
     "published": true,
     "title": "Phyla v1.0",
-    "tldr": "Phyla is a music data visualization software I developed using Python and VueJS. Each piece is essential a stacked radial area chart generated from the Fourier transform of a given piece of music. Phyla enables near infinite stylistic variation, allowing each piece to better reflect the source material.",
+    "tldr": "Phyla is a music data visualization software I developed using Python and VueJS. Each visualization is essentially a stacked radial area chart generated from the Fourier transform of a given piece of music. Phyla enables near infinite stylistic variation, allowing each piece to better reflect the source material.",
     "topics": {
       "vis": ["D3", "Python", "JavaScript"]
     },
