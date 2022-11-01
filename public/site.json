@@ -1,5 +1,10 @@
 {
  "blog": [{
+   "keywords": ["music", "ai", "information retreival"],
+   "title": "Immersive Music Streaming Services",
+   "topics": ["Software Egineering"],
+   "url": "https://medium.com/@jeremyfromearth/immersive-music-streaming-services-b415601279bf"
+ }, {
     "keywords": ["vim", "terminal", "code", "programming"],
     "title": "Navigating in Vim",
     "topcis": ["Software Engineering"],
@@ -38,25 +43,24 @@
   "employment": [{
     "descriptions": [
       "Leading the development of end user applications for an early stage startup",
-      "Developing user interfaces that allow end users to assemble machine learning pipelines",
-      "Designing and developing data visualizations that elucidate the inner workings of AI & NLP algorithms"
+      "Developing user interfaces that enable enterprise customers to assemble ML powered message processing pipelines",
+      "Developing data visualizations that provide insights into ML and NLP models, using D3.js"
     ],
-    "location": "Wien, Österreich",
+    "location": "Vienna, Austria",
     "timespan": "November 2019 - Present",
     "title": "Software Engineer, Cortical.io"
   }, {
     "descriptions": [
       "Developing over twenty-five custom software projects for The San Francisco Museum of Modern Art, The Smithsonian, Nike and many other clients from around the U.S. and Canada",
       "Generating project roadmaps, estimates of cost, software schematics and end user documentation",
-      "Collaborating with remote teams using Slack, Git, SVN, Atlassian Tools and Target Process",
-      "Studying fields of interest, including machine intelligence and natural language processing, with end goal of attaining work in new fields"
+      "Collaborating with remote teams using Slack, Git, Github and Atlassian Tools"
     ],
     "location": "Earth",
     "timespan": "January 2010 - 2019",
     "title": "Software Engineer (Contract)"
   }, {
     "descriptions": [
-      "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of ten million patent document corpus using JavaScript & D3",
+      "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of a ten million+ patent document corpus using JavaScript & D3",
       "Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
     ],
     "location": "Portland, OR – United States",
