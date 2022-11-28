@@ -1,5 +1,10 @@
 {
  "blog": [{
+   "keywords": ["music", "dna"],
+   "title": "New Project: Genome Audio Tool",
+   "topics": ["Software Engineering"],
+   "url": "https://medium.com/@sonicfauna/new-project-genome-audio-tool-2267e22392ff"
+ }, {
    "keywords": ["music", "ai", "information retreival"],
    "title": "Immersive Music Streaming Services",
    "topics": ["Software Egineering"],
@@ -110,12 +115,7 @@
       "icon": "fa-brands fa-medium",
       "keywords": ["blog", "writing", "sharing", "code", "programming", "medium"],
       "title": "medium",
-      "url": "https://medium.com/@jeremy.from.earth"
-    }, {
-      "icon": "fa-brands fa-twitter",
-      "keywords": ["twitter", "social", "sharing"],
-      "title": "twitter",
-      "url": "http://twitter.com/jeremyfromearth"
+      "url": "https://medium.com/@jeremyfromearth"
     }, {
       "icon": "fa-brands fa-linkedin",
       "keywords": ["linked", "in", "social"],
