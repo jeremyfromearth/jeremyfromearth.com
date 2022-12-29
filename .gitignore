@@ -1,5 +1,6 @@
 .env
 *.swp
+*.sw?
 .DS_Store
 node_modules/
 legacy/
