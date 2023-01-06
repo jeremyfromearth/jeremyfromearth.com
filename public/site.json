@@ -1,5 +1,10 @@
 {
  "blog": [{
+  "keywords": ["Python", "Software Engineering", "Programming"],
+  "title": "One a Day One Liners with Python",
+  "topics": ["Python", "programming", "data science"],
+  "url": "https://medium.com/@jeremyfromearth/one-a-day-one-liners-with-python-2b2147611c6"
+ }, {
    "keywords": ["music", "dna"],
    "title": "New Project: Genome Audio Tool",
    "topics": ["Software Engineering"],
@@ -14,19 +19,6 @@
     "title": "Navigating in Vim",
     "topcis": ["Software Engineering"],
     "url": "https://medium.com/@jeremy.from.earth/navigating-in-vim-41512418673e"
-  }, {
-    "keywords": ["jupyter", "data", "conda", "python", "science", "notebooks"],
-    "title": "Multiple Python kernels for Jupyter Lab with Conda",
-    "topics": ["Natural Language Processing"],
-    "url": "https://medium.com/@jeremy.from.earth/multiple-python-kernels-for-jupyter-lab-with-conda-c67e50de3aa3"
-  }, {
-    "keywords": ["google", "cloud", "platform", "python", "dataclasses"],
-    "title": "Py3.7 Dataclasses + Cloud Firestore",
-    "url": "https://medium.com/@jeremy.from.earth/using-dataclasses-firestore-to-replace-ndb-datastore-on-python-3-7-app-engine-e21199b58ef2"
-  }, {
-    "keywords": ["google", "cloud", "platform", "javascript", "upload"],
-    "title": "Google Cloud Storage File Upload with Flask & JavaScript",
-    "url": "https://medium.com/@jeremy.from.earth/google-cloud-storage-file-upload-with-flask-javascript-64ec5bc5c42d"
   }],
   "education": [
     {
