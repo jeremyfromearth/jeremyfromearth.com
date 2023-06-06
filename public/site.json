@@ -94,10 +94,10 @@
   }],
   "links": [
     {
-      "icon": "fa-brands fa-gitlab",
+      "icon": "fa-brands fa-github",
       "keywords": ["git", "gitlab", "version", "control", "code", "programming"],
       "title": "gitlab",
-      "url": "https://gitlab.com/jeremyfromearth"
+      "url": "https://github.com/jeremyfromearth"
     }, {
       "icon": "fa-brands fa-stack-overflow",
       "keywords": ["stack", "overflow", "code", "programming", "question", "answer", "community"],
@@ -886,7 +886,7 @@
       "vis": ["D3"]
     },
     "url": "https://www.cortical.io/solutions/message-intelligence/",
-    "year": 2022
+    "year": 2023
   }, {
     "client": "Google & O'Reilly Media",
     "coloraborators": ["Instrument"],

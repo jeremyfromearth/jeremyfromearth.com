@@ -92,7 +92,7 @@ export default {
             }'
             class='globe ml-2 mr-2'
             size='2x'/>
-          <h4>v3.0.1</h4>
+          <h4>v3.0.2</h4>
         </div>
         <v-spacer/>
         <div>
