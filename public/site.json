@@ -58,7 +58,7 @@
   }, {
     "descriptions": [
       "Developing the Semantic Map, an interactive data visualization tool enabling search and exploration of a ten million+ patent document corpus using JavaScript & D3",
-      "Developing domain specific query language based on provided Backus-Nuar form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
+      "Developing domain specific query language based on provided Backus-Naur form grammar using C++ for server side syntax parsing and JavaScript with D3 for front end and visualization of abstract syntax tree data structures"
     ],
     "location": "Portland, OR – United States",
     "timespan": "August 2016 - September 2017",
@@ -888,7 +888,7 @@
     "url": "https://www.cortical.io/solutions/message-intelligence/",
     "year": 2022
   }, {
-    "client": "Gooogle & O'Reilly Media",
+    "client": "Google & O'Reilly Media",
     "coloraborators": ["Instrument"],
     "content": [{"type": "video", "src": "690261248"}],
     "description": "Lorem Ipsum",
